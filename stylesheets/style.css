@@ -17,18 +17,18 @@ body {
 }
 
 .parallax {
+    background: BLACK ;
+}
+
+.scene1 {
     background: url(../Media/Labor.jpeg) 50% 0;
 }
 
-.slidein {
-    background: #5b3030;
-}
-
-.slidein2 {
+.story1 {
     background: #304b5b;
 }
 
-.slidein2 .row {
+.story1 .row {
     justify-content: space-around;
 }
 #left {

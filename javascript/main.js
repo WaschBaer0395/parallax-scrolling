@@ -17,18 +17,18 @@ if (document.documentElement.clientWidth > 768) {
 
     // Slide in
     new ScrollMagic.Scene({
-        triggerElement: "#slidein",
+        triggerElement: "#scene1",
         triggerHook: "onLeave",
     })
-        .setPin("#slidein")
+        .setPin("#scene1")
         //.addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
     new ScrollMagic.Scene({
-        triggerElement: "#slidein2",
+        triggerElement: "#story1",
         triggerHook: "onLeave",
     })
-        .setPin("#slidein2")
+        .setPin("#story1")
         //.addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
@@ -47,7 +47,7 @@ if (document.documentElement.clientWidth > 768) {
         .add(fromLeftTo);
 
     new ScrollMagic.Scene({
-        triggerElement: "#slidein2",
+        triggerElement: "#story1",
         offset: 200,
     })
         .setTween(fromLeftTimeline)
@@ -69,7 +69,7 @@ if (document.documentElement.clientWidth > 768) {
         .add(fadeInTo);
 
     new ScrollMagic.Scene({
-        triggerElement: "#slidein2",
+        triggerElement: "#story1",
         offset: 200,
     })
         .setTween(fadeInTimeline)
@@ -91,7 +91,7 @@ if (document.documentElement.clientWidth > 768) {
         .add(fromBottomTo);
 
     new ScrollMagic.Scene({
-        triggerElement: "#slidein2",
+        triggerElement: "#story1",
         offset: 200,
     })
         .addIndicators()
