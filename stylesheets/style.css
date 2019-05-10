@@ -19,16 +19,25 @@ body {
 .parallax {
     background: BLACK ;
 }
-
+/*--- SCENE 1 ---*/
 .scene1 {
-    background: url(../Media/Labor.jpeg) 50% 0;
+    background: url(../Fotos/Szene01_LacunaIndustries.jpg) 50% 0;
 }
 
-.story1 {
-    background: #304b5b;
+.story {
+    background: BLACK;
 }
 
 .story1 .row {
+    justify-content: space-around;
+}
+
+/*--- SCENE 2 ---*/
+.scene2 {
+    background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
+}
+
+.story2 .row {
     justify-content: space-around;
 }
 #left {

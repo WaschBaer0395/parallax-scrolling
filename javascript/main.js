@@ -15,90 +15,40 @@ if (document.documentElement.clientWidth > 768) {
         //.addIndicators() // add indicators (requires plugin)
         .addTo(controller);
 
-    // Slide in
-    new ScrollMagic.Scene({
-        triggerElement: "#scene1",
-        triggerHook: "onLeave",
-    })
-        .setPin("#scene1")
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
 
-    new ScrollMagic.Scene({
-        triggerElement: "#story1",
-        triggerHook: "onLeave",
-    })
-        .setPin("#story1")
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-
-    //Moving divs
-
-    //Fly in from the left
-    var fromLeftTimeline = new TimelineMax();
-    var fromLeftFrom = TweenMax.from("#left", 1, {
-        x: -500
+    //////////////////////
+    // Slide in Scene 1 //
+    //////////////////////
+    $(".slide").each(function() {
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: "onLeave",
+        })
+            .setPin(this)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
     });
-    var fromLeftTo = TweenMax.to("#left", 1, {
-        x: 0
+
+
+    ///////////////////////////////////////////////
+    // fadeIn from the bottom for story sections //
+    ///////////////////////////////////////////////
+    $(".fadeup").each(function() { // runs as soon as .fadeup is visible in window
+        var tween = TweenMax.from(this, .6, {
+            y: 100,  // offset of starting position for animation
+            autoAlpha: 0, // setting the opacity to 0 for start
+            delay: 0,
+            ease: Power2.easeOut
+        }, .1);
+
+        new ScrollMagic.Scene({ // creating a Scene for the animation
+                triggerElement: this, // triggering when current div is reached
+                offset: -100, // offsetting the trigger point
+                reverse:true
+            })
+                .setTween(tween)
+                .addTo(controller)
+                //.addIndicators() // for debugging only !
+        ;
     });
-    fromLeftTimeline
-        .add(fromLeftFrom)
-        .add(fromLeftTo);
-
-    new ScrollMagic.Scene({
-        triggerElement: "#story1",
-        offset: 200,
-    })
-        .setTween(fromLeftTimeline)
-        .duration(400)
-        //    .reverse(false)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-
-    // Fade in
-    var fadeInTimeline = new TimelineMax();
-    var fadeInFrom = TweenMax.from("#opacity", 1, {
-        autoAlpha: 0
-    });
-    var fadeInTo = TweenMax.to("#opacity", 1, {
-        autoAlpha: 1
-    });
-    fadeInTimeline
-        .add(fadeInFrom)
-        .add(fadeInTo);
-
-    new ScrollMagic.Scene({
-        triggerElement: "#story1",
-        offset: 200,
-    })
-        .setTween(fadeInTimeline)
-        .duration(400)
-        //    .reverse(false)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-
-    //Fly in from the left
-    var fromBottomTimeline = new TimelineMax();
-    var fromBottomFrom = TweenMax.from("#bottom", 1, {
-        y: 300
-    });
-    var fromBottomTo = TweenMax.to("#bottom", 1, {
-        y: 0
-    });
-    fromBottomTimeline
-        .add(fromBottomFrom)
-        .add(fromBottomTo);
-
-    new ScrollMagic.Scene({
-        triggerElement: "#story1",
-        offset: 200,
-    })
-        .addIndicators()
-        .setTween(fromBottomTimeline)
-        .duration(400)
-        //    .reverse(false)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-
 }
