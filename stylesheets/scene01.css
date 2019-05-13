@@ -1,5 +1,13 @@
 /* stylesheet for Scene 01
 */
+
+/*--- SCENE 1 ---*/
+#scene1 {
+    background: url(../Fotos/Szene01_LacunaIndustries.jpg) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .quinn01{
     bottom:0;
     left: 6em;

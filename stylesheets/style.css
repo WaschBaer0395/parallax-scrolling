@@ -19,12 +19,7 @@ body {
 .parallax {
     background: BLACK ;
 }
-/*--- SCENE 1 ---*/
-#scene1 {
-    background: url(../Fotos/Szene01_LacunaIndustries.jpg) 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 .story {
     background: BLACK;
