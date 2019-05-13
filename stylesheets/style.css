@@ -22,18 +22,26 @@ body {
 /*--- SCENE 1 ---*/
 #scene1 {
     background: url(../Fotos/Szene01_LacunaIndustries.jpg) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*--- SCENE 2 ---*/
 #scene2 {
     background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*--- SCENE 3 ---*/
 #scene3 {
     background: url(../Fotos/Szene03_Krankenzimmer.jpg) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*--- SCENE 4 ---*/
 #scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .story {
