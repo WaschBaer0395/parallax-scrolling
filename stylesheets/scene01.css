@@ -1,0 +1,13 @@
+/* stylesheet for Scene 01
+*/
+.quinn01{
+    bottom:0;
+    left: 6em;
+    position: fixed;
+}
+
+.speechBubble{
+    top: -7em;
+    right: -3em;
+    position: fixed;
+}
