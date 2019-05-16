@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     // Single scrollmagic controller for the entire experience
@@ -21,22 +20,22 @@ $(document).ready(function () {
         ///////////////////////////////////////////////
         // fadeIn from the bottom for story sections //
         ///////////////////////////////////////////////
-        $('.fade').each(function(){
+        $('.fade').each(function () {
             var fadein_tween = TweenMax
                 .fromTo(this, 1, {
-                    yPercent:100 ,
-                    xPercent:0 ,
-                    opacity:0
-                },{
-                    yPercent:0 ,
-                    xPercent:0 ,
-                    opacity:1 ,
-                    ease:Power1.easeInOut
+                    yPercent: 100,
+                    xPercent: 0,
+                    opacity: 0
+                }, {
+                    yPercent: 0,
+                    xPercent: 0,
+                    opacity: 1,
+                    ease: Power1.easeInOut
                 });
 
             var scene = new ScrollMagic.Scene({
                 triggerElement: self,
-                trigerHook:"onEnter",
+                trigerHook: "onEnter",
                 duration: 800,
                 offset: 400
             })
@@ -44,31 +43,29 @@ $(document).ready(function () {
                 .addIndicators({name: "fade"})
                 .addTo(controller);
         });
-/*        // Get the content to be parallaxed over the pinned section.
-        $squares = $(this).find('.square');
-        // Loop over the squares
-        $.each($squares, function () {
-            // For each square, set a tween
-            var tween = TweenMax.fromTo(this, 1, { 		// Can probably use tweenlite
-                bottom: -$(this).height() 				// Start the element outside of the bottom of the viewport
-            },{
-                top: -$(this).height(),					// Animate to outside the top of the viewport.
-                ease: Sine.easeOut        				// Set the easing
-            });
+        /*        // Get the content to be parallaxed over the pinned section.
+                $squares = $(this).find('.square');
+                // Loop over the squares
+                $.each($squares, function () {
+                    // For each square, set a tween
+                    var tween = TweenMax.fromTo(this, 1, { 		// Can probably use tweenlite
+                        bottom: -$(this).height() 				// Start the element outside of the bottom of the viewport
+                    },{
+                        top: -$(this).height(),					// Animate to outside the top of the viewport.
+                        ease: Sine.easeOut        				// Set the easing
+                    });
 
-            // Add the tween to the controller. The animation duration and offset is set via data attrs
-            var animateSquare = new ScrollMagic.Scene({
-                triggerElement: self, 					// The section.
-                triggerHook: 0,							// Use the top of the section element as the trigger.
-                duration: $(this).data('duration'),		// How many pixel scroll the animation lasts.
-                offset: $(this).data('offset')			// The scroll offset before the animation begins.
-            })
-                .setTween(tween)
-                .addTo(controller)
-        })*/
+                    // Add the tween to the controller. The animation duration and offset is set via data attrs
+                    var animateSquare = new ScrollMagic.Scene({
+                        triggerElement: self, 					// The section.
+                        triggerHook: 0,							// Use the top of the section element as the trigger.
+                        duration: $(this).data('duration'),		// How many pixel scroll the animation lasts.
+                        offset: $(this).data('offset')			// The scroll offset before the animation begins.
+                    })
+                        .setTween(tween)
+                        .addTo(controller)
+                })*/
     });
-
-
 
 
     //////////////////////////////////////////////////
@@ -80,7 +77,7 @@ $(document).ready(function () {
     // offset = move start and end trigger together //
     // duration = in % how long animation should be //
     //////////////////////////////////////////////////
-    $(".move").each(function() { // runs as soon as .move is visible in window
+    $(".move").each(function () { // runs as soon as .move is visible in window
         var fromBottomTimeline = new TimelineMax();
         var fromBottomFrom = TweenMax.from(this, 1, {
             x: this.getAttribute("x1"), // start x
@@ -96,13 +93,63 @@ $(document).ready(function () {
 
         new ScrollMagic.Scene({
             triggerElement: this.getAttribute("trigger"),
-            triggerHook:"onCenter",                          // offsetting the trigger
+            triggerHook: "onCenter",                          // offsetting the trigger
             offset: this.getAttribute("offset")     // offsetting the start and end point
         })
             .setTween(fromBottomTimeline)
-            .duration( this.getAttribute("duration"))   // duration of the animation
+            .duration(this.getAttribute("duration"))   // duration of the animation
             //.reverse(true)
             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
     });
+
+
+    // TESTfunction for Szene_1 parallax layer
+
+
+    var controller1 = new ScrollMagic.Controller();
+
+    var tlm = new TimelineMax({onComplete: myFunction});
+    tlm.fromTo('.laterne', 1, {x: 20}, {x: 0});
+
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#Slide3"
+        , duration: 800
+        , triggerHook: .5
+        , offset: 4300
+    })
+        .setTween(tlm)
+        .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+
+
+        .addTo(controller1);
+
+    function myFunction() {
+        console.log('myFunction()')
+    }
+
+    var controller2 = new ScrollMagic.Controller();
+
+    var tlm2 = new TimelineMax({onComplete: myFunction});
+    tlm2.fromTo('.ground', 1, {x: 0}, {x: 5});
+
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#Slide3"
+        , duration: 800
+        , triggerHook: .5
+        , offset: 4300
+    })
+        .setTween(tlm2)
+        .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+
+
+        .addTo(controller2);
+
+    function myFunction() {
+        console.log('myFunction()')
+    }
+
+
 });
