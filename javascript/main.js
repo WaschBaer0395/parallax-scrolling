@@ -107,17 +107,17 @@ $(document).ready(function () {
     // TESTfunction for Szene_1 parallax layer
 
 
-    var tlm = new TimelineMax({onComplete: myFunction});
-    tlm.fromTo('.laterne', 1, {x: 20}, {x: 0});
+    var laterne = new TimelineMax({onComplete: myFunction});
+    laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
 
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
-        , duration: 1200
+        , duration: 900
         , triggerHook: .5
         , offset: 3500
     })
-        .setTween(tlm)
+        .setTween(laterne)
         .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
 
 
@@ -127,8 +127,8 @@ $(document).ready(function () {
         console.log('myFunction()')
     }
 
-    var tlm2 = new TimelineMax({onComplete: myFunction});
-    tlm2.fromTo('.ground', 1, {x: 10}, {x: 0});
+    var boden = new TimelineMax({onComplete: myFunction});
+    boden.fromTo('.ground', 1, {x: 10}, {x: 0});
 
 
     var scene = new ScrollMagic.Scene({
@@ -137,10 +137,30 @@ $(document).ready(function () {
         , triggerHook: .5
         , offset: 3500
     })
-        .setTween(tlm2)
-        .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+        .setTween(boden)
+        .addTo(controller);
 
+    var background2 = new TimelineMax({onComplete: myFunction});
+    background2.fromTo('.background', 1, {x: 0}, {x: 20});
 
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#Slide3"
+        , duration: 1200
+        , triggerHook: .5
+        , offset: 3500
+    })
+        .setTween(background2)
+        .addTo(controller);
+    var building = new TimelineMax({onComplete: myFunction});
+    building.fromTo('.building', 1, {x: 20}, {x: 0});
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#Slide3"
+        , duration: 1200
+        , triggerHook: 0.5
+        , offset: 3500
+    })
+        .setTween(building)
         .addTo(controller);
 
     function myFunction() {
