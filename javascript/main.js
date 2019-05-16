@@ -17,7 +17,7 @@ $(document).ready(function () {
             .setPin(this)
             .addTo(controller)
 
-        // Get the content to be parallaxed over the pinned section.
+/*        // Get the content to be parallaxed over the pinned section.
         $squares = $(this).find('.square');
         // Loop over the squares
         $.each($squares, function () {
@@ -38,7 +38,7 @@ $(document).ready(function () {
             })
                 .setTween(tween)
                 .addTo(controller)
-        })
+        })*/
     });
 
 
