@@ -132,7 +132,7 @@ $(document).ready(function () {
     var controller2 = new ScrollMagic.Controller();
 
     var tlm2 = new TimelineMax({onComplete: myFunction});
-    tlm2.fromTo('.ground', 1, {x: 0}, {x: 5});
+    tlm2.fromTo('.ground', 1, {x: 0}, {x: 10});
 
 
     var scene = new ScrollMagic.Scene({
