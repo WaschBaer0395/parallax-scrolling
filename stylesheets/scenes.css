@@ -1,97 +1,118 @@
 /* stylesheet for Scene 01
 */
 
-#Title{
-    background:black;
-}
-
-#Prolog{
+#Title {
     background: black;
 }
 
-#Story1{
+#Prolog {
+    background: black;
+}
+
+#Story1 {
     background: Black;
 }
 
 /*--- SCENE 1 ---*/
-#Scene1{
-background: url(../Fotos/Szene01_LacunaIndustries.jpg) 50% 0;
-background-repeat: no-repeat;
-background-size: cover;
+#Scene1 {
+    background: url(../Media/pictures/szene01/background.png) 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+#scene_one_second_layer {
+    width:100%;
+    height:100%;
+    background: url(../Media/pictures/szene01/laterne.png)50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+}
+#scene_one_third_layer{
+    width:100%;
+    height:100%;
+    background: url(../Media/pictures/szene01/ground.png)50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
 }
 
 /*--- SCENE 2 ---*/
-#Scene2{
+#Scene2 {
     background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 3 ---*/
-#Scene3{
+#Scene3 {
     background: url(../Fotos/Szene03_Krankenzimmer.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 4 ---*/
-#Scene4{
+#Scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 5 ---*/
-#Scene5{
+#Scene5 {
     background: url(../Fotos/Szene05_DunkleStrasse.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 6 ---*/
-#Scene6{
+#Scene6 {
     background: url(../Fotos/Szene06_StrasseMitBergen.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 7 ---*/
-#Scene7{
+#Scene7 {
     background: url(../Fotos/Szene07_Gala.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 8 ---*/
-#Scene8{
+#Scene8 {
     background: url(../Fotos/Szene08_DunkleStrasse.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 9 ---*/
-#Scene9{
+#Scene9 {
     background: url(../Fotos/Szene09_JahrmarktMitKind.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 10 ---*/
-#Scene10{
+#Scene10 {
     background: url(../Fotos/Szene10_Cafe.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 11 ---*/
-#Scene11{
+#Scene11 {
     background: url(../Fotos/Szene11_Flughafen.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /*--- SCENE 12 ---*/
-#Scene12{
+#Scene12 {
     background: url(../Fotos/Szene12_Konzert.jpg) 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
