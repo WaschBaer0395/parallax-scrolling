@@ -107,45 +107,41 @@ $(document).ready(function () {
     // TESTfunction for Szene_1 parallax layer
 
 
-    var controller1 = new ScrollMagic.Controller();
-
     var tlm = new TimelineMax({onComplete: myFunction});
     tlm.fromTo('.laterne', 1, {x: 20}, {x: 0});
 
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
-        , duration: 800
+        , duration: 1200
         , triggerHook: .5
-        , offset: 4300
+        , offset: 3500
     })
         .setTween(tlm)
         .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
 
 
-        .addTo(controller1);
+        .addTo(controller);
 
     function myFunction() {
         console.log('myFunction()')
     }
 
-    var controller2 = new ScrollMagic.Controller();
-
     var tlm2 = new TimelineMax({onComplete: myFunction});
-    tlm2.fromTo('.ground', 1, {x: 0}, {x: 10});
+    tlm2.fromTo('.ground', 1, {x: 10}, {x: 0});
 
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
-        , duration: 800
+        , duration: 1200
         , triggerHook: .5
-        , offset: 4300
+        , offset: 3500
     })
         .setTween(tlm2)
         .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
 
 
-        .addTo(controller2);
+        .addTo(controller);
 
     function myFunction() {
         console.log('myFunction()')
