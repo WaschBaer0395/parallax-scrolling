@@ -35,7 +35,7 @@ $(document).ready(function () {
 
             var scene = new ScrollMagic.Scene({
                 triggerElement: self,
-                trigerHook: "onEnter",
+                triggerHook: "onEnter",
                 duration: 800,
                 offset: 400
             })
