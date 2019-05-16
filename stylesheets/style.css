@@ -1,27 +1,49 @@
-body {
-    margin: 0;
+html {
     font-family: sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px 10px #000;
 }
 
-.slide{
+body {
+    margin: 0;
+    background: red;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 999;
+    transform: translateY(-50%);
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    padding: 10px 0;
+}
+
+.section {
+    height: 100vh;
+}
+
+.section_inner {
+    height: 100%;
+    padding-top: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: white;
-    text-align: center;
-}
-
-.intro {
-    background: #305a5b;
-}
-
-.parallax {
-    background: BLACK ;
-}
-
-
-.story {
-    background: BLACK;
-    justify-content: space-around;
+    flex-direction: column;
+    background-size: cover;
 }
