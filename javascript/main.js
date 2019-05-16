@@ -15,8 +15,35 @@ $(document).ready(function () {
             duration: $(this).data('duration')			// Scroll for this many pixels before unpinning.
         })
             .setPin(this)
-            .addTo(controller)
+            .addIndicators({name: "Slide"})
+            .addTo(controller);
 
+        ///////////////////////////////////////////////
+        // fadeIn from the bottom for story sections //
+        ///////////////////////////////////////////////
+        $('.fade').each(function(){
+            var fadein_tween = TweenMax
+                .fromTo(this, 1, {
+                    yPercent:100 ,
+                    xPercent:0 ,
+                    opacity:0
+                },{
+                    yPercent:0 ,
+                    xPercent:0 ,
+                    opacity:1 ,
+                    ease:Power1.easeInOut
+                });
+
+            var scene = new ScrollMagic.Scene({
+                triggerElement: self,
+                trigerHook:"onEnter",
+                duration: 800,
+                offset: 400
+            })
+                .setTween(fadein_tween)
+                .addIndicators({name: "fade"})
+                .addTo(controller);
+        });
 /*        // Get the content to be parallaxed over the pinned section.
         $squares = $(this).find('.square');
         // Loop over the squares
@@ -42,27 +69,7 @@ $(document).ready(function () {
     });
 
 
-    ///////////////////////////////////////////////
-    // fadeIn from the bottom for story sections //
-    ///////////////////////////////////////////////
-    $(".fade").each(function() { // runs as soon as .fadeup is visible in window
-        var tween = TweenMax.from(this,1, {
-            y: 100,  // offset of starting position for animation
-            autoAlpha: 0, // setting the opacity to 0 for start
-            ease: Power2.easeOut
-        });
 
-        new ScrollMagic.Scene({ // creating a Scene for the animation
-                triggerElement: this.getAttribute("id"), // triggering when current div is reached
-                offset: 800, // offsetting the trigger point
-                reverse:true
-            })
-                .setTween(tween)
-                .duration('200%')
-                .addTo(controller)
-                .addIndicators() // for debugging only !
-        ;
-    });
 
     //////////////////////////////////////////////////
     // Move objects on trigger                      //
