@@ -6,9 +6,10 @@ class content
     for every layer in scene needed
  */
 .content {
-    width: 100%;
-    height: 100%;
+    height:100%;
+    width:100%;
     background-repeat: no-repeat;
+    background-size: cover;
     /*transform: scale(1);*/
 }
 /*
@@ -49,10 +50,12 @@ class content
 }
 
 #scene_one_third_layer {
+    margin-top:-190px;
     margin-left: -30px;
-    background: url(../Media/pictures/szene01/ground.png) 50% 0;
+    background: url(../Media/pictures/szene01/ground.png)50% 0;
     position: absolute;
     z-index: 1;
+    border:1px solid white;
 }
 
 #scene_one_fourth_layer {
@@ -64,65 +67,54 @@ class content
 /*--- SCENE 2 ---*/
 #Scene2 {
     background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 3 ---*/
 #Scene3 {
     background: url(../Fotos/Szene03_Krankenzimmer.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 4 ---*/
 #Scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 5 ---*/
 #Scene5 {
     background: url(../Fotos/Szene05_DunkleStrasse.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 6 ---*/
 #Scene6 {
     background: url(../Fotos/Szene06_StrasseMitBergen.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 7 ---*/
 #Scene7 {
     background: url(../Fotos/Szene07_Gala.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 8 ---*/
 #Scene8 {
     background: url(../Fotos/Szene08_DunkleStrasse.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 9 ---*/
 #Scene9 {
     background: url(../Fotos/Szene09_JahrmarktMitKind.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 10 ---*/
 #Scene10 {
     background: url(../Fotos/Szene10_Cafe.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 11 ---*/
 #Scene11 {
     background: url(../Fotos/Szene11_Flughafen.jpg) 50% 0;
-    background-size: cover;
 }
 
 /*--- SCENE 12 ---*/
 #Scene12 {
     background: url(../Fotos/Szene12_Konzert.jpg) 50% 0;
-    background-size: cover;
 }
