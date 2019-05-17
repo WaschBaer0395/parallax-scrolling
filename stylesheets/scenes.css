@@ -8,8 +8,9 @@ class content
 .content {
     height:100%;
     width:100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display:flex;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
     /*transform: scale(1);*/
 }
 /*
@@ -29,34 +30,29 @@ class content
 }
 
 /*--- SCENE 1 ---*/
-#Scene1 {
-}
 
 #scene_one_second_layer {
     background: url(../Media/pictures/szene01/laterne.png) 50% 0;
     position: absolute;
-    z-index: 2;
+
+    z-index: 4;
 }
 
 #scene_one_third_layer {
-    margin-top:-190px;
-    margin-left: -30px;
-    background: url(../Media/pictures/szene01/ground.png)50% 0;
+    background: url(../Media/pictures/szene01/ground.png) 50% 0;
     position: absolute;
-    z-index: 1;
-    border:1px solid white;
+    z-index: 3;
 }
 
 #scene_one_fourth_layer {
     background: url(../Media/pictures/szene01/background2.png) 50% 0;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
 }
 
 #scene_one_fifth_layer{
     background: url(../Media/pictures/szene01/background.png) 50% 0 no-repeat;
-    background-size: contain;
-    position: relative;
+    position: absolute;
     z-index: 0;
 }
 
