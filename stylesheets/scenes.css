@@ -1,6 +1,20 @@
 /* stylesheet for Scene 01
 */
 
+/*
+class content
+    for every layer in scene needed
+ */
+.content {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    /*transform: scale(1);*/
+}
+/*
+/////////////////////////////////////
+*/
+
 #Title {
     background: black;
 }
@@ -15,13 +29,10 @@
 
 /*--- SCENE 1 ---*/
 #Scene1 {
-    width: 105%;
-    height: 100%;
     background: url(../Media/pictures/szene01/background.png) 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     z-index: 0;
+
 }
 
 .scene1 {
@@ -32,32 +43,20 @@
 }
 
 #scene_one_second_layer {
-    width: 105%;
-    height: 100%;
     background: url(../Media/pictures/szene01/laterne.png) 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     z-index: 2;
 }
 
 #scene_one_third_layer {
-    width: 105%;
-    height: 100%;
     margin-left: -30px;
     background: url(../Media/pictures/szene01/ground.png) 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     z-index: 1;
 }
 
 #scene_one_fourth_layer {
-    width: 105%;
-    height: 100%;
     background: url(../Media/pictures/szene01/background2.png) 50% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     z-index: 0;
 }
