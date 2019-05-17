@@ -166,6 +166,6 @@ $(document).ready(function () {
     function myFunction() {
         console.log('myFunction()')
     }
-
+//////// END TESTfunction
 
 });
