@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'azonix';
+    src: url('../Media/fonts/azonix/azonix.otf') format("opentype");
+}
+@font-face {
+    font-family: 'adam';
+    src: url("../Media/fonts/Adam.otf") format("opentype");
+}
+@font-face {
+    font-family: 'mesmerize';
+    src: url("../Media/fonts/mesmerize/mesmerize-ul.ttf") format("truetype");
+}
 html {
-    font-family: sans-serif;
+    font-family: mesmerize, sans-serif;
     color: #fff;
     text-shadow: 1px 1px 10px #000;
+}
+h2 {
+    font-family: adam, sans-serif;
 }
 
 body {
