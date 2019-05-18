@@ -45,7 +45,6 @@ $(document).ready(function () {
             .addTo(controller);
     });
 
-
     $("#scene_one_quinn").each(function () {
         var quinn = TweenMax.fromTo($(this), 2, {
             x: $(this).attr('endX'),
@@ -145,7 +144,7 @@ $(document).ready(function () {
         new ScrollMagic.Scene({
             triggerElement: '.three',
             duration: 3000,
-            triggerHook: 1,
+            triggerHook: .6,
             offset: 0
         })
             .setTween(quinn)
