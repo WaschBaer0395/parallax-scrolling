@@ -49,13 +49,35 @@ $(document).ready(function () {
 
             new ScrollMagic.Scene({
                 triggerElement: self,
-                triggerHook: $(this).attr('triggerHook'), // start y !  for use add this to animating div data-hook=" "
+                triggerHook: $(this).attr('hook'), // start y !  for use add this to animating div data-hook=" "
                 duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
                 offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
             })
                 .setTween(fade)
                 .addIndicators({name: "fade"})
                 .addTo(controller);
+        });
+
+        $.each($(".scene1parallax.content"),function (i) {
+
+            var scene1 = TweenMax.fromTo(this, 1, {
+                y: $(this).attr('startY'),
+            },{
+                y: $(this).attr('endY'),
+                ease: Power1.easeInOut
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: self,
+                duration: $(this).data('duration'),
+                triggerHook: $(this).attr('hook'),
+                offset: $(this).data('offset')
+            })
+                .setTween(scene1)
+                .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+                .addTo(controller);
+
+
         });
         /*        // Get the content to be parallaxed over the pinned section.
                 $squares = $(this).find('.square');
@@ -119,29 +141,6 @@ $(document).ready(function () {
             .addTo(controller);
     });
 */
-
-
-
-    $('.scene1_parallax').each(function () {
-
-        var parallax_scene1 = TweenMax.fromTo(this, 1, {
-            y: $(this).attr('startY')
-            },{
-            y: $(this).attr('endY')
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: self,
-            duration: $(this).data('duration'),
-            triggerHook: $(this).attr('hook'),
-            offset: $(this).data('offset')
-        })
-            .setTween(parallax_scene1)
-            .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
-            .addTo(controller);
-
-
-    })
 
 
 
