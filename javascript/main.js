@@ -20,9 +20,8 @@ $(document).ready(function () {
         ///////////////////////////////////////////////
         // fadeIn from the bottom for story sections //
         ///////////////////////////////////////////////
-        $('.fade').each(function () {
-            var fadein_tween = TweenMax
-                .fromTo(this, 1, {
+        $('.fade').each(function (i) {
+            var fade = TweenMax.fromTo(this, 1, {
                     yPercent: 100,
                     xPercent: 0,
                     opacity: 0
@@ -33,13 +32,13 @@ $(document).ready(function () {
                     ease: Power1.easeInOut
                 });
 
-            var scene = new ScrollMagic.Scene({
+            new ScrollMagic.Scene({
                 triggerElement: self,
-                triggerHook: "onEnter",
+                triggerHook: 0.5,
                 duration: $(this).data('duration'),
                 offset: $(this).data('offset')
             })
-                .setTween(fadein_tween)
+                .setTween(fade)
                 .addIndicators({name: "fade"})
                 .addTo(controller);
         });
