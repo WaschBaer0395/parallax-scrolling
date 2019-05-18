@@ -35,7 +35,7 @@ $(document).ready(function () {
         // offset = move start and end trigger together        //
         // duration = how long animation should be             //
         /////////////////////////////////////////////////////////
-        $('.test1').each(function (i) {
+        $('.test1').each(function () {
             var fade = TweenMax.fromTo($(this), 1, {
                     y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
                     x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 .addTo(controller);
         });
 
-        $(".scene1parallax").each(function (i) {
+        $(".scene1parallax").each(function () {
 
             var scene1 = TweenMax.fromTo($(this), 1, {
                 y: $(this).attr('startY'),
@@ -73,14 +73,14 @@ $(document).ready(function () {
                 offset: $(this).data('offset')
             })
                 .setTween(scene1)
-                .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+                .addIndicators({name: "parallax_scene01", colorEnd: "#FFFFFF"})
                 .addTo(controller);
 
 
         });
         // FADE-IN SCENE FOR QUINN SCENE_ONE//
         //////////////////////////////////////
-        $("#scene_one_quinn").each(function (i) {
+        $("#scene_one_quinn").each(function () {
             var quinn = TweenMax.fromTo($(this), 2, {
                 x: $(this).attr('startX'),
                 opacity: $(this).attr('startOpacity'),
@@ -102,7 +102,7 @@ $(document).ready(function () {
         });
 
 
-        $("#scene_one_quinn").each(function (i) {
+        $("#scene_one_quinn").each(function () {
             var quinn = TweenMax.fromTo($(this), 2, {
                 x: $(this).attr('endX'),
                 opacity: $(this).attr('endOpacity'),
@@ -122,6 +122,29 @@ $(document).ready(function () {
                 .addTo(controller);
         });
         // FADE-IN SCENE FOR QUINN SCENE_ONE//
+        //////////////////////////////////////
+
+        // FADE-OUT SCENE_ONE//
+        //////////////////////////////////////
+        $("#Slide3").each(function () {
+            var quinn = TweenMax.fromTo($(this), 2, {
+                opacity: $(this).attr('startOpacity'),
+            },{
+                opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+                ease: Expo.easeOut,
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: '.four',
+                duration: 3000,
+                triggerHook: 1,
+                offset: $(this).data('offset')
+            })
+                .setTween(quinn)
+                .addIndicators({name: "fade_out scene1", colorEnd: "white"})
+                .addTo(controller);
+        });
+        // END FADE-OUT SCENE_ONE//
         //////////////////////////////////////
 
         /*        // Get the content to be parallaxed over the pinned section.
