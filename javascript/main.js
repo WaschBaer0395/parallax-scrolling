@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     var laterne = new TimelineMax({onComplete: myFunction});
     //laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
-    laterne.fromTo('.laterne', 1, {y: 0}, {y: -55});
+    laterne.fromTo('.laterne', 1, {y: 0}, {y: -10});
 
 
     var scene = new ScrollMagic.Scene({
