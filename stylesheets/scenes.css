@@ -23,28 +23,40 @@ class content
     flex-direction: column;
 }
 /*
+SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
 */
 .speechbubble_diamand{
-
+    background: url("../Media/speechbubbles/Endversion Diamant.png");
+    position: absolute;
+    z-index: 99;
 }
 .speechbubble_circle{
-    width:15%;
-    height:30%;
-    bottom:18%;
     background: url("../Media/speechbubbles/Endversion Kreis.png");
     position: absolute;
     z-index: 99;
-    border:1px solid green;
 }
 .speechbubble_square{
-
+    background: url("../Media/speechbubbles/Endversion Viereck.png");
+    position: absolute;
+    z-index: 99;
 }
 
 /*
 /////////////////////////////////////
 
  */
+.speechbubble_circle_scene1{
+    width:15%;
+    height:30%;
+    bottom:18%;
+}
+.speechbubble_square_scene1{
+    width:15%;
+    height:30%;
+    top:18%;
+    right:20%;
+}
 
 .inner_content{
     position: relative;

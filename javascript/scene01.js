@@ -71,7 +71,7 @@ $(document).ready(function () {
 
 // FADE-IN SCENE FOR SPEECHBUBLE_QUINN SCENE_ONE//
 //////////////////////////////////////
-    $(".speechbubble_scene1").each(function () {
+    $(".speechbubble_scene1Quinn").each(function () {
         var quinn = TweenMax.fromTo($(this), 2, {
             x: $(this).attr('startX'),
             opacity: $(this).attr('startOpacity'),
@@ -93,7 +93,7 @@ $(document).ready(function () {
     });
 // FADE-OUT SCENE FOR SPEECHBUBLE_QUINN SCENE_ONE//
 //////////////////////////////////////
-    $(".speechbubble_scene1").each(function () {
+    $(".speechbubble_scene1Quinn").each(function () {
         var quinn = TweenMax.fromTo($(this), 2, {
             x: $(this).attr('startX'),
             opacity: $(this).attr('endOpacity'),
@@ -109,7 +109,6 @@ $(document).ready(function () {
             duration: '50%'
         })
             .setTween(quinn)
-            .addIndicators({name: "speechbubbleQuinnScene1", colorEnd: "yellow"})
             .addTo(controller);
     });
     // END FADE-OUT SCENE FOR SPEECHBUBLE_QUINN SCENE_ONE//
@@ -129,7 +128,6 @@ $(document).ready(function () {
             offset: $(this).data('offset')
         })
             .setTween(quinn)
-            .addIndicators({name: "inner_content_speechbubbles", colorEnd: "pink"})
             .addTo(controller);
     });
 
@@ -151,9 +149,57 @@ $(document).ready(function () {
             offset: $(this).data('offset')
         })
             .setTween(quinn)
-            .addIndicators({name: "fade_out scene1", colorEnd: "white"})
             .addTo(controller);
     });
 // END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
+
+// FADE-IN SCENE FOR SPEECHBUBLE_LACUNA SCENE_ONE//
+//////////////////////////////////////
+    $(".speechbubble_scene1Lacuna").each(function () {
+        var quinn = TweenMax.fromTo($(this), 2, {
+            x: $(this).attr('startX'),
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            x: $(this).attr('endX'),
+            opacity: $(this).attr('endOpacity'),
+            ease: Expo.easeIn,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.three',
+            duration: $(this).data('duration'),
+            triggerHook: $(this).attr('hook'),
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn)
+            .addTo(controller);
+    });
+    // END FADE-IN SCENE FOR SPEECHBUBLE_LACUNA SCENE_ONE//
+//////////////////////////////////////
+
+
+    // FADE-OUT SCENE FOR SPEECHBUBLE_LACUNA SCENE_ONE//
+//////////////////////////////////////
+    $(".speechbubble_scene1Lacuna").each(function () {
+        var quinn = TweenMax.fromTo($(this), 2, {
+            x: $(this).attr('startX'),
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            x: $(this).attr('endX'),
+            opacity: $(this).attr('startOpacity'),
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.three',
+            offset: 5000,
+            duration: '50%'
+        })
+            .setTween(quinn)
+            .addTo(controller);
+    });
+    // END FADE-IN SCENE FOR SPEECHBUBLE_LACUNA SCENE_ONE//
 //////////////////////////////////////
 });
