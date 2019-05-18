@@ -8,7 +8,7 @@ $(document).ready(function () {
         var self = this ;
 
         // Pin the entire section for the number of pixels specified in duration.
-        var pinSectionOne = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: self, 						// The section element
             triggerHook: 0, 							// Sets the pin trigger to the top of the element.
             duration: $(this).data('duration')			// Scroll for this many pixels before unpinning.
@@ -78,6 +78,31 @@ $(document).ready(function () {
 
 
         });
+        // FADE-IN SCENE FOR QUINN SCENE_ONE//
+        //////////////////////////////////////
+        $("#scene_one_quinn").each(function (i) {
+            var quinn = TweenMax.fromTo($(this), 2, {
+                x: $(this).attr('startX'),
+                opacity: $(this).attr('startOpacity'),
+            },{
+                x: $(this).attr('endX'),
+                opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+                ease: Expo.easeOut,
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: self,
+                duration: $(this).data('duration'),
+                triggerHook: $(this).attr('hook'),
+                offset: $(this).data('offset')
+            })
+                .setTween(quinn)
+                .addIndicators({name: "quinn scene", colorEnd: "white"})
+                .addTo(controller);
+        });
+        // FADE-IN SCENE FOR QUINN SCENE_ONE//
+        //////////////////////////////////////
+
         /*        // Get the content to be parallaxed over the pinned section.
                 $squares = $(this).find('.square');
                 // Loop over the squares

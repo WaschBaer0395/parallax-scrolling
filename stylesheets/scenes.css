@@ -40,7 +40,13 @@ class content
 }
 
 /*--- SCENE 1 ---*/
-
+#scene_one_quinn{
+    height:30%;
+    background: url(../Media/pictures/szene01/quinn_scene01.png);
+    position: absolute;
+    bottom:0;
+    z-index: 5;
+}
 #scene_one_second_layer {
     background: url(../Media/pictures/szene01/laterne.png) 50% 0;
     position: absolute;
