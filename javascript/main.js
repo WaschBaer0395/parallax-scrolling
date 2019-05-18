@@ -37,15 +37,15 @@ $(document).ready(function () {
         /////////////////////////////////////////////////////////
         $('.test1').each(function (i) {
             var fade = TweenMax.fromTo(this, 1, {
-                    y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
-                    x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
-                    opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
-                }, {
-                    y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
-                    x: $(this).attr('endX'), // end x !  for use add this to animating div data-endX=" "
-                    opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-                    ease: Power1.easeInOut
-                });
+                y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
+                x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
+                opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+            }, {
+                y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
+                x: $(this).attr('endX'), // end x !  for use add this to animating div data-endX=" "
+                opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+                ease: Power1.easeInOut
+            });
 
             new ScrollMagic.Scene({
                 triggerElement: self,
@@ -80,7 +80,6 @@ $(document).ready(function () {
                         .addTo(controller)
                 })*/
     });
-
 
 
     //////////////////////////////////////////////////
@@ -121,12 +120,11 @@ $(document).ready(function () {
 */
 
 
-
-    $('.scene1_parallax').each(function () {
+    $.each($('.scene1_parallax.content'),function () {
 
         var parallax_scene1 = TweenMax.fromTo(this, 1, {
             y: $(this).attr('startY')
-            },{
+        }, {
             y: $(this).attr('endY')
         });
 
@@ -142,9 +140,6 @@ $(document).ready(function () {
 
 
     })
-
-
-
 
 
 });

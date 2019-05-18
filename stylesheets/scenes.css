@@ -8,7 +8,7 @@ class content
 .content {
     height:100%;
     width:100%;
-    display:flex;
+    /*display:flex;*/
     background-repeat: no-repeat !important;
     background-size: contain !important;
 
