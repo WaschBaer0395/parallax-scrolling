@@ -21,6 +21,7 @@ class content
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: flex;
 }
 /*
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
