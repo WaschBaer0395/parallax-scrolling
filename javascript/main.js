@@ -5,15 +5,15 @@ $(document).ready(function () {
 
     $.each($(".section"), function () {
 
-        var self = this;
+        var self = this ;
 
         // Pin the entire section for the number of pixels specified in duration.
         var pinSectionOne = new ScrollMagic.Scene({
-            triggerElement: this, 						// The section element
+            triggerElement: self, 						// The section element
             triggerHook: 0, 							// Sets the pin trigger to the top of the element.
             duration: $(this).data('duration')			// Scroll for this many pixels before unpinning.
         })
-            .setPin(this)
+            .setPin(self)
             .addIndicators({name: "Slide"})
             .addTo(controller);
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
         // duration = how long animation should be             //
         /////////////////////////////////////////////////////////
         $('.test1').each(function (i) {
-            var fade = TweenMax.fromTo(this, 1, {
+            var fade = TweenMax.fromTo($(this), 1, {
                     y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
                     x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
                     opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
@@ -58,13 +58,12 @@ $(document).ready(function () {
                 .addTo(controller);
         });
 
-        $.each($(".scene1parallax.content"),function (i) {
+        $(".scene1parallax").each(function (i) {
 
-            var scene1 = TweenMax.fromTo(this, 1, {
+            var scene1 = TweenMax.fromTo($(this), 1, {
                 y: $(this).attr('startY'),
             },{
                 y: $(this).attr('endY'),
-                ease: Power1.easeInOut
             });
 
             new ScrollMagic.Scene({
