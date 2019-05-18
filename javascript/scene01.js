@@ -132,6 +132,27 @@ $(document).ready(function () {
     });
 
 
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide3").each(function () {
+        var quinn = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.three',
+            duration: 3000,
+            triggerHook: 1,
+            offset: 0
+        })
+            .setTween(quinn)
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
 // FADE-OUT SCENE_ONE//
 //////////////////////////////////////
     $("#Slide3").each(function () {
