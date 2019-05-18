@@ -112,7 +112,7 @@ $(document).ready(function () {
 
     var laterne = new TimelineMax({onComplete: myFunction});
     //laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
-    laterne.fromTo('.laterne', 1, {y: 0}, {y: -55});
+    laterne.fromTo('.laterne', 1, {y: 0}, {y: -70});
 
 
     var scene = new ScrollMagic.Scene({
@@ -133,7 +133,7 @@ $(document).ready(function () {
 
     var boden = new TimelineMax({onComplete: myFunction});
     //boden.fromTo('.ground', 1, {x: 10}, {x: 0});
-    boden.fromTo('.ground', 1, {y: 0}, {y: -55});
+    boden.fromTo('.ground', 1, {y: 0}, {y: -70});
 
 
     var scene = new ScrollMagic.Scene({
