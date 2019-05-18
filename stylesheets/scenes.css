@@ -25,6 +25,36 @@ class content
 /*
 /////////////////////////////////////
 */
+.speechbubble_diamand{
+
+}
+.speechbubble_circle{
+    width:15%;
+    height:30%;
+    bottom:18%;
+    background: url("../Media/speechbubbles/Endversion Kreis.png");
+    position: absolute;
+    z-index: 99;
+    border:1px solid green;
+}
+.speechbubble_square{
+
+}
+
+/*
+/////////////////////////////////////
+
+ */
+
+.inner_content{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    top:30%;
+    width:70%;
+    height:40%;
+    border:1px solid yellow;
+}
 
 
 #Title {

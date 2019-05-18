@@ -124,6 +124,51 @@ $(document).ready(function () {
         // FADE-IN SCENE FOR QUINN SCENE_ONE//
         //////////////////////////////////////
 
+
+
+        // FADE-IN SCENE FOR SPEECHBUBLE_QUINN SCENE_ONE//
+        //////////////////////////////////////
+        $(".speechbubble_scene1").each(function () {
+            var quinn = TweenMax.fromTo($(this), 2, {
+                x: $(this).attr('startX'),
+                opacity: $(this).attr('startOpacity'),
+            },{
+                x: $(this).attr('endX'),
+                opacity: $(this).attr('endOpacity'),
+                ease: Expo.easeIn,
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: '.three',
+                duration: $(this).data('duration'),
+                triggerHook: $(this).attr('hook'),
+                offset: $(this).data('offset')
+            })
+                .setTween(quinn)
+                .addIndicators({name: "speechbubbleQuinnScene1", colorEnd: "yellow"})
+                .addTo(controller);
+        });
+        $(".inner_content").each(function () {
+            var quinn = TweenMax.fromTo($(this), 2, {
+                opacity: $(this).attr('startOpacity'),
+            },{
+                opacity: $(this).attr('endOpacity'),
+                ease: Expo.easeIn,
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: '.three',
+                duration: $(this).data('duration'),
+                triggerHook: $(this).attr('hook'),
+                offset: $(this).data('offset')
+            })
+                .setTween(quinn)
+                .addIndicators({name: "inner_content_speechbubbles", colorEnd: "pink"})
+                .addTo(controller);
+        });
+
+
+
         // FADE-OUT SCENE_ONE//
         //////////////////////////////////////
         $("#Slide3").each(function () {
