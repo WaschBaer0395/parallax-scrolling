@@ -67,7 +67,7 @@ $(document).ready(function () {
             });
 
             new ScrollMagic.Scene({
-                triggerElement: self,
+                triggerElement: '.three',
                 duration: $(this).data('duration'),
                 triggerHook: $(this).attr('hook'),
                 offset: $(this).data('offset')
@@ -91,13 +91,34 @@ $(document).ready(function () {
             });
 
             new ScrollMagic.Scene({
-                triggerElement: self,
+                triggerElement: '.three',
                 duration: $(this).data('duration'),
                 triggerHook: $(this).attr('hook'),
                 offset: $(this).data('offset')
             })
                 .setTween(quinn)
                 .addIndicators({name: "quinn scene", colorEnd: "white"})
+                .addTo(controller);
+        });
+
+
+        $("#scene_one_quinn").each(function (i) {
+            var quinn = TweenMax.fromTo($(this), 2, {
+                x: $(this).attr('endX'),
+                opacity: $(this).attr('endOpacity'),
+            },{
+                x: $(this).attr('startX'),
+                opacity: $(this).attr('startOpacity'),
+                ease: Expo.easeIn,
+            });
+
+            new ScrollMagic.Scene({
+                triggerElement: '.three',
+                offset: 5000,
+                duration: '50%'
+            })
+                .setTween(quinn)
+                .addIndicators({name: "quinn scene_fade_out", colorEnd: "white"})
                 .addTo(controller);
         });
         // FADE-IN SCENE FOR QUINN SCENE_ONE//
