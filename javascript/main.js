@@ -112,7 +112,7 @@ $(document).ready(function () {
 
     var laterne = new TimelineMax({onComplete: myFunction});
     //laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
-    laterne.fromTo('.laterne', 1, {y: 0}, {y: -40});
+    laterne.fromTo('.laterne', 1, {y: 0}, {y: -55});
 
 
     var scene = new ScrollMagic.Scene({
@@ -133,7 +133,7 @@ $(document).ready(function () {
 
     var boden = new TimelineMax({onComplete: myFunction});
     //boden.fromTo('.ground', 1, {x: 10}, {x: 0});
-    boden.fromTo('.ground', 1, {y: 0}, {y: -40});
+    boden.fromTo('.ground', 1, {y: 0}, {y: -55});
 
 
     var scene = new ScrollMagic.Scene({
@@ -147,7 +147,7 @@ $(document).ready(function () {
 
     var building = new TimelineMax({onComplete: myFunction});
     //building.fromTo('.building', 1, {x: 20}, {x: 0});
-    building.fromTo('.building', 1, {y: 0}, {y: -35});
+    building.fromTo('.background', 1, {y: 0}, {y: -20});
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
@@ -164,7 +164,7 @@ $(document).ready(function () {
 
     var background2 = new TimelineMax({onComplete: myFunction});
     //background2.fromTo('.background', 1, {x: 0}, {x: 20});
-    background2.fromTo('.background', 1, {y: 0}, {y: -25});
+    background2.fromTo('.building', 1, {y: 0}, {y: -50});
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
