@@ -121,73 +121,30 @@ $(document).ready(function () {
 */
 
 
-    // TESTfunction for Szene_1 parallax layer
+
+    $('.scene1_parallax').each(function () {
+
+        var parallax_scene1 = TweenMax.fromTo(this, 1, {
+            y: $(this).attr('startY')
+            },{
+            y: $(this).attr('endY')
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: self,
+            duration: $(this).data('duration'),
+            triggerHook: $(this).attr('hook'),
+            offset: $(this).data('offset')
+        })
+            .setTween(parallax_scene1)
+            .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
+            .addTo(controller);
 
 
-    var laterne = new TimelineMax({onComplete: myFunction});
-    //laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
-    laterne.fromTo('.laterne', 1, {y: 0}, {y: -70});
-
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#Slide3"
-        , duration: 1200
-        , triggerHook: .5
-        , offset: 3500
     })
-        .setTween(laterne)
-        .addIndicators({name: "pin scene", colorEnd: "#FFFFFF"})
 
 
-        .addTo(controller);
-
-    function myFunction() {
-        console.log('myFunction()')
-    }
-
-    var boden = new TimelineMax({onComplete: myFunction});
-    //boden.fromTo('.ground', 1, {x: 10}, {x: 0});
-    boden.fromTo('.ground', 1, {y: 0}, {y: -70});
 
 
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#Slide3"
-        , duration: 1200
-        , triggerHook: .5
-        , offset: 3500
-    })
-        .setTween(boden)
-        .addTo(controller);
-
-    var building = new TimelineMax({onComplete: myFunction});
-    //building.fromTo('.building', 1, {x: 20}, {x: 0});
-    building.fromTo('.background', 1, {y: 0}, {y: -20});
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#Slide3"
-        , duration: 1200
-        , triggerHook: 0.5
-        , offset: 3500
-    })
-        .setTween(building)
-        .addTo(controller);
-
-    function myFunction() {
-        console.log('myFunction()')
-    }
-
-    var background2 = new TimelineMax({onComplete: myFunction});
-    //background2.fromTo('.background', 1, {x: 0}, {x: 20});
-    background2.fromTo('.building', 1, {y: 0}, {y: -50});
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#Slide3"
-        , duration: 1200
-        , triggerHook: .5
-        , offset: 3500
-    })
-        .setTween(background2)
-        .addTo(controller);
-//////// END TESTfunction
 
 });
