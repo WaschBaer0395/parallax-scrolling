@@ -58,7 +58,7 @@ class content
 }
 
 #scene_one_fifth_layer{
-    background: url(../Media/pictures/szene01/background2.png) 50% 0 no-repeat;
+    background: url(../Media/pictures/szene01/background2.png) 50% 0;
     position: absolute;
     z-index: 0;
 }
