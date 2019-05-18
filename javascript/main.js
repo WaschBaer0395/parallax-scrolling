@@ -36,8 +36,8 @@ $(document).ready(function () {
             var scene = new ScrollMagic.Scene({
                 triggerElement: self,
                 triggerHook: "onEnter",
-                duration: 800,
-                offset: 400
+                duration: $(this).data('duration'),
+                offset: $(this).data('offset')
             })
                 .setTween(fadein_tween)
                 .addIndicators({name: "fade"})
@@ -68,6 +68,7 @@ $(document).ready(function () {
     });
 
 
+
     //////////////////////////////////////////////////
     // Move objects on trigger                      //
     // x1 = start x                                 //
@@ -77,6 +78,7 @@ $(document).ready(function () {
     // offset = move start and end trigger together //
     // duration = in % how long animation should be //
     //////////////////////////////////////////////////
+    /*
     $(".move").each(function () { // runs as soon as .move is visible in window
         var fromBottomTimeline = new TimelineMax();
         var fromBottomFrom = TweenMax.from(this, 1, {
@@ -102,6 +104,7 @@ $(document).ready(function () {
             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
     });
+*/
 
 
     // TESTfunction for Szene_1 parallax layer
@@ -109,12 +112,12 @@ $(document).ready(function () {
 
     var laterne = new TimelineMax({onComplete: myFunction});
     //laterne.fromTo('.laterne', 1, {x: 40}, {x: 0});
-    laterne.fromTo('.laterne', 1, {y: 0}, {y: -10});
+    laterne.fromTo('.laterne', 1, {y: 0}, {y: -40});
 
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
-        , duration: 900
+        , duration: 1200
         , triggerHook: .5
         , offset: 3500
     })
@@ -130,7 +133,7 @@ $(document).ready(function () {
 
     var boden = new TimelineMax({onComplete: myFunction});
     //boden.fromTo('.ground', 1, {x: 10}, {x: 0});
-    boden.fromTo('.ground', 1, {y: 0}, {y: -10});
+    boden.fromTo('.ground', 1, {y: 0}, {y: -40});
 
 
     var scene = new ScrollMagic.Scene({
@@ -142,21 +145,9 @@ $(document).ready(function () {
         .setTween(boden)
         .addTo(controller);
 
-    var background2 = new TimelineMax({onComplete: myFunction});
-    //background2.fromTo('.background', 1, {x: 0}, {x: 20});
-    background2.fromTo('.background', 1, {y: 0}, {y: -10});
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#Slide3"
-        , duration: 1200
-        , triggerHook: .5
-        , offset: 3500
-    })
-        .setTween(background2)
-        .addTo(controller);
     var building = new TimelineMax({onComplete: myFunction});
     //building.fromTo('.building', 1, {x: 20}, {x: 0});
-    building.fromTo('.building', 1, {y: 0}, {y: -40});
+    building.fromTo('.building', 1, {y: 0}, {y: -35});
 
     var scene = new ScrollMagic.Scene({
         triggerElement: "#Slide3"
@@ -170,6 +161,19 @@ $(document).ready(function () {
     function myFunction() {
         console.log('myFunction()')
     }
+
+    var background2 = new TimelineMax({onComplete: myFunction});
+    //background2.fromTo('.background', 1, {x: 0}, {x: 20});
+    background2.fromTo('.background', 1, {y: 0}, {y: -25});
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#Slide3"
+        , duration: 1200
+        , triggerHook: .5
+        , offset: 3500
+    })
+        .setTween(background2)
+        .addTo(controller);
 //////// END TESTfunction
 
 });
