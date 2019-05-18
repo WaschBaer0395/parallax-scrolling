@@ -45,7 +45,6 @@ $(document).ready(function () {
             .addTo(controller);
     });
 
-
     $("#scene_one_quinn").each(function () {
         var quinn = TweenMax.fromTo($(this), 2, {
             x: $(this).attr('endX'),
