@@ -7,11 +7,9 @@ class content
  */
 .content {
     height:100%;
-
     /*display:flex;*/
     background-repeat: no-repeat !important;
     background-size: contain !important;
-
     /*transform: scale(1);*/
 }
 
@@ -83,7 +81,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #Story1 {
-    background: Black;
+    background: black;
 }
 
 /*--- SCENE 1 ---*/
@@ -123,56 +121,56 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 
 /*--- SCENE 2 ---*/
 #Scene2 {
-    background: url(../Fotos/Szene02_Labor.jpg);
+    background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
 
 }
 
 /*--- SCENE 3 ---*/
 #Scene3 {
-    background: url(../Fotos/Szene03_Krankenzimmer.jpg);
+    background: url(../Fotos/Szene03_Krankenzimmer.jpg)50% 0;
 }
 
 /*--- SCENE 4 ---*/
 #Scene4 {
-    background: url(../Fotos/Szene04_Presse.jpg);
+    background: url(../Fotos/Szene04_Presse.jpg)50% 0;
 }
 
 /*--- SCENE 5 ---*/
 #Scene5 {
-    background: url(../Fotos/Szene05_DunkleStrasse.jpg);
+    background: url(../Fotos/Szene05_DunkleStrasse.jpg)50% 0;
 }
 
 /*--- SCENE 6 ---*/
 #Scene6 {
-    background: url(../Fotos/Szene06_StrasseMitBergen.jpg);
+    background: url(../Fotos/Szene06_StrasseMitBergen.jpg)50% 0;
 }
 
 /*--- SCENE 7 ---*/
 #Scene7 {
-    background: url(../Fotos/Szene07_Gala.jpg);
+    background: url(../Fotos/Szene07_Gala.jpg)50% 0;
 }
 
 /*--- SCENE 8 ---*/
 #Scene8 {
-    background: url(../Fotos/Szene08_DunkleStrasse.jpg);
+    background: url(../Fotos/Szene08_DunkleStrasse.jpg)50% 0;
 }
 
 /*--- SCENE 9 ---*/
 #Scene9 {
-    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg);
+    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg)50% 0;
 }
 
 /*--- SCENE 10 ---*/
 #Scene10 {
-    background: url(../Fotos/Szene10_Cafe.jpg);
+    background: url(../Fotos/Szene10_Cafe.jpg)50% 0;
 }
 
 /*--- SCENE 11 ---*/
 #Scene11 {
-    background: url(../Fotos/Szene11_Flughafen.jpg);
+    background: url(../Fotos/Szene11_Flughafen.jpg)50% 0;
 }
 
 /*--- SCENE 12 ---*/
 #Scene12 {
-    background: url(../Fotos/Szene12_Konzert.jpg);
+    background: url(../Fotos/Szene12_Konzert.jpg)50% 0;
 }

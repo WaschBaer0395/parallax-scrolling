@@ -9,6 +9,8 @@
     font-size: 7vh;
     margin-top: -30%;
     letter-spacing: 0.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
 
 }
 .timestamp{
