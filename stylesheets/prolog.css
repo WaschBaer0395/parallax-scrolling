@@ -40,12 +40,11 @@
 .textblock{
     font-size: 3.5vh;
     border:1px solid white;
+    text-align: justify;
 }
-#prologtest{
-
-}
-.endProlog{
+.textline{
     ffont-size: 5vh;
+    text-align: center;
 }
 #Slide2{
     background-color: black;
