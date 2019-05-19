@@ -1,7 +1,7 @@
 /* stylesheet for prolog
 */
 .main_title{
-    font-size: 9vh;
+    font-size: 10vh;
 }
 .timestamp{
     font-family: "Courier New", serif;
@@ -18,14 +18,12 @@
     box-sizing:content-box;
 }
 #quote{
-    font-size: 6vh;
+    font-size: 7vh;
     font-style: italic;
 }
 #description{
-    font-size: 4vh;
+    font-size: 5vh;
     text-align: center;
-    margin-right: 10%;
-    margin-left: 10%;
 }
 
 /* Animation */
