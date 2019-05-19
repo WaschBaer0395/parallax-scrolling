@@ -39,22 +39,15 @@
 }
 .textblock{
     font-size: 3.5vh;
-    text-align: justify;
-    margin-right: 10%;
-    margin-left: 10%;
-    position: absolute;
-}
-.endProlog{
-    text-align: center;
-    font-size: 5vh;
-    position: absolute;
-    border:2px solid orange;
+    border:1px solid white;
 }
 #prologtest{
-    top:20%;
+
+}
+.endProlog{
+    ffont-size: 5vh;
 }
 #Slide2{
-    display: flex;
     background-color: black;
 }
 /* Animation */

@@ -77,6 +77,12 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 
 #Prolog {
     background: black;
+    border:1px solid green;
+    width:70%;
+    height:50%;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #Story1 {
