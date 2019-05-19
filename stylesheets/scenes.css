@@ -6,7 +6,7 @@ class content
     for every layer in scene needed
  */
 .content {
-    display: inline-block;
+    height: 100%;
     background-repeat: no-repeat !important;
     background-size: contain !important;
 }
@@ -17,6 +17,7 @@ class content
     flex-direction: column;
     display: flex;
 }
+
 /*
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
