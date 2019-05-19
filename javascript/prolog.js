@@ -37,4 +37,85 @@ $(document).ready(function () {
             //.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"})
             .addTo(controller);
     });
+
+    $('.textslide_down').each(function () {
+        var fade = TweenMax.fromTo($(this), 1, {
+            y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
+            opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+        }, {
+            y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Power1.easeInOut
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '#Slide2',
+            triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
+            duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
+            offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
+        })
+            .setTween(fade)
+            //.addIndicators({name: "slide_down"})
+            .addTo(controller);
+    });
+
+    $('.textslide_down').each(function () {
+        var fade = TweenMax.fromTo($(this), 1, {
+            y: $(this).attr('endY'), // start y !  for use add this to animating div data-startY=" "
+            opacity: $(this).attr('endOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+        }, {
+            y: $(this).attr('startY'), // end y !  for use add this to animating div data-endY=" "
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Power1.easeInOut
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '#Slide2',
+            triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
+            duration: 500, // start y !  for use add this to animating div data-duration=" "
+            offset: 1500 // start y !  for use add this to animating div data-offset=" "
+        })
+            .setTween(fade)
+            //.addIndicators({name: "slide_down"})
+            .addTo(controller);
+    });
+
+    $('.textslide_up').each(function () {
+        var fade = TweenMax.fromTo($(this), 1, {
+            y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
+            opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+        }, {
+            y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: SlowMo.ease.config(0.5, 0.4, false)
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '#Slide2',
+            triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
+            duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
+            offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
+        })
+            .setTween(fade)
+            .addIndicators({name: "slide_up"})
+            .addTo(controller);
+    });
+
+    $('.textslide_up').each(function () {
+        var fade = TweenMax.fromTo($(this), 1, {
+            opacity: $(this).attr('endOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '#Slide2',
+            triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
+            duration: 500, // start y !  for use add this to animating div data-duration=" "
+            offset: 2600 // start y !  for use add this to animating div data-offset=" "
+        })
+            .setTween(fade)
+            //.addIndicators({name: "slide_down"})
+            .addTo(controller);
+    });
 });

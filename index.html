@@ -16,7 +16,8 @@
     <div class="content story" id="Title">
         <div class="textfade_Slide1 main_title" data-duration="800" data-offset="400" hook="0.5" startX="0" startY="100" endX="0"
              endY="0" startOpacity="0" endOpacity="1">
-            <h2>LACUNA INDUSTRIES</h2>
+            <h2>LACUNA</h2><br>
+            <h3 id="logo">INDUSTRIES</h3>
         </div>
         <div class="textfade_Slide1" id="quote" data-duration="800" data-offset="1800" hook="0.5" startX="0" startY="100" endX="0"
              endY="-50" startOpacity="0" endOpacity="1">
@@ -25,7 +26,8 @@
         <!--
         (fade in, unter dem Paket von oben, also etwas unter der Mitte)
         -->
-        <div class="textfade_Slide1" id="description" data-duration="800" data-offset="1000" hook="0.5" startX="0" startY="100"
+        <div class="textfade_Slide1" id="description" data-duration="800" data-offset="1200" hook="0.5" startX="0"
+             startY="100"
              endX="0" endY="0" startOpacity="0" endOpacity="1">
             <div>Ein Unternehmen, welches sich auf KI Technik-Gadgets spezialisiert hat, um den Alltag des Menschen zu
                 erleichtern.
@@ -46,43 +48,49 @@
     <div class="section_inner content story" id="Prolog">
         <div class="fade" data-duration="800" data-offset="400">
 
-            <h2>PROLOG</h2>
             <!--
             (kommt von oben rein)
             -->
-            <div>Durchbruch und immer noch Haupteinnahmequelle ist "EZY". Ein Sprachsystem, das die Gewohnheiten eines
-                Nutzers studiert und ihn anhand der Daten an wichtige Dinge erinnert.
+            <div class="textslide_down textblock" data-duration="800" data-offset="400" startY="-200"
+                 endY="120" startOpacity="0" endOpacity="1" endOffset="1500">
+                <span>Durchbruch und immer noch Haupteinnahmequelle ist "EZY".</span><br>
+                <span>Ein Sprachsystem, das die Gewohnheiten eines Nutzers studiert und ihn anhand der Daten an wichtige Dinge erinnert.</span>
                 Besonderheit der Systeme von Lacuna ist die Möglichkeit der KI eine Persönlichkeit zuzuweisen, die mit
                 Hilfe einer Analyse bestimmt mit welchem Charaktertyp und mit welcher Popkultur der Nutzer am ehesten
-                kooperiert. Besonders wichtig bei Lacunas Diät-Helfer "Khalory" und Styling-Assistent "Glam0r", die im
+                kooperiert. <br>Besonders wichtig bei Lacunas Diät-Helfer "Khalory" und Styling-Assistent "Glam0r", die im
                 engen Kontakt mit dem Gemütszustand des Kunden stehen und basierend auf diesem agieren.
             </div>
             <!--
             (kommt später als der obere Text von unten nach oben, schiebt den vorherigen komplett weg)
             -->
-            <div>Ein Projekt, das gerne von der Chefetage und Geschäftsleiter Tyrell Ashton unter den Teppich gekehrt
-                wird, ist ein Medizin-Gadget, das in Kooperation mit einer Entzugsklinik entstand und Süchtigen beim
-                Entzug im Eigenheim unterstützen sollte. Dies ging so lange gut, bis "Crave" jegliche Art von Nahrung
-                als illegale Droge erkannte und den Süchtigen dazu anwies sich von diesen loszureißen und fernzuhalten.
-                Daraufhin produzierte Lacuna aus einer Marketing-Strategie heraus eine Saison lang Robo-Tiere für Kinder
-                mit Allergien.
+            <div class="textslide_up textblock" data-duration="400" data-offset="1500"
+                 startY="500" endY="-150" startOpacity="0" endOpacity="1">
+                <p>Ein Projekt, das gerne von der Chefetage und Geschäftsleiter Tyrell Ashton unter den Teppich gekehrt
+                    wird, ist ein Medizin-Gadget, das in Kooperation mit einer Entzugsklinik entstand und Süchtigen beim
+                    Entzug im Eigenheim unterstützen sollte. <br> Dies ging so lange gut, bis "Crave" jegliche Art von
+                    Nahrung als illegale Droge erkannte und den Süchtigen dazu anwies sich von diesen loszureißen und
+                    fernzuhalten. <br>Daraufhin produzierte Lacuna aus einer Marketing-Strategie heraus eine Saison lang Robo-Tiere für
+                    Kinder
+                    mit Allergien.</p>
             </div>
-        </div>
-        <!--
-        Obere Texte verschwinden und folgender taucht in der Mitte des Bildschirms auf:
-        -->
-        <div>An all diesen Projekten arbeitete Quinn Walker mit.
-            „What is progress without risk? A different route to the same old destination.“
-        </div>
-        <!--
-        Text verschwindet und folgender kommt von unten nach oben
-        -->
-        <div> Als Senior UX-Designerin ist sie auf die Untersuchung wie Nutzer auf KIs reagieren und
-            Persönlichkeits-Kalibrierung spezialisiert. Nach "Crave" schlug Quinn dem Unternehmen einen Richtungswechsel
-            vor: Humanoide Androiden mit Lacunas Besonderheit: Hoch entwickelte Anpassung an Persönlichkeiten.
-            Ihr Vorschlag wurde nicht nur abgelehnt, sie wurde regelrecht ausgelacht und an ihre Position erinnert, in
-            der sie gezwungen wurde zu verharren. Lacuna wollte lediglich bei unterstützender Technik bleiben und ein
-            weiteres Fiasko a la "Crave" vermeiden.
+            <!--Obere Texte verschwinden und folgender taucht in der Mitte des Bildschirms auf:-->
+            <div class="textslide_up endProlog" data-duration="800" data-offset="2600"
+                 startY="-150" endY="-150" startOpacity="0" endOpacity="1">
+                An all diesen Projekten arbeitete Quinn Walker mit.
+            </div>
+            <div class="textslide_up endProlog" data-duration="800" data-offset="2600"
+                 startY="500" endY="-150" startOpacity="0" endOpacity="1">„What is progress without risk?“</div>
+            <div>„A different route to the same old destination.“</div>
+            <!--Text verschwindet und folgender kommt von unten nach oben-->
+            <div class="textfade_Slide1 endProlog" data-duration="800" data-offset="200" hook="0.5" startX="0"
+                 startY="0" endX="0" endY="0" startOpacity="0" endOpacity="1">
+                Als Senior UX-Designerin ist sie auf die Untersuchung wie Nutzer auf KIs reagieren und
+                Persönlichkeits-Kalibrierung spezialisiert. Nach "Crave" schlug Quinn dem Unternehmen einen Richtungswechsel
+                vor: Humanoide Androiden mit Lacunas Besonderheit: Hoch entwickelte Anpassung an Persönlichkeiten.
+                Ihr Vorschlag wurde nicht nur abgelehnt, sie wurde regelrecht ausgelacht und an ihre Position erinnert, in
+                der sie gezwungen wurde zu verharren. Lacuna wollte lediglich bei unterstützender Technik bleiben und ein
+                weiteres Fiasko a la "Crave" vermeiden.
+            </div>
         </div>
     </div>
 </div>

@@ -161,7 +161,7 @@ $(document).ready(function () {
             offset: 0
         })
             .setTween(quinn3)
-            .addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
             .addTo(controller);
     });
 // END FADE-IN SCENE_ONE//
