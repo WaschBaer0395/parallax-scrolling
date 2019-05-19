@@ -101,21 +101,25 @@ $(document).ready(function () {
             .addTo(controller);
     });
 
-    $('.textslide_up').each(function () {
+    $('.text3').each(function () {
         var fade = TweenMax.fromTo($(this), 1, {
-            opacity: $(this).attr('endOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+            y: $(this).attr('startY'),
+            opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
         }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            y: $(this).attr('endY'),
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
         });
 
         new ScrollMagic.Scene({
             triggerElement: '#Slide2',
             triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
-            duration: 500, // start y !  for use add this to animating div data-duration=" "
-            offset: 2600 // start y !  for use add this to animating div data-offset=" "
+            duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
+            offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
         })
             .setTween(fade)
             //.addIndicators({name: "slide_down"})
             .addTo(controller);
     });
+
+
 });
