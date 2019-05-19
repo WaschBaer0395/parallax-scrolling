@@ -17,7 +17,7 @@ $(document).ready(function () {
             offset: $(this).data('offset')
         })
             .setTween(scene1)
-            .addIndicators({name: "parallax_scene01", colorEnd: "#FFFFFF"})
+            //.addIndicators({name: "parallax_scene01", colorEnd: "#FFFFFF"})
             .addTo(controller);
 
 
@@ -41,7 +41,7 @@ $(document).ready(function () {
             offset: $(this).data('offset')
         })
             .setTween(quinn)
-            .addIndicators({name: "quinn scene", colorEnd: "white"})
+            //.addIndicators({name: "quinn scene", colorEnd: "white"})
             .addTo(controller);
     });
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
             duration: '50%'
         })
             .setTween(quinn)
-            .addIndicators({name: "quinn scene_fade_out", colorEnd: "white"})
+            //.addIndicators({name: "quinn scene_fade_out", colorEnd: "white"})
             .addTo(controller);
     });
 // FADE-IN SCENE FOR QUINN SCENE_ONE//
@@ -87,7 +87,7 @@ $(document).ready(function () {
             offset: $(this).data('offset')
         })
             .setTween(quinn)
-            .addIndicators({name: "speechbubbleQuinnScene1", colorEnd: "yellow"})
+            //.addIndicators({name: "speechbubbleQuinnScene1", colorEnd: "yellow"})
             .addTo(controller);
     });
 // FADE-OUT SCENE FOR SPEECHBUBLE_QUINN SCENE_ONE//
@@ -129,50 +129,6 @@ $(document).ready(function () {
             .setTween(quinn)
             .addTo(controller);
     });
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide3").each(function () {
-        var quinn = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.three',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn)
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide3").each(function () {
-        var quinn = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.four',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn)
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
 
 
 // FADE-IN SCENE FOR SPEECHBUBLE_LACUNA SCENE_ONE//

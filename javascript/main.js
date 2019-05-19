@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $.each($(".section"), function () {
 
-        var self = this ;
+        var self = this;
 
         // Pin the entire section for the number of pixels specified in duration.
         new ScrollMagic.Scene({
@@ -14,9 +14,8 @@ $(document).ready(function () {
             duration: $(this).data('duration')			// Scroll for this many pixels before unpinning.
         })
             .setPin(self)
-            .addIndicators({name: "Slide"})
+            //.addIndicators({name: "Slide"})
             .addTo(controller);
-
 
 
         /*        // Get the content to be parallaxed over the pinned section.
@@ -42,7 +41,6 @@ $(document).ready(function () {
                         .addTo(controller)
                 })*/
     });
-
 
 
     //////////////////////////////////////////////////
@@ -82,10 +80,326 @@ $(document).ready(function () {
     });
 */
 
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide3").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.three',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            .addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide3").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.four',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
 
 
+    // FADE-IN SCENE_ONE//
+// //////////////////////////////////////
+    $("#Slide4").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.four',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// // END FADE-OUT SCENE_ONE//
+// //////////////////////////////////////
+// // FADE-OUT SCENE_ONE//
+// //////////////////////////////////////
+    $("#Slide4").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.five',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// // END FADE-OUT SCENE_ONE//
+// //////////////////////////////////////
 
 
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide5").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.five',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide5").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.six',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
+
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide6").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.six',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide6").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.seven',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
+
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide7").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.seven',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide7").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.eight',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
+
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide8").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.eight',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide8").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.nine',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
+
+    // FADE-IN SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide9").each(function () {
+        var quinn3 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('endOpacity'),
+        }, {
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.nine',
+            duration: 3000,
+            triggerHook: .6,
+            offset: 0
+        })
+            .setTween(quinn3)
+            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+// FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+    $("#Slide9").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '.ten',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
 
 
 });
