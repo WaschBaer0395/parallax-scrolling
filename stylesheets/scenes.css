@@ -6,11 +6,9 @@ class content
     for every layer in scene needed
  */
 .content {
-    height:100%;
-    /*display:flex;*/
+    display: inline-block;
     background-repeat: no-repeat !important;
     background-size: contain !important;
-    /*transform: scale(1);*/
 }
 
 .story{
@@ -90,31 +88,27 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }*/
 #scene_one_quinn{
     height:30%;
-    background: url(../Media/pictures/szene01/quinn_scene01.png);
     position: absolute;
     bottom:0;
     z-index: 5;
 }
 #scene_one_second_layer {
-    background: url(../Media/pictures/szene01/laterne.png);
     position: absolute;
     z-index: 4;
 }
 
 #scene_one_third_layer {
-    background: url(../Media/pictures/szene01/ground.png);
     position: absolute;
     z-index: 3;
 }
 
 #scene_one_fourth_layer {
-    background: url(../Media/pictures/szene01/background.png);
+    border:solid red 1px;
     position: absolute;
     z-index: 1;
 }
 
 #scene_one_fifth_layer{
-    background: url(../Media/pictures/szene01/background2.png);
     position: absolute;
     z-index: 0;
 }

@@ -76,7 +76,7 @@ $(document).ready(function () {
             offset: 1500 // start y !  for use add this to animating div data-offset=" "
         })
             .setTween(fade)
-            //.addIndicators({name: "slide_down"})
+            .addIndicators({name: "slide_down"})
             .addTo(controller);
     });
 
