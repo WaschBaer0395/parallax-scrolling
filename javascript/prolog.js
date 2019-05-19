@@ -73,7 +73,7 @@ $(document).ready(function () {
             triggerElement: '#Slide2',
             triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
             duration: 500, // start y !  for use add this to animating div data-duration=" "
-            offset: 1500 // start y !  for use add this to animating div data-offset=" "
+            offset: $(this).attr('endOffset') // start y !  for use add this to animating div data-offset=" "
         })
             .setTween(fade)
             .addIndicators({name: "slide_down"})
@@ -101,7 +101,7 @@ $(document).ready(function () {
             .addTo(controller);
     });
 
-    $('.text3').each(function () {
+    $('.text_fadeout').each(function () {
         var fade = TweenMax.fromTo($(this), 1, {
             y: $(this).attr('startY'),
             opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
