@@ -139,5 +139,4 @@ $(document).ready(function () {
             .addIndicators({name: "slide_up"})
             .addTo(controller);
     });
-
 });
