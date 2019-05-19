@@ -35,7 +35,7 @@ $(document).ready(function () {
         // offset = move start and end trigger together        //
         // duration = how long animation should be             //
         /////////////////////////////////////////////////////////
-        $('.test1').each(function () {
+        $('.textfade_Slide1').each(function () {
             var fade = TweenMax.fromTo($(this), 1, {
                     y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
                     x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
