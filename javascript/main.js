@@ -54,7 +54,7 @@ $(document).ready(function () {
                 offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
             })
                 .setTween(fade)
-                .addIndicators({name: "fade"})
+                //.addIndicators({name: "fade"})
                 .addTo(controller);
         });
 
