@@ -112,7 +112,7 @@ $(document).ready(function () {
             triggerElement: '#Slide2',
             triggerHook: .5, // start y !  for use add this to animating div data-hook=" "
             duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
-            offset: $(this).attr('EndOffset') // start y !  for use add this to animating div data-offset=" "
+            offset: $(this).attr('endOffset') // start y !  for use add this to animating div data-offset=" "
         })
             .setTween(fade)
             //.addIndicators({name: "slide_down"})
