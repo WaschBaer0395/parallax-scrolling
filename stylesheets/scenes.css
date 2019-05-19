@@ -84,10 +84,8 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 1 ---*/
-/*#Slide3{
-    position: relative;
-}*/
 #scene_one_quinn{
+    width:8%;
     height:30%;
     position: absolute;
     bottom:0;
