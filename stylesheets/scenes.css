@@ -51,6 +51,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     width:15%;
     height:30%;
     bottom:18%;
+    text-align: center;
 }
 .speechbubble_square_scene1{
     width:15%;
@@ -66,7 +67,13 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top:30%;
     width:70%;
     height:40%;
-    border:1px solid yellow;
+    text-align: center;
+}
+.scene1bubble{
+    top:20%;
+}
+.inner_content > p {
+    font-size: 2vh;
 }
 
 #Title {
