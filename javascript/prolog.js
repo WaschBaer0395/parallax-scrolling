@@ -121,8 +121,10 @@ $(document).ready(function () {
 
     $('.text_fadeIn').each(function () {
         var fade = TweenMax.fromTo($(this), 1, {
-            opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+            y: $(this).attr('startY'),
+            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-startOpacity=" "
         }, {
+            y: $(this).attr('endY'),
             opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
             ease: SlowMo.ease.config(0.5, 0.4, false)
         });

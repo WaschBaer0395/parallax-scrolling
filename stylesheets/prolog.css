@@ -45,6 +45,19 @@
     ffont-size: 5vh;
     text-align: center;
 }
+.quote_position{
+    margin-right:300px;
+}
+.quote{
+    text-align: right;
+    font-style: italic;
+    line-height: 1.5em;
+}
+.quote_name{
+    text-align:right;
+    font-size: 1.9vh;
+    line-height: 1.5em;
+}
 #Slide2{
     background-color: black;
 }
