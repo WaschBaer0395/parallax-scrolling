@@ -121,6 +121,29 @@ $(document).ready(function () {
     });
 */
 
+    // FADE-OUT PROLOG//
+//////////////////////////////////////
+    $("#Slide1").each(function () {
+        var quinn2 = TweenMax.fromTo($(this), 2, {
+            opacity: $(this).attr('startOpacity'),
+        }, {
+            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+            ease: Expo.easeOut,
+        });
+
+        new ScrollMagic.Scene({
+            triggerElement: '#Slide1_1',
+            duration: 3000,
+            triggerHook: 1,
+            offset: $(this).data('offset')
+        })
+            .setTween(quinn2)
+            .addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            .addTo(controller);
+    });
+// END FADE-OUT SCENE_ONE//
+//////////////////////////////////////
+
     // FADE-IN SCENE_ONE//
 //////////////////////////////////////
     $("#Slide3").each(function () {
@@ -141,7 +164,7 @@ $(document).ready(function () {
             .addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
             .addTo(controller);
     });
-// END FADE-OUT SCENE_ONE//
+// END FADE-IN SCENE_ONE//
 //////////////////////////////////////
 // FADE-OUT SCENE_ONE//
 //////////////////////////////////////
