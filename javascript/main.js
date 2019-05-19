@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     // Single scrollmagic controller for the entire experience
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
 
     $.each($(".section"), function () {
 
-        var self = this ;
+        let self = this;
 
         // Pin the entire section for the number of pixels specified in duration.
         new ScrollMagic.Scene({
@@ -37,15 +37,15 @@ $(document).ready(function () {
         /////////////////////////////////////////////////////////
         $('.textfade_Slide1').each(function () {
             var fade = TweenMax.fromTo($(this), 1, {
-                    y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
-                    x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
-                    opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
-                }, {
-                    y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
-                    x: $(this).attr('endX'), // end x !  for use add this to animating div data-endX=" "
-                    opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-                    ease: Power1.easeInOut
-                });
+                y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
+                x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
+                opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
+            }, {
+                y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
+                x: $(this).attr('endX'), // end x !  for use add this to animating div data-endX=" "
+                opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
+                ease: Power1.easeInOut
+            });
 
             new ScrollMagic.Scene({
                 triggerElement: self,
@@ -57,8 +57,6 @@ $(document).ready(function () {
                 .addIndicators({name: "fade"})
                 .addTo(controller);
         });
-
-
 
         /*        // Get the content to be parallaxed over the pinned section.
                 $squares = $(this).find('.square');
@@ -83,7 +81,6 @@ $(document).ready(function () {
                         .addTo(controller)
                 })*/
     });
-
 
 
     //////////////////////////////////////////////////
@@ -122,11 +119,5 @@ $(document).ready(function () {
             .addTo(controller);
     });
 */
-
-
-
-
-
-
 
 });

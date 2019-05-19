@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var controller = new ScrollMagic.Controller();
+    let controller = new ScrollMagic.Controller();
 
     $.each($("#Slide1_1"), function () { // gets called as soon as #Slide1_1 is in view
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
                 "border-right-color": "rgba(255,255,255,0.75)" // defenies the starting color and opacity of the cursor (unblinked)
             }, {
                 "border-right-color": "rgba(255,255,255,0)", // defines the end color and opacity of the cursor (blinked)
-                repeat:-1, // allows the cursor to keep blinking
+                repeat: -1, // allows the cursor to keep blinking
                 ease: SteppedEase.config(11)
             }, 0)
         );
@@ -37,5 +37,4 @@ $(document).ready(function () {
             //.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"})
             .addTo(controller);
     });
-
 });
