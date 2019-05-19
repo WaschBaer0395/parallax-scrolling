@@ -1,8 +1,7 @@
 /* stylesheet for prolog
 */
 .main_title{
-    border: #1a8cff 1px solid;
-    font-size: 7vh;
+    font-size: 10vh;
 }
 .timestamp{
     font-family: "Courier New", serif;
@@ -18,22 +17,14 @@
     -webkit-box-sizing:content-box;
     box-sizing:content-box;
 }
-
-/*.line-1{
-    position: relative;
-    top: 50%;
-    width: 20.18em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
+#quote{
+    font-size: 7vh;
+    font-style: italic;
+}
+#description{
+    font-size: 5vh;
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-box-sizing:content-box;
-    box-sizing:content-box;
-}*/
+}
 
 /* Animation */
 .anim-typewriter{
