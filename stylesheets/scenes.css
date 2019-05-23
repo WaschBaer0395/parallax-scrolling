@@ -1,4 +1,4 @@
-/* stylesheet for Scene 01
+/* stylesheet for all Scenes
 */
 
 /*
@@ -107,7 +107,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene_one_fourth_layer {
-    border:solid red 1px;
     position: absolute;
     z-index: 1;
 }
@@ -119,8 +118,15 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 
 /*--- SCENE 2 ---*/
 #Scene2 {
-    background: url(../Fotos/Szene02_Labor.jpg) 50% 0;
-
+    width:100%;
+    height:100%;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+#scene_two_third_layer {
+    position: absolute;
+    z-index: 0;
 }
 
 /*--- SCENE 3 ---*/
