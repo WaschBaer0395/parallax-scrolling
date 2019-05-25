@@ -1,18 +1,6 @@
 /* stylesheet for prolog
 */
-.main_title{
-    font-size: 9vh;
-    letter-spacing: 0.4em;
-    text-align: center;
-}
-#logo{
-    font-size: 7vh;
-    margin-top: -30%;
-    letter-spacing: 0.2em;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
 
-}
 .timestamp{
     font-family: "Courier New", serif;
     font-size: 5vh;
@@ -27,26 +15,73 @@
     -webkit-box-sizing:content-box;
     box-sizing:content-box;
 }
+#logo{
+    font-size: 7vh;
+    margin-top:-30%;
+    letter-spacing: 0.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+#mainTitle{
+    top:30%;
+    position: relative;
+    visibility: hidden;
+    font-size: 9vh;
+    letter-spacing: 0.4em;
+}
+
 #quote{
+    top:30%;
+    position: relative;
+    visibility: hidden;
     font-size: 3vh;
     font-style: italic;
+
 }
 #description{
+    top: 35%;
+    position: relative;
+    visibility: hidden;
     font-size: 3.5vh;
-    text-align: center;
-    margin-right: 10%;
-    margin-left: 10%;
 }
 .textblock{
     font-size: 3.5vh;
     text-align: justify;
 }
+
+#prolog1{
+    top: 21%;
+    position: relative;
+    visibility: hidden;
+}
+
+#prolog2{
+    top: 20%;
+    position: relative;
+    visibility: hidden;
+}
+
+#prolog3{
+    top: -50%;
+    position: relative;
+    visibility: hidden;
+}
+
+#prologQuote{
+    top: -40%;
+    position: relative;
+    visibility: hidden;
+}
+
+#prolog4{
+    top: -40%;
+    position: relative;
+    visibility: hidden;
+}
+
 .textline{
     ffont-size: 5vh;
     text-align: center;
-}
-.quote_position{
-    margin-right:300px;
 }
 .quote{
     text-align: right;
@@ -58,28 +93,11 @@
     font-size: 1.9vh;
     line-height: 1.5em;
 }
-#Slide2{
-    background-color: black;
-}
+
 /* Animation */
 .anim-typewriter{
     width:0;
-    /*animation: typewriter 4s steps(44) 1s 1 normal both,
-               blinkTextCursor 500ms steps(44) infinite normal;*/
 }
-
-/*@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
-}
-
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}*/
-
-
-
 
 .scroll {
     position: absolute;

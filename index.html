@@ -13,52 +13,34 @@
     <link href="stylesheets/cover.css" media="screen" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="section cover" id="zero" data-duration="4000" data-offset="-800" startOpacity="1" endOpacity="0">
-
+<div class="section cover">
 </div>
-<div class="section one" id="Slide1" data-duration="4000" data-offset="-800" startOpacity="1" endOpacity="0">
-    <div class="content story" id="Title">
-        <div class="textfade_Slide1 main_title" data-duration="800" data-offset="400" hook="0.5" startX="0" startY="100"
-             endX="0"
-             endY="0" startOpacity="0" endOpacity="1">
+<div class="section intro">
+    <div class="content story" id="introscene">
+        <div id="mainTitle">
             <h2>LACUNA</h2><br>
             <h3 id="logo">INDUSTRIES</h3>
         </div>
-        <div class="scroll"></div>
-        <div class="textfade_Slide1" id="quote" data-duration="800" data-offset="1800" hook="0.5" startX="0"
-             startY="100" endX="0"
-             endY="-50" startOpacity="0" endOpacity="1">
+        <div id="quote">
             <p>„You can’t stop progress. You can’t stop Lacuna.“</p>
         </div>
-        <!--
-        (fade in, unter dem Paket von oben, also etwas unter der Mitte)
-        -->
-        <div class="textfade_Slide1" id="description" data-duration="800" data-offset="1200" hook="0.5" startX="0"
-             startY="100"
-             endX="0" endY="0" startOpacity="0" endOpacity="1">
+        <div id="description">
             <div>Ein Unternehmen, welches sich auf KI Technik-Gadgets spezialisiert hat, um den Alltag des Menschen zu
                 erleichtern.
             </div>
         </div>
+        <div class="scroll"></div>
     </div>
-
-    <!--
-    (Das ganze Paket kann dann weg, fade out)
-    -->
 </div>
-<div class="section one" id="Slide1_1" data-duration="3000">
-    <div>
+<div class="section typewriter">
         <div class="line-1 anim-typewriter timestamp">2019</div>
-    </div>
 </div>
-<div class="section two" id="Slide2" data-duration="10000">
-    <div class="section_inner" id="Prolog">
-
+<div class="section prolog">
+    <div class="content story" id="Prolog">
         <!--
         (kommt von oben rein)
         -->
-        <div class="textslide_down textblock" data-duration="800" data-offset="400" startY="-500"
-             endY="250" startOpacity="0" endOpacity="1" endOffset="2000">
+        <div class="textblock" id="prolog1">
             <span>Durchbruch und immer noch Haupteinnahmequelle ist "EZY".</span><br>
             <span>Ein Sprachsystem, das die Gewohnheiten eines Nutzers studiert und ihn anhand der Daten an wichtige Dinge erinnert.</span>
             Besonderheit der Systeme von Lacuna ist die Möglichkeit der KI eine Persönlichkeit zuzuweisen, die mit
@@ -70,8 +52,7 @@
         <!--
         (kommt später als der obere Text von unten nach oben, schiebt den vorherigen komplett weg)
         -->
-        <div class="textslide_up textblock text_fadeout" data-duration="400" data-offset="1900"
-             startY="500" endY="80" startOpacity="0" endOpacity="1" endOffset="3500">
+        <div class="textblock" id="prolog2">
             <p>Ein Projekt, das gerne von der Chefetage und Geschäftsleiter Tyrell Ashton unter den Teppich gekehrt
                 wird, ist ein Medizin-Gadget, das in Kooperation mit einer Entzugsklinik entstand und Süchtigen beim
                 Entzug im Eigenheim unterstützen sollte. <br> Dies ging so lange gut, bis "Crave" jegliche Art von
@@ -82,14 +63,11 @@
                 mit Allergien.</p>
         </div>
         <!--Obere Texte verschwinden und folgender taucht in der Mitte des Bildschirms auf:-->
-        <div class="text_fadeIn text_fadeout textline textblock" data-duration="1000" data-offset="4200"
-             startOpacity="0"
-             endOpacity="1" endOffset="5500" startY="-400" endY="-400">
+
+        <div class="textline textblock" id="prolog3">
             An all diesen Projekten arbeitete Quinn Walker mit.
         </div>
-        <div class="text_fadeIn text_fadeout quote_position" data-duration="1000" data-offset="6000"
-             startOpacity="0"
-             endOpacity="1" endOffset="7500" startY="-300" endY="-300">
+        <div id="prologQuote">
             <div class="textline textblock quote">„What is progress without
                 risk?“
             </div>
@@ -100,9 +78,7 @@
             <div class="textline textblock quote_name">- Quinn Walker, 2019 -
             </div>
         </div>
-        <div class="textblock text_fadeIn text_fadeout" data-duration="1000" data-offset="8000"
-             startOpacity="0"
-             endOpacity="1" startY="-30" endY="-400" endOffset="10000">
+        <div class="textblock" id="prolog4">
             Als Senior UX-Designerin ist sie auf die Untersuchung wie Nutzer auf KIs reagieren und
             Persönlichkeits-Kalibrierung spezialisiert. Nach "Crave" schlug Quinn dem Unternehmen einen
             Richtungswechsel
@@ -116,50 +92,52 @@
     </div>
 </div>
 
-<div class="section three" id="Slide3" data-duration="8000" data-offset="-800" startOpacity="1" endOpacity="0">
-    <div class="speechbubble_scene1Lacuna speechbubble_square speechbubble_square_scene1 content" data-duration="200"
-         data-offset="0" hook="0" startOpacity="0" endOpacity="1" startX="-50" endX="50">
+<div class="section scene01">
+    <div class="content speechbubble_square" id="scene01_bubble1">
         <div class="inner_content scene1bubble"><p>Menschen haben Angst vor so humanoiden Robotern, Quinn.</p></div>
     </div>
-    <div class="speechbubble_scene1Quinn speechbubble_circle speechbubble_circle_scene1 content" data-duration="1000"
-         data-offset="200" hook="0"
-         startX="520" endX="520" startOpacity="0" endOpacity="1">
-        <div class="inner_content" data-duration="4500" data-offset="200" startOpacity="0" endOpacity="1">
+    <div class="content speechbubble_circle" id="scene01_bubble_quinn">
+        <div class="inner_content">
             <p>Warum fürchten sie etwas, das wie sie aussieht?</p>
         </div>
     </div>
-    <div id="scene_one_quinn" class="content" data-duration="3000" data-offset="200" hook="0" startX="100" endX="370"
-         startOpacity="0" endOpacity="1"><img src="Media/pictures/Szene01_Quinn.png" alt="TEST"></div>
-    <div id="scene_one_second_layer" class="scene1parallax content" data-duration="4200" data-offset="5500" hook="0.5"
-         startY="0" endY="-70"><img src="Media/pictures/szene01/laterne.png" alt="TEST"></div>
-    <div id="scene_one_third_layer" class="scene1parallax content" data-duration="4200" data-offset="5500" hook="0.5"
-         startY="0" endY="-70"><img src="Media/pictures/szene01/ground.png" alt="TEST"></div>
-    <div id="scene_one_fourth_layer" class="scene1parallax content" data-duration="4200" data-offset="5500" hook="0.5"
-         startY="0" endY="-50"><img src="Media/pictures/szene01/background.png" alt="TEST"></div>
-    <div id="scene_one_fifth_layer" class="scene1parallax content" data-duration="4200" data-offset="5500" hook="0.5"
-         startY="0" endY="-20"><img src="Media/pictures/szene01/background2.png" alt="TEST"></div>
+    <div class="content" id="scene_one_quinn">
+        <img src="Media/pictures/Szene01_Quinn.png" alt="image of quinn">
+    </div>
+    <div class="content scene1parallax" id="scene_one_second_layer">
+        <img src="Media/pictures/szene01/laterne.png" alt="TEST">
+    </div>
+    <div class="content scene1parallax" id="scene_one_third_layer">
+        <img src="Media/pictures/szene01/ground.png" alt="TEST">
+    </div>
+    <div class="content scene1parallax" id="scene_one_fourth_layer">
+        <img src="Media/pictures/szene01/background.png" alt="TEST">
+    </div>
+    <div class="content scene1parallax" id="scene_one_fifth_layer">
+        <img src="Media/pictures/szene01/background2.png" alt="TEST">
+    </div>
 </div>
 
-<div class="section four" id="Slide4" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
+<div class="section scene02" id="Slide4" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
      data-duration="1000" data-offset="200" startOpacity="0" endOpacity="1">
     <div class="section_inner content" id="Scene2">
         <h2>THIS IS THE SECOND SCENE</h2>
     </div>
 </div>
 
-<div class="section five" id="Slide5" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
+<div class="section four" id="Slide5" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
      data-duration="1000" data-offset="200" startOpacity="0" endOpacity="1">
     <div class="section_inner content" id="Scene3">
         <h2>THIS IS THE THIRD SCENE</h2>
     </div>
 </div>
-<div class="section six" id="Slide6" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
+<div class="section five" id="Slide6" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
      data-duration="1000" data-offset="200" startOpacity="0" endOpacity="1">
     <div class="section_inner content" id="Scene4">
         <h2>THIS IS THE FOURTH SCENE</h2>
     </div>
 </div>
-<div class="section seven" id="Slide7" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
+<div class="section six" id="Slide7" data-duration="6500" data-offset="-800" startOpacity="1" endOpacity="0"
      data-duration="1000" data-offset="200" startOpacity="0" endOpacity="1">
     <div class="section_inner content" id="Scene5">
         <h2>THIS IS THE FIFTH SCENE </h2>
@@ -215,8 +193,9 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.js"></script>
 <script src="https://www.greensock.com/js/src/utils/SplitText.min.js"></script>
 <script src="javascript/main.js"></script>
-<script src="javascript/scene01.js"></script>
-<script src="javascript/prolog.js"></script>
+<!--<script src="javascript/scene01.js"></script>
+<script src="javascript/prolog.js"></script>-->
 </html>

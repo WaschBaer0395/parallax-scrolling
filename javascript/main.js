@@ -1,162 +1,161 @@
 $(document).ready(function () {
 
     // Single scrollmagic controller for the entire experience
-    let controller = new ScrollMagic.Controller();
+    var controller = new ScrollMagic.Controller();
 
-    $.each($(".section"), function () {
+$('.typewriter').each(function() { // gets called as soon as #Slide1_1 is in view
+        // letter animation
+        var tween = new TimelineMax(); // timeline for the typing and cursor animation
+        tween.add( // adds the animation to our timeline
+            TweenMax.fromTo(".anim-typewriter", 1.75,
+                {width: "0",},
+                {width: "2.5em",ease: SteppedEase.config(11)},0));
+        // text cursor animation
+        tween.add( // adds the animation to our timeline
+            TweenMax.fromTo(".anim-typewriter", 0.5,
+                {"border-right-color": "rgba(255,255,255,0.75)"},
+                {"border-right-color": "rgba(255,255,255,0)",repeat: -1,ease: SteppedEase.config(11)},0));
+    new ScrollMagic.Scene({
+        triggerElement: '.typewriter', // trigger for the start of the animation
+        triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
+        offset: 600 // start y !  for use add this to animating div data-offset=" "
+    })
+        .setTween(tween)
+        //.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"})
+        .addTo(controller);
+});
 
-        var self = this;
 
-        // Pin the entire section for the number of pixels specified in duration.
+    //  Cover ================================
+// animationen hier sind nur platzhalter !!! da noch kein cover gebaut wurde
+    var action01 = new TimelineMax()
+        .to('.title #mainTitle',20,{autoAlpha:1,y:-10},"+=4")
+        .to('.title #quote',20,{autoAlpha:1, y:-10},"+=20")
+        .to('.title #description',20,{autoAlpha:1,y:-10,delay:25},"+=20");
+
+    var cover = new ScrollMagic.Scene({
+        triggerElement: ".cover",
+        duration:1000,
+        triggerHook: 0.5, //  top of viewport
+        reverse: true
+    })
+        .setTween(action01)
+        .setPin(".cover")
+        //.addIndicators({name: "Cover"})
+        .addTo(controller);
+
+    //  Intro ================================
+
+    var action01 = new TimelineMax()
+        .to('.intro #mainTitle',20,{autoAlpha:1,y:-100},"+=4")
+        .to('.intro #description',20,{autoAlpha:1,y:-100},"+=8")
+        .to('.intro #quote',20,{autoAlpha:1, y:-100},"+=8")
+        .to('.intro #introscene',20,{autoAlpha:0},"+=4");
+
+    var intro = new ScrollMagic.Scene({
+        triggerElement: ".intro",
+        duration:5000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    })
+        .setTween(action01)
+        .setPin(".intro")
+        //.addIndicators({name: "INTRO"})
+        .addTo(controller);
+
+    //  typewriter ================================
+    var timeline = new TimelineMax();
+    // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
+    var prolog = new ScrollMagic.Scene({
+        triggerElement: ".typewriter",
+        duration:2500,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    })
+        .setPin(".typewriter")
+        //.addIndicators({name: "TYPEWRITER"})
+        .addTo(controller);
+
+//  Prolog ================================
+// bsp: bewege nach oder mache in richtung .to( klasse , länge, {styles},
+// start versatz ( verschiebt realtiv alle animationen dahinter!)
+    var action01 = new TimelineMax()
+        .to('.prolog #prolog1',10,{autoAlpha:1,y:100},"+=2") // fade from top
+        .to('.prolog #prolog1',10,{autoAlpha:0,y:-250},"+=4")// fade away to top
+        .to('.prolog #prolog2',10,{autoAlpha:1,y:-250},"-=8") // fade in from bottom
+        .to('.prolog #prolog2',10,{autoAlpha:0},"+=4")
+        .to('.prolog #prolog3',10,{autoAlpha:1},"+=4")
+        .to('.prolog #prolog3',10,{autoAlpha:0},"+=4")
+        .to('#prologQuote',10,{autoAlpha:1},"+=4")
+        .to('#prologQuote',10,{autoAlpha:0},"+=4")
+        .to('.prolog #prolog4',10,{autoAlpha:1,y:-250},"+=4") // fade from bottom
+        .to('.prolog #prolog4',10,{autoAlpha:0},"+=4") // fade from top
+    ;
+    var prolog = new ScrollMagic.Scene({
+        triggerElement: ".prolog",
+        duration:15000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    })
+        .setTween(action01)
+        .setPin(".prolog")
+        //.addIndicators({name:"PROLOG"})
+        .addTo(controller);
+
+//  scene01 ================================
+// Aufbau ist ganz einfach !  im grunde nur copy and paste
+// .to( zum bewegen oder irgend etwas machen ,
+// dann Klasse der szene und mit leerzeichen dahinter , id des objektes
+// dann mit komma getrennt die dauer zum strecken oder beschleunigen der animation mit scroll
+// dann in geschweifter klammer attribute , z.b nach x: 100 bewegen oder autoAlpha: 1 damit opacity 1 wird
+// WICHTIG ! autoalpha verwenden ! nicht opacity, und in der ID des objektes unbedingt visibility: hidden
+// eintragen wenn das objekt sichtbar werden, also reinfaden soll wenn möglich auch direkt position relative geben !
+// außer bei parallax hintergrund bild ebenen! die bleiben absolute ( keine ahnung warum aber anders gehts nicht )
+// dann mit komma getrennt kommt ein start delay, "+=" später starten, "-=" früher starten ( geht nur wenn vorher schon eine animation lief
+// wenn animationen gleich starten sollen, dann wird ein Punkt eingefügt mit .add("NameDesPunktes","start delay")
+// animationen die an diesem punkt starten sollen werden dann angefügt indem am ende ,"NameDesPunktes" eingefügt wird
+// soll am ende noch ein bisschen gescrolled werden können ohne das sich was bewegt ( z.b bei story abschniten ) dann in die geschweifte Klammer
+// bei dem lezten objekt, delay: nummer  einfügen
+// am ende noch mit ; schließen
+// trigger ist immer die klasse direkt nach dem section im ersten div ! benannt nach inhalt der szene oder des textabschnites
+// beispiel class="section prolog" dan wäre der trigger und der pin hier bei prolog!
+// gleiches gilt für den Pin,
+// für den aufbau im html dokument einfach immer an den anderen scenen orientieren
+// fade ins und fadeout müssen extra angefügt werden ! siehe unten !
+    var action01 = new TimelineMax()
+            // Klasse mit ID        //dauer//  attribute   // startDelay
+        .to('.scene01 #scene_one_quinn',10,{autoAlpha:1,x:100},"+=4")
+        .to('.scene01 #scene01_bubble1',10,{autoAlpha:1,x:100},"+=2")
+        .to('.scene01 #scene01_bubble_quinn',10,{autoAlpha:1,x:100},"+=4")
+        .add("Parallax","+=15") //insert point Parallax into timeline
+        .to('.scene01 #scene_one_second_layer',15,{y:-25},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene_one_third_layer',15,{y:-22},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene_one_fourth_layer',15,{y:-18},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene_one_fifth_layer',15,{y:-16},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene_one_quinn',15,{y:-22},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene01_bubble1',15,{y:-25},"Parallax")// starting at point Parallax
+        .to('.scene01 #scene01_bubble_quinn',15,{y:-25},"Parallax")// starting at point Parallax
+    ;
+
+    var scene01 = new ScrollMagic.Scene({
+        triggerElement: ".scene01",
+        duration:8000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    })
+        .setTween(action01)
+        .setPin(".scene01")
+        //.addIndicators()
+        .addTo(controller);
+
+
+// fade in ist einfach nur die scenen klasse!
+//  FadeInScene01 ================================
+    $(".scene01").each(function () {
+        var quinn3 = TweenMax.fromTo($(this),2,{opacity:0,},{opacity:1,ease:Power1.easeIn,});
         new ScrollMagic.Scene({
-            triggerElement: self, 						// The section element
-            triggerHook: 0, 							// Sets the pin trigger to the top of the element.
-            duration: $(this).data('duration')			// Scroll for this many pixels before unpinning.
-        })
-            .setPin(self)
-            //.addIndicators({name: "Slide"})
-            .addTo(controller);
-
-        /////////////////////////////////////////////////////////
-        // Fade objects on trigger                             //
-        // this method can be used for 1 slide ! but multiple  //
-        // fades inside the slide, if you need to fade on      //
-        // another Scene ( next slide or whatever ) then       //
-        // you need to recopy this function for that particular//
-        // slide and rename the trigger ( in this case .fade)  //
-        // to something like .fadeScene1 or .fadeScene2        //
-        // startY = start position Y                           //
-        // startX = start position X                           //
-        // endY = end position Y                               //
-        // endX = end position X                               //
-        // startOpacity = obviously                            //
-        // endOpacity = obviously                              //
-        // hook = moves the trigger , range from 0-1 bsp. 0.5  //
-        // offset = move start and end trigger together        //
-        // duration = how long animation should be             //
-        /////////////////////////////////////////////////////////
-        $('.textfade_Slide1').each(function () {
-            var fade = TweenMax.fromTo($(this), 1, {
-                y: $(this).attr('startY'), // start y !  for use add this to animating div data-startY=" "
-                x: $(this).attr('startX'), // start x !  for use add this to animating div data-startX=" "
-                opacity: $(this).attr('startOpacity') // start y !  for use add this to animating div data-startOpacity=" "
-            }, {
-                y: $(this).attr('endY'), // end y !  for use add this to animating div data-endY=" "
-                x: $(this).attr('endX'), // end x !  for use add this to animating div data-endX=" "
-                opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-                ease: Power1.easeInOut
-            });
-
-            new ScrollMagic.Scene({
-                triggerElement: self,
-                triggerHook: $(this).attr('hook'), // start y !  for use add this to animating div data-hook=" "
-                duration: $(this).data('duration'), // start y !  for use add this to animating div data-duration=" "
-                offset: $(this).data('offset') // start y !  for use add this to animating div data-offset=" "
-            })
-                .setTween(fade)
-                //.addIndicators({name: "fade"})
-                .addTo(controller);
-        });
-
-        /*        // Get the content to be parallaxed over the pinned section.
-                $squares = $(this).find('.square');
-                // Loop over the squares
-                $.each($squares, function () {
-                    // For each square, set a tween
-                    var tween = TweenMax.fromTo(this, 1, { 		// Can probably use tweenlite
-                        bottom: -$(this).height() 				// Start the element outside of the bottom of the viewport
-                    },{
-                        top: -$(this).height(),					// Animate to outside the top of the viewport.
-                        ease: Sine.easeOut        				// Set the easing
-                    });
-
-                    // Add the tween to the controller. The animation duration and offset is set via data attrs
-                    var animateSquare = new ScrollMagic.Scene({
-                        triggerElement: self, 					// The section.
-                        triggerHook: 0,							// Use the top of the section element as the trigger.
-                        duration: $(this).data('duration'),		// How many pixel scroll the animation lasts.
-                        offset: $(this).data('offset')			// The scroll offset before the animation begins.
-                    })
-                        .setTween(tween)
-                        .addTo(controller)
-                })*/
-    });
-
-
-
-    //////////////////////////////////////////////////
-    // Move objects on trigger                      //
-    // x1 = start x                                 //
-    // y1 = start y                                 //
-    // x2 = end x                                   //
-    // y2 = end y                                   //
-    // offset = move start and end trigger together //
-    // duration = in % how long animation should be //
-    //////////////////////////////////////////////////
-    /*
-    $(".move").each(function () { // runs as soon as .move is visible in window
-        var fromBottomTimeline = new TimelineMax();
-        var fromBottomFrom = TweenMax.from(this, 1, {
-            x: this.getAttribute("x1"), // start x
-            y: this.getAttribute("y1")  // start y
-        });
-        var fromBottomTo = TweenMax.to(this, 1, {
-            x: this.getAttribute("x2"), // end x
-            y: this.getAttribute("y2")  // end y
-        });
-        fromBottomTimeline
-            .add(fromBottomFrom)
-            .add(fromBottomTo);
-
-        new ScrollMagic.Scene({
-            triggerElement: this.getAttribute("trigger"),
-            triggerHook: "onCenter",                          // offsetting the trigger
-            offset: this.getAttribute("offset")     // offsetting the start and end point
-        })
-            .setTween(fromBottomTimeline)
-            .duration(this.getAttribute("duration"))   // duration of the animation
-            //.reverse(true)
-            .addIndicators() // add indicators (requires plugin)
-            .addTo(controller);
-    });
-*/
-
-    // FADE-OUT PROLOG//
-//////////////////////////////////////
-    $("#Slide1").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '#Slide1_1',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            .addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide3").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.three',
-            duration: 3000,
+            triggerElement: '.scene01',
+            duration: 500,
             triggerHook: .6,
             offset: 0
         })
@@ -164,306 +163,18 @@ $(document).ready(function () {
             //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
             .addTo(controller);
     });
-// END FADE-IN SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide3").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
 
+// fadeout hingegen ist scenen klasse aber mit trigger auf der nächsten scene bei einem onEnter Hook !!
+//  FadeOutScene01 ================================
+    $(".scene01").each(function () {
+        var quinn2 = TweenMax.to($(this),2,{opacity:0,ease:Power1.easeIn,});
         new ScrollMagic.Scene({
-            triggerElement: '.four',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
+            triggerElement: '.scene02',
+            duration: 500,
+            triggerHook: "onEnter",
         })
             .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
+            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"})
             .addTo(controller);
     });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-// //////////////////////////////////////
-    $("#Slide4").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.four',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// // END FADE-OUT SCENE_ONE//
-// //////////////////////////////////////
-// // FADE-OUT SCENE_ONE//
-// //////////////////////////////////////
-    $("#Slide4").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.five',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// // END FADE-OUT SCENE_ONE//
-// //////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide5").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.five',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide5").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.six',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide6").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.six',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide6").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.seven',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide7").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.seven',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide7").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.eight',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide8").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.eight',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide8").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.nine',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
-    // FADE-IN SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide9").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('endOpacity'),
-        }, {
-            opacity: $(this).attr('startOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.nine',
-            duration: 3000,
-            triggerHook: .6,
-            offset: 0
-        })
-            .setTween(quinn3)
-            //.addIndicators({name: "TEST", colorStart:"orange",colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-// FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-    $("#Slide9").each(function () {
-        var quinn2 = TweenMax.fromTo($(this), 2, {
-            opacity: $(this).attr('startOpacity'),
-        }, {
-            opacity: $(this).attr('endOpacity'), // start y !  for use add this to animating div data-endOpacity=" "
-            ease: Expo.easeOut,
-        });
-
-        new ScrollMagic.Scene({
-            triggerElement: '.ten',
-            duration: 3000,
-            triggerHook: 1,
-            offset: $(this).data('offset')
-        })
-            .setTween(quinn2)
-            //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
-            .addTo(controller);
-    });
-// END FADE-OUT SCENE_ONE//
-//////////////////////////////////////
-
-
 });

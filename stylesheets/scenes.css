@@ -12,10 +12,15 @@ class content
 }
 
 .story{
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     display: flex;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#introscene{
 }
 
 /*
@@ -24,17 +29,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 */
 .speechbubble_diamand{
     background: url("../Media/speechbubbles/Endversion Diamant.png");
-    position: absolute;
     z-index: 99;
 }
 .speechbubble_circle{
     background: url("../Media/speechbubbles/Endversion Kreis.png");
-    position: absolute;
     z-index: 99;
 }
 .speechbubble_square{
     background: url("../Media/speechbubbles/Endversion Viereck.png");
-    position: absolute;
     z-index: 99;
 }
 
@@ -42,19 +44,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
 
  */
-.speechbubble_circle_scene1{
-    width:15%;
-    height:30%;
-    bottom:18%;
-    text-align: center;
-}
-.speechbubble_square_scene1{
-    width:15%;
-    height:30%;
-    top:18%;
-    right:20%;
-}
-
 .inner_content{
     position: relative;
     margin-left:auto;
@@ -71,10 +60,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     font-size: 2vh;
 }
 
-#Title {
-    background: black;
-}
-
 #Prolog {
     background: black;
     width:70%;
@@ -88,11 +73,34 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     background: black;
 }
 
+
 /*--- SCENE 1 ---*/
+.scene01{
+    position: relative;
+}
+#scene01_bubble_quinn{
+    visibility: hidden;
+    position: absolute;
+    width:15%;
+    height:30%;
+    bottom:25%;
+    left: 24%;
+    text-align: center;
+}
+#scene01_bubble1{
+    visibility: hidden;
+    position: absolute;
+    width:15%;
+    height:30%;
+    top:18%;
+    right: 30%;
+}
 #scene_one_quinn{
+    visibility: hidden;
     width:8%;
     height:30%;
     position: absolute;
+    left: 20%;
     bottom:0;
     z-index: 5;
 }
@@ -107,7 +115,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene_one_fourth_layer {
-    border:solid red 1px;
     position: absolute;
     z-index: 1;
 }
