@@ -69,11 +69,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     margin-right:auto;
 }
 
-#Story1 {
-    background: black;
-}
-
-
 /*--- SCENE 1 ---*/
 .scene01{
     position: relative;
@@ -127,9 +122,18 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /*--- SCENE 2 ---*/
 
 
-#scene_two_third_layer {
+#scene2_background{
     position: absolute;
     z-index: 0;
+}
+#scene2_foreground{
+    position: absolute;
+    z-index: 1;
+}
+#scene02_quinn{
+    position: absolute;
+    z-index: 2;
+    width: 38%;
 }
 
 /*--- SCENE 3 ---*/

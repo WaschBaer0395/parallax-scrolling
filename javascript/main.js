@@ -91,7 +91,7 @@ $('.typewriter').each(function() { // gets called as soon as #Slide1_1 is in vie
         .to('.prolog #prolog4',10,{autoAlpha:1,y:-250},"+=4") // fade from bottom
         .to('.prolog #prolog4',10,{autoAlpha:0},"+=4") // fade from top
     ;
-    var prolog = new ScrollMagic.Scene({
+    var prolog= new ScrollMagic.Scene({
         triggerElement: ".prolog",
         duration:15000,
         triggerHook: 0, //  top of viewport
