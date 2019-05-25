@@ -127,14 +127,14 @@ $(document).ready(function () {
             .to('.scene01 #scene_one_quinn', 10, {autoAlpha: 1, x: 100}, "+=4")
             .to('.scene01 #scene01_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2")
             .to('.scene01 #scene01_bubble_quinn', 10, {autoAlpha: 1, x: 100}, "+=4")
-            .add("Parallax", "+=15") //insert point Parallax into timeline
-            .to('.scene01 #scene_one_second_layer', 15, {y: -25}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_third_layer', 15, {y: -22}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_fourth_layer', 15, {y: -18}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_fifth_layer', 15, {y: -16}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_quinn', 15, {y: -22}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene01_bubble1', 15, {y: -25}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene01_bubble_quinn', 15, {y: -25}, "Parallax")// starting at point Parallax
+            .add("Parallax", "+=10") //insert point Parallax into timeline
+            .to('.scene01 #scene_one_second_layer', 40, {y: -35}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene_one_third_layer', 40, {y: -35}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene_one_fourth_layer', 40, {y: -25}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene_one_fifth_layer', 40, {y: 0}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene_one_quinn', 40, {y: -35}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene01_bubble1', 40, {y: -10}, "Parallax")// starting at point Parallax
+            .to('.scene01 #scene01_bubble_quinn', 40, {y: -80}, "Parallax")// starting at point Parallax
     ;
 
     var scene01 = new ScrollMagic.Scene({
@@ -155,7 +155,7 @@ $(document).ready(function () {
         var quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
         new ScrollMagic.Scene({
             triggerElement: '.scene01',
-            duration: 500,
+            duration: 600,
             triggerHook: .6,
             offset: 0
         })
@@ -217,6 +217,7 @@ $(document).ready(function () {
             .to('.scene02 #scene2_foreground', 15, {y: -30}, "Parallax")// starting at point Parallax
             .to('.scene02 #scene02_quinn', 15, {y: -15}, "Parallax")
     ;
+
     new ScrollMagic.Scene({
         triggerElement: ".scene02",
         duration: 8000,
@@ -227,4 +228,6 @@ $(document).ready(function () {
         .setPin(".scene02")
         .addIndicators({name: "Scene02"})
         .addTo(controller);
+
+
 });

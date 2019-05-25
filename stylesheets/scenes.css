@@ -120,6 +120,9 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 2 ---*/
+.blur{
+    filter:none;
+}
 .scene02{
     position: relative;
 }
