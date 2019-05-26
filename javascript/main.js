@@ -7,19 +7,23 @@ $(document).ready(function () {
         // letter animation
         const tween = new TimelineMax(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 1.75,
-                {width: "0",},
-                {width: "2.5em", ease: SteppedEase.config(11)}, 0));
+                   TweenMax.fromTo(".anim-typewriter", 1.75,
+                                   {width: "0",},
+                                   {width: "2.5em", ease: SteppedEase.config(11)}, 0));
         // text cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 0.5,
-                {"border-right-color": "rgba(255,255,255,0.75)"},
-                {"border-right-color": "rgba(255,255,255,0)", repeat: -1, ease: SteppedEase.config(11)}, 0));
+                   TweenMax.fromTo(".anim-typewriter", 0.5,
+                                   {"border-right-color": "rgba(255,255,255,0.75)"},
+                                   {
+                                       "border-right-color": "rgba(255,255,255,0)",
+                                       repeat: -1,
+                                       ease: SteppedEase.config(11)
+                                   }, 0));
         new ScrollMagic.Scene({
-            triggerElement: '.typewriter', // trigger for the start of the animation
-            triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
-            offset: 600 // start y !  for use add this to animating div data-offset=" "
-        })
+                                  triggerElement: '.typewriter', // trigger for the start of the animation
+                                  triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
+                                  offset: 600 // start y !  for use add this to animating div data-offset=" "
+                              })
             .setTween(tween)
             //.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"})
             .addTo(controller);
@@ -27,51 +31,51 @@ $(document).ready(function () {
 
 
     //  Cover ================================
-// animationen hier sind nur platzhalter !!! da noch kein cover gebaut wurde
-    var action01 = new TimelineMax()
-        .to('.title #mainTitle', 20, {autoAlpha: 1, y: -10}, "+=4")
-        .to('.title #quote', 20, {autoAlpha: 1, y: -10}, "+=20")
-        .to('.title #description', 20, {autoAlpha: 1, y: -10, delay: 25}, "+=20");
+// Animationen hier sind nur Platzhalter !!! da noch kein cover gebaut wurde
+    let coverAction = new TimelineMax();
+    coverAction.to('.title #mainTitle', 20, {autoAlpha: 1, y: -10}, "+=4")
+               .to('.title #quote', 20, {autoAlpha: 1, y: -10}, "+=20")
+               .to('.title #description', 20, {autoAlpha: 1, y: -10, delay: 25}, "+=20");
 
     const cover = new ScrollMagic.Scene({
-        triggerElement: ".cover",
-        duration: 1000,
-        triggerHook: 0.5, //  top of viewport
-        reverse: true
-    })
-        .setTween(action01)
-        .setPin(".cover")
-        //.addIndicators({name: "Cover"})
-        .addTo(controller);
+                                            triggerElement: ".cover",
+                                            duration: 1000,
+                                            triggerHook: 0.5, //  top of viewport
+                                            reverse: true
+                                        });
+    cover.setTween(coverAction)
+         .setPin(".cover")
+         //.addIndicators({name: "Cover"})
+         .addTo(controller);
 
     //  Intro ================================
-
-    var action01 = new TimelineMax()
-        .to('.intro #mainTitle', 20, {autoAlpha: 1, y: -100}, "+=4")
-        .to('.intro #description', 20, {autoAlpha: 1, y: -100}, "+=8")
-        .to('.intro #quote', 20, {autoAlpha: 1, y: -100}, "+=8")
-        .to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
+    let introAction = new TimelineMax();
+    introAction.to('.intro #mainTitle', 20, {autoAlpha: 1, y: -100}, "+=4")
+               .to('.intro #description', 20, {autoAlpha: 1, y: -100}, "+=8")
+               .to('.intro #quote', 20, {autoAlpha: 1, y: -100}, "+=8")
+               .to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
 
     const intro = new ScrollMagic.Scene({
-        triggerElement: ".intro",
-        duration: 5000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    })
-        .setTween(action01)
+                                            triggerElement: ".intro",
+                                            duration: 5000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                        });
+    intro.setTween(introAction)
         .setPin(".intro")
         //.addIndicators({name: "INTRO"})
         .addTo(controller);
 
     //  typewriter ================================
-    const timeline = new TimelineMax();
+    //let timeline = new TimelineMax();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
-    var prolog = new ScrollMagic.Scene({
-        triggerElement: ".typewriter",
-        duration: 2500,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    })
+    const typewriter = new ScrollMagic.Scene({
+                                                 triggerElement: ".typewriter",
+                                                 duration: 2500,
+                                                 triggerHook: 0, //  top of viewport
+                                                 reverse: true
+                                             })
+    //.setTween(timeline)
         .setPin(".typewriter")
         //.addIndicators({name: "TYPEWRITER"})
         .addTo(controller);
@@ -79,25 +83,25 @@ $(document).ready(function () {
 //  Prolog ================================
 // bsp: bewege nach oder mache in richtung .to( klasse , länge, {styles},
 // start versatz ( verschiebt realtiv alle animationen dahinter!)
-    var action01 = new TimelineMax()
-        .to('.prolog #prolog1', 10, {autoAlpha: 1, y: 100}, "+=2") // fade from top
-        .to('.prolog #prolog1', 10, {autoAlpha: 0, y: -250}, "+=4")// fade away to top
-        .to('.prolog #prolog2', 10, {autoAlpha: 1, y: -250}, "-=8") // fade in from bottom
-        .to('.prolog #prolog2', 10, {autoAlpha: 0}, "+=4")
-        .to('.prolog #prolog3', 10, {autoAlpha: 1}, "+=4")
-        .to('.prolog #prolog3', 10, {autoAlpha: 0}, "+=4")
-        .to('#prologQuote', 10, {autoAlpha: 1}, "+=4")
-        .to('#prologQuote', 10, {autoAlpha: 0}, "+=4")
-        .to('.prolog #prolog4', 10, {autoAlpha: 1, y: -250}, "+=4") // fade from bottom
-        .to('.prolog #prolog4', 10, {autoAlpha: 0}, "+=4") // fade from top
-    ;
-    var prolog = new ScrollMagic.Scene({
-        triggerElement: ".prolog",
-        duration: 15000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    })
-        .setTween(action01)
+    let prologAction = new TimelineMax();
+    prologAction.to('.prolog #prolog1', 10, {autoAlpha: 1, y: 100}, "+=2") // fade from top
+                .to('.prolog #prolog1', 10, {autoAlpha: 0, y: -250}, "+=4")// fade away to top
+                .to('.prolog #prolog2', 10, {autoAlpha: 1, y: -250}, "-=8") // fade in from bottom
+                .to('.prolog #prolog2', 10, {autoAlpha: 0}, "+=4")
+                .to('.prolog #prolog3', 10, {autoAlpha: 1}, "+=4")
+                .to('.prolog #prolog3', 10, {autoAlpha: 0}, "+=4")
+                .to('#prologQuote', 10, {autoAlpha: 1}, "+=4")
+                .to('#prologQuote', 10, {autoAlpha: 0}, "+=4")
+                .to('.prolog #prolog4', 10, {autoAlpha: 1, y: -250}, "+=4") // fade from bottom
+                .to('.prolog #prolog4', 10, {autoAlpha: 0}, "+=4"); // fade from top
+
+    const prolog = new ScrollMagic.Scene({
+                                             triggerElement: ".prolog",
+                                             duration: 15000,
+                                             triggerHook: 0, //  top of viewport
+                                             reverse: true
+                                         })
+        .setTween(prologAction)
         .setPin(".prolog")
         //.addIndicators({name:"PROLOG"})
         .addTo(controller);
@@ -122,27 +126,26 @@ $(document).ready(function () {
 // gleiches gilt für den Pin,
 // für den aufbau im html dokument einfach immer an den anderen scenen orientieren
 // fade ins und fadeout müssen extra angefügt werden ! siehe unten !
-    var action01 = new TimelineMax()
-        // Klasse mit ID        //dauer//  attribute   // startDelay
-            .to('.scene01 #scene_one_quinn', 10, {autoAlpha: 1, x: 100}, "+=4")
+    action01 = new TimelineMax();
+    // Klasse mit ID        //dauer//  attribute   // startDelay
+    action01.to('.scene01 #scene_one_quinn', 10, {autoAlpha: 1, x: 100}, "+=4")
             .to('.scene01 #scene01_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2")
             .to('.scene01 #scene01_bubble_quinn', 10, {autoAlpha: 1, x: 100}, "+=4")
             .add("Parallax", "+=10") //insert point Parallax into timeline
-            .to('.scene01 #scene_one_second_layer', 40, {y: -35}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_third_layer', 40, {y: -35}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_fourth_layer', 40, {y: -25}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_fifth_layer', 40, {y: 0}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene_one_quinn', 40, {y: -35}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene01_bubble1', 40, {y: -10}, "Parallax")// starting at point Parallax
-            .to('.scene01 #scene01_bubble_quinn', 40, {y: -80}, "Parallax")// starting at point Parallax
-    ;
+            .to('.scene01 #scene_one_second_layer', 40, {y: -35}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene_one_third_layer', 40, {y: -35}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene_one_fourth_layer', 40, {y: -25}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene_one_fifth_layer', 40, {y: 0}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene_one_quinn', 40, {y: -35}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene01_bubble1', 40, {y: -10}, "Parallax") // starting at point Parallax
+            .to('.scene01 #scene01_bubble_quinn', 40, {y: -80}, "Parallax"); // starting at point Parallax
 
     const scene01 = new ScrollMagic.Scene({
-        triggerElement: ".scene01",
-        duration: 8000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    })
+                                              triggerElement: ".scene01",
+                                              duration: 8000,
+                                              triggerHook: 0, //  top of viewport
+                                              reverse: true
+                                          })
         .setTween(action01)
         .setPin(".scene01")
         //.addIndicators()
@@ -154,11 +157,11 @@ $(document).ready(function () {
     $(".scene01").each(function () {
         const quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
         new ScrollMagic.Scene({
-            triggerElement: '.scene01',
-            duration: 600,
-            triggerHook: .6,
-            offset: 0
-        })
+                                  triggerElement: '.scene01',
+                                  duration: 600,
+                                  triggerHook: .6,
+                                  offset: 0
+                              })
             .setTween(quinn3)
             //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
             .addTo(controller);
@@ -169,10 +172,10 @@ $(document).ready(function () {
     $(".scene01").each(function () {
         const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
         new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: "onEnter",
-        })
+                                  triggerElement: '.scene02',
+                                  duration: 500,
+                                  triggerHook: "onEnter",
+                              })
             .setTween(quinn2)
             //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"})
             .addTo(controller);
@@ -186,11 +189,11 @@ $(document).ready(function () {
     $(".scene02").each(function () {
         const scene2 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
         new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        })
+                                  triggerElement: '.scene02',
+                                  duration: 500,
+                                  triggerHook: .6,
+                                  offset: 0
+                              })
             .setTween(scene2)
             //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"})
             .addTo(controller);
@@ -201,17 +204,17 @@ $(document).ready(function () {
     $(".scene02").each(function () {
         const scene02 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
         new ScrollMagic.Scene({
-            triggerElement: '.scene03',
-            duration: 700,
-            triggerHook: "onEnter",
-        })
+                                  triggerElement: '.scene03',
+                                  duration: 700,
+                                  triggerHook: "onEnter",
+                              })
             .setTween(scene02)
             //.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"})
             .addTo(controller);
     });
     //  END FadeOutScene02 ================================
 
-    var scene02 = new TimelineMax()
+    const scene02 = new TimelineMax()
         // Klasse mit ID        //dauer//  attribute   // startDelay
             .add("Parallax", "+=40") //insert point Parallax into timeline
             .to('.scene02 #scene2_foreground', 15, {y: -30}, "Parallax")// starting at point Parallax
@@ -219,11 +222,11 @@ $(document).ready(function () {
     ;
 
     new ScrollMagic.Scene({
-        triggerElement: ".scene02",
-        duration: 8000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    })
+                              triggerElement: ".scene02",
+                              duration: 8000,
+                              triggerHook: 0, //  top of viewport
+                              reverse: true
+                          })
         .setTween(scene02)
         .setPin(".scene02")
         .addIndicators({name: "Scene02"})
