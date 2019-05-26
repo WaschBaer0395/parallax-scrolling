@@ -195,18 +195,13 @@ $(document).ready(function () {
     scene02TextAction.to('.scene02_textline #scene02_textline1', 10, {autoAlpha: 0, x: 100}, "+=4");
     scene02TextAction.to('.scene02_textline #scene02_textline2', 20, {autoAlpha: 1, x: -100}, "+=4");
     scene02TextAction.to('.scene02_textline #scene02_textline2', 10, {autoAlpha: 0, x: 100}, "+=4");
-    scene02TextAction.to('.scene02_textline #scene02_textline3', 20, {autoAlpha: 1, x: -100 }, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline3', 20, {autoAlpha: 1, x: -100}, "+=4");
     scene02TextAction.to('.scene02_textline #scene02_textline3', 10, {autoAlpha: 0, x: 100}, "+=4");
-    scene02TextAction.to('.scene02Text #scene02_textblock2', 20,{autoAlpha: 1, y: -250}, "-=8");
-    scene02TextAction.to('.scene02Text #scene02_textblock2', 10,{autoAlpha: 0}, "+=4");
-    scene02TextAction.to('.scene02Text #scene02_textblock3', 20,{autoAlpha: 1, y: -250}, "-=8");
-    scene02TextAction.to('.scene02Text #scene02_textblock3', 10,{autoAlpha: 0}, "+=4");
-    scene02TextAction.to('.scene02Text #scene02_textblock4', 20,{autoAlpha: 1, y: -550}, "+=4");
-
-
-
-
-
+    scene02TextAction.to('.scene02Text #scene02_textblock2', 20, {autoAlpha: 1, y: -250}, "-=8");
+    scene02TextAction.to('.scene02Text #scene02_textblock2', 10, {autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock3', 20, {autoAlpha: 1, y: -250}, "-=8");
+    scene02TextAction.to('.scene02Text #scene02_textblock3', 10, {autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=4");
 
     const scene02Text = new ScrollMagic.Scene({
                                                   triggerElement: ".scene02Text",
@@ -277,7 +272,7 @@ $(document).ready(function () {
         const scene02 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene03',
+                                                    triggerElement: '.scene02TextTransition',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
