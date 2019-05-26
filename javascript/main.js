@@ -191,8 +191,8 @@ $(document).ready(function () {
     let scene02TextAction = new TimelineMax();
     scene02TextAction.to('.scene02Text #scene2_textblock1', 20, {autoAlpha: 1, y: 300}, "+=2"); //fade from top
     scene02TextAction.to('.scene02Text #scene2_textblock1', 10, {autoAlpha: 0, y: -250}, "+=4"); // fade away to top
-    scene02TextAction.to('.scene2Text #scene2_textblock2', 10,{autoAlpha: 1, y: -250}, "-=8");
-    scene02TextAction.to('.scene2Text #scene2_textblock2', 10,{autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene2_textblock2', 10,{autoAlpha: 1, y: -550}, "-=8");
+    scene02TextAction.to('.scene02Text #scene2_textblock2', 10,{autoAlpha: 0}, "+=4");
 
 
     const scene02Text = new ScrollMagic.Scene({
