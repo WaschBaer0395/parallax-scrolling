@@ -1,11 +1,11 @@
 $(document).ready(function () {
 
     // Single scrollmagic controller for the entire experience
-    var controller = new ScrollMagic.Controller();
+    const controller = new ScrollMagic.Controller();
 
     $('.typewriter').each(function () { // gets called as soon as #Slide1_1 is in view
         // letter animation
-        var tween = new TimelineMax(); // timeline for the typing and cursor animation
+        const tween = new TimelineMax(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
             TweenMax.fromTo(".anim-typewriter", 1.75,
                 {width: "0",},
@@ -33,7 +33,7 @@ $(document).ready(function () {
         .to('.title #quote', 20, {autoAlpha: 1, y: -10}, "+=20")
         .to('.title #description', 20, {autoAlpha: 1, y: -10, delay: 25}, "+=20");
 
-    var cover = new ScrollMagic.Scene({
+    const cover = new ScrollMagic.Scene({
         triggerElement: ".cover",
         duration: 1000,
         triggerHook: 0.5, //  top of viewport
@@ -52,7 +52,7 @@ $(document).ready(function () {
         .to('.intro #quote', 20, {autoAlpha: 1, y: -100}, "+=8")
         .to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
 
-    var intro = new ScrollMagic.Scene({
+    const intro = new ScrollMagic.Scene({
         triggerElement: ".intro",
         duration: 5000,
         triggerHook: 0, //  top of viewport
@@ -64,7 +64,7 @@ $(document).ready(function () {
         .addTo(controller);
 
     //  typewriter ================================
-    var timeline = new TimelineMax();
+    const timeline = new TimelineMax();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
     var prolog = new ScrollMagic.Scene({
         triggerElement: ".typewriter",
@@ -137,7 +137,7 @@ $(document).ready(function () {
             .to('.scene01 #scene01_bubble_quinn', 40, {y: -80}, "Parallax")// starting at point Parallax
     ;
 
-    var scene01 = new ScrollMagic.Scene({
+    const scene01 = new ScrollMagic.Scene({
         triggerElement: ".scene01",
         duration: 8000,
         triggerHook: 0, //  top of viewport
@@ -152,7 +152,7 @@ $(document).ready(function () {
 // fade in ist einfach nur die scenen klasse!
 //  FadeInScene01 ================================
     $(".scene01").each(function () {
-        var quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
+        const quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
         new ScrollMagic.Scene({
             triggerElement: '.scene01',
             duration: 600,
@@ -167,7 +167,7 @@ $(document).ready(function () {
 // fadeout hingegen ist scenen klasse aber mit trigger auf der nächsten scene bei einem onEnter Hook !!
 //  FadeOutScene01 ================================
     $(".scene01").each(function () {
-        var quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
         new ScrollMagic.Scene({
             triggerElement: '.scene02',
             duration: 500,
@@ -184,7 +184,7 @@ $(document).ready(function () {
 
 //  FadeInScene02 ================================
     $(".scene02").each(function () {
-        var scene2 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
+        const scene2 = TweenMax.fromTo($(this), 2, {opacity: 0,}, {opacity: 1, ease: Power1.easeIn});
         new ScrollMagic.Scene({
             triggerElement: '.scene02',
             duration: 500,
@@ -199,7 +199,7 @@ $(document).ready(function () {
 
 //  FadeOutScene02 ================================
     $(".scene02").each(function () {
-        var scene02 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        const scene02 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
         new ScrollMagic.Scene({
             triggerElement: '.scene03',
             duration: 700,
