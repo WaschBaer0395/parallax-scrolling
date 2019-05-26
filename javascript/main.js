@@ -209,6 +209,7 @@ $(document).ready(function () {
     // SCENE 2 BILD ===============================
     let scene02Action = new TimelineMax();
     // Klasse mit ID        //dauer//  attribute   // startDelay
+    scene02Action.to('.scene02Bild #scene02_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
     scene02Action.add("Parallax", "+=0"); //insert point Parallax into timeline
     scene02Action.to('.scene02Bild #scene2_foreground', 15, {y: -20}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02Bild #scene02_quinn', 15, {y: -15}, "Parallax");
@@ -216,7 +217,7 @@ $(document).ready(function () {
 
     const scene02 = new ScrollMagic.Scene({
         triggerElement: ".scene02Bild",
-        duration: 8000,
+        duration: 5000,
         triggerHook: 0, //  top of viewport
         reverse: true
     });

@@ -11,7 +11,7 @@ class content
     background-size: contain !important;
 }
 
-.story{
+.story {
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -20,22 +20,24 @@ class content
     margin-left: 10%;
 }
 
-#introscene{
+#introscene {
 }
 
 /*
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
 */
-.speechbubble_diamand{
+.speechbubble_diamand {
     background: url("../Media/speechbubbles/Endversion Diamant.png");
     z-index: 99;
 }
-.speechbubble_circle{
+
+.speechbubble_circle {
     background: url("../Media/speechbubbles/Endversion Kreis.png");
     z-index: 99;
 }
-.speechbubble_square{
+
+.speechbubble_square {
     background: url("../Media/speechbubbles/Endversion Viereck.png");
     z-index: 99;
 }
@@ -44,61 +46,67 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
 
  */
-.inner_content{
+.inner_content {
     position: relative;
-    margin-left:auto;
-    margin-right:auto;
-    top:30%;
-    width:70%;
-    height:40%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    width: 70%;
+    height: 40%;
     text-align: center;
 }
-.scene1bubble{
-    top:20%;
+
+.scene1bubble {
+    top: 20%;
 }
+
 .inner_content > p {
     font-size: 2vh;
 }
 
 #Prolog {
     background: black;
-    width:70%;
-    height:100%;
+    width: 70%;
+    height: 100%;
     position: relative;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*--- SCENE 1 ---*/
-.scene01{
+.scene01 {
     position: relative;
 }
-#scene01_bubble_quinn{
+
+#scene01_bubble_quinn {
     visibility: hidden;
     position: absolute;
-    width:15%;
-    height:30%;
-    bottom:25%;
+    width: 15%;
+    height: 30%;
+    bottom: 25%;
     left: 24%;
     text-align: center;
 }
-#scene01_bubble1{
+
+#scene01_bubble1 {
     visibility: hidden;
     position: absolute;
-    width:15%;
-    height:30%;
-    top:18%;
+    width: 15%;
+    height: 30%;
+    top: 18%;
     right: 30%;
 }
-#scene_one_quinn{
+
+#scene_one_quinn {
     visibility: hidden;
-    width:8%;
-    height:30%;
+    width: 8%;
+    height: 30%;
     position: absolute;
     left: 20%;
-    bottom:0;
+    bottom: 0;
     z-index: 5;
 }
+
 #scene_one_second_layer {
     position: absolute;
     z-index: 4;
@@ -114,87 +122,107 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 1;
 }
 
-#scene_one_fifth_layer{
+#scene_one_fifth_layer {
     position: absolute;
     z-index: 0;
 }
 
 /*--- SCENE 2 ---*/
-.blur{
-    filter:none;
+.blur {
+    filter: none;
 }
-.scene02{
+
+.scene02 {
     position: relative;
 }
-#scene02_background{
+
+#scene02_background {
     position: absolute;
     z-index: 0;
 }
-#scene02_foreground{
+
+#scene02_foreground {
     position: absolute;
     z-index: 1;
-    bottom:-3%;
+    bottom: -3%;
 }
-#scene02_quinn{
+
+#scene02_quinn {
     position: absolute;
     z-index: 1;
     width: 30%;
-    height:90%;
-    bottom:-2%;
-    left:10%;
+    height: 90%;
+    bottom: -2%;
+    left: 10%;
 }
-.textblock{
+
+.textblock {
     z-index: 2;
 }
-.textline{
+
+.textline {
     z-index: 2;
 }
+
+.scene2bubble {
+    top: 15%;
+}
+
+#scene02_bubble1 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    top: 10%;
+    right: 30%;
+}
+
 /*--- SCENE 3 ---*/
 #Scene3 {
-    background: url(../Fotos/Szene03_Krankenzimmer.jpg)50% 0;
+    background: url(../Fotos/Szene03_Krankenzimmer.jpg) 50% 0;
 }
 
 /*--- SCENE 4 ---*/
 #Scene4 {
-    background: url(../Fotos/Szene04_Presse.jpg)50% 0;
+    background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
 }
 
 /*--- SCENE 5 ---*/
 #Scene5 {
-    background: url(../Fotos/Szene05_DunkleStrasse.jpg)50% 0;
+    background: url(../Fotos/Szene05_DunkleStrasse.jpg) 50% 0;
 }
 
 /*--- SCENE 6 ---*/
 #Scene6 {
-    background: url(../Fotos/Szene06_StrasseMitBergen.jpg)50% 0;
+    background: url(../Fotos/Szene06_StrasseMitBergen.jpg) 50% 0;
 }
 
 /*--- SCENE 7 ---*/
 #Scene7 {
-    background: url(../Fotos/Szene07_Gala.jpg)50% 0;
+    background: url(../Fotos/Szene07_Gala.jpg) 50% 0;
 }
 
 /*--- SCENE 8 ---*/
 #Scene8 {
-    background: url(../Fotos/Szene08_DunkleStrasse.jpg)50% 0;
+    background: url(../Fotos/Szene08_DunkleStrasse.jpg) 50% 0;
 }
 
 /*--- SCENE 9 ---*/
 #Scene9 {
-    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg)50% 0;
+    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg) 50% 0;
 }
 
 /*--- SCENE 10 ---*/
 #Scene10 {
-    background: url(../Fotos/Szene10_Cafe.jpg)50% 0;
+    background: url(../Fotos/Szene10_Cafe.jpg) 50% 0;
 }
 
 /*--- SCENE 11 ---*/
 #Scene11 {
-    background: url(../Fotos/Szene11_Flughafen.jpg)50% 0;
+    background: url(../Fotos/Szene11_Flughafen.jpg) 50% 0;
 }
 
 /*--- SCENE 12 ---*/
 #Scene12 {
-    background: url(../Fotos/Szene12_Konzert.jpg)50% 0;
+    background: url(../Fotos/Szene12_Konzert.jpg) 50% 0;
 }
