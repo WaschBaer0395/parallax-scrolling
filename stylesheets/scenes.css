@@ -163,7 +163,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     right: 30%;
 }
 
-.scene02Text{
+.scene02Text, .scene02TextTransition{
     background: black;
     width:70%;
     position: relative;
@@ -186,6 +186,11 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene02_textblock4{
     font-size: 200%;
     visibility: hidden;
+}
+#scene02_textblock5{
+    top: 21%;
+    visibility: hidden;
+    position: relative;
 }
 
 #scene02_textline1{
