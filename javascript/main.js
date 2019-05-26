@@ -190,7 +190,7 @@ $(document).ready(function () {
 
     let scene02Action = new TimelineMax();
     // Klasse mit ID        //dauer//  attribute   // startDelay
-    scene02Action.add("Parallax", "+=40"); //insert point Parallax into timeline
+    scene02Action.add("Parallax", "+=0"); //insert point Parallax into timeline
     scene02Action.to('.scene02 #scene2_foreground', 15, {y: -30}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02 #scene02_quinn', 15, {y: -15}, "Parallax");
 
