@@ -189,10 +189,23 @@ $(document).ready(function () {
     //  START scene02 ================================
     //SCENE 2 TEXT =========================
     let scene02TextAction = new TimelineMax();
-    scene02TextAction.to('.scene02Text #scene2_textblock1', 20, {autoAlpha: 1, y: 300}, "+=2"); //fade from top
-    scene02TextAction.to('.scene02Text #scene2_textblock1', 10, {autoAlpha: 0, y: -250}, "+=4"); // fade away to top
-    scene02TextAction.to('.scene02Text #scene2_textblock2', 10,{autoAlpha: 1, y: -550}, "-=8");
-    scene02TextAction.to('.scene02Text #scene2_textblock2', 10,{autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2"); //fade from top
+    scene02TextAction.to('.scene02Text #scene02_textblock1', 10, {autoAlpha: 0, y: -250}, "+=4"); // fade away to top
+    scene02TextAction.to('.scene02_textline #scene02_textline1', 20, {autoAlpha: 1, x: -100}, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline1', 10, {autoAlpha: 0, x: 100}, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline2', 20, {autoAlpha: 1, x: -100}, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline2', 10, {autoAlpha: 0, x: 100}, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline3', 20, {autoAlpha: 1, x: -100 }, "+=4");
+    scene02TextAction.to('.scene02_textline #scene02_textline3', 10, {autoAlpha: 0, x: 100}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock2', 20,{autoAlpha: 1, y: -250}, "-=8");
+    scene02TextAction.to('.scene02Text #scene02_textblock2', 10,{autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock3', 20,{autoAlpha: 1, y: -250}, "-=8");
+    scene02TextAction.to('.scene02Text #scene02_textblock3', 10,{autoAlpha: 0}, "+=4");
+    scene02TextAction.to('.scene02Text #scene02_textblock4', 20,{autoAlpha: 1, y: -550}, "+=4");
+
+
+
+
 
 
     const scene02Text = new ScrollMagic.Scene({
@@ -211,7 +224,7 @@ $(document).ready(function () {
     // Klasse mit ID        //dauer//  attribute   // startDelay
     scene02Action.to('.scene02Bild #scene02_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
     scene02Action.add("Parallax", "+=0"); //insert point Parallax into timeline
-    scene02Action.to('.scene02Bild #scene2_foreground', 15, {y: -20}, "Parallax"); // starting at point Parallax
+    scene02Action.to('.scene02Bild #scene02_foreground', 15, {y: -20}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02Bild #scene02_quinn', 15, {y: -15}, "Parallax");
 
 
