@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     // Single scrollmagic controller for the entire experience
     const controller = new ScrollMagic.Controller();
 
