@@ -232,6 +232,30 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 20%;
     position: relative;
 }
+scene03_hospital1{
+    position: relative;
+}
+#scene03_background{
+    position: absolute;
+    z-index: 0;
+}
+
+#scene03_adam1{
+    position: absolute;
+    z-index: 1;
+}
+#scene03_adam2{
+    position: absolute;
+    z-index: 1;
+}
+#scene03_adam3{
+    position: absolute;
+    z-index: 1;
+}
+#scene03_adam4{
+    position: absolute;
+    z-index: 1;
+}
 
 /*--- SCENE 4 ---*/
 #Scene4 {

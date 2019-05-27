@@ -194,10 +194,10 @@ $(document).ready(function () {
     scene02TextAction.to('.scene02_textline #scene02_textline1', 20, {autoAlpha: 1, y: 50, x: -60}, "+=4");
     scene02TextAction.to('.scene02_textline #scene02_textline2', 20, {autoAlpha: 1, y: 150, x: 80}, "+=4");
     scene02TextAction.to('.scene02_textline #scene02_textline3', 20, {autoAlpha: 1, y: 250, x: 40}, "+=4");
-    scene02TextAction.to('.scene02_textline #scene02_textline1', 10, {autoAlpha: 0, x: 100}, "+=4");
-    scene02TextAction.to('.scene02_textline #scene02_textline2', 10, {autoAlpha: 0, x: 100}, "+=4");
-    scene02TextAction.to('.scene02_textline #scene02_textline3', 10, {autoAlpha: 0, x: 100}, "+=4");
-    scene02TextAction.to('.scene02Text #scene02_textblock2', 20, {autoAlpha: 1, y: -250}, "-=8");
+    scene02TextAction.to('.scene02_textline #scene02_textline1', 10, {autoAlpha: 0, x: 50}, "-=2");
+    scene02TextAction.to('.scene02_textline #scene02_textline2', 10, {autoAlpha: 0, x: 100}, "-=2");
+    scene02TextAction.to('.scene02_textline #scene02_textline3', 10, {autoAlpha: 0, x: 100}, "-=2");
+    scene02TextAction.to('.scene02Text #scene02_textblock2', 20, {autoAlpha: 1, y: -250}, "-=6");
     scene02TextAction.to('.scene02Text #scene02_textblock2', 10, {autoAlpha: 0}, "+=4");
     scene02TextAction.to('.scene02Text #scene02_textblock3', 20, {autoAlpha: 1, y: -250}, "-=8");
     scene02TextAction.to('.scene02Text #scene02_textblock3', 10, {autoAlpha: 0}, "+=4");
@@ -217,10 +217,10 @@ $(document).ready(function () {
     // SCENE 2 BILD ===============================
     let scene02Action = new TimelineMax();
     // Klasse mit ID        //dauer//  attribute   // startDelay
-    scene02Action.to('.scene02Bild #scene02_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
     scene02Action.add("Parallax", "+=0"); //insert point Parallax into timeline
-    scene02Action.to('.scene02Bild #scene02_foreground', 15, {y: -20}, "Parallax"); // starting at point Parallax
-    scene02Action.to('.scene02Bild #scene02_quinn', 15, {y: -15}, "Parallax");
+    scene02Action.to('.scene02Bild #scene02_foreground', 10, {y: -20}, "Parallax"); // starting at point Parallax
+    scene02Action.to('.scene02Bild #scene02_quinn', 10, {y: -15}, "Parallax");
+    scene02Action.to('.scene02Bild #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "+=2");
 
 
     const scene02 = new ScrollMagic.Scene({
@@ -280,10 +280,25 @@ $(document).ready(function () {
     });
     //  END FadeInScene02 Bild ================================
 
+    //  FadeOutScene02 Bild ================================
+    $(".scene02Bild").each(function () {
+        const scene02BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene2Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene02TextTransition',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        scene2Scene.setTween(scene02BildOut);
+        scene2Scene.addTo(controller);
+        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
+    });
+    //  END FadeOutScene02 Bild ================================
+
     //SCENE 2 TEXT-TRANSITION =========================
     let scene02TextTransitionAction = new TimelineMax();
-    scene02TextTransitionAction.to('.scene02TextTransition #scene02_textblock5', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene02TextTransitionAction.to('.scene02TextTransition #scene02_textblock5', 10, {autoAlpha: 0, y: -250}, "+=4");
+    scene02TextTransitionAction.to('.scene02TextTransition #scene02_textblock5', 20, {autoAlpha: 1, y: 100}, "+=2");
+    scene02TextTransitionAction.to('.scene02TextTransition #scene02_textblock5', 30, {autoAlpha: 0, y: -350}, "+=4");
 
 
     const scene02Transition = new ScrollMagic.Scene({
@@ -297,20 +312,34 @@ $(document).ready(function () {
     scene02Transition.setPin(".scene02TextTransition");
     scene02Transition.addTo(controller);
 
-    //  FadeOutScene02 Bild ================================
-    $(".scene02Bild").each(function () {
-        const scene02BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+    //START FadeInScene02 Text Transition
+    $(".scene02TextTransition").each(function () {
+        const scene02TextTransitionIn = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02TextTransition',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
-        scene2Scene.setTween(scene02BildOut);
+            triggerElement: '.scene02TextTransition',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene2Scene.setTween(scene02TextTransitionIn);
         scene2Scene.addTo(controller);
-        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
-    //  END FadeOutScene02 Bild ================================
+    //  END FadeInScene02 Text Transition ================================
+
+    //  START FadeOutScene02 Text Transition ================================
+    $(".scene02TextTransition").each(function () {
+        const scene02TextTransitionOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene2Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene03Text',
+            duration: 600,
+            triggerHook: "onEnter",
+        });
+        scene2Scene.setTween(scene02TextTransitionOut);
+        scene2Scene.addTo(controller);
+    });
+    //END FadeOutScene02 Text Transition
     //  END scene02 ================================
 
 
@@ -360,7 +389,7 @@ $(document).ready(function () {
         const scene03TextOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.five',
+                                                    triggerElement: '.scene03_hospital1',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
@@ -369,4 +398,52 @@ $(document).ready(function () {
     });
     //  END FadeOutScene03 Text ================================
 
+    //SCENE 03 BILD
+    let scene03BildAction = new TweenlineMax();
+    scene03BildAction.add("Parallax", "+=0");
+    scene03BildAction.to('.scene03_hospital1 #scene03_background', 40, {autoAlpha:1, y:-35} , "Parallax");
+
+
+    const scene03Bild = new ScrollMagic.Scene({
+                                            triggerElement: ".scene03_hospital1",
+                                            duration: 10000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                         });
+
+    scene03Bild.setTween(scene03BildAction);
+    scene03Bild.setPin(".scene03_hospital1");
+    scene03Bild.addTo(controller);
+
+
+    // START FadeInScene03 Bild Hospital ==========================================
+    $(".scene03_hospital1").each(function () {
+        const scene03BildIn = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene3Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene03_hospital1',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene3Scene.setTween(scene03BildIn);
+        scene3Scene.addTo(controller);
+        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene03 Bild Hospital ================================
+
+    // START FadeOutScene03 Bild ================================
+    $(".scene03_hospital1").each(function () {
+        const scene03BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene3Scene = new ScrollMagic.Scene({
+            triggerElement: '.five',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        scene3Scene.setTween(scene03BildOut);
+        scene3Scene.addTo(controller);
+    });
+    // END FadeOutScene03 Bild Hospital =======================
+    //END SCENE03
 });
