@@ -197,9 +197,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 20%;
     position: relative;
 }
+#scene02_textblock3 {
+    top: 20%;
+    position: relative;
+}
 
 #scene02_textblock4 {
     font-size: 200%;
+    position: relative;
 }
 
 #scene02_textblock5 {
