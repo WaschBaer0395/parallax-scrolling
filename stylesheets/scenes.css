@@ -1,10 +1,10 @@
-/* stylesheet for all Scenes
+/*
+stylesheet for all Scenes
 */
 
 /*
-class content
-    for every layer in scene needed
- */
+class content for every layer in scene needed
+*/
 .content {
     height: 100%;
     background-repeat: no-repeat !important;
@@ -167,6 +167,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     font-size: 3.5vh;
     text-align: justify;
 }
+
 .textblock {
     z-index: 2;
     visibility: hidden;
