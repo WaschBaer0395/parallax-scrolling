@@ -190,13 +190,13 @@ $(document).ready(function () {
     // SCENE 2 ===============================
     let scene02Action = new TimelineMax();
     // Klasse mit ID        //dauer//  attribute   // startDelay
-    scene01Action.set('.blur',{webkitFilter:'blur(6px)',filter:'blur(6px)'},"+=2");
+    scene01Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //// TEXT////
-    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 1, y: 100},"+=10"); //fade from top
-    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 0, y: -250},"+=40"); // fade away to top
-    scene02Action.to('.scene02 #scene02_textline1', 20, {autoAlpha: 1, y: 50, x: -60},"+=4");
-    scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 1, y: 150, x: 80},"+=2");
-    scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 1, y: 250, x: 40},"+=2");
+    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 1, y: 100}, "+=10"); //fade from top
+    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 0, y: -250}, "+=40"); // fade away to top
+    scene02Action.to('.scene02 #scene02_textline1', 20, {autoAlpha: 1, y: 50, x: -60}, "+=4");
+    scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 1, y: 150, x: 80}, "+=2");
+    scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 1, y: 250, x: 40}, "+=2");
     scene02Action.to('.scene02 #scene02_textline1', 20, {autoAlpha: 0, x: 50}, "+=40");
     scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 0, x: 100}, "+=40");
     scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 0, x: 100}, "+=40");
@@ -205,14 +205,14 @@ $(document).ready(function () {
     scene02Action.to('.scene02 #scene02_textblock3', 20, {autoAlpha: 1, y: -650}, "-=4");
     scene02Action.to('.scene02 #scene02_textblock3', 10, {autoAlpha: 0}, "+=40");
     //// TEXT ENDE ////
-    scene02Action.to('.blur',20,{webkitFilter:'blur(0px)',filter:'blur(0px)'},"+=2");
+    scene02Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     scene02Action.add("Parallax", "+=2"); //insert point Parallax into timeline
     scene02Action.to('.scene02 #scene02_foreground', 400, {y: -70}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02 #scene02_quinn', 400, {y: -30}, "Parallax");
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "-=200");
-    scene02Action.add("BlurMitBlase","+=30");
-    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0},"BlurMitBlase");
-    scene02Action.to('.blur',20,{webkitFilter:'blur(6px)',filter:'blur(6px)'},"BlurMitBlase");
+    scene02Action.add("BlurMitBlase", "+=30");
+    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0}, "BlurMitBlase");
+    scene02Action.to('.blur', 20, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "BlurMitBlase");
     ///// TEXT /////
     scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=0");
     scene02Action.to('.scene02 #scene02_textblock5', 20, {autoAlpha: 1, y: 100}, "+=40");
@@ -229,7 +229,6 @@ $(document).ready(function () {
     scene02.setPin(".scene02");
     scene02.addTo(controller);
     scene02.addIndicators({name: "Scene02"});
-
 
 
     //  START FadeInScene02 Bild================================
@@ -252,10 +251,10 @@ $(document).ready(function () {
         const scene02BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene02TextTransition',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene02TextTransition',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene2Scene.setTween(scene02BildOut);
         scene2Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -324,15 +323,15 @@ $(document).ready(function () {
     //SCENE 03 BILD
     let scene03BildAction = new TweenlineMax();
     scene03BildAction.add("Parallax", "+=0");
-    scene03BildAction.to('.scene03_hospital1 #scene03_background', 40, {autoAlpha:1, y:-35} , "Parallax");
+    scene03BildAction.to('.scene03_hospital1 #scene03_background', 40, {autoAlpha: 1, y: -35}, "Parallax");
 
 
     const scene03Bild = new ScrollMagic.Scene({
-                                            triggerElement: ".scene03_hospital1",
-                                            duration: 10000,
-                                            triggerHook: 0, //  top of viewport
-                                            reverse: true
-                                         });
+                                                  triggerElement: ".scene03_hospital1",
+                                                  duration: 10000,
+                                                  triggerHook: 0, //  top of viewport
+                                                  reverse: true
+                                              });
 
     scene03Bild.setTween(scene03BildAction);
     scene03Bild.setPin(".scene03_hospital1");
@@ -344,11 +343,11 @@ $(document).ready(function () {
         const scene03BildIn = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03_hospital1',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene03_hospital1',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene3Scene.setTween(scene03BildIn);
         scene3Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -360,10 +359,10 @@ $(document).ready(function () {
         const scene03BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.five',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.five',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene3Scene.setTween(scene03BildOut);
         scene3Scene.addTo(controller);
     });
