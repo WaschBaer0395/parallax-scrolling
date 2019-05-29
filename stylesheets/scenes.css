@@ -156,9 +156,23 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     left: 10%;
 }
 
+.textblock_prolog {
+    z-index: 2;
+    visibility: hidden;
+    font-size: 3.5vh;
+    text-align: justify;
+}
 .textblock {
     z-index: 2;
     visibility: hidden;
+    font-size: 3.5vh;
+    text-align: justify;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .textline {
@@ -197,6 +211,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 20%;
     position: relative;
 }
+
 #scene02_textblock3 {
     top: 20%;
     position: relative;
@@ -237,27 +252,32 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 20%;
     position: relative;
 }
-scene03_hospital1{
+
+scene03_hospital1 {
     position: relative;
 }
-#scene03_background{
+
+#scene03_background {
     position: absolute;
     z-index: 0;
 }
 
-#scene03_adam1{
+#scene03_adam1 {
     position: absolute;
     z-index: 1;
 }
-#scene03_adam2{
+
+#scene03_adam2 {
     position: absolute;
     z-index: 1;
 }
-#scene03_adam3{
+
+#scene03_adam3 {
     position: absolute;
     z-index: 1;
 }
-#scene03_adam4{
+
+#scene03_adam4 {
     position: absolute;
     z-index: 1;
 }
