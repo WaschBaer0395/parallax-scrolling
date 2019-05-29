@@ -184,6 +184,8 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 2;
     font-size: 200%;
     visibility: hidden;
+    font-size: 5vh;
+    text-align: center;
 }
 
 .scene2bubble {

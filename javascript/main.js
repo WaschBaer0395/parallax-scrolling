@@ -214,7 +214,7 @@ $(document).ready(function () {
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0},"BlurMitBlase");
     scene02Action.to('.blur',20,{webkitFilter:'blur(6px)',filter:'blur(6px)'},"BlurMitBlase");
     ///// TEXT /////
-    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=40");
+    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=0");
     scene02Action.to('.scene02 #scene02_textblock5', 20, {autoAlpha: 1, y: 100}, "+=40");
 
 
