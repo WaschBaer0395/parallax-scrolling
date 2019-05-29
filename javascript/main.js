@@ -192,30 +192,31 @@ $(document).ready(function () {
     // Klasse mit ID        //dauer//  attribute   // startDelay
     scene01Action.set('.blur',{webkitFilter:'blur(6px)',filter:'blur(6px)'},"+=2");
     //// TEXT////
-    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 1, y: 100},"+=2"); //fade from top
-    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 0, y: -250},"+=4"); // fade away to top
+    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 1, y: 100},"+=10"); //fade from top
+    scene02Action.to('.scene02 #scene02_textblock1', 10, {autoAlpha: 0, y: -250},"+=40"); // fade away to top
     scene02Action.to('.scene02 #scene02_textline1', 20, {autoAlpha: 1, y: 50, x: -60},"+=4");
-    scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 1, y: 150, x: 80},"+=4");
-    scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 1, y: 250, x: 40},"+=4");
-    scene02Action.to('.scene02 #scene02_textline1', 10, {autoAlpha: 0, x: 50}, "-=2");
-    scene02Action.to('.scene02 #scene02_textline2', 10, {autoAlpha: 0, x: 100}, "-=2");
-    scene02Action.to('.scene02 #scene02_textline3', 10, {autoAlpha: 0, x: 100}, "-=2");
+    scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 1, y: 150, x: 80},"+=2");
+    scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 1, y: 250, x: 40},"+=2");
+    scene02Action.to('.scene02 #scene02_textline1', 20, {autoAlpha: 0, x: 50}, "+=40");
+    scene02Action.to('.scene02 #scene02_textline2', 20, {autoAlpha: 0, x: 100}, "+=40");
+    scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 0, x: 100}, "+=40");
     scene02Action.to('.scene02 #scene02_textblock2', 20, {autoAlpha: 1, y: -250}, "-=3");
-    scene02Action.to('.scene02 #scene02_textblock2', 10, {autoAlpha: 0}, "+=4");
-    scene02Action.to('.scene02 #scene02_textblock3', 20, {autoAlpha: 1, y: -250}, "-=4");
-    scene02Action.to('.scene02 #scene02_textblock3', 10, {autoAlpha: 0}, "+=4");
+    scene02Action.to('.scene02 #scene02_textblock2', 10, {autoAlpha: 0}, "+=40");
+    scene02Action.to('.scene02 #scene02_textblock3', 20, {autoAlpha: 1, y: -650}, "-=4");
+    scene02Action.to('.scene02 #scene02_textblock3', 10, {autoAlpha: 0}, "+=40");
     //// TEXT ENDE ////
     scene02Action.to('.blur',20,{webkitFilter:'blur(0px)',filter:'blur(0px)'},"+=2");
     scene02Action.add("Parallax", "+=2"); //insert point Parallax into timeline
     scene02Action.to('.scene02 #scene02_foreground', 10, {y: -20}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02 #scene02_quinn', 10, {y: -15}, "Parallax");
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "+=2");
-    scene02Action.add("BlurMitBlase","+=2");
+    scene02Action.add("BlurMitBlase","+=40");
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0},"BlurMitBlase");
     scene02Action.to('.blur',20,{webkitFilter:'blur(6px)',filter:'blur(6px)'},"BlurMitBlase");
     ///// TEXT /////
-    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=4");
-    scene02Action.to('.scene02 #scene02_textblock5', 20, {autoAlpha: 1, y: 100}, "+=4");
+    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=40");
+    scene02Action.to('.scene02 #scene02_textblock5', 20, {autoAlpha: 1, y: 100}, "+=40");
+
 
     //// TEXT ENDE ////
     const scene02 = new ScrollMagic.Scene({

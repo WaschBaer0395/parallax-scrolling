@@ -223,6 +223,8 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene02_textblock4 {
     font-size: 200%;
     position: relative;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
 }
 
 #scene02_textblock5 {
