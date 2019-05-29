@@ -207,10 +207,10 @@ $(document).ready(function () {
     //// TEXT ENDE ////
     scene02Action.to('.blur',20,{webkitFilter:'blur(0px)',filter:'blur(0px)'},"+=2");
     scene02Action.add("Parallax", "+=2"); //insert point Parallax into timeline
-    scene02Action.to('.scene02 #scene02_foreground', 10, {y: -20}, "Parallax"); // starting at point Parallax
-    scene02Action.to('.scene02 #scene02_quinn', 10, {y: -15}, "Parallax");
-    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "+=2");
-    scene02Action.add("BlurMitBlase","+=40");
+    scene02Action.to('.scene02 #scene02_foreground', 400, {y: -70}, "Parallax"); // starting at point Parallax
+    scene02Action.to('.scene02 #scene02_quinn', 400, {y: -30}, "Parallax");
+    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "-=200");
+    scene02Action.add("BlurMitBlase","+=30");
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0},"BlurMitBlase");
     scene02Action.to('.blur',20,{webkitFilter:'blur(6px)',filter:'blur(6px)'},"BlurMitBlase");
     ///// TEXT /////

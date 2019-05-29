@@ -149,13 +149,15 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 2;
 }
-
+#scene02_foreground{
+    bottom:-12%!important;
+}
 #scene02_quinn {
     position: absolute;
     z-index: 1;
     width: 30%;
     height: 90%;
-    bottom: -2%;
+    bottom: -10%;
     left: 10%;
 }
 
