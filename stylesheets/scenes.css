@@ -145,6 +145,10 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 1;
 }
+.scenes_layer02 {
+    position: absolute;
+    z-index: 2;
+}
 
 #scene02_quinn {
     position: absolute;
