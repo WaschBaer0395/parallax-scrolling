@@ -290,8 +290,6 @@ $(document).ready(function () {
     //ADAM FADEOUT
     scene03Action.to('.scene03 #scene03_adam1',5, {autoAlpha: 0});
     scene03Action.to('.scene03 #scene03_adam2',10, {autoAlpha: 1}, "-=10");
-    scene03Action.to('.scene03 #scene03_textblock6', 10, {autoAlpha: 1}, "-=6");
-    scene03Action.to('.scene03 #scene03_textblock6', 10, {autoAlpha: 0}, "+=2");
 
 
 
