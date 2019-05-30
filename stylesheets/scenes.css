@@ -376,8 +376,9 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext1 {
-    left: -18.5%;
-    top: 33%;
+    top: 30%;
+    left: -21%;
+    border: solid green 1px;
 }
 
 #scene03_frauBubble2 {
