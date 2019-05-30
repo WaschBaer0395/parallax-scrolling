@@ -169,7 +169,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 .textblock {
-    z-index: 2;
+    z-index: 3;
     visibility: hidden;
     font-size: 3.5vh;
     text-align: justify;
@@ -179,6 +179,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 .textline {
@@ -187,6 +188,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     visibility: hidden;
     font-size: 5vh;
     text-align: center;
+    position: relative;
 }
 
 .scene2bubble {
@@ -200,14 +202,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     height: 90%;
     top: 10%;
     right: 30%;
-}
-
-.scene02Text, .scene02TextTransition, .scene03Text {
-    background: black;
-    width: 70%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #scene02_textblock1 {
@@ -254,26 +248,13 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: relative;
     text-shadow: 2px 2px #262626;
 }
-
+.scene03 .textline{
+    font-size: 200%;
+    position: relative;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
 /*--- SCENE 3 ---*/
-#scene03_textblock1 {
-    top: 20%;
-    position: relative;
-}
-
-#scene03_textblock2 {
-    top: 20%;
-    position: relative;
-}
-
-#scene03_hospital1 {
-    position: relative;
-}
-
-#scene03_background {
-    position: absolute;
-    z-index: 0;
-}
 
 #scene03_adam1 {
     position: absolute;
@@ -294,6 +275,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 1;
 }
+
 
 /*--- SCENE 4 ---*/
 #Scene4 {
