@@ -369,15 +369,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene03_adamBubble1 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 30%;
     top: 10%;
     left: 20%;
 }
 
 #scene03_adamtext1 {
-    top: 30%;
-    left: -21%;
+    top: 15%;
     border: solid green 1px;
 }
 
