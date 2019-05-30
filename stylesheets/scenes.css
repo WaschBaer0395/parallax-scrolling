@@ -175,7 +175,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     text-align: justify;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
-    border: 2px solid white;
+    border: 2px solid #262626;
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;
@@ -263,7 +263,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: relative;
 }
 
-scene03_hospital1 {
+#scene03_hospital1 {
     position: relative;
 }
 

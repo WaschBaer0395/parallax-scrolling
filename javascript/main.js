@@ -175,7 +175,7 @@ $(document).ready(function () {
         const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let quinn2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02Text',
+                                                    triggerElement: '.scene02',
                                                     duration: 500,
                                                     triggerHook: "onEnter",
                                                 });
@@ -232,30 +232,30 @@ $(document).ready(function () {
 
 
     //  START FadeInScene02 Bild================================
-    $(".scene02Bild").each(function () {
-        const scene02BildIn = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+    $(".scene02").each(function () {
+        const scene02In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02Bild',
+                                                    triggerElement: '.scene02',
                                                     duration: 500,
                                                     triggerHook: .6,
                                                     offset: 0
                                                 });
-        scene2Scene.setTween(scene02BildIn);
+        scene2Scene.setTween(scene02In);
         scene2Scene.addTo(controller);
     });
     //  END FadeInScene02 Bild ================================
 
     //  FadeOutScene02 Bild ================================
-    $(".scene02Bild").each(function () {
-        const scene02BildOut = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+    $(".scene02").each(function () {
+        const scene02Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02TextTransition',
+                                                    triggerElement: '.scene03Text',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
-        scene2Scene.setTween(scene02BildOut);
+        scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
