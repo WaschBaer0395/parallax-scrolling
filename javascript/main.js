@@ -279,6 +279,20 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_textblock3', 10, {autoAlpha: 0, y: 100}, "+=4");
     scene03Action.to('.scene03 #scene03_textline2', 10, {autoAlpha: 1}, "+=2");
     scene03Action.to('.scene03 #scene03_textline2', 10, {autoAlpha: 0}, "+=4");
+    //TEXT ENDE
+    //BLUR ENDE
+    //TEXT
+    scene03Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene03Action.to('.scene03 #scene03_textblock4', 20, {autoAlpha: 1, x: 100}, "+=2");
+    scene03Action.to('.scene03 #scene03_textblock4', 15, {autoAlpha: 0, x: -250}, "+=4");
+    scene03Action.to('.scene03 #scene03_textblock5', 10, {autoAlpha: 1}, "+=2");
+    scene03Action.to('.scene03 #scene03_textblock5', 10, {autoAlpha: 0}, "+=4");
+    //ADAM FADEOUT
+    scene03Action.to('.scene03 #scene03_adam1',5, {autoAlpha: 0});
+    scene03Action.to('.scene03 #scene03_adam2',10, {autoAlpha: 1}, "-=10");
+    scene03Action.to('.scene03 #scene03_textblock6', 10, {autoAlpha: 1}, "-=6");
+    scene03Action.to('.scene03 #scene03_textblock6', 10, {autoAlpha: 0}, "+=2");
+
 
 
     const scene03 = new ScrollMagic.Scene({
