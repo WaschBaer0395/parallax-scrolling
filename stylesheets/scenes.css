@@ -20,8 +20,6 @@ class content for every layer in scene needed
     margin-left: 10%;
 }
 
-#introscene {
-}
 
 /*
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
@@ -75,6 +73,9 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 
 /*--- SCENE 1 ---*/
 .scene01 {
+    position: relative;
+}
+#cover {
     position: relative;
 }
 

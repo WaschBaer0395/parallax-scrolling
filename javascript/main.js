@@ -24,7 +24,7 @@ $(document).ready(function () {
                                                    triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
                                                    offset: 600 // start y !  for use add this to animating div data-offset=" "
                                                });
-        tweenScene.setTween(tween)
+        tweenScene.setTween(tween);
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
     });
@@ -33,9 +33,6 @@ $(document).ready(function () {
     //  Cover ================================
     // Animationen hier sind nur Platzhalter !!! da noch kein cover gebaut wurde
     let coverAction = new TimelineMax();
-    coverAction.to('.title #mainTitle', 20, {autoAlpha: 1, y: -10}, "+=4");
-    coverAction.to('.title #quote', 20, {autoAlpha: 1, y: -10}, "+=20");
-    coverAction.to('.title #description', 20, {autoAlpha: 1, y: -10, delay: 25}, "+=20");
 
     const cover = new ScrollMagic.Scene({
                                             triggerElement: ".cover",
@@ -46,7 +43,7 @@ $(document).ready(function () {
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
-    //cover.addIndicators({name: "Cover"});
+    cover.addIndicators({name: "COVER", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
 
     //  Intro ================================
     let introAction = new TimelineMax();
@@ -218,7 +215,6 @@ $(document).ready(function () {
     scene02Action.to('.blur', 20, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "BlurMitBlase");
     scene02Action.to('.scene02 #scene02_foreground', 400, {y: -70}, "Parallax"); // starting at point Parallax
     scene02Action.to('.scene02 #scene02_quinn', 400, {y: -30}, "Parallax");
-
 
     //// TEXT ENDE ////
     const scene02 = new ScrollMagic.Scene({
