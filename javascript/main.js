@@ -202,21 +202,22 @@ $(document).ready(function () {
     scene02Action.to('.scene02 #scene02_textline3', 20, {autoAlpha: 0, x: 100}, "+=40");
     scene02Action.to('.scene02 #scene02_textblock2', 20, {autoAlpha: 1, y: -250}, "-=3");
     scene02Action.to('.scene02 #scene02_textblock2', 10, {autoAlpha: 0}, "+=40");
-    scene02Action.to('.scene02 #scene02_textblock3', 20, {autoAlpha: 1, y: -650}, "-=4");
+    scene02Action.to('.scene02 #scene02_textblock3', 20, {autoAlpha: 1, y: -150}, "-=4");
     scene02Action.to('.scene02 #scene02_textblock3', 10, {autoAlpha: 0}, "+=40");
     //// TEXT ENDE ////
     scene02Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     scene02Action.add("Parallax", "+=2"); //insert point Parallax into timeline
-    scene02Action.to('.scene02 #scene02_foreground', 400, {y: -70}, "Parallax"); // starting at point Parallax
-    scene02Action.to('.scene02 #scene02_quinn', 400, {y: -30}, "Parallax");
-    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "-=200");
+    scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 1, x: 100}, "+=5");
     scene02Action.add("BlurMitBlase", "+=30");
+    ///// TEXT /////
+    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -150}, "+=0");
+    scene02Action.to('.scene02 #scene02_textblock4', 10, {autoAlpha: 0}, "+=40");
+    scene02Action.to('.scene02 #scene02_textblock5', 40, {autoAlpha: 1, y: -100}, "+=4");
+
     scene02Action.to('.scene02 #scene02_bubble1', 20, {autoAlpha: 0}, "BlurMitBlase");
     scene02Action.to('.blur', 20, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "BlurMitBlase");
-    ///// TEXT /////
-    scene02Action.to('.scene02 #scene02_textblock4', 20, {autoAlpha: 1, y: -550}, "+=0");
-    scene02Action.to('.scene02 #scene02_textblock4', 10, {autoAlpha: 0}, "+=40");
-    scene02Action.to('.scene02 #scene02_textblock5', 40, {autoAlpha: 1, y: -900}, "+=4");
+    scene02Action.to('.scene02 #scene02_foreground', 400, {y: -70}, "Parallax"); // starting at point Parallax
+    scene02Action.to('.scene02 #scene02_quinn', 400, {y: -30}, "Parallax");
 
 
     //// TEXT ENDE ////
