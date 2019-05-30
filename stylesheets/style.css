@@ -25,6 +25,7 @@ h2 {
 
 body {
     background: black;
+    overflow-x: hidden;
 }
 
 img {

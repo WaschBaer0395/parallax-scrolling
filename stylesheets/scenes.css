@@ -78,7 +78,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #cover {
     position: relative;
 }
-
 #scene01_bubble_quinn {
     visibility: hidden;
     position: absolute;
@@ -150,6 +149,10 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 .scenes_layer02 {
     position: absolute;
     z-index: 2;
+}
+.scenes_layer03 {
+    position: absolute;
+    z-index: 3;
 }
 
 #scene02_foreground {

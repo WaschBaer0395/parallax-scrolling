@@ -15,7 +15,21 @@
 </head>
 <body>
 <div class="section cover" id="cover">
-    <div class="scenes_layer0"><img src="Media/pictures/title/background.jpg" alt="background_cover"></div>
+    <div id="cover_parallax" data-relative-input="true">
+        <div class="scenes_layer0">
+            <img src="Media/pictures/title/background.jpg" alt="background_cover">
+        </div>
+        <div class="scenes_layer03" data-depth="0.4">
+            <img src="Media/pictures/title/title.png" alt="background_title">
+        </div>
+        <div class="scenes_layer02" data-depth="0.2">
+            <img src="Media/pictures/title/lu_bright.png" alt="lu_bright" style="opacity: .9">
+        </div>
+        <div class="scenes_layer01" data-depth="0.1">
+            <img src="Media/pictures/title/lu_dark.png" alt="lu_dark" style="opacity: .8">
+        </div>
+    </div>
+    <div class="scroll scenes_layer03"></div>
 </div>
 <div class="section intro">
     <div class="content story" id="introscene">
@@ -33,7 +47,6 @@
                 erleichtern.
             </div>
         </div>
-        <div class="scroll"></div>
     </div>
 </div>
 <div class="section typewriter">
@@ -122,7 +135,7 @@
     <div class="scene2Parallax blur scenes_layer0">
         <img src="Media/pictures/szene02/background.png">
     </div>
-    <div class="scene2Parallax blur scenes_layer01" id="scene02_foreground" style="bottom:-3%">
+    <div class="scene2Parallax blur scenes_layer01" id="scene02_foreground">
         <img src="Media/pictures/szene02/foreground.png">
     </div>
     <div class="content speechbubble_square blur" id="scene02_bubble1">
@@ -332,5 +345,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 <script src="https://www.greensock.com/js/src/utils/SplitText.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="javascript/main.js"></script>
 </html>

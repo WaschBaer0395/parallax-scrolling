@@ -37,13 +37,18 @@ $(document).ready(function () {
     const cover = new ScrollMagic.Scene({
                                             triggerElement: ".cover",
                                             duration: 1000,
-                                            triggerHook: 0.5, //  top of viewport
+                                            triggerHook: 0, //  top of viewport
                                             reverse: true
                                         });
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
-    cover.addIndicators({name: "COVER", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
+    //cover.addIndicators({name: "COVER", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
+    var cover_parallax = document.getElementById('cover_parallax');
+    var parallaxInstance = new Parallax(cover_parallax, {
+        relativeInput: true
+    });
+    parallaxInstance.friction(0.2, 0.2);
 
     //  Intro ================================
     let introAction = new TimelineMax();
@@ -337,3 +342,4 @@ $(document).ready(function () {
 
     //END SCENE03
 });
+
