@@ -145,13 +145,16 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 1;
 }
+
 .scenes_layer02 {
     position: absolute;
     z-index: 2;
 }
-#scene02_foreground{
-    bottom:-12%!important;
+
+#scene02_foreground {
+    bottom: -12% !important;
 }
+
 #scene02_quinn {
     position: absolute;
     z-index: 1;
@@ -179,7 +182,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
 }
 
 .textline {
@@ -210,25 +213,29 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene02_textblock2 {
-    top: 20%;
-    position: absolute;
+    text-align: center;
+    left: 8%;
+    right: auto;
 }
 
 #scene02_textblock3 {
-    top: 20%;
-    position: absolute;
+    top: 70%;
+    left: 8%;
+    right: auto;
 }
 
 #scene02_textblock4 {
     font-size: 200%;
-    position: absolute;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
+    text-align: center;
+    top: 15%;
 }
 
 #scene02_textblock5 {
-    top: 10%;
-    position: absolute;
+    left: 8%;
+    right: auto;
+    top: 30%;
 }
 
 #scene02_textline1 {
@@ -248,6 +255,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: relative;
     text-shadow: 2px 2px #262626;
 }
+
 /*--- SCENE 3 ---*/
 
 #scene03_adam1 {
@@ -268,34 +276,92 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene03_adam4 {
     position: absolute;
     z-index: 1;
-}.scene03 .textline{
-     font-size: 200%;
-     position: relative;
-     background-color: hsla(0, 0%, 0%, 0.58);
-     padding: 20px;
- }
-.scene03_adam2, .scene03_adam3, .scene03_adam4{
+}
+
+.scene03 .textline {
+    font-size: 200%;
+    position: relative;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene03_textline2 {
+    top: 50%;
+}
+
+.scene03_adam2, .scene03_adam3, .scene03_adam4 {
     visibility: hidden;
 }
 
-#scene03_textblock4{
-    position: absolute;
-    right: 15%;
-    bottom: 40%;
-
+#scene03_textblock2 {
+    left: 8%;
+    right: auto;
 }
-#scene03_regBubble{
+
+#scene03_textblock3 {
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+    top: -9.5%;
+}
+
+#scene03_textblock4 {
+    left: 9%;
+    top: 50%;
+}
+
+#scene03_thoughtBubble {
     visibility: hidden;
     position: absolute;
-    top: 2%;
-    left: 60%;
+    width: 30%;
+    height: 37%;
+    top: 10%;
+    left: 20%;
 }
 
-.scene03_regtext1{
-    top: 18.5%;
+.scene03_thoughttext1 {
+    left: -12%;
 }
 
+#scene03_regBubble {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    top: 10%;
+    left: 70%;
+}
 
+.scene03_regtext1 {
+    top: 40%;
+    right: 10%;
+}
+
+#scene03_frauBubble1 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    top: 27%;
+    left: 55%;
+}
+
+#scene03_frautext1 {
+    right: 28%;
+}
+
+#scene03_adamBubble1 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 10%;
+    left: 20%;
+}
+
+#scene03_adamtext1 {
+    left: -18%;
+    top: 32%;
+}
 /*--- SCENE 4 ---*/
 #Scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
