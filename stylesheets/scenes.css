@@ -240,16 +240,19 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene02_textline1 {
     font-size: 200%;
     position: relative;
+    text-shadow: 2px 2px #262626;
 }
 
 #scene02_textline2 {
     font-size: 200%;
     position: relative;
+    text-shadow: 2px 2px #262626;
 }
 
 #scene02_textline3 {
     font-size: 200%;
     position: relative;
+    text-shadow: 2px 2px #262626;
 }
 
 /*--- SCENE 3 ---*/
