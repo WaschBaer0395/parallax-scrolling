@@ -313,57 +313,53 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene03_thoughtBubble {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 37%;
     top: 10%;
     left: 20%;
 }
 
 .scene03_thoughttext1 {
-    left: -12%;
+    left: -7%;
 }
 
 #scene03_regBubble {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 40%;
     top: 10%;
-    left: 75%;
+    left: 80%;
 }
 
 .scene03_regtext1 {
-    top: 40%;
-    right: 11%;
+    top: 19%;
 }
 
 #scene03_regBubble2 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
-    height: 30%;
-    top: 10%;
-    left: 80%;
+    width: 10%;
+    height: 50%;
+    top: 15%;
+    left: 83%;
 }
 
 .scene03_regtext2 {
-    top: 40%;
-    right: 21%;
-    letter-spacing: 0.5em;
+    top: 10%;
 }
 
 #scene03_frauBubble1 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 20%;
-    top: 30%;
+    top: 35%;
     left: 55%;
 }
 
 #scene03_frautext1 {
-    right: 28.5%;
-    top: 34%;
+    top: 13%;
 }
 
 #scene03_adamBubble1 {
@@ -371,54 +367,50 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     width: auto;
     height: 30%;
-    top: 10%;
-    left: 20%;
+    top: 22%;
+    left: 27%;
 }
 
 #scene03_adamtext1 {
     top: 15%;
-    border: solid green 1px;
 }
 
 #scene03_frauBubble2 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
-    height: 20%;
-    top: 30%;
+    width: 10%;
+    top: 35%;
     left: 55%;
 }
 
 #scene03_frautext2 {
-    right: 29%;
+    top: 4%;
 }
 
 #scene03_adamBubble2 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 30%;
-    top: 10%;
-    left: 20%;
+    top: 25%;
+    left: 30%;
 }
 
 #scene03_adamtext2 {
-    left: -19%;
-    top: 36%;
+    top: 15%;
 }
 
 #scene03_regBubble3 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 50%;
     top: 10%;
     left: 70%;
 }
 
 .scene03_regtext3 {
-    top: 39%;
-    right: 1.5%;
+    top: 40%;
 }
 
 /*--- SCENE 4 ---*/
