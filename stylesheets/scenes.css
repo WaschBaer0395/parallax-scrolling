@@ -285,11 +285,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 
 }
 #scene03_regBubble{
-    background: url("../Media/speechbubbles/Endversion Diamant.png");
     visibility: hidden;
     position: absolute;
     top: 2%;
     left: 60%;
+}
+
+.scene03_regtext1{
+    top: 18.5%;
 }
 
 
