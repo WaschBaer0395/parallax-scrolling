@@ -155,6 +155,16 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 3;
 }
 
+.scenes_layer03 {
+    position: absolute;
+    z-index: 3;
+}
+
+.scenes_layer04 {
+    position: absolute;
+    z-index: 4;
+}
+
 #scene02_foreground {
     bottom: -12% !important;
 }
@@ -196,6 +206,16 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     font-size: 5vh;
     text-align: center;
     position: relative;
+}
+
+.dark_textline {
+    visibility: hidden;
+    text-align: center;
+    position: relative;
+    background-color: hsla(360, 100%, 100%, 0.8);
+    padding: 20px;
+    color: #262626;
+    font-size: 3vh;
 }
 
 .scene2bubble {
@@ -316,56 +336,106 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #scene03_thoughtBubble {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 37%;
     top: 10%;
     left: 20%;
 }
 
 .scene03_thoughttext1 {
-    left: -12%;
+    left: -7%;
 }
 
 #scene03_regBubble {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 40%;
     top: 10%;
-    left: 70%;
+    left: 80%;
 }
 
 .scene03_regtext1 {
-    top: 40%;
-    right: 10%;
+    top: 19%;
+}
+
+#scene03_regBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: 10%;
+    height: 50%;
+    top: 15%;
+    left: 83%;
+}
+
+.scene03_regtext2 {
+    top: 10%;
 }
 
 #scene03_frauBubble1 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 20%;
-    top: 27%;
+    top: 35%;
     left: 55%;
 }
 
 #scene03_frautext1 {
-    right: 28%;
+    top: 13%;
 }
 
 #scene03_adamBubble1 {
     visibility: hidden;
     position: absolute;
-    width: 30%;
+    width: auto;
     height: 30%;
-    top: 10%;
-    left: 20%;
+    top: 22%;
+    left: 27%;
 }
 
 #scene03_adamtext1 {
-    left: -18%;
-    top: 32%;
+    top: 15%;
 }
+
+#scene03_frauBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: 10%;
+    top: 35%;
+    left: 55%;
+}
+
+#scene03_frautext2 {
+    top: 4%;
+}
+
+#scene03_adamBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 30%;
+    top: 25%;
+    left: 30%;
+}
+
+#scene03_adamtext2 {
+    top: 15%;
+}
+
+#scene03_regBubble3 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 50%;
+    top: 10%;
+    left: 70%;
+}
+
+.scene03_regtext3 {
+    top: 40%;
+}
+
 /*--- SCENE 4 ---*/
 #Scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
