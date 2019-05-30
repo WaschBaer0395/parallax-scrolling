@@ -329,12 +329,27 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     width: 30%;
     height: 40%;
     top: 10%;
-    left: 70%;
+    left: 75%;
 }
 
 .scene03_regtext1 {
     top: 40%;
-    right: 10%;
+    right: 11%;
+}
+
+#scene03_regBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 10%;
+    left: 80%;
+}
+
+.scene03_regtext2 {
+    top: 40%;
+    right: 21%;
+    letter-spacing: 0.5em;
 }
 
 #scene03_frauBubble1 {
@@ -342,12 +357,13 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     width: 30%;
     height: 20%;
-    top: 27%;
+    top: 30%;
     left: 55%;
 }
 
 #scene03_frautext1 {
-    right: 28%;
+    right: 28.5%;
+    top: 34%;
 }
 
 #scene03_adamBubble1 {
@@ -360,9 +376,51 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext1 {
-    left: -18%;
-    top: 32%;
+    left: -18.5%;
+    top: 33%;
 }
+
+#scene03_frauBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    top: 30%;
+    left: 55%;
+}
+
+#scene03_frautext2 {
+    right: 29%;
+}
+
+#scene03_adamBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 10%;
+    left: 20%;
+}
+
+#scene03_adamtext2 {
+    left: -19%;
+    top: 36%;
+}
+
+#scene03_regBubble3 {
+    visibility: hidden;
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 10%;
+    left: 70%;
+}
+
+.scene03_regtext3 {
+    top: 39%;
+    right: 1.5%;
+}
+
 /*--- SCENE 4 ---*/
 #Scene4 {
     background: url(../Fotos/Szene04_Presse.jpg) 50% 0;

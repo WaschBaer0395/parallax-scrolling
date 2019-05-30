@@ -284,14 +284,26 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_textblock4', 20, {autoAlpha: 1, x: 100}, "+=2");
     scene03Action.to('.scene03 #scene03_textblock4', 15, {autoAlpha: 0, x: -260}, "+=4");
     //ADAM FADEOUT
-    scene03Action.to('.scene03 #scene03_adam1',5, {autoAlpha: 0});
-    scene03Action.to('.scene03 #scene03_adam2',10, {autoAlpha: 1}, "-=10");
+    scene03Action.to('.scene03 #scene03_regBubble2', 10,{autoAlpha:1});
+    scene03Action.to('.scene03 #scene03_regBubble2', 10,{autoAlpha:0});
     scene03Action.to('.scene03 #scene03_regBubble', 10,{autoAlpha:1});
     scene03Action.to('.scene03 #scene03_regBubble', 10,{autoAlpha:0});
     scene03Action.to('.scene03 #scene03_frauBubble1', 10,{autoAlpha:1});
     scene03Action.to('.scene03 #scene03_frauBubble1', 10,{autoAlpha:0});
     scene03Action.to('.scene03 #scene03_adamBubble1', 10,{autoAlpha:1});
     scene03Action.to('.scene03 #scene03_adamBubble1', 10,{autoAlpha:0});
+    scene03Action.to('.scene03 #scene03_frauBubble2', 10,{autoAlpha:1});
+    scene03Action.to('.scene03 #scene03_frauBubble2', 10,{autoAlpha:0});
+    scene03Action.to('.scene03 #scene03_adamBubble2', 10,{autoAlpha:1});
+    scene03Action.to('.scene03 #scene03_adamBubble2', 10,{autoAlpha:0});
+    scene03Action.to('.scene03 #scene03_adam1',5, {autoAlpha: 0});
+    scene03Action.to('.scene03 #scene03_adam2',10, {autoAlpha: 1}, "-=5");
+    scene03Action.to('.scene03 #scene03_adam2',5, {autoAlpha: 0});
+    scene03Action.to('.scene03 #scene03_adam4',10, {autoAlpha: 1}, "-=5");
+    scene03Action.to('.scene03 #scene03_adam4',5, {autoAlpha: 0});
+    scene03Action.to('.scene03 #scene03_adam3',10, {autoAlpha: 1}, "-=5");
+    scene03Action.to('.scene03 #scene03_regBubble3', 10,{autoAlpha:1});
+    scene03Action.to('.scene03 #scene03_regBubble3', 10,{autoAlpha:0});
 
 
     const scene03 = new ScrollMagic.Scene({
