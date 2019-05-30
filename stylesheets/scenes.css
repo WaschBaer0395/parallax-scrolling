@@ -152,6 +152,16 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 2;
 }
 
+.scenes_layer03 {
+    position: absolute;
+    z-index: 3;
+}
+
+.scenes_layer04 {
+    position: absolute;
+    z-index: 4;
+}
+
 #scene02_foreground {
     bottom: -12% !important;
 }
@@ -193,6 +203,16 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     font-size: 5vh;
     text-align: center;
     position: relative;
+}
+
+.dark_textline {
+    visibility: hidden;
+    text-align: center;
+    position: relative;
+    background-color: hsla(360, 100%, 100%, 0.8);
+    padding: 20px;
+    color: #262626;
+    font-size: 3vh;
 }
 
 .scene2bubble {

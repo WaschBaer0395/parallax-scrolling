@@ -348,4 +348,60 @@ $(document).ready(function () {
     //  END FadeOutScene03 ================================
 
     //END SCENE03
+
+    //  START scene03_Part2 ================================
+    //SCENE 3_2 =========================
+    // TEXT
+    let scene03_part2Action = new TimelineMax();
+    //BLUR
+    scene03Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    scene03_part2Action.to('.scene03_part2 #scene03_2_textblock1', 10, {autoAlpha: 1}, "-=5");
+    scene03_part2Action.to('.scene03_part2 #scene03_2_textblock1', 5, {autoAlpha: 0}, "+=4");
+    //BLUR ENDE
+    scene03_part2Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+    const scene03_2 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene03_part2",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene03_2.setTween(scene03_part2Action);
+    scene03_2.setPin(".scene03_part2");
+    scene03_2.addTo(controller);
+    scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+
+    //  START FadeInScene03  text================================
+    $(".scene03_part2").each(function () {
+        const scene03_2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene3_2Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene03_part2',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene3_2Scene.setTween(scene03_2In);
+        scene3_2Scene.addTo(controller);
+        //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene03_2 ================================
+
+    //  FadeOutScene03 ================================
+    $(".scene03_part2").each(function () {
+        const scene03_2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene3_2Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene04',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene3_2Scene.setTween(scene03_2Out);
+        scene3_2Scene.addTo(controller);
+    });
+    //  END FadeOutScene03_part2 ================================
+
+    //END SCENE03_2
 });
