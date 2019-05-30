@@ -291,7 +291,8 @@ $(document).ready(function () {
     //ADAM FADEOUT
     scene03Action.to('.scene03 #scene03_adam1',5, {autoAlpha: 0});
     scene03Action.to('.scene03 #scene03_adam2',10, {autoAlpha: 1}, "-=10");
-
+    scene03Action.to('.scene03 #scene03_regBubble', 10,{autoAlpha:1});
+    scene03Action.to('.scene03 #scene03_regBubble', 10,{autoAlpha:0});
 
 
     const scene03 = new ScrollMagic.Scene({

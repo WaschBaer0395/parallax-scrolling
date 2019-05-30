@@ -288,6 +288,8 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     background: url("../Media/speechbubbles/Endversion Diamant.png");
     visibility: hidden;
     position: absolute;
+    top: 2%;
+    left: 60%;
 }
 
 
