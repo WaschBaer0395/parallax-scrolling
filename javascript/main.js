@@ -313,6 +313,10 @@ $(document).ready(function () {
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
     scene03Action.to(".scene03 .path2", 5, {drawSVG:"1900px 290px" ,autoAlpha: 0,ease:Power4.easeOut},"+=5");
 
+    // battery animation
+    let t = TweenMax.fromTo(".animation", 1, {y:-2}, {y:5, ease:Linear.easeInOut, repeat:-1, yoyo:true});
+    t.progress(0.5).play();
+
     const scene03 = new ScrollMagic.Scene({
         triggerElement: ".scene03",
         duration: 15000,
