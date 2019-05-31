@@ -310,14 +310,6 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 1});
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 0});
 
-    // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
-    // actually not workable
-    //toDo HEEELLPP :D
-    scene03Action.to(".scene03 .path2", 5, {drawSVG:"1900px 290px" ,autoAlpha: 0,ease:Power4.easeOut},"+=5");
-
-    // battery animation
-    let t = TweenMax.fromTo(".animation", 1, {y:-2}, {y:5, ease:Linear.easeInOut, repeat:-1, yoyo:true});
-    t.progress(0.5).play();
 
     const scene03 = new ScrollMagic.Scene({
         triggerElement: ".scene03",
@@ -373,10 +365,29 @@ $(document).ready(function () {
     scene03_part2Action.to('.scene03_part2 #scene03_2_textblock1', 5, {autoAlpha: 0}, "+=4");
     //BLUR ENDE
     scene03_part2Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    // Animate batteryloading
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
+    // end batteryloading
+
+    // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
+    // actually not workable
+    //toDo HEEELLPP :D
+    scene03_part2Action.to(".scene03 .path2", 5, {drawSVG:"1900px 290px" ,autoAlpha: 0,ease:Power4.easeOut},"+=5");
+
+    // battery animation
+    let t = TweenMax.fromTo(".animation", 1, {y:-2}, {y:5, ease:Linear.easeInOut, repeat:-1, yoyo:true});
+    t.progress(0.5).play();
 
     const scene03_2 = new ScrollMagic.Scene({
         triggerElement: ".scene03_part2",
-        duration: 15000,
+        duration: 20000,
         triggerHook: 0,
         reverse: true
     });

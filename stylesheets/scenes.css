@@ -316,6 +316,9 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 .scene03_adam2, .scene03_adam3, .scene03_adam4 {
     visibility: hidden;
 }
+#battery_animation_1{
+    visibility: hidden;
+}
 
 #scene03_textblock2 {
     left: 8%;
