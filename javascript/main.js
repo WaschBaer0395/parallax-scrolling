@@ -311,6 +311,8 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 0});
 
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
+    // actually not workable
+    //toDo HEEELLPP :D
     scene03Action.to(".scene03 .path2", 5, {drawSVG:"1900px 290px" ,autoAlpha: 0,ease:Power4.easeOut},"+=5");
 
     // battery animation
