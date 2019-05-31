@@ -319,6 +319,12 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 #battery_animation_1{
     visibility: hidden;
 }
+#battery_hospital{
+    position: relative;
+    top:-30%;
+    left:-3%;
+    visibility: hidden;
+}
 
 #scene03_textblock2 {
     left: 8%;

@@ -309,6 +309,13 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_adam3', 10, {autoAlpha: 1}, "-=5");
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 1});
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 0});
+    scene03Action.to('.scene03 #battery_hospital', 20, {autoAlpha: 1, x:30},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
 
 
     const scene03 = new ScrollMagic.Scene({
@@ -366,14 +373,13 @@ $(document).ready(function () {
     //BLUR ENDE
     scene03_part2Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // Animate batteryloading
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .6},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
     // end batteryloading
 
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
