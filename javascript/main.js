@@ -380,6 +380,7 @@ $(document).ready(function () {
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
     scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_full', 1, {autoAlpha: .8},"+=1");
     // end batteryloading
 
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
