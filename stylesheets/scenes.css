@@ -431,6 +431,13 @@ FOR EVERY SCENE USEABLE
     top: 40%;
 }
 
+#scene03_2_textblock1 {
+    font-size: 150%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+/*--- SCENE 4 ---*/
 #scene04_reporter01 {
     width: auto;
     height: 50%;
