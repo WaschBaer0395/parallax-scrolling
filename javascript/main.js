@@ -413,7 +413,7 @@ $(document).ready(function () {
     scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
 
     //  START FadeInScene03  text================================
-    $(".scene04").each(function () {
+    $(".scene03_part2").each(function () {
         const scene03_2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3_2Scene = new ScrollMagic.Scene({
@@ -429,7 +429,7 @@ $(document).ready(function () {
     //  END FadeInScene03_2 ================================
 
     //  FadeOutScene03 ================================
-    $(".scene04").each(function () {
+    $(".scene03_part2").each(function () {
         const scene03_2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3_2Scene = new ScrollMagic.Scene({
@@ -532,6 +532,90 @@ $(document).ready(function () {
 
 
 
+
+    //  START scene05 ================================
+    //SCENE 5 =========================
+    let scene05Action = new TimelineMax();
+    //BLUR
+    scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
+    scene05Action.to('.scene05 #scene05_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
+    scene05Action.to('.scene05 #scene05_textblock1', 5, {autoAlpha: 0, y: -100}, "+=4");
+    //BLUR ENDE
+    scene05Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    //ADAM IN
+    scene05Action.to('.scene05 #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
+    //GIRL IN
+    scene05Action.to('.scene05 #scene05_girl', 10, {autoAlpha: 1}, "+=4");
+    //BUBBLES
+    scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
+    scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
+    scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
+    //TEXT
+    scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
+    scene05Action.to('.scene05 #scene05_textline3', 10, {autoAlpha: 0}, "-=10");
+    scene05Action.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 1, x: -600}, "+=2");
+    scene05Action.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 0, x: 300}, "+=4");
+    scene05Action.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 0}, "+=4");
+    scene05Action.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 1, y: -400}, "+=2");
+    scene05Action.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 0, y: 150}, "+=10");
+    scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 1}, "-=2");
+    scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
+    scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
+    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
+    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
+
+    const scene05 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene05",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene05.setTween(scene05Action);
+    scene05.setPin(".scene05");
+    scene05.addTo(controller);
+
+    //  START FadeInScene05 ================================
+    $(".scene05").each(function () {
+        const scene05In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene5Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene05',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene5Scene.setTween(scene05In);
+        scene5Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene05 ================================
+
+    //  START FadeOutScene05 ================================
+    $(".scene05").each(function () {
+        const scene05Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene5Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.eight',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene5Scene.setTween(scene05Out);
+        scene5Scene.addTo(controller);
+    });
+    //  END FadeOutScene05 ================================
+
+    //END SCENE05
 
     //DrawSVG_Plugin:
     var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window;(_gsScope._gsQueue||(_gsScope._gsQueue=[])).push(function(){"use strict";function t(t,e,i,r){return i=parseFloat(i)-parseFloat(t),r=parseFloat(r)-parseFloat(e),Math.sqrt(i*i+r*r)}function e(t){return"string"!=typeof t&&t.nodeType||(t=_gsScope.TweenLite.selector(t),t.length&&(t=t[0])),t}function i(t,e,i){var r,s,n=t.indexOf(" ");return-1===n?(r=void 0!==i?i+"":t,s=t):(r=t.substr(0,n),s=t.substr(n+1)),r=-1!==r.indexOf("%")?parseFloat(r)/100*e:parseFloat(r),s=-1!==s.indexOf("%")?parseFloat(s)/100*e:parseFloat(s),r>s?[s,r]:[r,s]}function r(i){if(!i)return 0;i=e(i);var r,s,n,a,o,l,h,u,f=i.tagName.toLowerCase();if("path"===f)o=i.style.strokeDasharray,i.style.strokeDasharray="none",r=i.getTotalLength()||0,i.style.strokeDasharray=o;else if("rect"===f)s=i.getBBox(),r=2*(s.width+s.height);else if("circle"===f)r=2*Math.PI*parseFloat(i.getAttribute("r"));else if("line"===f)r=t(i.getAttribute("x1"),i.getAttribute("y1"),i.getAttribute("x2"),i.getAttribute("y2"));else if("polyline"===f||"polygon"===f)for(n=i.getAttribute("points").split(" "),r=0,o=n[0].split(","),"polygon"===f&&(n.push(n[0]),-1===n[0].indexOf(",")&&n.push(n[1])),l=1;n.length>l;l++)a=n[l].split(","),1===a.length&&(a[1]=n[l++]),2===a.length&&(r+=t(o[0],o[1],a[0],a[1])||0,o=a);else"ellipse"===f&&(h=parseFloat(i.getAttribute("rx")),u=parseFloat(i.getAttribute("ry")),r=Math.PI*(3*(h+u)-Math.sqrt((3*h+u)*(h+3*u))));return r||0}function s(t,i){if(!t)return[0,0];t=e(t),i=i||r(t)+1;var s=a(t),n=s.strokeDasharray||"",o=parseFloat(s.strokeDashoffset),l=n.indexOf(",");return 0>l&&(l=n.indexOf(" ")),n=0>l?i:parseFloat(n.substr(0,l))||1e-5,n>i&&(n=i),[Math.max(0,-o),n-o]}var n,a=document.defaultView?document.defaultView.getComputedStyle:function(){};n=_gsScope._gsDefine.plugin({propName:"drawSVG",API:2,version:"0.0.5",global:!0,overwriteProps:["drawSVG"],init:function(t,e){if(!t.getBBox)return!1;var n,a,o,l=r(t)+1;return this._style=t.style,e===!0||"true"===e?e="0 100%":e?-1===(e+"").indexOf(" ")&&(e="0 "+e):e="0 0",n=s(t,l),a=i(e,l,n[0]),this._length=l+10,0===n[0]&&0===a[0]?(o=Math.max(1e-5,a[1]-l),this._dash=l+o,this._offset=l-n[1]+o,this._addTween(this,"_offset",this._offset,l-a[1]+o,"drawSVG")):(this._dash=n[1]-n[0]||1e-6,this._offset=-n[0],this._addTween(this,"_dash",this._dash,a[1]-a[0]||1e-5,"drawSVG"),this._addTween(this,"_offset",this._offset,-a[0],"drawSVG")),!0},set:function(t){this._firstPT&&(this._super.setRatio.call(this,t),this._style.strokeDashoffset=this._offset,this._style.strokeDasharray=(1===t||0===t)&&.001>this._offset&&10>=this._length-this._dash?"none":this._dash+"px,"+this._length+"px")}}),n.getLength=r,n.getPosition=s}),_gsScope._gsDefine&&_gsScope._gsQueue.pop()();

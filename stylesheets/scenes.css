@@ -36,7 +36,22 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 .speechbubble_square {
-    background: url("../Media/speechbubbles/Endversion Viereck.png");
+     background: url("../Media/speechbubbles/Endversion Viereck.png");
+     z-index: 99;
+ }
+
+.thoughtbubble_square {
+    background: url("../Media/thoughtbubbles/quadratThought.png");
+    z-index: 99;
+}
+
+.thoughtbubble_circle {
+    background: url("../Media/thoughtbubbles/circleThought.png");
+    z-index: 99;
+}
+
+.thoughtbubble_diamand {
+    background: url("../Media/thoughtbubbles/diamondThought.png");
     z-index: 99;
 }
 
@@ -522,8 +537,127 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 5 ---*/
-#Scene5 {
-    background: url(../Fotos/Szene05_DunkleStrasse.jpg) 50% 0;
+#scene05_adam {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+#scene05_girl {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.scene05 .textline {
+    font-size: 200%;
+    position: relative;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene05_textline1 {
+    top: 30%;
+}
+
+#scene05_textline4 {
+    top: 57%;
+}
+
+#scene05_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene05_textblock2 {
+    left: 50%;
+    right: auto;
+}
+
+#scene05_textblock3 {
+    left: 9%;
+    right: auto;
+    top: 80%;
+}
+
+#scene05_textblock4 {
+    left: 9%;
+    right: auto;
+    top: 10%;
+}
+
+#scene05_bubbleGirl1 {
+    visibility: hidden;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 50%;
+    left: 30%;
+}
+
+#scene05_girlText1 {
+    top: 13%;
+    left: -17%;
+}
+
+#scene05_girlText1 p {
+    font-size: 1.5vh;
+}
+
+#scene05_bubbleAdam1 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText1 {
+    width: 40%;
+    left: -21.5%;
+}
+
+#scene05_bubbleAdam2 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 35%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText2 {
+    width: 40%;
+    left: -22.5%;
+}
+
+#scene05_bubbleAdam3 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText3 {
+    width: 35%;
+    left: -26.5%;
+}
+
+#scene05_bubbleAdam4 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText4 {
+    width: 32%;
+    left: -24%;
 }
 
 /*--- SCENE 6 ---*/
