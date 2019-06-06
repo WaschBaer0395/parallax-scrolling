@@ -492,11 +492,11 @@ $(document).ready(function () {
     scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=4");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=5");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline1', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 1}, "-=5");
     scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline2', 10, {autoAlpha: 0}, "+=4");
     //BLUR ENDE
     scene04Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
@@ -509,17 +509,17 @@ $(document).ready(function () {
     scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0});
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0});
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0});
-    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1}, "-=5");
     scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0});

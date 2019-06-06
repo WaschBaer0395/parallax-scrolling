@@ -154,6 +154,11 @@ FOR EVERY SCENE USEABLE
     font-size: 3vh;
 }
 
+.shadow_textline {
+    font-size: 200%;
+    text-shadow: 2px 2px #262626;
+}
+
 .person {
     position: absolute;
     visibility: hidden;
@@ -271,21 +276,6 @@ FOR EVERY SCENE USEABLE
     left: 8%;
     right: auto;
     top: 30%;
-}
-
-#scene02_textline1 {
-    font-size: 200%;
-    text-shadow: 2px 2px #262626;
-}
-
-#scene02_textline2 {
-    font-size: 200%;
-    text-shadow: 2px 2px #262626;
-}
-
-#scene02_textline3 {
-    font-size: 200%;
-    text-shadow: 2px 2px #262626;
 }
 
 /*--- SCENE 3 ---*/
@@ -440,49 +430,115 @@ FOR EVERY SCENE USEABLE
 /*--- SCENE 4 ---*/
 #scene04_reporter01 {
     width: auto;
-    height: 50%;
+    height: 43%;
     top: 10%;
     left: 70%;
+}
+
+#scene04_reportertext1 {
+    right: 5%;
+    top: 34%;
 }
 
 #scene04_reporter02 {
     width: auto;
-    height: 50%;
-    top: 10%;
-    left: 70%;
+    height: 40%;
+    top: 5%;
+    left: 5%;
 }
 
-#scene04_adamtext2 {
-    top: 10%;
-    left: -10%;
+#scene04_reportertext2 {
+    width: 25%;
+    right: 34.5%;
+    top: 33%;
 }
 
 #scene04_adamBubble1 {
     width: auto;
     height: 40%;
     top: 22%;
-    left: 27%;
+    left: 40%;
+}
+
+#scene04_adamtext1 {
+    top: 2%;
 }
 
 #scene04_adamBubble2 {
     width: auto;
-    height: 40%;
-    top: 22%;
-    left: 27%;
+    height: 25%;
+    top: 9%;
+    left: 65%;
+}
+
+#scene04_adamtext2 {
+    top: 21%;
+    right: 27.5%;
+    width: 30%;
 }
 
 #scene04_adamBubble3 {
     width: auto;
-    height: 40%;
-    top: 22%;
-    left: 27%;
+    height: 50%;
+    top: 10%;
+    left: 19%;
+}
+
+#scene04_adamtext3 {
+    top: 32%;
+    right: 31%;
+    width: 30%;
 }
 
 #scene04_adamBubble4 {
     width: auto;
     height: 40%;
+    top: 10%;
+    left: 21%;
+}
+
+#scene04_adamtext4 {
+    width: 30%;
+    right: 30%;
     top: 22%;
-    left: 27%;
+}
+
+#scene04_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene04_textblock2 {
+    left: 9%;
+    right: auto;
+    top: 10%;
+}
+
+#scene04_textblock3 {
+    left: 9%;
+    right: auto;
+}
+
+.scene04 .textline {
+    font-size: 180%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene04_textline2 {
+    top: 82%;
+}
+
+#scene04_textline3 {
+    top: 73%;
+}
+
+#scene04_textline4 {
+    top: 60%;
+}
+
+#scene04_textline5 {
+    top: 50%;
 }
 
 /*--- SCENE 5 ---*/
