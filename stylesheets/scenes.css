@@ -359,26 +359,34 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     visibility: hidden;
     position: absolute;
     width: auto;
-    height: 40%;
+    height: 50%;
     top: 10%;
     left: 80%;
 }
 
 .scene03_regtext1 {
-    top: 19%;
+    top: 20%;
+}
+
+.scene03_regtext1 p {
+    font-size: 3vh;
 }
 
 #scene03_regBubble2 {
     visibility: hidden;
     position: absolute;
-    width: 10%;
+    width: 20%;
     height: 50%;
-    top: 15%;
-    left: 83%;
+    top: 10%;
+    left: 80%;
 }
 
 .scene03_regtext2 {
-    top: 10%;
+    top: 17%;
+}
+
+.scene03_regtext2 p {
+    font-size: 5vh;
 }
 
 #scene03_frauBubble1 {
