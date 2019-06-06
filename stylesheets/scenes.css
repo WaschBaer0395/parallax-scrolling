@@ -75,9 +75,11 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 .scene01 {
     position: relative;
 }
+
 #cover {
     position: relative;
 }
+
 #scene01_bubble_quinn {
     visibility: hidden;
     position: absolute;
@@ -150,6 +152,7 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 2;
 }
+
 .scenes_layer03 {
     position: absolute;
     z-index: 3;
@@ -316,13 +319,15 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 .scene03_adam2, .scene03_adam3, .scene03_adam4 {
     visibility: hidden;
 }
-#battery_animation_1{
+
+#battery_animation_1 {
     visibility: hidden;
 }
-#battery_hospital{
+
+#battery_hospital {
     position: relative;
-    top:-30%;
-    left:-3%;
+    top: -30%;
+    left: -3%;
     visibility: hidden;
 }
 
@@ -336,10 +341,11 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     padding: 20px;
     top: -9.5%;
 }
-#scene04_textline1{
+
+#scene04_textline1 {
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
-    bottom: 0!;
+    bottom: 0;
 }
 
 #scene03_textblock4 {
@@ -458,9 +464,61 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 40%;
 }
 
-/*--- SCENE 4 ---*/
-#Scene4 {
-    background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
+
+#scene04_reporter01 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 50%;
+    top: 10%;
+    lef
+    t: 70%;
+}
+#scene04_reporter02 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 50%;
+    top: 10%;
+    left: 70%;
+}
+
+#scene04_adamtext2 {
+    top: 10%;
+    left:-10%;
+}
+
+#scene04_adamBubble1 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 22%;
+    left: 27%;
+}
+#scene04_adamBubble2 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 22%;
+    left: 27%;
+}
+#scene04_adamBubble3 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 22%;
+    left: 27%;
+}
+#scene04_adamBubble4 {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    height: 40%;
+    top: 22%;
+    left: 27%;
 }
 
 /*--- SCENE 5 ---*/
