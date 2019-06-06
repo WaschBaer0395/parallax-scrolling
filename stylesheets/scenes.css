@@ -173,14 +173,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 3;
 }
 
-.scenes_layer03 {
-    position: absolute;
-    z-index: 3;
-}
-
 .scenes_layer04 {
     position: absolute;
     z-index: 4;
+}
+
+.scenes_layer05 {
+    position: absolute;
+    z-index: 5;
 }
 
 #scene02_foreground {
@@ -661,36 +661,22 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 6 ---*/
-#Scene6 {
-    background: url(../Fotos/Szene06_StrasseMitBergen.jpg) 50% 0;
-}
+
 
 /*--- SCENE 7 ---*/
-#Scene7 {
-    background: url(../Fotos/Szene07_Gala.jpg) 50% 0;
-}
+
 
 /*--- SCENE 8 ---*/
-#Scene8 {
-    background: url(../Fotos/Szene08_DunkleStrasse.jpg) 50% 0;
-}
+
 
 /*--- SCENE 9 ---*/
-#Scene9 {
-    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg) 50% 0;
-}
+
 
 /*--- SCENE 10 ---*/
-#Scene10 {
-    background: url(../Fotos/Szene10_Cafe.jpg) 50% 0;
-}
+
 
 /*--- SCENE 11 ---*/
-#Scene11 {
-    background: url(../Fotos/Szene11_Flughafen.jpg) 50% 0;
-}
+
 
 /*--- SCENE 12 ---*/
-#Scene12 {
-    background: url(../Fotos/Szene12_Konzert.jpg) 50% 0;
-}
+
