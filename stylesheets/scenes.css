@@ -20,7 +20,6 @@ class content for every layer in scene needed
     margin-left: 10%;
 }
 
-
 /*
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
@@ -28,114 +27,48 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 .speechbubble_diamand {
     background: url("../Media/speechbubbles/Endversion Diamant.png");
     z-index: 99;
+    visibility: hidden;
+    position: absolute;
 }
 
 .speechbubble_circle {
     background: url("../Media/speechbubbles/Endversion Kreis.png");
     z-index: 99;
+    visibility: hidden;
+    position: absolute;
 }
 
 .speechbubble_square {
     background: url("../Media/speechbubbles/Endversion Viereck.png");
     z-index: 99;
+    visibility: hidden;
+    position: absolute;
+}
+
+.thoughtbubble_square {
+    background: url("../Media/thoughtbubbles/quadratThought.png");
+    z-index: 99;
+    visibility: hidden;
+    position: absolute;
+}
+
+.thoughtbubble_circle {
+    background: url("../Media/thoughtbubbles/circleThought.png");
+    z-index: 99;
+    visibility: hidden;
+    position: absolute;
+}
+
+.thoughtbubble_diamand {
+    background: url("../Media/thoughtbubbles/diamondThought.png");
+    z-index: 99;
+    position: absolute;
 }
 
 /*
 /////////////////////////////////////
-
+LAYERS - FOR EVERY SCENE USEABLE
  */
-.inner_content {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 30%;
-    width: 70%;
-    height: 40%;
-    text-align: center;
-}
-
-.scene1bubble {
-    top: 20%;
-}
-
-.inner_content > p {
-    font-size: 2vh;
-}
-
-#Prolog {
-    background: black;
-    width: 70%;
-    height: 100%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*--- SCENE 1 ---*/
-.scene01 {
-    position: relative;
-}
-#cover {
-    position: relative;
-}
-#scene01_bubble_quinn {
-    visibility: hidden;
-    position: absolute;
-    width: 15%;
-    height: 30%;
-    bottom: 25%;
-    left: 24%;
-    text-align: center;
-}
-
-#scene01_bubble1 {
-    visibility: hidden;
-    position: absolute;
-    width: 15%;
-    height: 30%;
-    top: 18%;
-    right: 30%;
-}
-
-#scene_one_quinn {
-    visibility: hidden;
-    width: 8%;
-    height: 30%;
-    position: absolute;
-    left: 20%;
-    bottom: 0;
-    z-index: 5;
-}
-
-#scene_one_second_layer {
-    position: absolute;
-    z-index: 4;
-}
-
-#scene_one_third_layer {
-    position: absolute;
-    z-index: 3;
-}
-
-#scene_one_fourth_layer {
-    position: absolute;
-    z-index: 1;
-}
-
-#scene_one_fifth_layer {
-    position: absolute;
-    z-index: 0;
-}
-
-/*--- SCENE 2 ---*/
-.blur {
-    filter: none;
-}
-
-.scene02 {
-    position: relative;
-}
-
 .scenes_layer0 {
     position: absolute;
     z-index: 0;
@@ -150,10 +83,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
     z-index: 2;
 }
-.scenes_layer03 {
-    position: absolute;
-    z-index: 3;
-}
 
 .scenes_layer03 {
     position: absolute;
@@ -165,24 +94,31 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     z-index: 4;
 }
 
-#scene02_foreground {
-    bottom: -12% !important;
-}
-
-#scene02_quinn {
+.scenes_layer05 {
     position: absolute;
-    z-index: 1;
-    width: 30%;
-    height: 90%;
-    bottom: -10%;
-    left: 10%;
+    z-index: 5;
 }
 
-.textblock_prolog {
-    z-index: 2;
-    visibility: hidden;
-    font-size: 3.5vh;
-    text-align: justify;
+/*
+/////////////////////////////////////
+FOR EVERY SCENE USEABLE
+ */
+.inner_content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+    width: 70%;
+    height: 40%;
+    text-align: center;
+}
+
+.inner_content > p {
+    font-size: 2vh;
+}
+
+.blur {
+    filter: none;
 }
 
 .textblock {
@@ -218,13 +154,93 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     font-size: 3vh;
 }
 
+.shadow_textline {
+    font-size: 200%;
+    text-shadow: 2px 2px #262626;
+}
+
+.person {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+}
+
+/*--- COVER ---*/
+#cover {
+    position: relative;
+}
+
+/*--- PROLOG ---*/
+#Prolog {
+    background: black;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textblock_prolog {
+    z-index: 2;
+    visibility: hidden;
+    font-size: 3.5vh;
+    text-align: justify;
+}
+
+/*--- SCENE 1 ---*/
+.scene01 {
+    position: relative;
+}
+
+.scene1bubble {
+    top: 20%;
+}
+
+#scene01_bubble_quinn {
+    width: 15%;
+    height: 30%;
+    bottom: 25%;
+    left: 24%;
+    text-align: center;
+}
+
+#scene01_bubble1 {
+    width: 15%;
+    height: 30%;
+    top: 18%;
+    right: 30%;
+}
+
+#scene_one_quinn {
+    width: 8%;
+    height: 30%;
+    left: 20%;
+    bottom: 0;
+    z-index: 5;
+}
+
+/*--- SCENE 2 ---*/
+.scene02 {
+    position: relative;
+}
+
+#scene02_foreground {
+    bottom: -12% !important;
+}
+
+#scene02_quinn {
+    visibility: visible;
+    width: 30%;
+    height: 90%;
+    bottom: -10%;
+    left: 10%;
+}
+
 .scene2bubble {
     top: 15%;
 }
 
 #scene02_bubble1 {
-    visibility: hidden;
-    position: absolute;
     width: 30%;
     height: 90%;
     top: 10%;
@@ -262,49 +278,13 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 30%;
 }
 
-#scene02_textline1 {
-    font-size: 200%;
-    position: relative;
-    text-shadow: 2px 2px #262626;
-}
-
-#scene02_textline2 {
-    font-size: 200%;
-    position: relative;
-    text-shadow: 2px 2px #262626;
-}
-
-#scene02_textline3 {
-    font-size: 200%;
-    position: relative;
-    text-shadow: 2px 2px #262626;
-}
-
 /*--- SCENE 3 ---*/
-
 #scene03_adam1 {
-    position: absolute;
-    z-index: 1;
-}
-
-#scene03_adam2 {
-    position: absolute;
-    z-index: 1;
-}
-
-#scene03_adam3 {
-    position: absolute;
-    z-index: 1;
-}
-
-#scene03_adam4 {
-    position: absolute;
-    z-index: 1;
+    visibility: visible;
 }
 
 .scene03 .textline {
     font-size: 200%;
-    position: relative;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
 }
@@ -313,16 +293,14 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 50%;
 }
 
-.scene03_adam2, .scene03_adam3, .scene03_adam4 {
+#battery_animation_1 {
     visibility: hidden;
 }
-#battery_animation_1{
-    visibility: hidden;
-}
-#battery_hospital{
+
+#battery_hospital {
     position: relative;
-    top:-30%;
-    left:-3%;
+    top: -30%;
+    left: -3%;
     visibility: hidden;
 }
 
@@ -337,14 +315,18 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: -9.5%;
 }
 
+#scene04_textline1 {
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+    bottom: 0;
+}
+
 #scene03_textblock4 {
     left: 9%;
     top: 50%;
 }
 
 #scene03_thoughtBubble {
-    visibility: hidden;
-    position: absolute;
     width: auto;
     height: 37%;
     top: 10%;
@@ -356,34 +338,36 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_regBubble {
-    visibility: hidden;
-    position: absolute;
     width: auto;
-    height: 40%;
+    height: 50%;
     top: 10%;
     left: 80%;
 }
 
 .scene03_regtext1 {
-    top: 19%;
+    top: 20%;
+}
+
+.scene03_regtext1 p {
+    font-size: 3vh;
 }
 
 #scene03_regBubble2 {
-    visibility: hidden;
-    position: absolute;
-    width: 10%;
+    width: 20%;
     height: 50%;
-    top: 15%;
-    left: 83%;
+    top: 10%;
+    left: 80%;
 }
 
 .scene03_regtext2 {
-    top: 10%;
+    top: 17%;
+}
+
+.scene03_regtext2 p {
+    font-size: 5vh;
 }
 
 #scene03_frauBubble1 {
-    visibility: hidden;
-    position: absolute;
     width: auto;
     height: 20%;
     top: 35%;
@@ -395,8 +379,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamBubble1 {
-    visibility: hidden;
-    position: absolute;
     width: auto;
     height: 30%;
     top: 22%;
@@ -408,8 +390,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_frauBubble2 {
-    visibility: hidden;
-    position: absolute;
     width: 10%;
     top: 35%;
     left: 55%;
@@ -420,8 +400,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamBubble2 {
-    visibility: hidden;
-    position: absolute;
     width: auto;
     height: 30%;
     top: 25%;
@@ -433,8 +411,6 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
 }
 
 #scene03_regBubble3 {
-    visibility: hidden;
-    position: absolute;
     width: auto;
     height: 50%;
     top: 10%;
@@ -445,47 +421,238 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     top: 40%;
 }
 
+#scene03_2_textblock1 {
+    font-size: 150%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
 /*--- SCENE 4 ---*/
-#Scene4 {
-    background: url(../Fotos/Szene04_Presse.jpg) 50% 0;
+#scene04_reporter01 {
+    width: auto;
+    height: 43%;
+    top: 10%;
+    left: 70%;
+}
+
+#scene04_reportertext1 {
+    right: 5%;
+    top: 34%;
+}
+
+#scene04_reporter02 {
+    width: auto;
+    height: 40%;
+    top: 5%;
+    left: 5%;
+}
+
+#scene04_reportertext2 {
+    width: 25%;
+    right: 34.5%;
+    top: 33%;
+}
+
+#scene04_adamBubble1 {
+    width: auto;
+    height: 40%;
+    top: 22%;
+    left: 40%;
+}
+
+#scene04_adamtext1 {
+    top: 2%;
+}
+
+#scene04_adamBubble2 {
+    width: auto;
+    height: 25%;
+    top: 9%;
+    left: 65%;
+}
+
+#scene04_adamtext2 {
+    top: 21%;
+    right: 27.5%;
+    width: 30%;
+}
+
+#scene04_adamBubble3 {
+    width: auto;
+    height: 50%;
+    top: 10%;
+    left: 19%;
+}
+
+#scene04_adamtext3 {
+    top: 32%;
+    right: 31%;
+    width: 30%;
+}
+
+#scene04_adamBubble4 {
+    width: auto;
+    height: 40%;
+    top: 10%;
+    left: 21%;
+}
+
+#scene04_adamtext4 {
+    width: 30%;
+    right: 30%;
+    top: 22%;
+}
+
+#scene04_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene04_textblock2 {
+    left: 9%;
+    right: auto;
+    top: 10%;
+}
+
+#scene04_textblock3 {
+    left: 9%;
+    right: auto;
+}
+
+.scene04 .textline {
+    font-size: 180%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene04_textline2 {
+    top: 82%;
+}
+
+#scene04_textline3 {
+    top: 73%;
+}
+
+#scene04_textline4 {
+    top: 60%;
+}
+
+#scene04_textline5 {
+    top: 50%;
 }
 
 /*--- SCENE 5 ---*/
-#Scene5 {
-    background: url(../Fotos/Szene05_DunkleStrasse.jpg) 50% 0;
+.scene05 .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene05_textline1 {
+    top: 30%;
+}
+
+#scene05_textline4 {
+    top: 57%;
+}
+
+#scene05_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene05_textblock2 {
+    left: 50%;
+    right: auto;
+}
+
+#scene05_textblock3 {
+    left: 9%;
+    right: auto;
+    top: 80%;
+}
+
+#scene05_textblock4 {
+    left: 9%;
+    right: auto;
+    top: 10%;
+}
+
+#scene05_bubbleGirl1 {
+    width: 10%;
+    height: 10%;
+    top: 50%;
+    left: 30%;
+}
+
+#scene05_girlText1 {
+    top: 13%;
+    left: -17%;
+}
+
+#scene05_girlText1 p {
+    font-size: 1.5vh;
+}
+
+#scene05_bubbleAdam1 {
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText1 {
+    width: 40%;
+    left: -21.5%;
+}
+
+#scene05_bubbleAdam2 {
+    width: auto;
+    height: 35%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText2 {
+    width: 40%;
+    left: -22.5%;
+}
+
+#scene05_bubbleAdam3 {
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText3 {
+    width: 35%;
+    left: -26.5%;
+}
+
+#scene05_bubbleAdam4 {
+    width: auto;
+    height: 30%;
+    top: 10%;
+    left: 25%;
+}
+
+#scene05_adamText4 {
+    width: 32%;
+    left: -24%;
 }
 
 /*--- SCENE 6 ---*/
-#Scene6 {
-    background: url(../Fotos/Szene06_StrasseMitBergen.jpg) 50% 0;
-}
 
 /*--- SCENE 7 ---*/
-#Scene7 {
-    background: url(../Fotos/Szene07_Gala.jpg) 50% 0;
-}
 
 /*--- SCENE 8 ---*/
-#Scene8 {
-    background: url(../Fotos/Szene08_DunkleStrasse.jpg) 50% 0;
-}
 
 /*--- SCENE 9 ---*/
-#Scene9 {
-    background: url(../Fotos/Szene09_JahrmarktMitKind.jpg) 50% 0;
-}
 
 /*--- SCENE 10 ---*/
-#Scene10 {
-    background: url(../Fotos/Szene10_Cafe.jpg) 50% 0;
-}
 
 /*--- SCENE 11 ---*/
-#Scene11 {
-    background: url(../Fotos/Szene11_Flughafen.jpg) 50% 0;
-}
 
 /*--- SCENE 12 ---*/
-#Scene12 {
-    background: url(../Fotos/Szene12_Konzert.jpg) 50% 0;
-}
+
