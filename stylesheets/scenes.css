@@ -336,6 +336,11 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     padding: 20px;
     top: -9.5%;
 }
+#scene04_textline1{
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+    bottom: 0!;
+}
 
 #scene03_textblock4 {
     left: 9%;
