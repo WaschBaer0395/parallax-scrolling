@@ -739,7 +739,7 @@ $(document).ready(function () {
         const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene7Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.nine',
+                                                    triggerElement: '.scene08',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
@@ -747,6 +747,58 @@ $(document).ready(function () {
         scene7Scene.addTo(controller);
     });
     //  END FadeOutScene07 ================================
+
+    //  START scene08 ================================
+    //SCENE 8 =========================
+    let scene08Action = new TimelineMax();
+    //BLUR
+    scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //BLUR ENDE
+    scene08Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene08Action.to('.scene08 #background1', 5, {autoAlpha: 0});
+    scene08Action.to('.scene08 #background2', 5, {autoAlpha: 1}, "-=10");
+
+
+    const scene08 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene08",
+                                              duration: 5000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene08.setTween(scene06Action);
+    scene08.setPin(".scene08");
+    scene08.addTo(controller);
+
+    //  START FadeInScene06 ================================
+    $(".scene08").each(function () {
+        const scene08In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene8Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene08',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene8Scene.setTween(scene08In);
+        scene8Scene.addTo(controller);
+        //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene05 ================================
+
+    //  START FadeOutScene06 ================================
+    $(".scene08").each(function () {
+        const scene08Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene8Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.nine',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene8Scene.setTween(scene08Out);
+        scene8Scene.addTo(controller);
+    });
+    //  END FadeOutScene08 ================================
 
     //DrawSVG_Plugin:
     var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this

@@ -770,7 +770,9 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 8 ---*/
-
+#background2 {
+    visibility: hidden;
+}
 /*--- SCENE 9 ---*/
 
 /*--- SCENE 10 ---*/
