@@ -573,6 +573,8 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
+    scene05Action.to('.scene05 #scene05_textblock5', 10, {autoAlpha: 1}, "-=5");
+    scene05Action.to('.scene05 #scene05_textblock5', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
 

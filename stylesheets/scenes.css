@@ -503,11 +503,11 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamBubble4 {
-     width: auto;
-     height: 40%;
-     top: 10%;
-     left: 21%;
- }
+    width: auto;
+    height: 40%;
+    top: 10%;
+    left: 21%;
+}
 
 #scene04_adamtext4 {
     width: 30%;
@@ -539,10 +539,10 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_textblock3 {
-     left: 9%;
-     right: auto;
-     top: 60%;
- }
+    left: 9%;
+    right: auto;
+    top: 60%;
+}
 
 #scene04_textblock4 {
     left: 9%;
@@ -610,6 +610,12 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene05_textblock4 {
+    left: 9%;
+    right: auto;
+    top: 10%;
+}
+
+#scene05_textblock5 {
     left: 9%;
     right: auto;
     top: 10%;
