@@ -535,8 +535,28 @@ $(document).ready(function () {
 
     //  START scene05 ================================
     //SCENE 5 =========================
-    let scene05Action = new TimelineMax();
-    //BLUR
+    let pauseBtn = document.getElementById("button"),
+        scene05Action = new TimelineMax();
+/*    scene05Action.call(function(){
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        })
+    });*/
+    pauseBtn.onclick = function() {
+        $('html, body').css({
+            overflowY:'auto',
+            overflowX:'auto',
+            height: '100%'
+        })
+    };
+/*    scene05Action.call(function(){
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
+    });*/
+/*    //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
@@ -572,7 +592,7 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
+    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");*/
 
     const scene05 = new ScrollMagic.Scene({
                                               triggerElement: ".scene05",

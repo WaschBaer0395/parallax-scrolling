@@ -127,7 +127,6 @@
         <img src="Media/pictures/szene01/background2.png" alt="TEST">
     </div>
 </div>
-<!-- Sprechblase von Quinn: -->
 <div class="section scene02">
     <div class="scene2Parallax blur person" id="scene02_quinn">
         <img src="Media/pictures/szene02/quinn_scene02_final.png">
@@ -462,8 +461,15 @@
     </div>
 
 </div>
-<div class="section scene05">
-    <div class="scene05Parallax scenes_layer0 blur">
+<div class="section scene05" id="descicion">
+    <div id="wrapper">
+        <div class="" id="left"></div>
+        <div class="" id="middle">
+            <button id="button">pause</input>
+        </div>
+        <div class="" id="right"></div>
+    </div>
+   <!-- <div class="scene05Parallax scenes_layer0 blur">
         <img src="Media/pictures/szene05/background.jpg">
     </div>
     <div class="scene05_adam scenes_layer01 blur person" id="scene05_adam">
@@ -546,7 +552,7 @@
         <div class="scene05_bubbleAdamText4 inner_content" id="scene05_adamText4">
             <p>Macht mich Schmerz zu einem von ihnen? Ist es das, was mir fehlt?" </p>
         </div>
-    </div>
+    </div>-->
 </div>
 <div class="section scene06">
     <div class="scene06Parallax scenes_layer0 blur" id="scene06_sixth_layer">
@@ -611,4 +617,10 @@
 <script src="https://www.greensock.com/js/src/utils/SplitText.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="javascript/main.js"></script>
+<script>
+    $(document).ready(function(){
+    document.getElementById('wrapper').scrollIntoView({ inline: 'center' });
+    });
+
+</script>
 </html>

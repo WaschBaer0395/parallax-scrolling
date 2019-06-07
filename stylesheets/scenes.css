@@ -656,3 +656,40 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 12 ---*/
 
+#descicion{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#wrapper{
+    width: 300vw;
+    height: 100vh;
+    display: inline-block;
+    left: -100vw;
+}
+#middle > button{
+    margin-top: 50vh;
+}
+#middle{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    border: solid 3px green;
+    left: 100vw;
+}
+#right{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    border: solid 3px blue;
+    left: 200vw;
+}
+
+#left{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    border: solid 3px red;
+}
