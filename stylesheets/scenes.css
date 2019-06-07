@@ -430,40 +430,40 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 4 ---*/
 #scene04_reporter01 {
-    width: auto;
-    height: 43%;
+    width: 25%;
+    height: 45%;
     top: 10%;
     left: 80%;
 }
 
 #scene04_reportertext1 {
-    top: 20%;
+    top: 26%;
 }
 
 #scene04_reporter02 {
-    width: auto;
-    height: 40%;
+    width: 27%;
+    height: 50%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext2 {
-    width: 25%;
-    right: 34.5%;
-    top: 33%;
+    top: 30%;
 }
 
 #scene04_reporter03 {
-    width: auto;
-    height: 25%;
+    width: 25%;
+    height: 40%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext3 {
-    width: 25%;
-    right: 27%;
-    top: 24%;
+    top: 35%;
+}
+
+#scene04_reportertext3 > p{
+    font-size: 2.5vh;
 }
 
 #scene04_adamBubble1 {
@@ -478,54 +478,51 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamBubble2 {
-    width: auto;
-    height: 25%;
+    width: 20%;
+    height: 40%;
     top: 9%;
     left: 65%;
 }
 
 #scene04_adamtext2 {
-    top: 21%;
-    right: 27.5%;
-    width: 30%;
+    top: 22%;
 }
 
 #scene04_adamBubble3 {
-    width: auto;
-    height: 37%;
+    width: 25%;
+    height: 50%;
     top: 8%;
     left: 23%;
 }
 
 #scene04_adamtext3 {
     top: 23%;
-    right: 35%;
-    width: 20%;
 }
 
 #scene04_adamBubble4 {
-    width: auto;
-    height: 40%;
+    width: 25%;
+    height: 50%;
     top: 10%;
     left: 21%;
 }
 
 #scene04_adamtext4 {
-    width: 30%;
-    right: 30.5%;
-    top: 22%;
+    top: 15%;
 }
 
 #scene04_adamBubble5 {
-    width: auto;
-    height: 30%;
+    width: 20%;
+    height: 40%;
     top: 10%;
-    left: 30%;
+    left: 28%;
 }
 
 #scene04_adamtext5 {
-    width: 70%;
-    top: 23%;
+    top: 24%;
+}
+
+#scene04_adamtext5 > p{
+    font-size: 2.5vh;
 }
 
 #scene04_textblock1 {
