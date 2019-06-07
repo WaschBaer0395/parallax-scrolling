@@ -194,15 +194,18 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene1bubble {
-    top: 20%;
+    top: 16%;
 }
 
 #scene01_bubble_quinn {
     width: 15%;
     height: 30%;
-    bottom: 25%;
+    top: 50%;
     left: 24%;
-    text-align: center;
+}
+
+#bubble_quinn_text {
+    top: 25%;
 }
 
 #scene01_bubble1 {
@@ -238,12 +241,12 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene2bubble {
-    top: 15%;
+    top: 20%;
 }
 
 #scene02_bubble1 {
     width: 30%;
-    height: 90%;
+    height: 60%;
     top: 10%;
     right: 30%;
 }
