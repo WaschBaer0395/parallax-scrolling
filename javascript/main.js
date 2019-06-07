@@ -551,8 +551,8 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
     //GIRL IN
     scene05Action.to('.scene05 #scene05_girl', 10, {autoAlpha: 1}, "+=4");
-    //BUBBLES
-    scene05Action.to('.scene05 #scene05_textline5', 10, {autoAlpha: 1}, "-=2");
+    //BUBBLES & TEXTS
+    scene05Action.to('.scene05 #scene05_textline5', 10, {autoAlpha: 1}, "+=4");
     scene05Action.to('.scene05 #scene05_textline5', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
@@ -560,7 +560,6 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
     scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
-    //TEXT
     scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
