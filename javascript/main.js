@@ -6,24 +6,24 @@ $(document).ready(function () {
         // letter animation
         const tween = new TimelineMax(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 1.75,
-                {width: "0",},
-                {width: "2.5em", ease: SteppedEase.config(11)}, 0));
+                   TweenMax.fromTo(".anim-typewriter", 1.75,
+                                   {width: "0",},
+                                   {width: "2.5em", ease: SteppedEase.config(11)}, 0));
         // text cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 0.5,
-                {"border-right-color": "rgba(255,255,255,0.75)"},
-                {
-                    "border-right-color": "rgba(255,255,255,0)",
-                    repeat: -1,
-                    ease: SteppedEase.config(11)
-                }, 0));
+                   TweenMax.fromTo(".anim-typewriter", 0.5,
+                                   {"border-right-color": "rgba(255,255,255,0.75)"},
+                                   {
+                                       "border-right-color": "rgba(255,255,255,0)",
+                                       repeat: -1,
+                                       ease: SteppedEase.config(11)
+                                   }, 0));
 
         let tweenScene = new ScrollMagic.Scene({
-            triggerElement: '.typewriter', // trigger for the start of the animation
-            triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
-            offset: 600 // start y !  for use add this to animating div data-offset=" "
-        });
+                                                   triggerElement: '.typewriter', // trigger for the start of the animation
+                                                   triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
+                                                   offset: 600 // start y !  for use add this to animating div data-offset=" "
+                                               });
         tweenScene.setTween(tween);
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
@@ -35,11 +35,11 @@ $(document).ready(function () {
     let coverAction = new TimelineMax();
 
     const cover = new ScrollMagic.Scene({
-        triggerElement: ".cover",
-        duration: 1000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                            triggerElement: ".cover",
+                                            duration: 1000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                        });
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
@@ -58,11 +58,11 @@ $(document).ready(function () {
     introAction.to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
 
     const intro = new ScrollMagic.Scene({
-        triggerElement: ".intro",
-        duration: 5000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                            triggerElement: ".intro",
+                                            duration: 5000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                        });
     intro.setTween(introAction);
     intro.setPin(".intro");
     intro.addTo(controller);
@@ -72,11 +72,11 @@ $(document).ready(function () {
     //let timeline = new TimelineMax();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
     const typewriter = new ScrollMagic.Scene({
-        triggerElement: ".typewriter",
-        duration: 2500,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                                 triggerElement: ".typewriter",
+                                                 duration: 2500,
+                                                 triggerHook: 0, //  top of viewport
+                                                 reverse: true
+                                             });
     //typewriter.setTween(timeline);
     typewriter.setPin(".typewriter");
     typewriter.addTo(controller);
@@ -98,11 +98,11 @@ $(document).ready(function () {
     prologAction.to('.prolog #prolog4', 10, {autoAlpha: 0}, "+=4"); // fade from top
 
     const prolog = new ScrollMagic.Scene({
-        triggerElement: ".prolog",
-        duration: 15000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                             triggerElement: ".prolog",
+                                             duration: 15000,
+                                             triggerHook: 0, //  top of viewport
+                                             reverse: true
+                                         });
     prolog.setTween(prologAction);
     prolog.setPin(".prolog");
     prolog.addTo(controller);
@@ -144,11 +144,11 @@ $(document).ready(function () {
     scene01Action.to('.scene01 #scene01_bubble_quinn', 40, {y: -80}, "Parallax"); // starting at point Parallax
 
     const scene01 = new ScrollMagic.Scene({
-        triggerElement: ".scene01",
-        duration: 8000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                              triggerElement: ".scene01",
+                                              duration: 8000,
+                                              triggerHook: 0, //  top of viewport
+                                              reverse: true
+                                          });
     scene01.setTween(scene01Action);
     scene01.setPin(".scene01");
     scene01.addTo(controller);
@@ -161,11 +161,11 @@ $(document).ready(function () {
         const quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let quinn3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene01',
-            duration: 600,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene01',
+                                                    duration: 600,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         quinn3Scene.setTween(quinn3);
         quinn3Scene.addTo(controller);
         //quinn3Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -177,10 +177,10 @@ $(document).ready(function () {
         const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let quinn2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene02',
+                                                    duration: 500,
+                                                    triggerHook: "onEnter",
+                                                });
         quinn2Scene.setTween(quinn2);
         quinn2Scene.addTo(controller);
         //quinn2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -223,11 +223,11 @@ $(document).ready(function () {
 
     //// TEXT ENDE ////
     const scene02 = new ScrollMagic.Scene({
-        triggerElement: ".scene02",
-        duration: 10000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                              triggerElement: ".scene02",
+                                              duration: 10000,
+                                              triggerHook: 0, //  top of viewport
+                                              reverse: true
+                                          });
     scene02.setTween(scene02Action);
     scene02.setPin(".scene02");
     scene02.addTo(controller);
@@ -239,11 +239,11 @@ $(document).ready(function () {
         const scene02In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene02',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene2Scene.setTween(scene02In);
         scene2Scene.addTo(controller);
     });
@@ -254,10 +254,10 @@ $(document).ready(function () {
         const scene02Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene03',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -317,21 +317,21 @@ $(document).ready(function () {
     scene03Action.to('.scene03 #scene03_regBubble3', 10, {autoAlpha: 0});
     scene03Action.to('.scene03 #scene03_adam4', 5, {autoAlpha: 0});
     scene03Action.to('.scene03 #scene03_adam3', 10, {autoAlpha: 1}, "-=5");
-    scene03Action.to('.scene03 #battery_hospital', 20, {autoAlpha: 1, x:30},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0},"+=5");
-    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1},"+=5");
+    scene03Action.to('.scene03 #battery_hospital', 20, {autoAlpha: 1, x: 30}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 0}, "+=5");
+    scene03Action.to('.scene03 #battery_animation_hospitalScene01', 1, {autoAlpha: 1}, "+=5");
 
 
     const scene03 = new ScrollMagic.Scene({
-        triggerElement: ".scene03",
-        duration: 15000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene03",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene03.setTween(scene03Action);
     scene03.setPin(".scene03");
@@ -342,11 +342,11 @@ $(document).ready(function () {
         const scene03In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene03',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene3Scene.setTween(scene03In);
         scene3Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -358,10 +358,10 @@ $(document).ready(function () {
         const scene03Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene04',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene3Scene.setTween(scene03Out);
         scene3Scene.addTo(controller);
     });
@@ -381,31 +381,31 @@ $(document).ready(function () {
     //BLUR ENDE
     scene03_part2Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // Animate batteryloading
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4},"+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_full', 1, {autoAlpha: .8},"+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('.scene03_part2 #battery_full', 1, {autoAlpha: .8}, "+=1");
     // end batteryloading
 
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
     // actually not workable
     //toDo HEEELLPP :D
-    scene03_part2Action.to(".scene03 .path2", 5, {drawSVG:"1900px 290px" ,autoAlpha: 0,ease:Power4.easeOut},"+=5");
+    scene03_part2Action.to(".scene03 .path2", 5, {drawSVG: "1900px 290px", autoAlpha: 0, ease: Power4.easeOut}, "+=5");
 
     // battery animation
-    let t = TweenMax.fromTo(".animation", 1, {y:-2}, {y:5, ease:Linear.easeInOut, repeat:-1, yoyo:true});
+    let t = TweenMax.fromTo(".animation", 1, {y: -2}, {y: 5, ease: Linear.easeInOut, repeat: -1, yoyo: true});
     t.progress(0.5).play();
 
     const scene03_2 = new ScrollMagic.Scene({
-        triggerElement: ".scene03_part2",
-        duration: 20000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                                triggerElement: ".scene03_part2",
+                                                duration: 20000,
+                                                triggerHook: 0,
+                                                reverse: true
+                                            });
 
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
@@ -417,11 +417,11 @@ $(document).ready(function () {
         const scene03_2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03_part2',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                      triggerElement: '.scene03_part2',
+                                                      duration: 500,
+                                                      triggerHook: .6,
+                                                      offset: 0
+                                                  });
         scene3_2Scene.setTween(scene03_2In);
         scene3_2Scene.addTo(controller);
         //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -433,10 +433,10 @@ $(document).ready(function () {
         const scene03_2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                      triggerElement: '.scene04',
+                                                      duration: 700,
+                                                      triggerHook: "onEnter",
+                                                  });
         scene3_2Scene.setTween(scene03_2Out);
         scene3_2Scene.addTo(controller);
     });
@@ -489,42 +489,44 @@ $(document).ready(function () {
     scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=4");
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=5");
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 1}, "-=5");
-    scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 0}, "+=4");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=20");
+    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=8");
+    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textblock3', 20, {autoAlpha: 1, y: -250}, "+=2");
+    scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 0}, "+=20");
     //BLUR ENDE
     scene04Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // TEXT
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=5");
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0});
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1}, "-=5");
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0}, "+=4");
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1, x: -80});
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0, x: 80}, "+=20");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1, y: -250}, "-=5");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: 250}, "+=20");
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0});
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=2");
     scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=4");
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0});
+    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0});
-    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1}, "-=5");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0});
+    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1, y: -250}, "-=5");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: 250}, "+=20");
+    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80});
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: -80}, "+=20");
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1});
-    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0});
+    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: 80});
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: -80}, "+=20");
+    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
     scene04.setTween(scene04Action);
     scene04.setPin(".scene04");
@@ -571,6 +573,8 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
+    scene05Action.to('.scene05 #scene05_textblock5', 10, {autoAlpha: 1}, "-=5");
+    scene05Action.to('.scene05 #scene05_textblock5', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
 
@@ -606,7 +610,7 @@ $(document).ready(function () {
         const scene05Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene5Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.eight',
+                                                    triggerElement: '.scene06',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
@@ -617,7 +621,167 @@ $(document).ready(function () {
 
     //END SCENE05
 
+    //  START scene06 ================================
+    //SCENE 6 =========================
+    let scene06Action = new TimelineMax();
+    //BLUR
+    scene05Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //BLUR ENDE
+    scene06Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+
+    const scene06 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene06",
+                                              duration: 5000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene06.setTween(scene06Action);
+    scene06.setPin(".scene06");
+    scene06.addTo(controller);
+
+    //  START FadeInScene06 ================================
+    $(".scene06").each(function () {
+        const scene06In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene6Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene06',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene6Scene.setTween(scene06In);
+        scene6Scene.addTo(controller);
+        //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene05 ================================
+
+    //  START FadeOutScene06 ================================
+    $(".scene06").each(function () {
+        const scene06Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene6Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.nine',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene6Scene.setTween(scene06Out);
+        scene6Scene.addTo(controller);
+    });
+    //  END FadeOutScene05 ================================
+
     //DrawSVG_Plugin:
-    var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window;(_gsScope._gsQueue||(_gsScope._gsQueue=[])).push(function(){"use strict";function t(t,e,i,r){return i=parseFloat(i)-parseFloat(t),r=parseFloat(r)-parseFloat(e),Math.sqrt(i*i+r*r)}function e(t){return"string"!=typeof t&&t.nodeType||(t=_gsScope.TweenLite.selector(t),t.length&&(t=t[0])),t}function i(t,e,i){var r,s,n=t.indexOf(" ");return-1===n?(r=void 0!==i?i+"":t,s=t):(r=t.substr(0,n),s=t.substr(n+1)),r=-1!==r.indexOf("%")?parseFloat(r)/100*e:parseFloat(r),s=-1!==s.indexOf("%")?parseFloat(s)/100*e:parseFloat(s),r>s?[s,r]:[r,s]}function r(i){if(!i)return 0;i=e(i);var r,s,n,a,o,l,h,u,f=i.tagName.toLowerCase();if("path"===f)o=i.style.strokeDasharray,i.style.strokeDasharray="none",r=i.getTotalLength()||0,i.style.strokeDasharray=o;else if("rect"===f)s=i.getBBox(),r=2*(s.width+s.height);else if("circle"===f)r=2*Math.PI*parseFloat(i.getAttribute("r"));else if("line"===f)r=t(i.getAttribute("x1"),i.getAttribute("y1"),i.getAttribute("x2"),i.getAttribute("y2"));else if("polyline"===f||"polygon"===f)for(n=i.getAttribute("points").split(" "),r=0,o=n[0].split(","),"polygon"===f&&(n.push(n[0]),-1===n[0].indexOf(",")&&n.push(n[1])),l=1;n.length>l;l++)a=n[l].split(","),1===a.length&&(a[1]=n[l++]),2===a.length&&(r+=t(o[0],o[1],a[0],a[1])||0,o=a);else"ellipse"===f&&(h=parseFloat(i.getAttribute("rx")),u=parseFloat(i.getAttribute("ry")),r=Math.PI*(3*(h+u)-Math.sqrt((3*h+u)*(h+3*u))));return r||0}function s(t,i){if(!t)return[0,0];t=e(t),i=i||r(t)+1;var s=a(t),n=s.strokeDasharray||"",o=parseFloat(s.strokeDashoffset),l=n.indexOf(",");return 0>l&&(l=n.indexOf(" ")),n=0>l?i:parseFloat(n.substr(0,l))||1e-5,n>i&&(n=i),[Math.max(0,-o),n-o]}var n,a=document.defaultView?document.defaultView.getComputedStyle:function(){};n=_gsScope._gsDefine.plugin({propName:"drawSVG",API:2,version:"0.0.5",global:!0,overwriteProps:["drawSVG"],init:function(t,e){if(!t.getBBox)return!1;var n,a,o,l=r(t)+1;return this._style=t.style,e===!0||"true"===e?e="0 100%":e?-1===(e+"").indexOf(" ")&&(e="0 "+e):e="0 0",n=s(t,l),a=i(e,l,n[0]),this._length=l+10,0===n[0]&&0===a[0]?(o=Math.max(1e-5,a[1]-l),this._dash=l+o,this._offset=l-n[1]+o,this._addTween(this,"_offset",this._offset,l-a[1]+o,"drawSVG")):(this._dash=n[1]-n[0]||1e-6,this._offset=-n[0],this._addTween(this,"_dash",this._dash,a[1]-a[0]||1e-5,"drawSVG"),this._addTween(this,"_offset",this._offset,-a[0],"drawSVG")),!0},set:function(t){this._firstPT&&(this._super.setRatio.call(this,t),this._style.strokeDashoffset=this._offset,this._style.strokeDasharray=(1===t||0===t)&&.001>this._offset&&10>=this._length-this._dash?"none":this._dash+"px,"+this._length+"px")}}),n.getLength=r,n.getPosition=s}),_gsScope._gsDefine&&_gsScope._gsQueue.pop()();
+    var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this
+                                                                                                             || window;
+    (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
+        "use strict";
+
+        function t(t, e, i, r) {
+            return i = parseFloat(i) - parseFloat(t), r = parseFloat(r) - parseFloat(e), Math.sqrt(i * i + r * r)
+        }
+
+        function e(t) {
+            return "string" != typeof t && t.nodeType || (t = _gsScope.TweenLite.selector(t), t.length && (t = t[0])), t
+        }
+
+        function i(t, e, i) {
+            var r, s, n = t.indexOf(" ");
+            return -1 === n ? (r = void 0 !== i ? i + "" : t, s = t) : (r = t.substr(0, n), s = t.substr(n + 1)), r =
+                -1 !== r.indexOf("%") ? parseFloat(r) / 100 * e : parseFloat(r), s =
+                -1 !== s.indexOf("%") ? parseFloat(s) / 100 * e : parseFloat(s), r > s ? [s, r] : [r, s]
+        }
+
+        function r(i) {
+            if (!i) {
+                return 0;
+            }
+            i = e(i);
+            var r, s, n, a, o, l, h, u, f = i.tagName.toLowerCase();
+            if ("path" === f) {
+                o = i.style.strokeDasharray, i.style.strokeDasharray = "none", r =
+                    i.getTotalLength() || 0, i.style.strokeDasharray = o;
+            } else if ("rect" === f) {
+                s = i.getBBox(), r =
+                    2 * (s.width + s.height);
+            } else if ("circle" === f) {
+                r =
+                    2 * Math.PI * parseFloat(i.getAttribute("r"));
+            } else if ("line" === f) {
+                r =
+                    t(i.getAttribute("x1"), i.getAttribute("y1"), i.getAttribute("x2"),
+                      i.getAttribute("y2"));
+            } else if ("polyline" === f || "polygon" === f) {
+                for (n = i.getAttribute("points")
+                          .split(" "), r = 0, o =
+                    n[0].split(","), "polygon" === f && (n.push(n[0]), -1 === n[0].indexOf(",") && n.push(n[1])), l = 1;
+                     n.length > l;
+                     l++) {
+                    a = n[l].split(","), 1
+                                         === a.length
+                                         && (a[1] =
+                        n[l++]), 2 === a.length && (r += t(o[0], o[1], a[0], a[1]) || 0, o = a);
+                }
+            } else {
+                "ellipse" === f
+                && (h =
+                    parseFloat(i.getAttribute("rx")), u = parseFloat(i.getAttribute("ry")), r =
+                    Math.PI * (3 * (h + u) - Math.sqrt((3 * h + u) * (h + 3 * u))));
+            }
+            return r || 0
+        }
+
+        function s(t, i) {
+            if (!t) {
+                return [0, 0];
+            }
+            t = e(t), i = i || r(t) + 1;
+            var s = a(t), n = s.strokeDasharray || "", o = parseFloat(s.strokeDashoffset), l = n.indexOf(",");
+            return 0 > l && (l = n.indexOf(" ")), n = 0 > l ? i : parseFloat(n.substr(0, l)) || 1e-5, n > i && (n =
+                i), [Math.max(0, -o), n - o]
+        }
+
+        var n, a = document.defaultView ? document.defaultView.getComputedStyle : function () {
+        };
+        n = _gsScope._gsDefine.plugin({
+                                          propName: "drawSVG",
+                                          API: 2,
+                                          version: "0.0.5",
+                                          global: !0,
+                                          overwriteProps: ["drawSVG"],
+                                          init: function (t, e) {
+                                              if (!t.getBBox) {
+                                                  return !1;
+                                              }
+                                              var n, a, o, l = r(t) + 1;
+                                              return this._style = t.style, e === !0 || "true" === e ? e = "0 100%" : e
+                                                                                                                      ? -1
+                                                                                                                        === (e
+                                                                                                                             + "").indexOf(
+                                                      " ") && (e = "0 " + e)
+                                                                                                                      : e =
+                                                                                                                          "0 0", n =
+                                                  s(t, l), a = i(e, l, n[0]), this._length = l + 10, 0 === n[0] && 0
+                                                                                                     === a[0] ? (o =
+                                                  Math.max(1e-5, a[1] - l), this._dash = l + o, this._offset =
+                                                  l - n[1] + o, this._addTween(this, "_offset", this._offset,
+                                                                               l - a[1] + o, "drawSVG")) : (this._dash =
+                                                  n[1] - n[0] || 1e-6, this._offset = -n[0], this._addTween(this,
+                                                                                                            "_dash",
+                                                                                                            this._dash,
+                                                                                                            a[1] - a[0]
+                                                                                                            || 1e-5,
+                                                                                                            "drawSVG"), this._addTween(
+                                                  this, "_offset", this._offset, -a[0], "drawSVG")), !0
+                                          },
+                                          set: function (t) {
+                                              this._firstPT && (this._super.setRatio.call(this,
+                                                                                          t), this._style.strokeDashoffset =
+                                                  this._offset, this._style.strokeDasharray =
+                                              (1 === t || 0 === t) && .001 > this._offset && 10 >= this._length
+                                              - this._dash ? "none" : this._dash + "px," + this._length + "px")
+                                          }
+                                      }), n.getLength = r, n.getPosition = s
+    }), _gsScope._gsDefine && _gsScope._gsQueue.pop()();
 });
 
