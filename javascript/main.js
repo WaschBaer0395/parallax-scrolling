@@ -552,6 +552,8 @@ $(document).ready(function () {
     //GIRL IN
     scene05Action.to('.scene05 #scene05_girl', 10, {autoAlpha: 1}, "+=4");
     //BUBBLES
+    scene05Action.to('.scene05 #scene05_textline5', 10, {autoAlpha: 1}, "-=2");
+    scene05Action.to('.scene05 #scene05_textline5', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
     scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");

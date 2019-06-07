@@ -481,6 +481,10 @@ FOR EVERY SCENE USEABLE
     top: 20%;
 }
 
+#scene04_adamtext1 > p{
+    font-size: 2.5vh;
+}
+
 #scene04_adamBubble2 {
     width: 20%;
     height: 40%;
@@ -593,6 +597,10 @@ FOR EVERY SCENE USEABLE
 
 #scene05_textline4 {
     top: 57%;
+}
+
+#scene05_textline5 {
+    top: 72%;
 }
 
 #scene05_textblock1 {
