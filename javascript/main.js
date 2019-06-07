@@ -448,7 +448,7 @@ $(document).ready(function () {
 
     // START Scene04
 
-    //  START FadeInScene03  text================================
+    //  START FadeInScene04  text================================
     $(".scene04").each(function () {
         const scene04_in = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
@@ -662,14 +662,70 @@ $(document).ready(function () {
         const scene06Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene6Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.nine',
+                                                    triggerElement: '.scene07',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
         scene6Scene.setTween(scene06Out);
         scene6Scene.addTo(controller);
     });
-    //  END FadeOutScene05 ================================
+    //  END FadeOutScene06 ================================
+
+    //  START scene07 ================================
+    //SCENE 7 =========================
+    let scene07Action = new TimelineMax();
+    //BLUR
+    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene07Action.to('.scene07 #scene07_adam1', 5, {autoAlpha: 1}, "-=5");
+    //BLUR ENDE
+    scene07Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene07Action.to('.scene07 #scene07_adam1', 5, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam2', 5, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_adam2', 5, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 1}, "-=5");
+
+    const scene07 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene07",
+                                              duration: 5000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene07.setTween(scene07Action);
+    scene07.setPin(".scene07");
+    scene07.addTo(controller);
+
+    //  START FadeInScene06 ================================
+    $(".scene07").each(function () {
+        const scene07In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene7Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene07',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene7Scene.setTween(scene07In);
+        scene7Scene.addTo(controller);
+        //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene05 ================================
+
+    //  START FadeOutScene06 ================================
+    $(".scene07").each(function () {
+        const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene7Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.nine',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene7Scene.setTween(scene07Out);
+        scene7Scene.addTo(controller);
+    });
+    //  END FadeOutScene07 ================================
 
     //DrawSVG_Plugin:
     var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this
