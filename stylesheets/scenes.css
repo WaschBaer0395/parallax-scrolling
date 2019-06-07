@@ -621,66 +621,61 @@ FOR EVERY SCENE USEABLE
 
 #scene05_bubbleGirl1 {
     width: 10%;
-    height: 10%;
-    top: 50%;
-    left: 30%;
+    height: 20%;
+    top: 48%;
+    left: 38%;
 }
 
 #scene05_girlText1 {
-    top: 13%;
-    left: -17%;
+    top: 16%;
 }
 
 #scene05_girlText1 p {
-    font-size: 1.5vh;
+    font-size: 1.7vh;
 }
 
 #scene05_bubbleAdam1 {
-    width: auto;
-    height: 30%;
-    top: 10%;
-    left: 25%;
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: 5%;
 }
 
 #scene05_adamText1 {
-    width: 40%;
-    left: -21.5%;
+    top: 30%;
 }
 
 #scene05_bubbleAdam2 {
-    width: auto;
-    height: 35%;
+    width: 20%;
+    height: 40%;
     top: 10%;
     left: 25%;
 }
 
 #scene05_adamText2 {
-    width: 40%;
-    left: -22.5%;
+    top: 20%;
 }
 
 #scene05_bubbleAdam3 {
-    width: auto;
-    height: 30%;
+    width: 20%;
+    height: 40%;
     top: 10%;
     left: 25%;
 }
 
 #scene05_adamText3 {
-    width: 35%;
-    left: -26.5%;
+    top: 25%;
 }
 
 #scene05_bubbleAdam4 {
-    width: auto;
-    height: 30%;
-    top: 10%;
-    left: 25%;
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: 5%;
 }
 
 #scene05_adamText4 {
-    width: 32%;
-    left: -24%;
+    top: 30%;
 }
 
 /*--- SCENE 6 ---*/
