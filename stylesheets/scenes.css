@@ -685,6 +685,81 @@ FOR EVERY SCENE USEABLE
 /*--- SCENE 6 ---*/
 
 /*--- SCENE 7 ---*/
+#scene07_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene07_textblock2 {
+    left: 9%;
+    right: auto;
+    top: 60%;
+}
+
+#scene07_textblock3 {
+    left: 9%;
+    right: auto;
+}
+
+#scene07_textblock4 {
+     left: 9%;
+     right: auto;
+}
+
+#scene07_textblock5 {
+     left: 9%;
+     right: auto;
+     top: 70%;
+ }
+
+#scene07_textblock6 {
+    fleft: 9%;
+    right: auto;
+    top: 50%;
+}
+
+.scene07 .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene07_textline1 {
+    top: 91%;
+}
+
+#scene07_bubbleAdam1 {
+    width: 25%;
+    height: 50%;
+    top: 1%;
+    left: 3%;
+}
+
+#scene07_adamText1 {
+    top: 14%;
+}
+
+#scene07_bubbleAdam2 {
+    width: 20%;
+    height: 40%;
+    top: 1%;
+    left: 8%;
+}
+
+#scene07_adamText2 {
+    top: 15%;
+}
+
+#scene07_bubbleAdam3 {
+    width: 25%;
+    height: 50%;
+    top: 1%;
+    left: 3%;
+}
+
+#scene07_adamText3 {
+    top: 16%;
+}
 
 /*--- SCENE 8 ---*/
 

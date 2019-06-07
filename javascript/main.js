@@ -677,18 +677,38 @@ $(document).ready(function () {
     //BLUR
     scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene07Action.to('.scene07 #scene07_adam1', 5, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
+    scene07Action.to('.scene07 #scene07_textblock1', 5, {autoAlpha: 0, y: -100}, "+=20");
+    scene07Action.to('.scene07 #scene07_textblock2', 10, {autoAlpha: 1, y: -250}, "-=6");
+    scene07Action.to('.scene07 #scene07_textblock2', 5, {autoAlpha: 0, y: 250}, "+=20");
+    scene07Action.to('.scene07 #scene07_textblock3', 10, {autoAlpha: 1, y: 250}, "-=6");
+    scene07Action.to('.scene07 #scene07_textblock3', 5, {autoAlpha: 0, y: -250}, "+=20");
     //BLUR ENDE
     scene07Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-    scene07Action.to('.scene07 #scene07_adam1', 5, {autoAlpha: 0});
-    scene07Action.to('.scene07 #scene07_adam2', 5, {autoAlpha: 1}, "-=5");
-    scene07Action.to('.scene07 #scene07_adam2', 5, {autoAlpha: 0});
-    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 1}, "-=5");
-    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 0});
-    scene07Action.to('.scene07 #scene07_adam3', 5, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_adam1', 10, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam2', 10, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_adam2', 10, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam3', 10, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_adam3', 10, {autoAlpha: 0});
+    scene07Action.to('.scene07 #scene07_adam4', 10, {autoAlpha: 1}, "-=5");
+    scene07Action.to('.scene07 #scene07_textblock4', 10, {autoAlpha: 1, y: 100}, "+=2");
+    scene07Action.to('.scene07 #scene07_textblock5', 10, {autoAlpha: 1, y: -150}, "+=4");
+    scene07Action.to('.scene07 #scene07_textblock4', 10, {autoAlpha: 0, x: 300}, "+=20");
+    scene07Action.to('.scene07 #scene07_textblock5', 10, {autoAlpha: 0, x: 300}, "-=10");
+    scene07Action.to('.scene07 #scene07_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
+    scene07Action.to('.scene07 #scene07_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
+    scene07Action.to('.scene07 #scene07_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
+    scene07Action.to('.scene07 #scene07_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
+    scene07Action.to('.scene07 #scene07_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
+    scene07Action.to('.scene07 #scene07_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
+    scene07Action.to('.scene07 #scene07_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene07Action.to('.scene07 #scene07_textline1', 5, {autoAlpha: 0}, "+=20");
+    scene07Action.to('.scene07 #scene07_textblock6', 10, {autoAlpha: 1, x: 130}, "+=2");
+    scene07Action.to('.scene07 #scene07_textblock6', 10, {autoAlpha: 0, x: 260}, "+=20");
 
     const scene07 = new ScrollMagic.Scene({
                                               triggerElement: ".scene07",
-                                              duration: 5000,
+                                              duration: 15000,
                                               triggerHook: 0,
                                               reverse: true
                                           });
