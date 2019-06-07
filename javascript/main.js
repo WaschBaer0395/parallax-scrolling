@@ -753,20 +753,55 @@ $(document).ready(function () {
     let scene08Action = new TimelineMax();
     //BLUR
     scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    scene08Action.to('.scene08 #scene08_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline1', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textblock1', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock1', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline2', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline3', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textblock2', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock2', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textblock3', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock3', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textblock4', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock4', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_textline4', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline4', 5, {autoAlpha: 0}, "+=20");
     //BLUR ENDE
     scene08Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-    scene08Action.to('.scene08 #background1', 5, {autoAlpha: 0});
+    scene08Action.to('.scene08 #scene08_textblock5', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock5', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_regBubble1', 10, {autoAlpha: 1});
+    scene08Action.to('.scene08 #scene08_regBubble1', 10, {autoAlpha: 0});
+    scene08Action.to('.scene08 #scene08_textblock6', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textblock6', 5, {autoAlpha: 0}, "+=20");
+    scene08Action.to('.scene08 #scene08_bubbleAdam1', 10, {autoAlpha: 1});
+    scene08Action.to('.scene08 #scene08_bubbleAdam1', 10, {autoAlpha: 0});
+    scene08Action.to('.scene08 #scene08_bubbleAdam2', 10, {autoAlpha: 1});
+    scene08Action.to('.scene08 #scene08_bubbleAdam2', 10, {autoAlpha: 0});
+    scene08Action.to('.scene08 #scene08_bubbleAdam3', 10, {autoAlpha: 1});
+    scene08Action.to('.scene08 #scene08_bubbleAdam3', 10, {autoAlpha: 0});
+    scene08Action.to('.scene08 #scene08_textline5', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline5', 5, {autoAlpha: 0}, "+=20");
+    //BACKGROUND CHANGE
+    scene08Action.to('.scene08 #background1', 5, {autoAlpha: 0}, "+=4");
     scene08Action.to('.scene08 #background2', 5, {autoAlpha: 1}, "-=10");
-
+    //Diese Textline kann durch Zeichnung ersetzt werden.
+    scene08Action.to('.scene08 #scene08_textline6', 10, {autoAlpha: 1}, "+=2");
+    scene08Action.to('.scene08 #scene08_textline6', 5, {autoAlpha: 0}, "+=20");
+    //DRAWING
 
     const scene08 = new ScrollMagic.Scene({
                                               triggerElement: ".scene08",
-                                              duration: 5000,
+                                              duration: 15000,
                                               triggerHook: 0,
                                               reverse: true
                                           });
 
-    scene08.setTween(scene06Action);
+    scene08.setTween(scene08Action);
     scene08.setPin(".scene08");
     scene08.addTo(controller);
 
