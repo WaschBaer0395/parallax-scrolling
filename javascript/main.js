@@ -789,6 +789,28 @@ $(document).ready(function () {
     //BACKGROUND CHANGE
     scene08Action.to('#background1', 5, {autoAlpha: 0}, "+=4");
     scene08Action.to('#background2', 5, {autoAlpha: 1}, "-=10");
+    // start animating 'funken'
+    scene08Action.to('#funken00', 1, {autoAlpha: 1});
+    scene08Action.to('#funken00', 1, {autoAlpha: 0});
+    scene08Action.to('#funken01', 1, {autoAlpha: 1});
+    scene08Action.to('#funken01', 1, {autoAlpha: 0});
+    scene08Action.to('#funken02', 1, {autoAlpha: 1});
+    scene08Action.to('#funken02', 1, {autoAlpha: 0});
+    scene08Action.to('#funken03', 1, {autoAlpha: 1});
+    scene08Action.to('#funken03', 1, {autoAlpha: 0});
+    scene08Action.to('#funken04', 1, {autoAlpha: 1});
+    scene08Action.to('#funken04', 1, {autoAlpha: 0});
+    scene08Action.to('#funken05', 1, {autoAlpha: 1});
+    scene08Action.to('#funken05', 1, {autoAlpha: 0});
+    scene08Action.to('#funken06', 1, {autoAlpha: 1});
+    scene08Action.to('#funken06', 1, {autoAlpha: 0});
+    scene08Action.to('#funken07', 1, {autoAlpha: 1});
+    scene08Action.to('#funken07', 1, {autoAlpha: 0});
+    scene08Action.to('#funken08', 1, {autoAlpha: 1});
+    scene08Action.to('#funken08', 1, {autoAlpha: 0});
+    scene08Action.to('#funken09', 1, {autoAlpha: 1});
+    scene08Action.to('#funken09', 1, {autoAlpha: 0});
+
     //Diese Textline kann durch Zeichnung ersetzt werden.
     scene08Action.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=2");
     scene08Action.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
