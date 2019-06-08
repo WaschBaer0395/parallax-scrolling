@@ -14,6 +14,8 @@
 }
 
 html {
+    height: 100vh;
+    width: 100%;
     font-family: mesmerize, sans-serif;
     color: #FFFFFF;
     text-shadow: 1px 1px 10px #000000;
@@ -24,6 +26,8 @@ h2 {
 }
 
 body {
+    height: 100vh;
+    width: 100%;
     background: black;
     overflow-x: hidden;
 }
@@ -37,5 +41,19 @@ img {
 
 .section {
     height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 

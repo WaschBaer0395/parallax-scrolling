@@ -133,6 +133,9 @@ FOR EVERY SCENE USEABLE
     width: 80%;
     margin: 0 auto;
     position: absolute;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .textline {
@@ -141,7 +144,12 @@ FOR EVERY SCENE USEABLE
     visibility: hidden;
     font-size: 5vh;
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
     position: relative;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .dark_textline {
@@ -549,45 +557,64 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene05_textline1 {
+    left: 200vw;
     top: 30%;
+    height: auto;
+    width: 97vw;
+}
+#scene05_textline2 {
+    left: 100vw;
+    width: 97vw;
+    height: auto;
+}
+#scene05_textline3 {
+    left: 100vw;
+    width: 97vw;
+    height: auto;
 }
 
+
 #scene05_textline4 {
+    width: 80vw;
+    left: 100vw;
     top: 57%;
 }
 
 #scene05_textblock1 {
-    left: 9%;
-    right: auto;
+    left: 208vw;
+    right: 9vw;
+    width: auto;
+    height: auto;
 }
 
 #scene05_textblock2 {
-    left: 50%;
-    right: auto;
+    width: 35em;
+    height: auto;
+    left: 250vw;
 }
 
 #scene05_textblock3 {
-    left: 9%;
-    right: auto;
+    width: 80vw;
+    left: 209vw;
     top: 80%;
 }
 
 #scene05_textblock4 {
-    left: 9%;
-    right: auto;
+    width: 80vw;
+    left: 209vw;
     top: 10%;
 }
 
 #scene05_bubbleGirl1 {
-    width: 10%;
-    height: 10%;
-    top: 50%;
-    left: 30%;
+    width: 7em;
+    height: 7em;
+    top: 60%;
+    left: 238vw;
 }
 
 #scene05_girlText1 {
     top: 13%;
-    left: -17%;
+    height: auto;
 }
 
 #scene05_girlText1 p {
@@ -598,49 +625,52 @@ FOR EVERY SCENE USEABLE
     width: auto;
     height: 30%;
     top: 10%;
-    left: 25%;
+    left: 225vw;
 }
 
 #scene05_adamText1 {
     width: 40%;
-    left: -21.5%;
+    height: auto;
+    transform: translate(-55%);
 }
 
 #scene05_bubbleAdam2 {
     width: auto;
     height: 35%;
     top: 10%;
-    left: 25%;
+    left: 225vw;
 }
 
 #scene05_adamText2 {
     width: 40%;
-    left: -22.5%;
+    height: auto;
+    transform: translate(-55%);
 }
 
 #scene05_bubbleAdam3 {
     width: auto;
     height: 30%;
     top: 10%;
-    left: 25%;
+    left: 225vw;
 }
 
 #scene05_adamText3 {
     width: 35%;
-    left: -26.5%;
+    height: auto;
+    transform: translate(-76%);
 }
 
 #scene05_bubbleAdam4 {
     width: auto;
     height: 30%;
     top: 10%;
-    left: 25%;
+    left: 225vw;
 }
 
 #scene05_adamText4 {
     width: 32%;
-    left: -24%;
-}
+    height: auto;
+    transform: translate(-76%);}
 
 /*--- SCENE 6 ---*/
 
@@ -656,17 +686,15 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 12 ---*/
 
+
 #descicion{
-    overflow-x: hidden;
-    overflow-y: hidden;
-    white-space: nowrap;
-    text-align: center;
 }
 
 
 #wrapper{
     position: absolute;
     width: 300vw;
+    top: 0;
     height: 100vh;
     display: inline-block;
     left: -100vw;
@@ -674,7 +702,7 @@ FOR EVERY SCENE USEABLE
 #middle{
     position: absolute;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     border: solid 3px green;
     left: 100vw;
 }
@@ -682,7 +710,7 @@ FOR EVERY SCENE USEABLE
     position: absolute;
     border: solid blue 1px;
     top: 5%;
-    left: 50%;
+    left: 50vw;
     transform: translate(-50%,-50%);
     height: auto;
     width: auto;
@@ -696,24 +724,29 @@ FOR EVERY SCENE USEABLE
     width: auto;
 }
 .movieR{
-    right: 30%;
+    left: 85vw;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: auto;
 }
 .movieL{
-    left: 30%;
+    left: 15vw;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: auto;
 }
-#right{
+#right {
     position: absolute;
     height: 100vh;
-    width: 100vw;
-    border: solid 3px blue;
-    left: 200vw;
+    width: 100%;
+    right:0;
 }
 
 #left{
+    left: 0;
     position: absolute;
     height: 100vh;
-    width: 100vw;
-    border: solid 3px red;
+    width: 100%;
 }
 
 .button{
@@ -726,10 +759,10 @@ FOR EVERY SCENE USEABLE
     transform: translateY(-50%);
 }
 .buttonL{
-    left: 20%;
+    left: 10vw;
 }
 .buttonR{
-    right: 20%;
+    left: 90vw;
 }
 .button svg {
     position: absolute;
@@ -746,3 +779,20 @@ FOR EVERY SCENE USEABLE
     fill: white;
 }
 
+.scene05Parallax{
+    border: solid red 1px;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.scene05_adam{
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.scene05_girl{
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+}

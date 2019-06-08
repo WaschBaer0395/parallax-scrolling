@@ -1,12 +1,9 @@
 $(document).ready(function () {
-    // Single scrollmagic controller for the entire experience
-    const controller = new ScrollMagic.Controller();
 
     let badCounter = 0;
     let goodCounter = 0;
 
-
-    // left: 37, up: 38, right: 39, down: 40,
+// left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
     var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
@@ -44,6 +41,9 @@ $(document).ready(function () {
         document.onkeydown = null;
     }
 
+    // Single scrollmagic controller for the entire experience
+    const controller = new ScrollMagic.Controller();
+
     $('.typewriter').each(function () { // gets called as soon as #Slide1_1 is in view
         // letter animation
         const tween = new TimelineMax(); // timeline for the typing and cursor animation
@@ -70,6 +70,7 @@ $(document).ready(function () {
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
     });
+
 
     //  Cover ================================
     // Animationen hier sind nur Platzhalter !!! da noch kein cover gebaut wurde
@@ -518,13 +519,6 @@ $(document).ready(function () {
     });
     //  END FadeOutScene04 ================================
 
-    const scene04 = new ScrollMagic.Scene({
-        triggerElement: ".scene04",
-        duration: 20000,
-        triggerHook: 0,
-        reverse: true
-    });
-
     let scene04Action = new TimelineMax();
     //BLUR
     scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
@@ -567,118 +561,108 @@ $(document).ready(function () {
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0});
 
+    const scene04 = new ScrollMagic.Scene({
+        triggerElement: ".scene04",
+        duration: 20000,
+        triggerHook: 0,
+        reverse: true
+    });
+
     scene04.setTween(scene04Action);
     scene04.setPin(".scene04");
     scene04.addTo(controller);
 
 
 
-    //  START scene05 ================================
 
-    function lockscroll(){
-        $('html, body').css({
-            overflow: 'hidden',
-            height: '100%'
-        });
-    }
     //SCENE 5 =========================
-    let scene05Action = new TimelineMax();
-    // starting immediaetly on first scroll after pinning,
-    // starting the animation
-    scene05Action.add("choices");
+$('.scene05').each(function(){
 
-    // locking the scrolling via arrows, touch, and mousewheel
-    scene05Action.call(disableScroll,[],this);
-    // animating the choice options independent from scrolling
-    TweenLite.to(".choice1",2,{autoAlpha:1,y: 100},'choices');
-    TweenLite.to(".movieL",1,{autoAlpha:1,x: 100},'choices');
-    TweenLite.to(".movieR",1,{autoAlpha:1,x: -100},'choices');
-    TweenLite.to(".buttonL",10,{autoAlpha:1,x:0},'choices');
-    TweenLite.to(".buttonR",10,{autoAlpha:1,x:0},'choices');
+    let scene05Rechts = new TimelineMax();
 
-    $('.buttonL').on('click',
-        function() {
-            TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"0vw"});
-            enableScroll();
-            goodCounter++;
+    //BLUR
+    //scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textblock1', 5, {autoAlpha: 0, y: -100}, "+=4");
+    //BLUR ENDE
+    scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    //ADAM IN
+    scene05Rechts.to('.scene05 #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
+    //GIRL IN
+    scene05Rechts.to('.scene05 #scene05_girl', 10, {autoAlpha: 1}, "+=4");
+    //BUBBLES
+    scene05Rechts.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
+    //TEXT
+    scene05Rechts.to('.scene05 #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_textline3', 10, {autoAlpha: 0}, "-=10");
+    scene05Rechts.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 1, x: -600}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 0, x: 300}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 0}, "+=4");
+    scene05Rechts.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 1, y: -400}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 0, y: 150}, "+=10");
+    scene05Rechts.to('.scene05 #scene05_textline4', 10, {autoAlpha: 1}, "-=2");
+    scene05Rechts.to('.scene05 #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
+    scene05Rechts.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
+    scene05Rechts.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
+
+        let scene05Action = new TimelineMax();
+        scene05Action.add('text');
+        scene05Action.add('options');
+        scene05Action.add('buttons');
+        scene05Action.call(disableScroll,[],null,'+=1');
+        scene05Action.to('.choice1',2,{autoAlpha:1,y:100},'text');
+        scene05Action.to('.movieL',1,{autoAlpha:1,x:100},'options');
+        scene05Action.to('.buttonL',2,{autoAlpha:1,x:0},'buttons');
+        scene05Action.to('.movieR',1,{autoAlpha:1,x:-100},'options');
+        scene05Action.to('.buttonR',2,{autoAlpha:1,x:0},'buttons');
+
+
+        let scene05Main = new TimelineLite();
+        scene05Main.add(scene05Action);
+        scene05Main.add(scene05Rechts);
+
+    // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonR').on('click',
+            function() {
+                TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"-200vw",oncomplete: enableScroll()});
+                badCounter++;
+            });
+
+        // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonL').on('click',
+            function() {
+                TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"0",oncomplete: enableScroll()});
+                badCounter++;
+            });
+
+
+        const scene05 = new ScrollMagic.Scene({
+            triggerElement: ".scene05",
+            duration: 15000,
+            triggerHook: 0,
+            reverse: true
         });
-    $('.buttonR').on('click',
-        function() {
-            TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"-200vw"});
-            enableScroll();
-            badCounter++;
-        });
 
-
-
-    const scene05 = new ScrollMagic.Scene({
-        triggerElement: ".scene05",
-        duration: 5000,
-        triggerHook: 0,
-        reverse: true
+        scene05.setTween(scene05Main);
+        scene05.setPin(".scene05");
+        scene05.addTo(controller);
     });
 
-    scene05.setTween(scene05Action);
-    scene05.setPin(".scene05");
-    scene05.addTo(controller);
-
-
-
-/*  //  START scene05 ================================
-    //SCENE 5 =========================
-    let pauseBtn = document.getElementById("button"),
-        scene05Action = new TimelineMax();
-    //BLUR
-    scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-    //TEXT
-    scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
-    scene05Action.to('.scene05 #scene05_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene05Action.to('.scene05 #scene05_textblock1', 5, {autoAlpha: 0, y: -100}, "+=4");
-    //BLUR ENDE
-    scene05Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-    //ADAM IN
-    scene05Action.to('.scene05 #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
-    //GIRL IN
-    scene05Action.to('.scene05 #scene05_girl', 10, {autoAlpha: 1}, "+=4");
-    //BUBBLES
-    scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
-    scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
-    scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
-    //TEXT
-    scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
-    scene05Action.to('.scene05 #scene05_textline3', 10, {autoAlpha: 0}, "-=10");
-    scene05Action.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 1, x: -600}, "+=2");
-    scene05Action.to('.scene05 #scene05_textblock2', 10, {autoAlpha: 0, x: 300}, "+=4");
-    scene05Action.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam3', 10, {autoAlpha: 0}, "+=4");
-    scene05Action.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 1, y: -400}, "+=2");
-    scene05Action.to('.scene05 #scene05_textblock3', 10, {autoAlpha: 0, y: 150}, "+=10");
-    scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 1}, "-=2");
-    scene05Action.to('.scene05 #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
-    scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
-    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
-
-    const scene05 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene05",
-                                              duration: 15000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
-
-    scene05.setTween(scene05Action);
-    scene05.setPin(".scene05");
-    scene05.addTo(controller);*/
-
     //  START FadeInScene05 ================================
-    $(".scene05").each(function () {
+    $('.scene05').each(function () {
         const scene05In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene5Scene = new ScrollMagic.Scene({
@@ -713,7 +697,7 @@ $(document).ready(function () {
     //SCENE 6 =========================
     let scene06Action = new TimelineMax();
     //BLUR
-    scene05Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //BLUR ENDE
     scene06Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
