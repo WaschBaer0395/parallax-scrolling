@@ -446,7 +446,6 @@ $(document).ready(function () {
     //END SCENE03_2
 
 
-
     // START Scene04
 
     //  START FadeInScene04  text================================
@@ -454,11 +453,11 @@ $(document).ready(function () {
         const scene04_in = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene04 = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                triggerElement: '.scene04',
+                                                duration: 500,
+                                                triggerHook: .6,
+                                                offset: 0
+                                            });
         scene04.setTween(scene04_in);
         scene04.addTo(controller);
     });
@@ -469,21 +468,21 @@ $(document).ready(function () {
         const scene04_out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene04 = new ScrollMagic.Scene({
-            triggerElement: '.scene05',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                triggerElement: '.scene05',
+                                                duration: 700,
+                                                triggerHook: "onEnter",
+                                            });
         scene04.setTween(scene04_out);
         scene04.addTo(controller);
     });
     //  END FadeOutScene04 ================================
 
     const scene04 = new ScrollMagic.Scene({
-        triggerElement: ".scene04",
-        duration: 20000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene04",
+                                              duration: 20000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     let scene04Action = new TimelineMax();
     //BLUR
@@ -532,8 +531,6 @@ $(document).ready(function () {
     scene04.setTween(scene04Action);
     scene04.setPin(".scene04");
     scene04.addTo(controller);
-
-
 
 
     //  START scene05 ================================
