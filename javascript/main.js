@@ -890,7 +890,6 @@ $(document).ready(function () {
     //Diese Textline kann durch Zeichnung ersetzt werden.
     scene08Action.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=10");
     scene08Action.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
-    //DRAWING
 
     const scene08 = new ScrollMagic.Scene({
                                               triggerElement: ".scene08",
