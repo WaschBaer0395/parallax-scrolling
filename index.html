@@ -465,7 +465,20 @@
     <div id="wrapper">
         <div class="" id="left"></div>
         <div class="" id="middle">
-            <button id="button">pause</input>
+            <div class="content textblock choice1"> Wähle welche Rolle Adam als nächstes spielen soll</div>
+            <div class="content textblock movieL">Good</div>
+            <div class="content textblock movieR">Bad</div>
+            <div class="button buttonL">
+                <svg viewbox="0 0 100 100">
+                    <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" transform=" translate(15,0)"></path>
+                </svg>
+            </div>
+            <div class="button buttonR">
+                <svg viewbox="0 0 100 100">
+                    <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "transform="translate(85,100) rotate(180) "></path>
+                </svg>
+            </div>
+            <div class="next x0 buttonR"></div>
         </div>
         <div class="" id="right"></div>
     </div>
@@ -618,9 +631,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="javascript/main.js"></script>
 <script>
-    $(document).ready(function(){
-    document.getElementById('wrapper').scrollIntoView({ inline: 'center' });
-    });
-
 </script>
 </html>

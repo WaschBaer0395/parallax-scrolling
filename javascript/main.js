@@ -2,6 +2,48 @@ $(document).ready(function () {
     // Single scrollmagic controller for the entire experience
     const controller = new ScrollMagic.Controller();
 
+    let badCounter = 0;
+    let goodCounter = 0;
+
+
+    // left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove  = preventDefault; // mobile
+        document.onkeydown  = preventDefaultForScrollKeys;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        document.removeEventListener('wheel', preventDefault, {passive: false}); // Enable scrolling in Chrome
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
     $('.typewriter').each(function () { // gets called as soon as #Slide1_1 is in view
         // letter animation
         const tween = new TimelineMax(); // timeline for the typing and cursor animation
@@ -28,7 +70,6 @@ $(document).ready(function () {
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
     });
-
 
     //  Cover ================================
     // Animationen hier sind nur Platzhalter !!! da noch kein cover gebaut wurde
@@ -532,31 +573,62 @@ $(document).ready(function () {
 
 
 
-
     //  START scene05 ================================
-    //SCENE 5 =========================
-    let pauseBtn = document.getElementById("button"),
-        scene05Action = new TimelineMax();
-/*    scene05Action.call(function(){
+
+    function lockscroll(){
         $('html, body').css({
             overflow: 'hidden',
             height: '100%'
-        })
-    });*/
-    pauseBtn.onclick = function() {
-        $('html, body').css({
-            overflowY:'auto',
-            overflowX:'auto',
-            height: '100%'
-        })
-    };
-/*    scene05Action.call(function(){
-        $('html, body').css({
-            overflow: 'auto',
-            height: 'auto'
         });
-    });*/
-/*    //BLUR
+    }
+    //SCENE 5 =========================
+    let scene05Action = new TimelineMax();
+    // starting immediaetly on first scroll after pinning,
+    // starting the animation
+    scene05Action.add("choices");
+
+    // locking the scrolling via arrows, touch, and mousewheel
+    scene05Action.call(disableScroll,[],this);
+    // animating the choice options independent from scrolling
+    TweenLite.to(".choice1",2,{autoAlpha:1,y: 100},'choices');
+    TweenLite.to(".movieL",1,{autoAlpha:1,x: 100},'choices');
+    TweenLite.to(".movieR",1,{autoAlpha:1,x: -100},'choices');
+    TweenLite.to(".buttonL",10,{autoAlpha:1,x:0},'choices');
+    TweenLite.to(".buttonR",10,{autoAlpha:1,x:0},'choices');
+
+    $('.buttonL').on('click',
+        function() {
+            TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"0vw"});
+            enableScroll();
+            goodCounter++;
+        });
+    $('.buttonR').on('click',
+        function() {
+            TweenLite.to("#wrapper",2,{ease: Power2.easeOut,left:"-200vw"});
+            enableScroll();
+            badCounter++;
+        });
+
+
+
+    const scene05 = new ScrollMagic.Scene({
+        triggerElement: ".scene05",
+        duration: 5000,
+        triggerHook: 0,
+        reverse: true
+    });
+
+    scene05.setTween(scene05Action);
+    scene05.setPin(".scene05");
+    scene05.addTo(controller);
+
+
+
+/*  //  START scene05 ================================
+    //SCENE 5 =========================
+    let pauseBtn = document.getElementById("button"),
+        scene05Action = new TimelineMax();
+    //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene05Action.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
@@ -592,7 +664,7 @@ $(document).ready(function () {
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
     scene05Action.to('.scene05 #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
     scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
-    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");*/
+    scene05Action.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
 
     const scene05 = new ScrollMagic.Scene({
                                               triggerElement: ".scene05",
@@ -603,7 +675,7 @@ $(document).ready(function () {
 
     scene05.setTween(scene05Action);
     scene05.setPin(".scene05");
-    scene05.addTo(controller);
+    scene05.addTo(controller);*/
 
     //  START FadeInScene05 ================================
     $(".scene05").each(function () {
