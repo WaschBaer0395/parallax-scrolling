@@ -163,7 +163,7 @@ FOR EVERY SCENE USEABLE
 .person {
     position: absolute;
     visibility: hidden;
-    z-index: 1;
+    z-index: 99;
 }
 
 /*--- COVER ---*/
