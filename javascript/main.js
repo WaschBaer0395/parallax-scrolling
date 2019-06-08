@@ -376,19 +376,20 @@ $(document).ready(function () {
     //BLUR
     scene03Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
-    scene03_part2Action.to('.scene03_part2 #scene03_2_textblock1', 10, {autoAlpha: 1}, "-=5");
-    scene03_part2Action.to('.scene03_part2 #scene03_2_textblock1', 5, {autoAlpha: 0}, "+=4");
+    scene03_part2Action.to('#scene03_2_textblock1', 10, {autoAlpha: 1}, "-=5");
+    scene03_part2Action.to('#scene03_2_textblock1', 5, {autoAlpha: 0}, "+=4");
     //BLUR ENDE
     scene03_part2Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // Animate batteryloading
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: 0}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_animation_1', 1, {autoAlpha: .4}, "+=1");
-    scene03_part2Action.to('.scene03_part2 #battery_full', 1, {autoAlpha: .8}, "+=1");
+    scene03_part2Action.to('#wire', 4, {autoAlpha: 1}, "-=5");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: 0}, "+=1");
+    scene03_part2Action.to('#battery_animation_1', 1, {autoAlpha: .4}, "+=1");
+    scene03_part2Action.to('#battery_full', 1, {autoAlpha: .8}, "+=1");
     // end batteryloading
 
     // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
