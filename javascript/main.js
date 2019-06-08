@@ -626,9 +626,56 @@ $(document).ready(function () {
     //SCENE 6 =========================
     let scene06Action = new TimelineMax();
     //BLUR
-    scene05Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //BLUR ENDE
     scene06Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+    // start animation of binär
+    scene06Action.to('#binaer01', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer02', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer03', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer04', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer05', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer06', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer07', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer08', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer09', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer10', 3, {autoAlpha: 1});
+
+    scene06Action.to('#binaer01', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer02', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer03', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer04', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer05', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer06', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer07', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer08', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer09', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer10', 3, {autoAlpha: 0});
+
+    scene06Action.to('#binaer01', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer02', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer03', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer04', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer05', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer06', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer07', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer08', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer09', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer10', 3, {autoAlpha: 1});
+
+    scene06Action.to('#binaer01', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer02', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer03', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer04', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer05', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer06', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer07', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer08', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer09', 3, {autoAlpha: 0});
+    scene06Action.to('#binaer10', 3, {autoAlpha: 0});
+    // end animation
+
 
 
     const scene06 = new ScrollMagic.Scene({
@@ -840,6 +887,7 @@ $(document).ready(function () {
     scene08Action.to('#funken08', 3, {autoAlpha: 1});
     scene08Action.to('#funken08', 3, {autoAlpha: 0});
     scene08Action.to('#funken09', 3, {autoAlpha: 1});
+    // end animation
 
     //Diese Textline kann durch Zeichnung ersetzt werden.
     scene08Action.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=10");
