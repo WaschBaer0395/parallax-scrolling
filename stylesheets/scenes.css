@@ -773,6 +773,104 @@ FOR EVERY SCENE USEABLE
     visibility: hidden;
 }
 
+.scene08 .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene08_textblock1 {
+    left: 9%;
+    right: auto;
+}
+
+#scene08_textline2 {
+    top: 71.5%;
+}
+
+#scene08_textline3 {
+    top: 62.5%;
+}
+
+#scene08_textblock2 {
+    left: -12%;
+}
+
+#scene08_textblock3 {
+    left: -12%;
+    top: 60%;
+}
+
+#scene08_textblock4 {
+    left: -12%;
+}
+
+#scene08_textblock5 {
+    left: 9%;
+    right: auto;
+}
+
+#scene08_textline5 {
+    top: -80%;
+    font-size: 3.5vh;
+}
+
+#scene08_textline6 {
+    top: 16%;
+}
+
+#scene08_textline7 {
+    top: 6%;
+}
+
+#scene08_regBubble1 {
+    width: 20%;
+    height: 40%;
+    top: 10%;
+    left: 100%;
+}
+
+.scene08_regtext1 {
+    top: 30%;
+}
+
+.scene08_regtext1 p {
+    font-size: 3vh;
+}
+
+#scene08_bubbleAdam1 {
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: 53%;
+}
+
+#scene08_adamText1 {
+    top: 25%;
+}
+
+#scene08_bubbleAdam2 {
+    width: 20%;
+    height: 40%;
+    top: 20%;
+    left: 70%;
+}
+
+#scene08_adamText2 {
+    top: 28%;
+}
+
+#scene08_bubbleAdam3 {
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: 53%;
+}
+
+#scene08_adamText3 {
+    top: 25%;
+}
+
 /*--- SCENE 9 ---*/
 
 /*--- SCENE 10 ---*/
