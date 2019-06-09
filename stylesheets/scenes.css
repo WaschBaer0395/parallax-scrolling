@@ -595,7 +595,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene05_textline4 {
-    top:57%;
+    top: 57%;
 }
 
 #scene05_textline5 {
@@ -690,6 +690,97 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 6 ---*/
+.scene06 .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene06_textblock1 {
+    left: 9%;
+    right: auto;
+    top: 90%;
+}
+
+#scene06_textblock2 {
+    left: 9%;
+    right: auto;
+    top: 50%;
+}
+
+#scene06_textblock3 {
+    left: -12%;
+}
+
+#scene06_textblock4 {
+    left: -12%;
+    top: 60%;
+}
+
+#scene06_textblock5 {
+    left: -20%;
+    top: 5%;
+}
+
+#scene06_textblock6 {
+    left: 9%;
+    right: auto;
+    top: 100%;
+}
+
+#scene06_textline1, #scene06_textline2, #scene06_textline3 {
+    top: 25%;
+    right: -100%;
+}
+
+#scene06_textline4 {
+    top: 46%;
+}
+
+#scene06_textline5 {
+    top: -60.5%;
+}
+
+#scene06_textline6 {
+    top: 46%;
+}
+
+#scene06_bubbleAdam1 {
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: -20%;
+}
+
+#scene06_adamText1 {
+    top: 30%;
+}
+
+#scene06_bubble1small {
+    width: 15%;
+    height: 30%;
+    top: 20%;
+    fleft: -5%;
+}
+
+#scene06_bubble1textsmall {
+    top: 27%;
+}
+
+#scene06_bubbleAdam2 {
+    width: 20%;
+    height: 40%;
+    top: 15%;
+    left: 48%;
+}
+
+#scene06_adamText2 {
+    top: 27%;
+}
+
+#scene06_bubble1textsmall p{
+    font-size: 1.5vh;
+}
 
 /*--- SCENE 7 ---*/
 #scene07_textblock1 {

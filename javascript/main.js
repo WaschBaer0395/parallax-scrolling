@@ -624,12 +624,44 @@ $(document).ready(function () {
     //SCENE 6 =========================
     let scene06Action = new TimelineMax();
     //BLUR
-    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene05Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
+    scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_textblock1', 10, {autoAlpha: 1, y: -300}, "+=10");
+    scene06Action.to('#scene06_textblock1', 5, {autoAlpha: 0, y: -600}, "+=20");
+    scene06Action.to('#scene06_textline1', 10, {autoAlpha: 1, x: -1424}, "+=2");
+    scene06Action.to('#scene06_textline2', 10, {autoAlpha: 1, x: -1424}, "+=20");
+    scene06Action.to('#scene06_textline3', 10, {autoAlpha: 1, x: -1424}, "+=20");
+    scene06Action.to('#scene06_textline1', 10, {autoAlpha: 0, x: 10}, "+=20");
+    scene06Action.to('#scene06_textline2', 10, {autoAlpha: 0, x: 10}, "-=10");
+    scene06Action.to('#scene06_textline3', 10, {autoAlpha: 0, x: 10}, "-=10");
+    scene06Action.to('#scene06_textblock2', 10, {autoAlpha: 1, y: -300}, "+=2");
+    scene06Action.to('#scene06_textblock2', 5, {autoAlpha: 0, y: -400}, "+=20");
     //BLUR ENDE
     scene06Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-
+    scene06Action.to('#scene06_textline4', 10, {autoAlpha: 1}, "+=2");
+    scene06Action.to('#scene06_bubbleAdam1', 10, {autoAlpha: 0.9, x: 400}, "-=10");
+    scene06Action.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_bubble1small', 10, {autoAlpha: 0.75}, "-=5");
+    scene06Action.to('#scene06_bubble1small', 20, {autoAlpha: 0}, "-=5");
+    scene06Action.to('#scene06_textline4', 5, {autoAlpha: 0}, "-=10");
+    scene06Action.to('#scene06_textblock3', 10, {autoAlpha: 1, x: 300}, "+=2");
+    scene06Action.to('#scene06_textblock3', 5, {autoAlpha: 1, y: -150}, "+=2");
+    scene06Action.to('#scene06_textblock4', 10, {autoAlpha: 1, x: 300}, "-=5");
+    scene06Action.to('#scene06_textblock3', 5, {autoAlpha: 0, x: 1000}, "+=20");
+    scene06Action.to('#scene06_textblock4', 5, {autoAlpha: 0, x: 1000}, "-=5");
+    scene06Action.to('#scene06_textblock5', 10, {autoAlpha: 1, x: 300}, "+=2");
+    scene06Action.to('#scene06_textblock5', 5, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
+    scene06Action.to('#scene06_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_textblock6', 10, {autoAlpha: 1, y: -500}, "+=2");
+    scene06Action.to('#scene06_textblock6', 5, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_textline5', 10, {autoAlpha: 1, y: 60}, "+=2");
+    scene06Action.to('#scene06_textline6', 10, {autoAlpha: 1, y: -350}, "-=10");
+    scene06Action.to('#scene06_textline5', 5, {autoAlpha: 0}, "+=20");
+    scene06Action.to('#scene06_textline6', 5, {autoAlpha: 0}, "-=5");
     // start animation of binär
-    scene06Action.to('#binaer01', 3, {autoAlpha: 1});
+    scene06Action.to('#binaer01', 3, {autoAlpha: 1}, "-=5");
     scene06Action.to('#binaer02', 3, {autoAlpha: 1});
     scene06Action.to('#binaer03', 3, {autoAlpha: 1});
     scene06Action.to('#binaer04', 3, {autoAlpha: 1});
@@ -674,10 +706,9 @@ $(document).ready(function () {
     scene06Action.to('#binaer10', 3, {autoAlpha: 0});
     // end animation
 
-
     const scene06 = new ScrollMagic.Scene({
                                               triggerElement: ".scene06",
-                                              duration: 5000,
+                                              duration: 25000,
                                               triggerHook: 0,
                                               reverse: true
                                           });
@@ -801,13 +832,12 @@ $(document).ready(function () {
     scene08Action.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
     scene08Action.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
     scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_textblock1', 5, {autoAlpha: 1});
-    scene08Action.to('#scene08_textline2', 5, {autoAlpha: 1, y: -74}, "-=5");
-    scene08Action.to('#scene08_textline3', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_textblock1', 5, {autoAlpha: 0, y: -300}, "+=20");
-    scene08Action.to('#scene08_textline2', 5, {autoAlpha: 0, y: -573}, "-=5");
-    scene08Action.to('#scene08_textline3', 5, {autoAlpha: 0, y: -500}, "-=5");
+    scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 1}, "-=10");
+    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 1, y: -74}, "-=10");
+    scene08Action.to('#scene08_textline3', 10, {autoAlpha: 1}, "-=5");
+    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 0, y: -573}, "+=20");
+    scene08Action.to('#scene08_textline3', 10, {autoAlpha: 0, y: -500}, "-=10");
     scene08Action.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 300}, "+=2");
     scene08Action.to('#scene08_textblock2', 5, {autoAlpha: 1, y: -150}, "+=2");
     scene08Action.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 300}, "-=5");
