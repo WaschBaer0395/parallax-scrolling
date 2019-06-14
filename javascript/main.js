@@ -583,7 +583,7 @@ $(document).ready(function () {
         let scene05Rechts = new TimelineMax();
 
         //BLUR
-    //scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene05Rechts.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
     scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
@@ -620,21 +620,21 @@ $(document).ready(function () {
     scene05Rechts.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
     scene05Rechts.to('.scene05 #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
 
-        let scene05Action = new TimelineMax();
-        scene05Action.add('text');
-        scene05Action.add('options');
-        scene05Action.add('buttons');
-        scene05Action.call(disableScroll,[],null,'+=1');
-        scene05Action.to('.choice1',2,{autoAlpha:1,y:100},'text');
-        scene05Action.to('.movieL',1,{autoAlpha:1,x:100},'options');
-        scene05Action.to('.buttonL',2,{autoAlpha:1,x:0},'buttons');
-        scene05Action.to('.movieR',1,{autoAlpha:1,x:-100},'options');
-        scene05Action.to('.buttonR',2,{autoAlpha:1,x:0},'buttons');
+    let scene05Action = new TimelineMax();
+    scene05Action.add('text');
+    scene05Action.add('options');
+    scene05Action.add('buttons');
+    scene05Action.call(disableScroll,[],null,'+=1');
+    scene05Action.to('.choice1',2,{autoAlpha:1,y:100},'text');
+    scene05Action.to('.movieL',1,{autoAlpha:1,x:100},'options');
+    scene05Action.to('.buttonL',2,{autoAlpha:1,x:0},'buttons');
+    scene05Action.to('.movieR',1,{autoAlpha:1,x:-100},'options');
+    scene05Action.to('.buttonR',2,{autoAlpha:1,x:0},'buttons');
 
 
-        let scene05Main = new TimelineLite();
-        scene05Main.add(scene05Action);
-        scene05Main.add(scene05Rechts);
+    let scene05Main = new TimelineLite();
+    scene05Main.add(scene05Action);
+    scene05Main.add(scene05Rechts);
 
     // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
@@ -696,10 +696,10 @@ $(document).ready(function () {
     //END SCENE05
 
     //  START scene06 ================================
-    //SCENE 6 =========================
+    //SCENE 6 =========================d
     let scene06Action = new TimelineMax();
     //BLUR
-    scene05Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
     scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 0}, "+=20");
     scene06Action.to('#scene06_textblock1', 10, {autoAlpha: 1, y: -300}, "+=10");
