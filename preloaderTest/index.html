@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+  
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="progress"></div>
+    <div id="gallery"></div>
+
+<script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+
+<script>
+
+    let progress = document.getElementById('progress');
+    let gallery = document.getElementById('gallery');
+
+    //creating a queue
+    var queue = new createjs.LoadQueue(false); //false:
+
+	//evrytime one of the images is loaded, progress event is called upon
+    queue.on("progress", event => {
+
+		console.log(event);
+        let progress = Math.floor(event.progress*100)
+		//ist der progress der vordefiniert wurde, deshalb this
+		//reference to the progress id
+        this.progress.style.width = progress+'%';
+        if (progress == 100) {
+            console.log('all done');
+            document.querySelector('body').style.background = 'white';
+        }
+    });
+
+	 queue.on("complete", event => {
+
+		 gallery.classList.add('fadeIn');
+		 //damit der progressbar schon asugeblendet wird bevor die Bidler geladen werden
+		 setTimeout(()=>{
+			 progress.classList.add('fadeOut');
+		 })
+		 progress.classList.add('fadeOut');
+		 
+		 
+    });
+
+    queue.on("fileload", handleFileComplete);
+	//the images
+    queue.loadFile("./Bilder/berg1.jpg");
+	queue.loadFile("./Bilder/berg2.jpg");
+	
+
+
+	//function wird jedesmal aufgerufen, nachdem EIN Bild geladen wurde
+    function handleFileComplete(event) {
+
+		var item = event.item;
+		var type = item.type;
+		
+		if(type == createjs.Types.IMAGE){
+			//add an image tag 
+			//maipulating the dom
+			gallery.appendChild(event.result);
+		}
+    }
+</script>
+</body>
+
+</html>
