@@ -780,6 +780,16 @@ $(document).ready(function () {
     scene06Action.to('#binaer10', 3, {autoAlpha: 0});
     // end animation
 
+    // START PARALLAX ZOOM-IN
+    scene06Action.add("Parallax_mountain", "+=30");
+    scene06Action.to('#ff', 10, {scale:"2",x:-1000},"Parallax_mountain");
+    scene06Action.to('#scene06_sixth_layer', 10, {scale:"1",x:-2000},"Parallax_mountain");
+    scene06Action.to('#scene06_fifth_layer', 10, {scale:"2",x:-2000},"Parallax_mountain");
+    scene06Action.to('#scene06_fourth_layer', .2, {autoAlpha:0},"Parallax_mountain");
+    scene06Action.to('#scene06_third_layer', 10, {scale:"3",x:-1000,y:300},"Parallax_mountain");
+    scene06Action.to('#scene06_second_layer', 10, {scale:"3.5",x:-1000,y:300},"Parallax_mountain");
+    scene06Action.to('#scene06_first_layer', 10, {scale:"4",x:-2000},"Parallax_mountain");
+
     const scene06 = new ScrollMagic.Scene({
         triggerElement: ".scene06",
         duration: 25000,
