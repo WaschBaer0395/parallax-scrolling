@@ -660,7 +660,9 @@ $(document).ready(function () {
         scene05.setTween(scene05Main);
         scene05.setPin(".scene05");
         scene05.addTo(controller);
+        
     });
+
 
     //  START FadeInScene05 ================================
     $('.scene05').each(function () {
