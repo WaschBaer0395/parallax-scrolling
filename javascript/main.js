@@ -1099,9 +1099,8 @@ $(document).ready(function () {
     scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:.3});
     scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0},"+=1");
     scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:.4});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0},"+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY:0,autoAlpha:.2},"+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {scaleY:1,autoAlpha:.3},"+=1");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY:0,autoAlpha:.2},"+=0");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY:1,autoAlpha:.3},"+=1");
     scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0},"+=1");
     scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:1},"+=1");
 
