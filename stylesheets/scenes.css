@@ -144,7 +144,7 @@ FOR EVERY SCENE USEABLE
     visibility: hidden;
     font-size: 5vh;
     text-align: center;
-    width: 80%;
+    vw: 100%;
     margin: 0 auto;
     position: relative;
     overflow-wrap: break-word;
@@ -618,7 +618,7 @@ FOR EVERY SCENE USEABLE
 
 #scene05_textline4 {
     top: 57%;
-    width: 80vw;
+    width: 97vw;
     left: 100vw;
 }
 
