@@ -1105,3 +1105,14 @@ FOR EVERY SCENE USEABLE
     height: 100vh;
     width: 100vw;
 }
+
+
+/* ============= SCENE 11 ============= */
+.opacity0{
+    opacity: 0;
+}
+#scene11_bright{
+    filter:none;
+}
+#scene11_layer01{
+}
