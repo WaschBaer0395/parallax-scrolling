@@ -1105,7 +1105,7 @@ $(document).ready(function () {
         const scene08Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene8Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.nine',
+                                                    triggerElement: '.scene10',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
@@ -1113,6 +1113,61 @@ $(document).ready(function () {
         scene8Scene.addTo(controller);
     });
     //  END FadeOutScene08 ================================
+    
+    //  START scene10 ================================
+    //SCENE 10 =========================
+    let scene10Action = new TimelineMax();
+    //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
+    scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    // folgende Beispiele durch  Szenenanimationen ersetzen:
+    //scene08Action.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
+    //scene08Action.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
+    //scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
+    //scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
+    //BLUR ENDE
+    scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+    const scene10 = new ScrollMagic.Scene({
+                                              triggerElement: ".scene10",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
+
+    scene10.setTween(scene10Action);
+    scene10.setPin(".scene10");
+    scene10.addTo(controller);
+
+    //  START FadeInScene10 ================================
+    $(".scene10").each(function () {
+        const scene10In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene10Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene10',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
+        scene10Scene.setTween(scene10In);
+        scene10Scene.addTo(controller);
+        //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene10 ================================
+
+    //  START FadeOutScene10 ================================
+    $(".scene10").each(function () {
+        const scene10Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene10Scene = new ScrollMagic.Scene({
+                                                    triggerElement: '.scene11',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
+        scene10Scene.setTween(scene10Out);
+        scene10Scene.addTo(controller);
+    });
+    //  END FadeOutScene10 ================================
 
     //  START FadeInScene11 ================================
     $('.scene11').each(function () {
