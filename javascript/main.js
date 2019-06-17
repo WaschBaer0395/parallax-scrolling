@@ -9,8 +9,9 @@ $(document).ready(function () {
 
     function preventDefault(e) {
         e = e || window.event;
-        if (e.preventDefault)
+        if (e.preventDefault) {
             e.preventDefault();
+        }
         e.returnValue = false;
     }
 
@@ -23,7 +24,9 @@ $(document).ready(function () {
 
     function disableScroll() {
         if (window.addEventListener) // older FF
+        {
             window.addEventListener('DOMMouseScroll', preventDefault, false);
+        }
         document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
         window.onwheel = preventDefault; // modern standard
         window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
@@ -32,8 +35,9 @@ $(document).ready(function () {
     }
 
     function enableScroll() {
-        if (window.removeEventListener)
+        if (window.removeEventListener) {
             window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        }
         document.removeEventListener('wheel', preventDefault, {passive: false}); // Enable scrolling in Chrome
         window.onmousewheel = document.onmousewheel = null;
         window.onwheel = null;
@@ -48,24 +52,24 @@ $(document).ready(function () {
         // letter animation
         const tween = new TimelineMax(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 1.75,
-                {width: "0",},
-                {width: "2.5em", ease: SteppedEase.config(11)}, 0));
+                   TweenMax.fromTo(".anim-typewriter", 1.75,
+                                   {width: "0",},
+                                   {width: "2.5em", ease: SteppedEase.config(11)}, 0));
         // text cursor animation
         tween.add( // adds the animation to our timeline
-            TweenMax.fromTo(".anim-typewriter", 0.5,
-                {"border-right-color": "rgba(255,255,255,0.75)"},
-                {
-                    "border-right-color": "rgba(255,255,255,0)",
-                    repeat: -1,
-                    ease: SteppedEase.config(11)
-                }, 0));
+                   TweenMax.fromTo(".anim-typewriter", 0.5,
+                                   {"border-right-color": "rgba(255,255,255,0.75)"},
+                                   {
+                                       "border-right-color": "rgba(255,255,255,0)",
+                                       repeat: -1,
+                                       ease: SteppedEase.config(11)
+                                   }, 0));
 
         let tweenScene = new ScrollMagic.Scene({
-            triggerElement: '.typewriter', // trigger for the start of the animation
-            triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
-            offset: 600 // start y !  for use add this to animating div data-offset=" "
-        });
+                                                   triggerElement: '.typewriter', // trigger for the start of the animation
+                                                   triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
+                                                   offset: 600 // start y !  for use add this to animating div data-offset=" "
+                                               });
         tweenScene.setTween(tween);
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
@@ -77,11 +81,11 @@ $(document).ready(function () {
     let coverAction = new TimelineMax();
 
     const cover = new ScrollMagic.Scene({
-        triggerElement: ".cover",
-        duration: 1000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                            triggerElement: ".cover",
+                                            duration: 1000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                        });
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
@@ -100,11 +104,11 @@ $(document).ready(function () {
     introAction.to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
 
     const intro = new ScrollMagic.Scene({
-        triggerElement: ".intro",
-        duration: 5000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                            triggerElement: ".intro",
+                                            duration: 5000,
+                                            triggerHook: 0, //  top of viewport
+                                            reverse: true
+                                        });
     intro.setTween(introAction);
     intro.setPin(".intro");
     intro.addTo(controller);
@@ -114,11 +118,11 @@ $(document).ready(function () {
     //let timeline = new TimelineMax();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
     const typewriter = new ScrollMagic.Scene({
-        triggerElement: ".typewriter",
-        duration: 2500,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                                 triggerElement: ".typewriter",
+                                                 duration: 2500,
+                                                 triggerHook: 0, //  top of viewport
+                                                 reverse: true
+                                             });
     //typewriter.setTween(timeline);
     typewriter.setPin(".typewriter");
     typewriter.addTo(controller);
@@ -140,11 +144,11 @@ $(document).ready(function () {
     prologAction.to('.prolog #prolog4', 10, {autoAlpha: 0}, "+=4"); // fade from top
 
     const prolog = new ScrollMagic.Scene({
-        triggerElement: ".prolog",
-        duration: 15000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                             triggerElement: ".prolog",
+                                             duration: 15000,
+                                             triggerHook: 0, //  top of viewport
+                                             reverse: true
+                                         });
     prolog.setTween(prologAction);
     prolog.setPin(".prolog");
     prolog.addTo(controller);
@@ -186,11 +190,11 @@ $(document).ready(function () {
     scene01Action.to('#scene01_bubble_quinn', 40, {y: -80}, "Parallax"); // starting at point Parallax
 
     const scene01 = new ScrollMagic.Scene({
-        triggerElement: ".scene01",
-        duration: 8000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                              triggerElement: ".scene01",
+                                              duration: 8000,
+                                              triggerHook: 0, //  top of viewport
+                                              reverse: true
+                                          });
     scene01.setTween(scene01Action);
     scene01.setPin(".scene01");
     scene01.addTo(controller);
@@ -203,11 +207,11 @@ $(document).ready(function () {
         const quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let quinn3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene01',
-            duration: 600,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene01',
+                                                    duration: 600,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         quinn3Scene.setTween(quinn3);
         quinn3Scene.addTo(controller);
         //quinn3Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -219,10 +223,10 @@ $(document).ready(function () {
         const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let quinn2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene02',
+                                                    duration: 500,
+                                                    triggerHook: "onEnter",
+                                                });
         quinn2Scene.setTween(quinn2);
         quinn2Scene.addTo(controller);
         //quinn2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -265,11 +269,11 @@ $(document).ready(function () {
 
     //// TEXT ENDE ////
     const scene02 = new ScrollMagic.Scene({
-        triggerElement: ".scene02",
-        duration: 10000,
-        triggerHook: 0, //  top of viewport
-        reverse: true
-    });
+                                              triggerElement: ".scene02",
+                                              duration: 10000,
+                                              triggerHook: 0, //  top of viewport
+                                              reverse: true
+                                          });
     scene02.setTween(scene02Action);
     scene02.setPin(".scene02");
     scene02.addTo(controller);
@@ -281,11 +285,11 @@ $(document).ready(function () {
         const scene02In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene02',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene02',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene2Scene.setTween(scene02In);
         scene2Scene.addTo(controller);
     });
@@ -296,10 +300,10 @@ $(document).ready(function () {
         const scene02Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene03',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -369,11 +373,11 @@ $(document).ready(function () {
 
 
     const scene03 = new ScrollMagic.Scene({
-        triggerElement: ".scene03",
-        duration: 15000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene03",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene03.setTween(scene03Action);
     scene03.setPin(".scene03");
@@ -384,11 +388,11 @@ $(document).ready(function () {
         const scene03In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene03',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene3Scene.setTween(scene03In);
         scene3Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -400,10 +404,10 @@ $(document).ready(function () {
         const scene03Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene04',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene3Scene.setTween(scene03Out);
         scene3Scene.addTo(controller);
     });
@@ -444,11 +448,11 @@ $(document).ready(function () {
     t.progress(0.5).play();
 
     const scene03_2 = new ScrollMagic.Scene({
-        triggerElement: ".scene03_part2",
-        duration: 20000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                                triggerElement: ".scene03_part2",
+                                                duration: 20000,
+                                                triggerHook: 0,
+                                                reverse: true
+                                            });
 
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
@@ -460,11 +464,11 @@ $(document).ready(function () {
         const scene03_2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene03_part2',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                      triggerElement: '.scene03_part2',
+                                                      duration: 500,
+                                                      triggerHook: .6,
+                                                      offset: 0
+                                                  });
         scene3_2Scene.setTween(scene03_2In);
         scene3_2Scene.addTo(controller);
         //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -476,10 +480,10 @@ $(document).ready(function () {
         const scene03_2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                      triggerElement: '.scene04',
+                                                      duration: 700,
+                                                      triggerHook: "onEnter",
+                                                  });
         scene3_2Scene.setTween(scene03_2Out);
         scene3_2Scene.addTo(controller);
     });
@@ -495,11 +499,11 @@ $(document).ready(function () {
         const scene04_in = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene04 = new ScrollMagic.Scene({
-            triggerElement: '.scene04',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                triggerElement: '.scene04',
+                                                duration: 500,
+                                                triggerHook: .6,
+                                                offset: 0
+                                            });
         scene04.setTween(scene04_in);
         scene04.addTo(controller);
     });
@@ -510,21 +514,21 @@ $(document).ready(function () {
         const scene04_out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene04 = new ScrollMagic.Scene({
-            triggerElement: '.scene05',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                triggerElement: '.scene05',
+                                                duration: 700,
+                                                triggerHook: "onEnter",
+                                            });
         scene04.setTween(scene04_out);
         scene04.addTo(controller);
     });
     //  END FadeOutScene04 ================================
 
     const scene04 = new ScrollMagic.Scene({
-        triggerElement: ".scene04",
-        duration: 20000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene04",
+                                              duration: 20000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     let scene04Action = new TimelineMax();
     //BLUR
@@ -637,30 +641,31 @@ $(document).ready(function () {
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
-            function () {
-                TweenLite.to("#wrapper", 2, {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
-                badCounter++;
-            });
+                         function () {
+                             TweenLite.to("#wrapper", 2,
+                                          {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                             badCounter++;
+                         });
 
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonL').on('click',
-            function () {
-                TweenLite.to("#wrapper", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
-                badCounter++;
-            });
+                         function () {
+                             TweenLite.to("#wrapper", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                             badCounter++;
+                         });
 
 
         const scene05 = new ScrollMagic.Scene({
-            triggerElement: ".scene05",
-            duration: 15000,
-            triggerHook: 0,
-            reverse: true
-        });
+                                                  triggerElement: ".scene05",
+                                                  duration: 15000,
+                                                  triggerHook: 0,
+                                                  reverse: true
+                                              });
 
         scene05.setTween(scene05Main);
         scene05.setPin(".scene05");
         scene05.addTo(controller);
-        
+
     });
 
 
@@ -669,11 +674,11 @@ $(document).ready(function () {
         const scene05In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene5Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene05',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene05',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene5Scene.setTween(scene05In);
         scene5Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -685,10 +690,10 @@ $(document).ready(function () {
         const scene05Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene5Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene06',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene06',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene5Scene.setTween(scene05Out);
         scene5Scene.addTo(controller);
     });
@@ -737,31 +742,31 @@ $(document).ready(function () {
     scene06Action.to('#scene06_textline5', 5, {autoAlpha: 0}, "+=20");
     scene06Action.to('#scene06_textline6', 5, {autoAlpha: 0}, "-=5");
     // start animation of binär
-    scene06Action.to('#binaer01', 1, {autoAlpha: 1,y:-10}, "-=5");
-    scene06Action.to('#binaer02', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer03', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer04', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer05', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer06', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer07', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer08', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer09', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer10', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer11', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer12', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer14', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer15', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer16', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer17', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer18', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer19', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer20', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer21', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer22', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer23', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer24', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer25', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer26', 1, {autoAlpha: 1,y:-10});
+    scene06Action.to('#binaer01', 1, {autoAlpha: 1, y: -10}, "-=5");
+    scene06Action.to('#binaer02', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer03', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer04', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer05', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer06', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer07', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer08', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer09', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer10', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer11', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer12', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer14', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer15', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer16', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer17', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer18', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer19', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer20', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer21', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer22', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer23', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer24', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer25', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer26', 1, {autoAlpha: 1, y: -10});
 
     scene06Action.to('#binaer01', 1, {autoAlpha: 0});
     scene06Action.to('#binaer02', 1, {autoAlpha: 0});
@@ -789,79 +794,76 @@ $(document).ready(function () {
     scene06Action.to('#binaer25', 1, {autoAlpha: 0});
     scene06Action.to('#binaer26', 1, {autoAlpha: 0});
 
-    scene06Action.to('#binaer01', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer02', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer03', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer04', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer05', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer06', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer07', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer08', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer09', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer10', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer11', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer12', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer14', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer15', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer16', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer17', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer18', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer19', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer20', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer21', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer22', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer23', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer24', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer25', 1, {autoAlpha: 1,y:-10});
-    scene06Action.to('#binaer26', 1, {autoAlpha: 1,y:-10});
+    scene06Action.to('#binaer01', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer02', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer03', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer04', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer05', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer06', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer07', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer08', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer09', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer10', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer11', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer12', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer14', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer15', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer16', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer17', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer18', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer19', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer20', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer21', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer22', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer23', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer24', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer25', 1, {autoAlpha: 1, y: -10});
+    scene06Action.to('#binaer26', 1, {autoAlpha: 1, y: -10});
 
     // end animation
 
     // START PARALLAX ZOOM-IN
     scene06Action.add("Parallax_mountain", "+=0");
 
-    scene06Action.to('#scene06_background', 60, {scale:"2",x:-1000},"Parallax_mountain");
-    scene06Action.to('#scene06_sixth_layer', 60, {scale:"1",x:-2000},"Parallax_mountain");
-    scene06Action.to('#scene06_fifth_layer', 60, {scale:"2",x:-2000},"Parallax_mountain");
-    scene06Action.to('#scene06_third_layer', 60, {scale:"3",x:-1000,y:300},"Parallax_mountain");
-    scene06Action.to('#scene06_second_layer', 60, {scale:"3.5",x:-1000,y:300},"Parallax_mountain");
-    scene06Action.to('#scene06_first_layer', 60, {scale:"4",x:-2000},"Parallax_mountain");
+    scene06Action.to('#scene06_background', 60, {scale: "2", x: -1000}, "Parallax_mountain");
+    scene06Action.to('#scene06_sixth_layer', 60, {scale: "1", x: -2000}, "Parallax_mountain");
+    scene06Action.to('#scene06_fifth_layer', 60, {scale: "2", x: -2000}, "Parallax_mountain");
+    scene06Action.to('#scene06_third_layer', 60, {scale: "3", x: -1000, y: 300}, "Parallax_mountain");
+    scene06Action.to('#scene06_second_layer', 60, {scale: "3.5", x: -1000, y: 300}, "Parallax_mountain");
+    scene06Action.to('#scene06_first_layer', 60, {scale: "4", x: -2000}, "Parallax_mountain");
 
-    scene06Action.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer02', 60, {scale:"3.4",x:-1770,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer03', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer04', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer05', 60, {scale:"3.3",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer06', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer07', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer08', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer09', 60, {scale:"2.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer10', 60, {scale:"2.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer11', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer12', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer14', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer15', 60, {scale:"2.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer16', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer17', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer18', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer19', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer20', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer21', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer22', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer23', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer24', 60, {scale:"3.2",x:-1770,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer25', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-    scene06Action.to('#binaer26', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-
-
-
+    scene06Action.to('#binaer01', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer02', 60, {scale: "3.4", x: -1770, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer03', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer04', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer05', 60, {scale: "3.3", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer06', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer07', 60, {scale: "2.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer08', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer09', 60, {scale: "2.9", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer10', 60, {scale: "2.9", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer11', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer12', 60, {scale: "2.8", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer14', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer15', 60, {scale: "2.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer16', 60, {scale: "3.2", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer17', 60, {scale: "2.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer18', 60, {scale: "3.2", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer19', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer20', 60, {scale: "2.8", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer21', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer22', 60, {scale: "3.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer23', 60, {scale: "2.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer24', 60, {scale: "3.2", x: -1770, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer25', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+    scene06Action.to('#binaer26', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
 
     const scene06 = new ScrollMagic.Scene({
-        triggerElement: ".scene06",
-        duration: 25000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene06",
+                                              duration: 25000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene06.setTween(scene06Action);
     scene06.setPin(".scene06");
@@ -872,11 +874,11 @@ $(document).ready(function () {
         const scene06In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene6Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene06',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene06',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene6Scene.setTween(scene06In);
         scene6Scene.addTo(controller);
         //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -888,10 +890,10 @@ $(document).ready(function () {
         const scene06Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene6Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene07',
-            duration: 300,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene07',
+                                                    duration: 300,
+                                                    triggerHook: "onEnter",
+                                                });
         scene6Scene.setTween(scene06Out);
         scene6Scene.addTo(controller);
     });
@@ -933,11 +935,11 @@ $(document).ready(function () {
     scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: 260}, "+=20");
 
     const scene07 = new ScrollMagic.Scene({
-        triggerElement: ".scene07",
-        duration: 15000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene07",
+                                              duration: 15000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene07.setTween(scene07Action);
     scene07.setPin(".scene07");
@@ -948,11 +950,11 @@ $(document).ready(function () {
         const scene07In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene7Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene07',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene07',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene7Scene.setTween(scene07In);
         scene7Scene.addTo(controller);
         //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -964,10 +966,10 @@ $(document).ready(function () {
         const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene7Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene08',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.scene08',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene7Scene.setTween(scene07Out);
         scene7Scene.addTo(controller);
     });
@@ -1072,11 +1074,11 @@ $(document).ready(function () {
     scene08Action.to('#scene08_textline7', 5, {autoAlpha: 0}, "-=3");
 
     const scene08 = new ScrollMagic.Scene({
-        triggerElement: ".scene08",
-        duration: 30000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene08",
+                                              duration: 30000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene08.setTween(scene08Action);
     scene08.setPin(".scene08");
@@ -1087,11 +1089,11 @@ $(document).ready(function () {
         const scene08In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene8Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene08',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                    triggerElement: '.scene08',
+                                                    duration: 500,
+                                                    triggerHook: .6,
+                                                    offset: 0
+                                                });
         scene8Scene.setTween(scene08In);
         scene8Scene.addTo(controller);
         //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -1103,10 +1105,10 @@ $(document).ready(function () {
         const scene08Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene8Scene = new ScrollMagic.Scene({
-            triggerElement: '.nine',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                    triggerElement: '.nine',
+                                                    duration: 700,
+                                                    triggerHook: "onEnter",
+                                                });
         scene8Scene.setTween(scene08Out);
         scene8Scene.addTo(controller);
     });
@@ -1117,11 +1119,11 @@ $(document).ready(function () {
         const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene11Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene11',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                     triggerElement: '.scene11',
+                                                     duration: 500,
+                                                     triggerHook: .6,
+                                                     offset: 0
+                                                 });
         scene11Scene.setTween(scene11In);
         scene11Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -1133,10 +1135,10 @@ $(document).ready(function () {
         const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene11Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene12',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                     triggerElement: '.scene12',
+                                                     duration: 700,
+                                                     triggerHook: "onEnter",
+                                                 });
         scene11Scene.setTween(scene11Out);
         scene11Scene.addTo(controller);
     });
@@ -1156,55 +1158,48 @@ $(document).ready(function () {
     scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
     // LICHT GEHT AUS
-    scene11Action.to('#scene11_bright', 4, {scale:"10",x:-2800,y:2700,webkitFilter: 'brightness(.1)',filter: 'brightness(.1)'}, "+=2");
-    scene11Action.to('#scene11_bright', 2, {autoAlpha:0});
+    scene11Action.to('#scene11_bright', 4,
+                     {scale: "10", x: -2800, y: 2700, webkitFilter: 'brightness(.1)', filter: 'brightness(.1)'}, "+=2");
+    scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
     scene11Action.add("Parallax", "+=1");
-    scene11Action.to('#scene11_layer01', 0, {scale:"1.2",autoAlpha: 1},"Parallax");
-    scene11Action.to('#scene11_layer02', 0, {scale:"2",autoAlpha: 1},"Parallax" );
-    scene11Action.to('#scene11_layer01', 2, {scale:"1.01"},"Parallax");
-    scene11Action.to('#scene11_layer02', 2, {scale:"1"},"Parallax");
+    scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
+    scene11Action.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
+    scene11Action.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
+    scene11Action.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
     scene11Action.add("Parallax2", "+=1");
-    scene11Action.to('#scene11_layer02', 2, {scale:"3", autoAlpha:0},"Parallax2");
-    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {scale:"1.2",autoAlpha:1},"Parallax2");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY:0, transformOrigin:"50% 50%"},"+=1");
+    scene11Action.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
+    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1}, "Parallax2");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"}, "+=1");
     scene11Action.add("Parallax3", "+=1");
-    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha:0},"Parallax3");
-    scene11Action.to('#scene11_layer01', 2, {autoAlpha:0},"Parallax3");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scale:"1.01",autoAlpha:.1,transformOrigin:"50% 50%"},"Parallax3");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:.3});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0},"+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:.4});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY:0,autoAlpha:.2},"+=0");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY:1,autoAlpha:.3},"+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha:0},"+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha:1},"+=1");
-
+    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
+    scene11Action.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 2,
+                     {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
+    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
 
 
     const scene11 = new ScrollMagic.Scene({
-        triggerElement: ".scene11",
-        duration: 30000,
-        triggerHook: 0,
-        reverse: true
-    });
+                                              triggerElement: ".scene11",
+                                              duration: 30000,
+                                              triggerHook: 0,
+                                              reverse: true
+                                          });
 
     scene11.setTween(scene11Action);
     scene11.setPin(".scene11");
     scene11.addTo(controller);
 
 
-
-
-
-
-
-
-
-
     //DrawSVG_Plugin:
     var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this
-        || window;
+                                                                                                             || window;
     (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
         "use strict";
 
@@ -1241,16 +1236,16 @@ $(document).ready(function () {
             } else if ("line" === f) {
                 r =
                     t(i.getAttribute("x1"), i.getAttribute("y1"), i.getAttribute("x2"),
-                        i.getAttribute("y2"));
+                      i.getAttribute("y2"));
             } else if ("polyline" === f || "polygon" === f) {
                 for (n = i.getAttribute("points")
-                    .split(" "), r = 0, o =
+                          .split(" "), r = 0, o =
                     n[0].split(","), "polygon" === f && (n.push(n[0]), -1 === n[0].indexOf(",") && n.push(n[1])), l = 1;
                      n.length > l;
                      l++) {
                     a = n[l].split(","), 1
-                    === a.length
-                    && (a[1] =
+                                         === a.length
+                                         && (a[1] =
                         n[l++]), 2 === a.length && (r += t(o[0], o[1], a[0], a[1]) || 0, o = a);
                 }
             } else {
@@ -1275,44 +1270,44 @@ $(document).ready(function () {
         var n, a = document.defaultView ? document.defaultView.getComputedStyle : function () {
         };
         n = _gsScope._gsDefine.plugin({
-            propName: "drawSVG",
-            API: 2,
-            version: "0.0.5",
-            global: !0,
-            overwriteProps: ["drawSVG"],
-            init: function (t, e) {
-                if (!t.getBBox) {
-                    return !1;
-                }
-                var n, a, o, l = r(t) + 1;
-                return this._style = t.style, e === !0 || "true" === e ? e = "0 100%" : e
-                    ? -1
-                    === (e
-                        + "").indexOf(
-                        " ") && (e = "0 " + e)
-                    : e =
-                        "0 0", n =
-                    s(t, l), a = i(e, l, n[0]), this._length = l + 10, 0 === n[0] && 0
-                === a[0] ? (o =
-                    Math.max(1e-5, a[1] - l), this._dash = l + o, this._offset =
-                    l - n[1] + o, this._addTween(this, "_offset", this._offset,
-                    l - a[1] + o, "drawSVG")) : (this._dash =
-                    n[1] - n[0] || 1e-6, this._offset = -n[0], this._addTween(this,
-                    "_dash",
-                    this._dash,
-                    a[1] - a[0]
-                    || 1e-5,
-                    "drawSVG"), this._addTween(
-                    this, "_offset", this._offset, -a[0], "drawSVG")), !0
-            },
-            set: function (t) {
-                this._firstPT && (this._super.setRatio.call(this,
-                    t), this._style.strokeDashoffset =
-                    this._offset, this._style.strokeDasharray =
-                    (1 === t || 0 === t) && .001 > this._offset && 10 >= this._length
-                    - this._dash ? "none" : this._dash + "px," + this._length + "px")
-            }
-        }), n.getLength = r, n.getPosition = s
+                                          propName: "drawSVG",
+                                          API: 2,
+                                          version: "0.0.5",
+                                          global: !0,
+                                          overwriteProps: ["drawSVG"],
+                                          init: function (t, e) {
+                                              if (!t.getBBox) {
+                                                  return !1;
+                                              }
+                                              var n, a, o, l = r(t) + 1;
+                                              return this._style = t.style, e === !0 || "true" === e ? e = "0 100%" : e
+                                                                                                                      ? -1
+                                                                                                                        === (e
+                                                                                                                             + "").indexOf(
+                                                      " ") && (e = "0 " + e)
+                                                                                                                      : e =
+                                                                                                                          "0 0", n =
+                                                  s(t, l), a = i(e, l, n[0]), this._length = l + 10, 0 === n[0] && 0
+                                                                                                     === a[0] ? (o =
+                                                  Math.max(1e-5, a[1] - l), this._dash = l + o, this._offset =
+                                                  l - n[1] + o, this._addTween(this, "_offset", this._offset,
+                                                                               l - a[1] + o, "drawSVG")) : (this._dash =
+                                                  n[1] - n[0] || 1e-6, this._offset = -n[0], this._addTween(this,
+                                                                                                            "_dash",
+                                                                                                            this._dash,
+                                                                                                            a[1] - a[0]
+                                                                                                            || 1e-5,
+                                                                                                            "drawSVG"), this._addTween(
+                                                  this, "_offset", this._offset, -a[0], "drawSVG")), !0
+                                          },
+                                          set: function (t) {
+                                              this._firstPT && (this._super.setRatio.call(this,
+                                                                                          t), this._style.strokeDashoffset =
+                                                  this._offset, this._style.strokeDasharray =
+                                              (1 === t || 0 === t) && .001 > this._offset && 10 >= this._length
+                                              - this._dash ? "none" : this._dash + "px," + this._length + "px")
+                                          }
+                                      }), n.getLength = r, n.getPosition = s
     }), _gsScope._gsDefine && _gsScope._gsQueue.pop()();
 });
 
