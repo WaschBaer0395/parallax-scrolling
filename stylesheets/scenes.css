@@ -715,96 +715,148 @@ FOR EVERY SCENE USEABLE
     transform: translate(-76%);}
 
 /*--- SCENE 6 ---*/
-.scene06 .textline {
+.scene06Parallax{
+    left: 0vw;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.scene06L .textline {
     font-size: 200%;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
 }
 
+#scene06_textlineTitle{
+    right: 100.5vw;
+    top: 30%;
+    height: auto;
+    width: 97vw;
+}
+
 #scene06_textblock1 {
     left: 9%;
-    right: auto;
+    width: 70vw;
+    height: auto;
     top: 90%;
 }
 
 #scene06_textblock2 {
     left: 9%;
-    right: auto;
+    width: 70vw;
+    height: auto;
     top: 50%;
 }
 
 #scene06_textblock3 {
-    left: -12%;
+    width: 80vw;
+    left: -6vw;
+    height: auto;
 }
 
 #scene06_textblock4 {
     left: -12%;
     top: 60%;
+    width: 80vw;
+    left: -6vw;
+    height: auto;
 }
 
 #scene06_textblock5 {
-    left: -20%;
     top: 5%;
+    width: 80vw;
+    left: -15vw;
+    height: auto;
 }
 
 #scene06_textblock6 {
     left: 9%;
-    right: auto;
+    width: 70vw;
+    height: auto;
     top: 100%;
 }
 
 #scene06_textline1, #scene06_textline2, #scene06_textline3 {
     top: 25%;
-    right: -100%;
+    left: -26.5vw;
+    width: 97vw;
+    height: auto;
 }
 
 #scene06_textline4 {
-    top: 46%;
+    top: 26vw;
+    width: 97vw;
+    right: 100.5vw;
+    height: auto;
 }
 
 #scene06_textline5 {
     top: -60.5%;
+    width: 97vw;
+    right: 100.5vw;
+    height: auto;
 }
 
 #scene06_textline6 {
     top: 46%;
+    width: 97vw;
+    right: 100.5vw;
+    height: auto;
 }
 
 #scene06_bubbleAdam1 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
-    left: -20%;
+    width: auto;
+    height: 30%;
+    top: 17%;
+    left: -10vw;
 }
 
 #scene06_adamText1 {
-    top: 30%;
+    top: 45%;
+    width: 40%;
+    height: auto;
+    right: 0;
+    transform: translate(-52%,-50%)
+
 }
 
 #scene06_bubble1small {
-    width: 15%;
-    height: 30%;
-    top: 20%;
-    fleft: -5%;
+    width: auto;
+    height: 10vw;
+    top: 22%;
+    left: 0vw;
 }
 
 #scene06_bubble1textsmall {
-    top: 27%;
+    top: 45%;
+    width: 30%;
+    height: auto;
+    left: 0;
+    transform: translate(-85%,-50%);
 }
 
 #scene06_bubbleAdam2 {
-    width: 20%;
-    height: 40%;
+    width: 20vw;
+    height: 30vh;
     top: 15%;
-    left: 48%;
+    left: 50vw;
 }
 
 #scene06_adamText2 {
-    top: 27%;
+    top: 40%;
+    width: 40%;
+    height: auto;
+    left: 0;
+    transform: translate(-23%,-50%);
 }
 
 #scene06_bubble1textsmall p{
     font-size: 1.5vh;
+}
+
+.binaer{
+    left: 0;
 }
 
 /*--- SCENE 7 ---*/
@@ -1013,14 +1065,14 @@ FOR EVERY SCENE USEABLE
     top: 0;
     height: 100vh;
     display: inline-block;
-    left: -100vw;
+    left: -101vw;
 }
 #middle{
     position: absolute;
     height: 100vh;
     width: 100%;
-    background-image: url("");
     left: 100vw;
+    top: 0;
 }
 .choice1{
     position: absolute;
@@ -1070,15 +1122,15 @@ FOR EVERY SCENE USEABLE
 #right {
     position: absolute;
     height: 100vh;
-    width: 100%;
-    right:0;
+    width: 100vw;
+    left: 200vw
 }
 
 #left{
-    left: 0;
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    left: 0;
 }
 
 .button{
@@ -1122,15 +1174,18 @@ FOR EVERY SCENE USEABLE
     right: 0;
     height: 100vh;
     width: 100vw;
+    top: 0;
 }
 
 .scene05_adam{
     right: 0;
+    top: 0;
     height: 100vh;
     width: 100vw;
 }
 .scene05_girl{
     right: 0;
+    top: 0;
     height: 100vh;
     width: 100vw;
 }
