@@ -990,7 +990,14 @@ FOR EVERY SCENE USEABLE
 /*--- SCENE 9 ---*/
 
 /*--- SCENE 10 ---*/
+#scene10_textblock1 {
+    left: 8%;
+    right: auto;
+}
 
+#scene10_textline1 {
+    top: 20%;
+}
 /*--- SCENE 11 ---*/
 
 /*--- SCENE 12 ---*/
