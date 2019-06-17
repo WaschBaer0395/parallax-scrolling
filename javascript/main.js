@@ -528,7 +528,7 @@ $(document).ready(function () {
 
     let scene04Action = new TimelineMax();
     //BLUR
-    scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
     scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=20");
@@ -582,7 +582,7 @@ $(document).ready(function () {
         let scene05Rechts = new TimelineMax();
 
         //BLUR
-        scene05Rechts.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
         scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
         scene05Rechts.to('.scene05 #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
@@ -700,7 +700,7 @@ $(document).ready(function () {
     //SCENE 6 =========================d
     let scene06Action = new TimelineMax();
     //BLUR
-    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
     scene06Action.to('#scene06_textlineTitle', 10, {autoAlpha: 0}, "+=20");
     scene06Action.to('#scene06_textblock1', 10, {autoAlpha: 1, y: -300}, "+=10");
@@ -957,9 +957,9 @@ $(document).ready(function () {
         scene7Scene.addTo(controller);
         //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
-    //  END FadeInScene05 ================================
+    //  END FadeInScene07 ================================
 
-    //  START FadeOutScene06 ================================
+    //  START FadeOutScene07 ================================
     $(".scene07").each(function () {
         const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
@@ -977,7 +977,7 @@ $(document).ready(function () {
     //SCENE 8 =========================
     let scene08Action = new TimelineMax();
     //BLUR
-    scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene08Action.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
     scene08Action.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
@@ -1082,7 +1082,7 @@ $(document).ready(function () {
     scene08.setPin(".scene08");
     scene08.addTo(controller);
 
-    //  START FadeInScene06 ================================
+    //  START FadeInScene08 ================================
     $(".scene08").each(function () {
         const scene08In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
@@ -1096,9 +1096,9 @@ $(document).ready(function () {
         scene8Scene.addTo(controller);
         //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
-    //  END FadeInScene05 ================================
+    //  END FadeInScene08 ================================
 
-    //  START FadeOutScene06 ================================
+    //  START FadeOutScene08 ================================
     $(".scene08").each(function () {
         const scene08Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
