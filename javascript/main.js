@@ -487,6 +487,7 @@ $(document).ready(function () {
         scene3_2Scene.setTween(scene03_2Out);
         scene3_2Scene.addTo(controller);
     });
+
     //  END FadeOutScene03_part2 ================================
 
     //END SCENE03_2
@@ -889,7 +890,7 @@ $(document).ready(function () {
     //SCENE 7 =========================
     let scene07Action = new TimelineMax();
     //BLUR
-    scene06Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 5, {autoAlpha: 1}, "-=5");
     scene07Action.to('#scene07_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
     scene07Action.to('#scene07_textblock1', 5, {autoAlpha: 0, y: -100}, "+=20");
