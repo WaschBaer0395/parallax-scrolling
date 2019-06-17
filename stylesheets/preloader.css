@@ -1,0 +1,19 @@
+#progress {
+    background-color: rgb(29, 29, 29);
+    height: 25px;
+    width: 50%;
+    left: 25%;
+    position: relative;
+    top: -40%;
+    opacity: 0.6;
+}
+
+#progressbar {
+    background-color: white;
+    height: 2px;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    top: 38%;
+    opacity: 1;
+}

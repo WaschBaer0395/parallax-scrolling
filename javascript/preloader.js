@@ -4,6 +4,7 @@ var queue = new createjs.LoadQueue(false);
 queue.on("fileload", handleFileComplete);
 
 queue.on("progressbar", event =>{
+    console.log('all done');
     let progressbar = Math.floor(event.progress*100);
     this.progressbar.style.width = progress+'%'
     if(progressbar == 100){
@@ -36,6 +37,7 @@ queue.on("progressbar", event =>{
         queue.loadFile("Media/pictures/szene11/dark_scene/dark_background01_layer02.png");
         queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_without_nightvision.jpg");
         queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_with_nightvision.jpg");
+        console.log('all done');
 
     }
 });
