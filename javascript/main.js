@@ -50,7 +50,7 @@ $(document).ready(function () {
 
     $('.typewriter').each(function () { // gets called as soon as #Slide1_1 is in view
         // letter animation
-        const tween = new TimelineMax(); // timeline for the typing and cursor animation
+        const tween = new TimelineLite(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
                    TweenMax.fromTo(".anim-typewriter", 1.75,
                                    {width: "0",},
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     //  Cover ================================
     // Animationen hier sind nur Platzhalter !!! da noch kein cover gebaut wurde
-    let coverAction = new TimelineMax();
+    let coverAction = new TimelineLite();
 
     const cover = new ScrollMagic.Scene({
                                             triggerElement: ".cover",
@@ -97,7 +97,7 @@ $(document).ready(function () {
     parallaxInstance.friction(0.2, 0.2);
 
     //  Intro ================================
-    let introAction = new TimelineMax();
+    let introAction = new TimelineLite();
     introAction.to('.intro #mainTitle', 20, {autoAlpha: 1, y: -100}, "+=4");
     introAction.to('.intro #description', 20, {autoAlpha: 1, y: -100}, "+=8");
     introAction.to('.intro #quote', 20, {autoAlpha: 1, y: -100}, "+=8");
@@ -115,7 +115,7 @@ $(document).ready(function () {
     //intro.addIndicators({name: "INTRO"});
 
     //  typewriter ================================
-    //let timeline = new TimelineMax();
+    //let timeline = new TimelineLite();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
     const typewriter = new ScrollMagic.Scene({
                                                  triggerElement: ".typewriter",
@@ -131,7 +131,7 @@ $(document).ready(function () {
 //  Prolog ================================
 // bsp: bewege nach oder mache in richtung .to( klasse , länge, {styles},
 // start versatz ( verschiebt realtiv alle animationen dahinter!)
-    let prologAction = new TimelineMax();
+    let prologAction = new TimelineLite();
     prologAction.to('.prolog #prolog1', 10, {autoAlpha: 1, y: 100}, "+=2"); // fade from top
     prologAction.to('.prolog #prolog1', 10, {autoAlpha: 0, y: -250}, "+=4"); // fade away to top
     prologAction.to('.prolog #prolog2', 10, {autoAlpha: 1, y: -250}, "-=8"); // fade in from bottom
@@ -175,7 +175,7 @@ $(document).ready(function () {
 // gleiches gilt für den Pin,
 // für den aufbau im html dokument einfach immer an den anderen scenen orientieren
 // fade ins und fadeout müssen extra angefügt werden ! siehe unten !
-    let scene01Action = new TimelineMax();
+    let scene01Action = new TimelineLite();
     // Klasse mit ID        //dauer//  attribute   // startDelay
     scene01Action.to('#scene_one_quinn', 10, {autoAlpha: 1, x: 100}, "+=4");
     scene01Action.to('#scene01_bubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
@@ -236,7 +236,7 @@ $(document).ready(function () {
 
     //  START scene02 ================================
     // SCENE 2 ===============================
-    let scene02Action = new TimelineMax();
+    let scene02Action = new TimelineLite();
     // Klasse mit ID        //dauer//  attribute   // startDelay
     scene01Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //// TEXT////
@@ -315,7 +315,7 @@ $(document).ready(function () {
     //  START scene03 ================================
     //SCENE 3 =========================
     // TEXT
-    let scene03Action = new TimelineMax();
+    let scene03Action = new TimelineLite();
     //BLUR
     scene02Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
@@ -418,7 +418,7 @@ $(document).ready(function () {
     //  START scene03_Part2 ================================
     //SCENE 3_2 =========================
     // TEXT
-    let scene03_part2Action = new TimelineMax();
+    let scene03_part2Action = new TimelineLite();
     //BLUR
     scene03Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
@@ -494,7 +494,6 @@ $(document).ready(function () {
 
 
     // START Scene04
-
     //  START FadeInScene04  text================================
     $(".scene04").each(function () {
         const scene04_in = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
@@ -509,21 +508,6 @@ $(document).ready(function () {
         scene04.addTo(controller);
     });
     //  END FadeInScene04 ================================
-
-    //  FadeOutScene04 ================================
-    $(".scene04").each(function () {
-        const scene04_out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
-
-        let scene04 = new ScrollMagic.Scene({
-                                                triggerElement: '.scene05',
-                                                duration: 700,
-                                                triggerHook: "onEnter",
-                                            });
-        scene04.setTween(scene04_out);
-        scene04.addTo(controller);
-    });
-    //  END FadeOutScene04 ================================
-
     const scene04 = new ScrollMagic.Scene({
                                               triggerElement: ".scene04",
                                               duration: 20000,
@@ -531,7 +515,7 @@ $(document).ready(function () {
                                               reverse: true
                                           });
 
-    let scene04Action = new TimelineMax();
+    let scene04Action = new TimelineLite();
     //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
@@ -800,7 +784,7 @@ $(document).ready(function () {
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
             function () {
-                TweenLite.to("#wrapper1", 2, {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
                 scene06Links.progress(1); //directly ends timeline for left scene
                 badCounter++;
             });
@@ -808,7 +792,7 @@ $(document).ready(function () {
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonL').on('click',
             function () {
-                TweenLite.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
                 scene05Rechts.progress(1); //directly ends timeline for right scene
                 goodCounter++;
             });
@@ -891,7 +875,7 @@ $(document).ready(function () {
 
     //  START scene07 ================================
     //SCENE 7 =========================
-    let scene07Action = new TimelineMax();
+    let scene07Action = new TimelineLite();
     //BLUR
     //scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 5, {autoAlpha: 1}, "-=5");
@@ -967,7 +951,7 @@ $(document).ready(function () {
 
     //  START scene08 ================================
     //SCENE 8 =========================
-    let scene08Action = new TimelineMax();
+    let scene08Action = new TimelineLite();
     //BLUR
     scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
@@ -1106,7 +1090,7 @@ $(document).ready(function () {
 
     //  START scene10 ================================
     //SCENE 10 =========================
-    let scene10Action = new TimelineMax();
+    let scene10Action = new TimelineLite();
     //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
     scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
@@ -1158,7 +1142,7 @@ $(document).ready(function () {
 
     //  START FadeInScene11 ================================
     $('.scene11').each(function () {
-        const scene11In = TweenLite.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+        const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene11Scene = new ScrollMagic.Scene({
                                                      triggerElement: '.scene11',
@@ -1174,7 +1158,7 @@ $(document).ready(function () {
 
     //  START FadeOutScene11 ================================
     $(".scene11").each(function () {
-        const scene11Out = TweenLite.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene11Scene = new ScrollMagic.Scene({
                                                      triggerElement: '.scene12',
@@ -1250,7 +1234,7 @@ $(document).ready(function () {
         }
 
         function e(t) {
-            return "string" != typeof t && t.nodeType || (t = _gsScope.TweenLite.selector(t), t.length && (t = t[0])), t
+            return "string" != typeof t && t.nodeType || (t = _gsScope.TweenMax.selector(t), t.length && (t = t[0])), t
         }
 
         function i(t, e, i) {
