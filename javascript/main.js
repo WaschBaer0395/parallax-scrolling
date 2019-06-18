@@ -801,6 +801,7 @@ $(document).ready(function () {
         $('.buttonR').on('click',
             function () {
                 TweenLite.to("#wrapper1", 2, {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                scene06Links.progress(1); //directly ends timeline for left scene
                 badCounter++;
             });
 
@@ -808,6 +809,7 @@ $(document).ready(function () {
         $('.buttonL').on('click',
             function () {
                 TweenLite.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                scene05Rechts.progress(1); //directly ends timeline for right scene
                 goodCounter++;
             });
 
