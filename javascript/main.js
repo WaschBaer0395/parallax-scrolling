@@ -585,7 +585,7 @@ $(document).ready(function () {
     $('.decision1').each(function () {
 
         // START SCENE 05 RIGHT SIDE =======================================================================
-        let scene05Rechts = new TimelineMax();
+        let scene05Rechts = new TimelineLite();
         //BLUR
         scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
@@ -626,7 +626,7 @@ $(document).ready(function () {
         // END SCENE 05 RIGHT SIDE =======================================================================
 
         // START SCENE 06 LEFT SIDE =======================================================================
-        let scene06Links = new TimelineMax();
+        let scene06Links = new TimelineLite();
         //BLUR
         scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
@@ -744,12 +744,12 @@ $(document).ready(function () {
         // end animation
         // START PARALLAX ZOOM-IN
         scene06Links.add("Parallax_mountain", "+=0");
-        scene06Links.to('#scene06_background', 60, {scale:"2",x:-1000},"Parallax_mountain");
-        scene06Links.to('#scene06_sixth_layer', 60, {scale:"1",x:-2000},"Parallax_mountain");
-        scene06Links.to('#scene06_fifth_layer', 60, {scale:"2",x:-2000},"Parallax_mountain");
-        scene06Links.to('#scene06_third_layer', 60, {scale:"3",x:-1000,y:300},"Parallax_mountain");
-        scene06Links.to('#scene06_second_layer', 60, {scale:"3.5",x:-1000,y:300},"Parallax_mountain");
-        scene06Links.to('#scene06_first_layer', 60, {scale:"4",x:-2000},"Parallax_mountain");
+        scene06Links.to('#scene06_background', 60, {scale:2,x:-1000, rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_sixth_layer', 60, {scale:1,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_fifth_layer', 60, {scale:2,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_third_layer', 60, {scale:3,x:-1000,y:300,rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_second_layer', 60, {scale:3.5,x:-1000,y:300,rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
         scene06Links.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1770,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer03', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
@@ -778,7 +778,7 @@ $(document).ready(function () {
         // END SCENE 06 LEFT SIDE =======================================================================
 
 
-        let decision1Middle = new TimelineMax();
+        let decision1Middle = new TimelineLite();
         decision1Middle.add('text');
         decision1Middle.add('options');
         decision1Middle.add('buttons');
@@ -1156,7 +1156,7 @@ $(document).ready(function () {
 
     //  START FadeInScene11 ================================
     $('.scene11').each(function () {
-        const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+        const scene11In = TweenLite.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene11Scene = new ScrollMagic.Scene({
                                                      triggerElement: '.scene11',
@@ -1172,7 +1172,7 @@ $(document).ready(function () {
 
     //  START FadeOutScene11 ================================
     $(".scene11").each(function () {
-        const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        const scene11Out = TweenLite.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene11Scene = new ScrollMagic.Scene({
                                                      triggerElement: '.scene12',
@@ -1186,7 +1186,7 @@ $(document).ready(function () {
 
     // START SCENE11 ======================================
     // START ANIMATION ====================================
-    let scene11Action = new TimelineMax();
+    let scene11Action = new TimelineLite();
     //BLUR
     scene11Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
 
