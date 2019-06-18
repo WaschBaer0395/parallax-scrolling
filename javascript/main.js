@@ -795,6 +795,7 @@ $(document).ready(function () {
         decision1Main.add("main");
         decision1Main.add(scene06Links,'main');
         decision1Main.add(scene05Rechts,"main");
+        decision1Main.set('.scene07 .blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
