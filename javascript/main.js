@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    let chosen1 = false;
+    let chosen2 = false;
+    let chosen3 = false;
+    let chosen4 = false;
 
     let badCounter = 0;
     let goodCounter = 0;
@@ -22,16 +26,22 @@ $(document).ready(function () {
         }
     }
 
-    function disableScroll() {
-        if (window.addEventListener) // older FF
-        {
-            window.addEventListener('DOMMouseScroll', preventDefault, false);
+    function disableScroll(choice) {
+        if(choice == "1" && chosen1 == true){enableScroll();return false;}
+        else if(choice == "2" && chosen2 == true){enableScroll();return false;}
+        else if(choice == "3" && chosen3 == true){enableScroll();return false;}
+        else if(choice == "4" && chosen4 == true){enableScroll();return false;}
+        else {
+            if (window.addEventListener) // older FF
+            {
+                window.addEventListener('DOMMouseScroll', preventDefault, false);
+            }
+            document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
+            window.onwheel = preventDefault; // modern standard
+            window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+            window.ontouchmove = preventDefault; // mobile
+            document.onkeydown = preventDefaultForScrollKeys;
         }
-        document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-        window.onwheel = preventDefault; // modern standard
-        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-        window.ontouchmove = preventDefault; // mobile
-        document.onkeydown = preventDefaultForScrollKeys;
     }
 
     function enableScroll() {
@@ -766,7 +776,8 @@ $(document).ready(function () {
         decision1Middle.add('text');
         decision1Middle.add('options');
         decision1Middle.add('buttons');
-        decision1Middle.call(disableScroll, [], null, '+=1');
+        decision1Middle.call(disableScroll, ["1"], null, '+=1');
+        decision1Middle.call(function(){chosen1 = true},null,'+=3');
         decision1Middle.to('.choice1', 2, {autoAlpha: 1, y: 100}, 'text');
         decision1Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options');
         decision1Middle.to('.buttonL', 2, {autoAlpha: 1, x: 0}, 'buttons');
