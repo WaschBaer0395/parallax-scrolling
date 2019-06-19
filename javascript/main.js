@@ -738,37 +738,37 @@ $(document).ready(function () {
         // end animation
         // START PARALLAX ZOOM-IN
         scene06Links.add("Parallax_mountain", "+=0");
-        scene06Links.to('#scene06_background', 60, {scale:2,x:"-1000vw"},"Parallax_mountain");
-        scene06Links.to('#scene06_sixth_layer', 60, {scale:1,x:"-2000vw"},"Parallax_mountain");
-        scene06Links.to('#scene06_fifth_layer', 60, {scale:2,x:"-2000vw"},"Parallax_mountain");
-        scene06Links.to('#scene06_third_layer', 60, {scale:3,x:"-1000vw",y:"300vw"},"Parallax_mountain");
-        scene06Links.to('#scene06_second_layer', 60, {scale:3.5,x:"-1000vw",y:"300vw"},"Parallax_mountain");
-        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:"-2000vw"},"Parallax_mountain");
-        scene06Links.to('#binaer01', 60, {scale:"3.5",x:"-1700vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer02', 60, {scale:"3.4",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer03', 60, {scale:"3.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer04', 60, {scale:"3.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer05', 60, {scale:"3.3",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer06', 60, {scale:"3.4",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer07', 60, {scale:"2.7",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer08', 60, {scale:"3.5",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer09', 60, {scale:"2.9",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer10', 60, {scale:"2.9",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer11', 60, {scale:"3.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer12', 60, {scale:"2.8",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer14', 60, {scale:"3.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer15', 60, {scale:"2.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer16', 60, {scale:"3.2",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer17', 60, {scale:"2.7",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer18', 60, {scale:"3.2",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer19', 60, {scale:"3.6",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer20', 60, {scale:"2.8",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer21', 60, {scale:"3.5",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer22', 60, {scale:"3.7",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer23', 60, {scale:"2.7",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer24', 60, {scale:"3.2",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer25', 60, {scale:"3.4",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer26', 60, {scale:"3.4",x:"-17vw",autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#scene06_background', 60, {scale:2,x:-1000},"Parallax_mountain");
+        scene06Links.to('#scene06_sixth_layer', 60, {scale:1,x:-2000},"Parallax_mountain");
+        scene06Links.to('#scene06_fifth_layer', 60, {scale:2,x:-2000},"Parallax_mountain");
+        scene06Links.to('#scene06_third_layer', 60, {scale:3,x:-1000,y:300},"Parallax_mountain");
+        scene06Links.to('#scene06_second_layer', 60, {scale:3.5,x:-1000,y:300},"Parallax_mountain");
+        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000},"Parallax_mountain");
+        scene06Links.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer03', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer04', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer05', 60, {scale:"3.3",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer06', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer07', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer08', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer09', 60, {scale:"2.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer10', 60, {scale:"2.9",x:1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer11', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer12', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer14', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer15', 60, {scale:"2.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer16', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer17', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer18', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer19', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer20', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer21', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer22', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer23', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer24', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer25', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer26', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
         // END SCENE 06 LEFT SIDE =======================================================================
 
 
