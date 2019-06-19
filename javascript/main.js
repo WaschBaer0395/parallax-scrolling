@@ -1106,13 +1106,47 @@ $(document).ready(function () {
     scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
     //BLUR ENDE
     scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
+    scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
 
     const scene10 = new ScrollMagic.Scene({
                                               triggerElement: ".scene10",
-                                              duration: 15000,
+                                              duration: 30000,
                                               triggerHook: 0,
                                               reverse: true
                                           });
