@@ -24,7 +24,7 @@ class content for every layer in scene needed
 SPEECHBUBBLE FOR EVERY SCENE USEABLE
 /////////////////////////////////////
 */
-.speechbubble_diamand {
+.speechbubble_diamond {
     background: url("../Media/speechbubbles/Endversion Diamant.png");
     z-index: 99;
     visibility: hidden;
@@ -59,9 +59,10 @@ SPEECHBUBBLE FOR EVERY SCENE USEABLE
     position: absolute;
 }
 
-.thoughtbubble_diamand {
+.thoughtbubble_diamond {
     background: url("../Media/thoughtbubbles/diamondThought.png");
     z-index: 99;
+    visibility: hidden;
     position: absolute;
 }
 
@@ -1294,21 +1295,6 @@ FOR EVERY SCENE USEABLE
     width: 100vw;
     top: 0;
 }
-
-.scene05_adam{
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-}
-.scene05_girl{
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
-
 /* ============= SCENE 11 ============= */
 .opacity0{
     opacity: 0;

@@ -613,7 +613,9 @@ $(document).ready(function () {
         //BLUR ENDE
         scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         //ADAM IN
-        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
+        scene05Rechts.add("adam_scene05", "+=0");
+        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1, x: 100}, "adam_scene05");
+        scene05Rechts.to(' #hurt', 10, {autoAlpha: 1,x:100}, "adam_scene05");
         //GIRL IN
         scene05Rechts.to(' #scene05_girl', 10, {autoAlpha: 1}, "+=4");
         //BUBBLES
