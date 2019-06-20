@@ -3,11 +3,11 @@ let progressbar = document.getElementById('progressbar');
 var queue = new createjs.LoadQueue(false);
 
 
-queue.on("progressbar", event =>{
+queue.on("progress", event =>{
     console.log('all done');
-    let progressbar = Math.floor(event.progress*100);
-    this.progressbar.style.width = progressbar+'%'
-    if(progressbar == 100){
+    let progress = Math.floor(event.progress*100);
+    this.progressbar.style.width = progress+'%';
+    if(progress == 100){
         console.log('all done');
 
     }
