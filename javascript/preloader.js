@@ -1,4 +1,4 @@
-let progressbar = document.getElementById('progress');
+let progressbar = document.getElementById('progressbar');
 
 var queue = new createjs.LoadQueue(false);
 queue.on("fileload", handleFileComplete);
