@@ -1199,6 +1199,14 @@ $(document).ready(function () {
         scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
         scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
 
+    scene10Action.add("scene10_parallax", "+=20");
+    scene10Action.to('#scene10_adam', 15, {x:-10}, "scene10_parallax");
+    scene10Action.to('#scene10_girl', 15, {x:-400}, "scene10_parallax");
+    scene10Action.to('#scene10_layer02', 15, {x:-70}, "scene10_parallax");
+    scene10Action.to('#scene10_layer01', 15, {x:-30}, "scene10_parallax");
+    scene10Action.to('#scene10_layer00', 15, {x:40}, "scene10_parallax");
+    scene10Action.to('.blur', 15, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "scene10_parallax");
+
         const scene10 = new ScrollMagic.Scene({
                                                   triggerElement: ".scene10",
                                                   duration: 30000,
