@@ -1373,6 +1373,87 @@ $(document).ready(function () {
     scene12.setPin(".scene12");
     scene12.addTo(controller);
 
+
+
+
+
+
+
+
+
+
+
+
+    //  START FadeInScene14 ================================
+    $('.scene14').each(function () {
+        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene12Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene14',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene12Scene.setTween(scene12In);
+        scene12Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene14 ================================
+
+    // START ANIMATION
+    let scene14Action = new TimelineLite();
+
+    scene14Action.to('#scene14_title', 10, {autoAlpha:1},"-=20");
+    scene11Action.add("scene14_animation01", "-=20");
+    scene14Action.to('#scene14_title', 10, {autoAlpha:0,scale:"6"},"scene14_animation01");
+    scene14Action.to('#scene14_project', 20, {autoAlpha:1},"scene14_animation01");
+    scene14Action.to('#hsd_logo', 10, {autoAlpha:1});
+    scene11Action.add("scene14_animation02", "+=1");
+    scene14Action.to('#hsd_logo', 20, {width:"15%",height:"15%",top:"5%",left:"43%"},"scene14_animation02");
+    scene14Action.to('#scene14_project', 20, {scale:"6",autoAlpha:0},"scene14_animation02");
+    scene14Action.fromTo('#border', 10, {scaleX:0,autoAlpha:0},{scaleX:1, autoAlpha:.7});
+
+    scene11Action.add("scene14_animation03", "+=1");
+    scene14Action.fromTo('#scene14_name01', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"-800",fontsize:"4vh"},"scene14_animation03");
+    scene14Action.fromTo('#scene14_name02', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"400",x:"-400",fontsize:"4vh"},"scene14_animation03");
+    scene14Action.fromTo('#scene14_name03', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"0",fontsize:"4vh"},"scene14_animation03");
+    scene14Action.fromTo('#scene14_name04', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"400",x:"300",fontsize:"4vh"},"scene14_animation03");
+    scene14Action.fromTo('#scene14_name05', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"700",fontsize:"4vh"},"scene14_animation03");
+
+    scene14Action.to('#border', 10, {scaleX:0, autoAlpha:0});
+
+    scene11Action.add("scene14_animation04", "+=1");
+    scene14Action.to('#scene14_name01', 10, {y:"-100"},"scene14_animation04");
+    scene14Action.to('#scene14_name02', 10, {y:"0"},"scene14_animation04");
+    scene14Action.to('#scene14_name03', 10, {y:"-100"},"scene14_animation04");
+    scene14Action.to('#scene14_name04', 10, {y:"0"},"scene14_animation04");
+    scene14Action.to('#scene14_name05', 10, {y:"-100"},"scene14_animation04");
+    scene14Action.fromTo('#scene14_name06', 10, {y:"300",autoAlpha:0},{autoAlpha:1});
+
+    scene11Action.add("scene14_animation05", "-=20");
+    scene14Action.to('#scene14_name01', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#scene14_name02', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#scene14_name03', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#scene14_name04', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#scene14_name05', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#scene14_name06', 5, {autoAlpha:0},"scene14_animation05");
+    scene14Action.to('#hsd_logo', 10, {autoAlpha:0,scale:"4",y:"500"},"scene14_animation05");
+
+
+
+
+
+
+    const scene14 = new ScrollMagic.Scene({
+        triggerElement: ".scene14",
+        duration: 2000,
+        triggerHook: 0,
+        reverse: true
+    });
+
+    scene14.setTween(scene14Action);
+    scene14.setPin(".scene14");
+    scene14.addTo(controller);
 });
 
 

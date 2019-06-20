@@ -1302,3 +1302,33 @@ FOR EVERY SCENE USEABLE
 #scene11_bright{
     filter:none;
 }
+
+
+#scene14{
+    width:40%;
+    height:40%;
+}
+
+.name_credits{
+    position: absolute;
+    margin: 0 auto;
+    width:100%;
+    top:40%;
+    font-size: 5vh;
+    visibility: hidden;
+    z-index: 2;
+}
+#hsd_logo{
+    position: absolute;
+    margin:0 auto;
+    width:10%;
+    height:10%;
+    top:50%;
+    left:45%;
+    visibility: hidden;
+    z-index: 1;
+}
+#border{
+    border-bottom:1px solid red;
+    visibility: hidden;
+}
