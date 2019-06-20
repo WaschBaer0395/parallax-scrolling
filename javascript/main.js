@@ -739,10 +739,6 @@ $(document).ready(function () {
         // START PARALLAX ZOOM-IN
         scene06Links.add("Parallax_mountain", "+=0");
         scene06Links.to('#scene06_background', 60, {scale:2.4,x:-1200},"Parallax_mountain");
-        //scene06Links.to('#scene06_sixth_layer', 60, {scale:1,x:-2000},"Parallax_mountain");
-        //scene06Links.to('#scene06_fifth_layer', 60, {scale:2,x:-2000},"Parallax_mountain");
-        //scene06Links.to('#scene06_third_layer', 60, {scale:3,x:-1900,y:300},"Parallax_mountain");
-        //scene06Links.to('#scene06_second_layer', 60, {scale:3.5,x:-1000,y:300},"Parallax_mountain");
         scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000},"Parallax_mountain");
         scene06Links.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
