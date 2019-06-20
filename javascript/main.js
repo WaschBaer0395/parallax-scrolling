@@ -1446,7 +1446,7 @@ $(document).ready(function () {
 
     const scene14 = new ScrollMagic.Scene({
         triggerElement: ".scene14",
-        duration: 2000,
+        duration: 15000,
         triggerHook: 0,
         reverse: true
     });
