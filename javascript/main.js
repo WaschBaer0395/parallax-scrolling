@@ -1224,9 +1224,9 @@ $(document).ready(function () {
     // BLUR END
     scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
-    // LICHT GEHT AUS
+    // LIGHT GOES OFF
     scene11Action.to('#scene11_bright', 4,
-                     {scale: "10", x: "-800vw", y: "2000vw"}, "+=2");
+                     {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
     scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
     scene11Action.add("Parallax", "+=1");
     scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
@@ -1251,6 +1251,14 @@ $(document).ready(function () {
     scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
     scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
 
+    // PREPARING FOR ZOOM-OUT SCENE12 //
+    scene11Action.add("Parallax_concert1", "+=1");
+    scene11Action.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
+
 
     const scene11 = new ScrollMagic.Scene({
                                               triggerElement: ".scene11",
@@ -1262,6 +1270,84 @@ $(document).ready(function () {
     scene11.setTween(scene11Action);
     scene11.setPin(".scene11");
     scene11.addTo(controller);
+
+
+
+
+    //  START FadeInScene12 ================================
+    $('.scene12').each(function () {
+        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene12Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene12',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene12Scene.setTween(scene12In);
+        scene12Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene12 ================================
+
+    //  START FadeOutScene12 ================================
+    $(".scene12").each(function () {
+        const scene12Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene11Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene13',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        scene11Scene.setTween(scene12Out);
+        scene11Scene.addTo(controller);
+    });
+    //  END FadeOutScene12 ================================
+
+    // START SCENE11 ======================================
+    // START ANIMATION ====================================
+    let scene12Action = new TimelineLite();
+    // ANIMATION FOR SCENEBEGINING
+    scene12Action.add("Parallax_concert2", "+=1");
+    scene12Action.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
+    //////////////////////////////
+
+
+    // Ab hier Animationen einfügen
+    scene12Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
+    scene12Action.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
+
+    // BLUR END
+    scene12Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+
+
+    // START ANIMATION  -  ZOOM-IN  -
+    scene12Action.add("Parallax_concert", "+=1");
+    scene12Action.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
+
+
+
+
+    const scene12 = new ScrollMagic.Scene({
+        triggerElement: ".scene12",
+        duration: 3000,
+        triggerHook: 0,
+        reverse: true
+    });
+
+    scene12.setTween(scene12Action);
+    scene12.setPin(".scene12");
+    scene12.addTo(controller);
+
 });
 
 
