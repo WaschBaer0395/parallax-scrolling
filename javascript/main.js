@@ -448,10 +448,19 @@ $(document).ready(function () {
     scene03_part2Action.to('#battery_full', 1, {autoAlpha: .8}, "+=1");
     // end batteryloading
 
-    // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
-    // actually not workable
-    //toDo HEEELLPP :D
-    scene03_part2Action.to(".scene03 .path2", 5, {drawSVG: "1900px 290px", autoAlpha: 0, ease: Power4.easeOut}, "+=5");
+    // START PARALLAX FOR SCENE3_PART2
+    scene03_part2Action.add("Parallax_hospital", "+=0");
+    scene03_part2Action.to('#background', 10, {y:-10}, "Parallax_hospital");
+    scene03_part2Action.to('#bed', 10, {y:-40}, "Parallax_hospital");
+    scene03_part2Action.to('#chair', 10, {y:-20}, "Parallax_hospital");
+    scene03_part2Action.to('#monitor', 10, {y:-25}, "Parallax_hospital");
+    scene03_part2Action.to('#adam', 10, {y:-60}, "Parallax_hospital");
+    scene03_part2Action.to('#socket', 10, {y:-60}, "Parallax_hospital");
+    scene03_part2Action.to('#battery', 5, {y:-10, autoAlpha:0}, "Parallax_hospital");
+    scene03_part2Action.to('#wire', 10, {y:-60}, "Parallax_hospital");
+
+
+
 
     // battery animation
     let t = TweenMax.fromTo(".animation", 1, {y: -2}, {y: 5, ease: Linear.easeInOut, repeat: -1, yoyo: true});
@@ -467,7 +476,7 @@ $(document).ready(function () {
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
     scene03_2.addTo(controller);
-    scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    //scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
 
     //  START FadeInScene03  text================================
     $(".scene03_part2").each(function () {
@@ -524,6 +533,20 @@ $(document).ready(function () {
                                               triggerHook: 0,
                                               reverse: true
                                           });
+    //  FadeOutScene04 ================================
+    $(".scene04").each(function () {
+        const scene04Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let s04out = new ScrollMagic.Scene({
+            triggerElement: '.decision1',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        s04out.setTween(scene04Out);
+        s04out.addTo(controller);
+    });
+
+    //  END FadeOutScene04 ================================
 
     let scene04Action = new TimelineLite();
     //BLUR

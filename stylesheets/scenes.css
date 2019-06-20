@@ -1225,6 +1225,7 @@ FOR EVERY SCENE USEABLE
     width:8%;
     margin-left:-40px;
     margin-top:5vw;
+    visibility: hidden;
     text-align: center;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 10px 0 80px 0;
