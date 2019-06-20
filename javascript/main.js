@@ -448,10 +448,19 @@ $(document).ready(function () {
     scene03_part2Action.to('#battery_full', 1, {autoAlpha: .8}, "+=1");
     // end batteryloading
 
-    // draw SVG   code from: https://codepen.io/webmage/pen/eaPGwb
-    // actually not workable
-    //toDo HEEELLPP :D
-    scene03_part2Action.to(".scene03 .path2", 5, {drawSVG: "1900px 290px", autoAlpha: 0, ease: Power4.easeOut}, "+=5");
+    // START PARALLAX FOR SCENE3_PART2
+    scene03_part2Action.add("Parallax_hospital", "+=0");
+    scene03_part2Action.to('#background', 10, {y:-10}, "Parallax_hospital");
+    scene03_part2Action.to('#bed', 10, {y:-40}, "Parallax_hospital");
+    scene03_part2Action.to('#chair', 10, {y:-20}, "Parallax_hospital");
+    scene03_part2Action.to('#monitor', 10, {y:-25}, "Parallax_hospital");
+    scene03_part2Action.to('#adam', 10, {y:-60}, "Parallax_hospital");
+    scene03_part2Action.to('#socket', 10, {y:-60}, "Parallax_hospital");
+    scene03_part2Action.to('#battery', 5, {y:-10, autoAlpha:0}, "Parallax_hospital");
+    scene03_part2Action.to('#wire', 10, {y:-60}, "Parallax_hospital");
+
+
+
 
     // battery animation
     let t = TweenMax.fromTo(".animation", 1, {y: -2}, {y: 5, ease: Linear.easeInOut, repeat: -1, yoyo: true});
@@ -467,7 +476,7 @@ $(document).ready(function () {
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
     scene03_2.addTo(controller);
-    scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    //scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
 
     //  START FadeInScene03  text================================
     $(".scene03_part2").each(function () {
@@ -524,6 +533,20 @@ $(document).ready(function () {
                                               triggerHook: 0,
                                               reverse: true
                                           });
+    //  FadeOutScene04 ================================
+    $(".scene04").each(function () {
+        const scene04Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let s04out = new ScrollMagic.Scene({
+            triggerElement: '.decision1',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        s04out.setTween(scene04Out);
+        s04out.addTo(controller);
+    });
+
+    //  END FadeOutScene04 ================================
 
     let scene04Action = new TimelineLite();
     //BLUR
@@ -590,7 +613,9 @@ $(document).ready(function () {
         //BLUR ENDE
         scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         //ADAM IN
-        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1, x: 100}, "+=4");
+        scene05Rechts.add("adam_scene05", "+=0");
+        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1, x: 100}, "adam_scene05");
+        scene05Rechts.to(' #hurt', 10, {autoAlpha: 1,x:100}, "adam_scene05");
         //GIRL IN
         scene05Rechts.to(' #scene05_girl', 10, {autoAlpha: 1}, "+=4");
         //BUBBLES
@@ -620,7 +645,7 @@ $(document).ready(function () {
         // END SCENE 05 RIGHT SIDE =======================================================================
 
         // START SCENE 06 LEFT SIDE =======================================================================
-        let scene06Links = new TimelineLite();
+        let scene06Links = new TimelineMax();
         //BLUR
         scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
@@ -738,35 +763,31 @@ $(document).ready(function () {
         // end animation
         // START PARALLAX ZOOM-IN
         scene06Links.add("Parallax_mountain", "+=0");
-        scene06Links.to('#scene06_background', 60, {scale:2,x:-1000, rotationZ: .01, z:0.01},"Parallax_mountain");
-        scene06Links.to('#scene06_sixth_layer', 60, {scale:1,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
-        scene06Links.to('#scene06_fifth_layer', 60, {scale:2,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
-        scene06Links.to('#scene06_third_layer', 60, {scale:3,x:-1000,y:300,rotationZ: .01, z:0.01},"Parallax_mountain");
-        scene06Links.to('#scene06_second_layer', 60, {scale:3.5,x:-1000,y:300,rotationZ: .01, z:0.01},"Parallax_mountain");
-        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000,rotationZ: .01, z:0.01},"Parallax_mountain");
+        scene06Links.to('#scene06_background', 60, {scale:2.4,x:-1200},"Parallax_mountain");
+        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000},"Parallax_mountain");
         scene06Links.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1770,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer03', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer04', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer05', 60, {scale:"3.3",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer06', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer07', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer05', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer06', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer07', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer08', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer09', 60, {scale:"2.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer10', 60, {scale:"2.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer09', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer10', 60, {scale:"3.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer11', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer12', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer12', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer14', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer15', 60, {scale:"2.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer16', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer17', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer18', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer15', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer16', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer17', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer18', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer19', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer20', 60, {scale:"2.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer20', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer21', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer22', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer23', 60, {scale:"2.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer24', 60, {scale:"3.2",x:-1770,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer23', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#binaer24', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer25', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
         scene06Links.to('#binaer26', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
         // END SCENE 06 LEFT SIDE =======================================================================
@@ -1106,13 +1127,47 @@ $(document).ready(function () {
     scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
     scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
     //BLUR ENDE
     scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
+    scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
 
     const scene10 = new ScrollMagic.Scene({
                                               triggerElement: ".scene10",
-                                              duration: 15000,
+                                              duration: 30000,
                                               triggerHook: 0,
                                               reverse: true
                                           });
@@ -1194,9 +1249,9 @@ $(document).ready(function () {
     // BLUR END
     scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
-    // LICHT GEHT AUS
+    // LIGHT GOES OFF
     scene11Action.to('#scene11_bright', 4,
-                     {scale: "10", x: -2800, y: 2700, webkitFilter: 'brightness(.1)', filter: 'brightness(.1)'}, "+=2");
+                     {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
     scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
     scene11Action.add("Parallax", "+=1");
     scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
@@ -1221,6 +1276,14 @@ $(document).ready(function () {
     scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
     scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
 
+    // PREPARING FOR ZOOM-OUT SCENE12 //
+    scene11Action.add("Parallax_concert1", "+=1");
+    scene11Action.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
+    scene11Action.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
+
 
     const scene11 = new ScrollMagic.Scene({
                                               triggerElement: ".scene11",
@@ -1234,118 +1297,82 @@ $(document).ready(function () {
     scene11.addTo(controller);
 
 
-    //DrawSVG_Plugin:
-    var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this
-                                                                                                             || window;
-    (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
-        "use strict";
 
-        function t(t, e, i, r) {
-            return i = parseFloat(i) - parseFloat(t), r = parseFloat(r) - parseFloat(e), Math.sqrt(i * i + r * r)
-        }
 
-        function e(t) {
-            return "string" != typeof t && t.nodeType || (t = _gsScope.TweenMax.selector(t), t.length && (t = t[0])), t
-        }
+    //  START FadeInScene12 ================================
+    $('.scene12').each(function () {
+        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-        function i(t, e, i) {
-            var r, s, n = t.indexOf(" ");
-            return -1 === n ? (r = void 0 !== i ? i + "" : t, s = t) : (r = t.substr(0, n), s = t.substr(n + 1)), r =
-                -1 !== r.indexOf("%") ? parseFloat(r) / 100 * e : parseFloat(r), s =
-                -1 !== s.indexOf("%") ? parseFloat(s) / 100 * e : parseFloat(s), r > s ? [s, r] : [r, s]
-        }
+        let scene12Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene12',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene12Scene.setTween(scene12In);
+        scene12Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene12 ================================
 
-        function r(i) {
-            if (!i) {
-                return 0;
-            }
-            i = e(i);
-            var r, s, n, a, o, l, h, u, f = i.tagName.toLowerCase();
-            if ("path" === f) {
-                o = i.style.strokeDasharray, i.style.strokeDasharray = "none", r =
-                    i.getTotalLength() || 0, i.style.strokeDasharray = o;
-            } else if ("rect" === f) {
-                s = i.getBBox(), r =
-                    2 * (s.width + s.height);
-            } else if ("circle" === f) {
-                r =
-                    2 * Math.PI * parseFloat(i.getAttribute("r"));
-            } else if ("line" === f) {
-                r =
-                    t(i.getAttribute("x1"), i.getAttribute("y1"), i.getAttribute("x2"),
-                      i.getAttribute("y2"));
-            } else if ("polyline" === f || "polygon" === f) {
-                for (n = i.getAttribute("points")
-                          .split(" "), r = 0, o =
-                    n[0].split(","), "polygon" === f && (n.push(n[0]), -1 === n[0].indexOf(",") && n.push(n[1])), l = 1;
-                     n.length > l;
-                     l++) {
-                    a = n[l].split(","), 1
-                                         === a.length
-                                         && (a[1] =
-                        n[l++]), 2 === a.length && (r += t(o[0], o[1], a[0], a[1]) || 0, o = a);
-                }
-            } else {
-                "ellipse" === f
-                && (h =
-                    parseFloat(i.getAttribute("rx")), u = parseFloat(i.getAttribute("ry")), r =
-                    Math.PI * (3 * (h + u) - Math.sqrt((3 * h + u) * (h + 3 * u))));
-            }
-            return r || 0
-        }
+    //  START FadeOutScene12 ================================
+    $(".scene12").each(function () {
+        const scene12Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
-        function s(t, i) {
-            if (!t) {
-                return [0, 0];
-            }
-            t = e(t), i = i || r(t) + 1;
-            var s = a(t), n = s.strokeDasharray || "", o = parseFloat(s.strokeDashoffset), l = n.indexOf(",");
-            return 0 > l && (l = n.indexOf(" ")), n = 0 > l ? i : parseFloat(n.substr(0, l)) || 1e-5, n > i && (n =
-                i), [Math.max(0, -o), n - o]
-        }
+        let scene11Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene13',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        scene11Scene.setTween(scene12Out);
+        scene11Scene.addTo(controller);
+    });
+    //  END FadeOutScene12 ================================
 
-        var n, a = document.defaultView ? document.defaultView.getComputedStyle : function () {
-        };
-        n = _gsScope._gsDefine.plugin({
-                                          propName: "drawSVG",
-                                          API: 2,
-                                          version: "0.0.5",
-                                          global: !0,
-                                          overwriteProps: ["drawSVG"],
-                                          init: function (t, e) {
-                                              if (!t.getBBox) {
-                                                  return !1;
-                                              }
-                                              var n, a, o, l = r(t) + 1;
-                                              return this._style = t.style, e === !0 || "true" === e ? e = "0 100%" : e
-                                                                                                                      ? -1
-                                                                                                                        === (e
-                                                                                                                             + "").indexOf(
-                                                      " ") && (e = "0 " + e)
-                                                                                                                      : e =
-                                                                                                                          "0 0", n =
-                                                  s(t, l), a = i(e, l, n[0]), this._length = l + 10, 0 === n[0] && 0
-                                                                                                     === a[0] ? (o =
-                                                  Math.max(1e-5, a[1] - l), this._dash = l + o, this._offset =
-                                                  l - n[1] + o, this._addTween(this, "_offset", this._offset,
-                                                                               l - a[1] + o, "drawSVG")) : (this._dash =
-                                                  n[1] - n[0] || 1e-6, this._offset = -n[0], this._addTween(this,
-                                                                                                            "_dash",
-                                                                                                            this._dash,
-                                                                                                            a[1] - a[0]
-                                                                                                            || 1e-5,
-                                                                                                            "drawSVG"), this._addTween(
-                                                  this, "_offset", this._offset, -a[0], "drawSVG")), !0
-                                          },
-                                          set: function (t) {
-                                              this._firstPT && (this._super.setRatio.call(this,
-                                                                                          t), this._style.strokeDashoffset =
-                                                  this._offset, this._style.strokeDasharray =
-                                              (1 === t || 0 === t) && .001 > this._offset && 10 >= this._length
-                                              - this._dash ? "none" : this._dash + "px," + this._length + "px")
-                                          }
-                                      }), n.getLength = r, n.getPosition = s
-    }), _gsScope._gsDefine && _gsScope._gsQueue.pop()();
+    // START SCENE11 ======================================
+    // START ANIMATION ====================================
+    let scene12Action = new TimelineLite();
+    // ANIMATION FOR SCENEBEGINING
+    scene12Action.add("Parallax_concert2", "+=1");
+    scene12Action.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
+    scene12Action.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
+    //////////////////////////////
+
+
+    // Ab hier Animationen einfügen
+    scene12Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
+    scene12Action.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
+
+    // BLUR END
+    scene12Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+
+
+    // START ANIMATION  -  ZOOM-IN  -
+    scene12Action.add("Parallax_concert", "+=1");
+    scene12Action.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
+    scene12Action.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
+
+
+
+
+    const scene12 = new ScrollMagic.Scene({
+        triggerElement: ".scene12",
+        duration: 3000,
+        triggerHook: 0,
+        reverse: true
+    });
+
+    scene12.setTween(scene12Action);
+    scene12.setPin(".scene12");
+    scene12.addTo(controller);
+
 });
 
 
