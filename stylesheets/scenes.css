@@ -1177,7 +1177,7 @@ FOR EVERY SCENE USEABLE
 }
 
 
-#wrapper1{
+#wrapper1, #wrapper2{
     position: absolute;
     width: 300vw;
     top: 0;
@@ -1185,14 +1185,14 @@ FOR EVERY SCENE USEABLE
     display: inline-block;
     left: -101vw;
 }
-#middle{
+#middle, #middle2{
     position: absolute;
     height: 100vh;
     width: 100%;
     left: 100vw;
     top: 0;
 }
-.choice1{
+.choice1, .choice2{
     position: absolute;
     top: 1%;
     left: 50vw;

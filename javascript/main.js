@@ -27,11 +27,19 @@ $(document).ready(function () {
     }
 
     function disableScroll(choice) {
-        if(choice == "1" && chosen1 == true){enableScroll();return false;}
-        else if(choice == "2" && chosen2 == true){enableScroll();return false;}
-        else if(choice == "3" && chosen3 == true){enableScroll();return false;}
-        else if(choice == "4" && chosen4 == true){enableScroll();return false;}
-        else {
+        if (choice == "1" && chosen1 == true) {
+            enableScroll();
+            return false;
+        } else if (choice == "2" && chosen2 == true) {
+            enableScroll();
+            return false;
+        } else if (choice == "3" && chosen3 == true) {
+            enableScroll();
+            return false;
+        } else if (choice == "4" && chosen4 == true) {
+            enableScroll();
+            return false;
+        } else {
             if (window.addEventListener) // older FF
             {
                 window.addEventListener('DOMMouseScroll', preventDefault, false);
@@ -450,16 +458,14 @@ $(document).ready(function () {
 
     // START PARALLAX FOR SCENE3_PART2
     scene03_part2Action.add("Parallax_hospital", "+=0");
-    scene03_part2Action.to('#background', 10, {y:-10}, "Parallax_hospital");
-    scene03_part2Action.to('#bed', 10, {y:-40}, "Parallax_hospital");
-    scene03_part2Action.to('#chair', 10, {y:-20}, "Parallax_hospital");
-    scene03_part2Action.to('#monitor', 10, {y:-25}, "Parallax_hospital");
-    scene03_part2Action.to('#adam', 10, {y:-60}, "Parallax_hospital");
-    scene03_part2Action.to('#socket', 10, {y:-60}, "Parallax_hospital");
-    scene03_part2Action.to('#battery', 5, {y:-10, autoAlpha:0}, "Parallax_hospital");
-    scene03_part2Action.to('#wire', 10, {y:-60}, "Parallax_hospital");
-
-
+    scene03_part2Action.to('#background', 10, {y: -10}, "Parallax_hospital");
+    scene03_part2Action.to('#BBEEDD', 10, {y: -40}, "Parallax_hospital");
+    scene03_part2Action.to('#chair', 10, {y: -20}, "Parallax_hospital");
+    scene03_part2Action.to('#monitor', 10, {y: -25}, "Parallax_hospital");
+    scene03_part2Action.to('#adam', 10, {y: -60}, "Parallax_hospital");
+    scene03_part2Action.to('#socket', 10, {y: -60}, "Parallax_hospital");
+    scene03_part2Action.to('#battery', 5, {y: -10, autoAlpha: 0}, "Parallax_hospital");
+    scene03_part2Action.to('#wire', 10, {y: -60}, "Parallax_hospital");
 
 
     // battery animation
@@ -538,10 +544,10 @@ $(document).ready(function () {
         const scene04Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let s04out = new ScrollMagic.Scene({
-            triggerElement: '.decision1',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                               triggerElement: '.decision1',
+                                               duration: 700,
+                                               triggerHook: "onEnter",
+                                           });
         s04out.setTween(scene04Out);
         s04out.addTo(controller);
     });
@@ -614,8 +620,8 @@ $(document).ready(function () {
         scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         //ADAM IN
         scene05Rechts.add("adam_scene05", "+=0");
-        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1,x:80}, "adam_scene05");
-        scene05Rechts.to(' #hurt', 10, {autoAlpha: 1,x:40}, "adam_scene05");
+        scene05Rechts.to(' #scene05_adam', 10, {autoAlpha: 1, x: 80}, "adam_scene05");
+        scene05Rechts.to(' #hurt', 10, {autoAlpha: 1, x: 40}, "adam_scene05");
         //GIRL IN
         scene05Rechts.to(' #scene05_girl', 10, {autoAlpha: 1}, "+=4");
         //BUBBLES
@@ -666,8 +672,8 @@ $(document).ready(function () {
         scene06Links.to('#scene06_bubbleAdam1', 10, {autoAlpha: 0.9, x: 400}, "-=10");
         scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0.3}, "+=20");
         scene06Links.to('#scene06_bubble1small', 10, {autoAlpha: 0.7}, "-=15");
-        scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0},"+=10");
-        scene06Links.to('#scene06_bubble1small', 20, {autoAlpha: 0},"+=10");
+        scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0}, "+=10");
+        scene06Links.to('#scene06_bubble1small', 20, {autoAlpha: 0}, "+=10");
         scene06Links.to('#scene06_textline4', 5, {autoAlpha: 0}, "-=10");
         scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 1, x: 300}, "+=2");
         scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 1, y: -150}, "+=2");
@@ -685,31 +691,31 @@ $(document).ready(function () {
         scene06Links.to('#scene06_textline5', 5, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_textline6', 5, {autoAlpha: 0}, "-=5");
         // start animation of binär
-        scene06Links.to('#binaer01', 1, {autoAlpha: 1,y:-10}, "-=5");
-        scene06Links.to('#binaer02', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer03', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer04', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer05', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer06', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer07', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer08', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer09', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer10', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer11', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer12', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer14', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer15', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer16', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer17', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer18', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer19', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer20', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer21', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer22', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer23', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer24', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer25', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer26', 1, {autoAlpha: 1,y:-10});
+        scene06Links.to('#binaer01', 1, {autoAlpha: 1, y: -10}, "-=5");
+        scene06Links.to('#binaer02', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer03', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer04', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer05', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer06', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer07', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer08', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer09', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer10', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer11', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer12', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer14', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer15', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer16', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer17', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer18', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer19', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer20', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer21', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer22', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer23', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer24', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer25', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer26', 1, {autoAlpha: 1, y: -10});
         scene06Links.to('#binaer01', 1, {autoAlpha: 0});
         scene06Links.to('#binaer02', 1, {autoAlpha: 0});
         scene06Links.to('#binaer03', 1, {autoAlpha: 0});
@@ -735,61 +741,61 @@ $(document).ready(function () {
         scene06Links.to('#binaer24', 1, {autoAlpha: 0});
         scene06Links.to('#binaer25', 1, {autoAlpha: 0});
         scene06Links.to('#binaer26', 1, {autoAlpha: 0});
-        scene06Links.to('#binaer01', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer02', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer03', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer04', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer05', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer06', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer07', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer08', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer09', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer10', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer11', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer12', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer14', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer15', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer16', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer17', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer18', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer19', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer20', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer21', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer22', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer23', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer24', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer25', 1, {autoAlpha: 1,y:-10});
-        scene06Links.to('#binaer26', 1, {autoAlpha: 1,y:-10});
+        scene06Links.to('#binaer01', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer02', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer03', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer04', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer05', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer06', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer07', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer08', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer09', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer10', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer11', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer12', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer14', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer15', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer16', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer17', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer18', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer19', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer20', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer21', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer22', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer23', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer24', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer25', 1, {autoAlpha: 1, y: -10});
+        scene06Links.to('#binaer26', 1, {autoAlpha: 1, y: -10});
         // end animation
         // START PARALLAX ZOOM-IN
         scene06Links.add("Parallax_mountain", "+=0");
-        scene06Links.to('#scene06_background', 60, {scale:2.4,x:-1200},"Parallax_mountain");
-        scene06Links.to('#scene06_first_layer', 60, {scale:4,x:-2000},"Parallax_mountain");
-        scene06Links.to('#binaer01', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer02', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer03', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer04', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer05', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer06', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer07', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer08', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer09', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer10', 60, {scale:"3.9",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer11', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer12', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer14', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer15', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer16', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer17', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer18', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer19', 60, {scale:"3.6",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer20', 60, {scale:"3.8",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer21', 60, {scale:"3.5",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer22', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer23', 60, {scale:"3.7",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer24', 60, {scale:"3.2",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer25', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
-        scene06Links.to('#binaer26', 60, {scale:"3.4",x:-1700,autoAlpha: 1},"Parallax_mountain");
+        scene06Links.to('#scene06_background', 60, {scale: 2.4, x: -1200}, "Parallax_mountain");
+        scene06Links.to('#scene06_first_layer', 60, {scale: 4, x: -2000}, "Parallax_mountain");
+        scene06Links.to('#binaer01', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer02', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer03', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer04', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer05', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer06', 60, {scale: "3.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer07', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer08', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer09', 60, {scale: "3.8", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer10', 60, {scale: "3.9", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer11', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer12', 60, {scale: "3.8", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer14', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer15', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer16', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer17', 60, {scale: "3.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer18', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer19', 60, {scale: "3.6", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer20', 60, {scale: "3.8", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer21', 60, {scale: "3.5", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer22', 60, {scale: "3.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer23', 60, {scale: "3.7", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer24', 60, {scale: "3.2", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer25', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
+        scene06Links.to('#binaer26', 60, {scale: "3.4", x: -1700, autoAlpha: 1}, "Parallax_mountain");
         // END SCENE 06 LEFT SIDE =======================================================================
 
 
@@ -798,7 +804,9 @@ $(document).ready(function () {
         decision1Middle.add('options');
         decision1Middle.add('buttons');
         decision1Middle.call(disableScroll, ["1"], null, '+=1');
-        decision1Middle.call(function(){chosen1 = true},null,'+=3');
+        decision1Middle.call(function () {
+            chosen1 = true
+        }, null, '+=3');
         decision1Middle.to('.choice1', 2, {autoAlpha: 1, y: 100}, 'text');
         decision1Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options');
         decision1Middle.to('.buttonL', 2, {autoAlpha: 1, x: 0}, 'buttons');
@@ -809,101 +817,72 @@ $(document).ready(function () {
         let decision1Main = new TimelineLite();
         decision1Main.add(decision1Middle);
         decision1Main.add("main");
-        decision1Main.add(scene06Links,'main');
-        decision1Main.add(scene05Rechts,"main");
+        decision1Main.add(scene06Links, 'main');
+        decision1Main.add(scene05Rechts, "main");
         decision1Main.set('.scene07 .blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
-            function () {
-                TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
-                scene06Links.progress(1); //directly ends timeline for left scene
-                badCounter++;
-            });
+                         function () {
+                             TweenMax.to("#wrapper1", 2,
+                                         {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                             scene06Links.progress(1); //directly ends timeline for left scene
+                             badCounter++;
+                         });
 
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonL').on('click',
-            function () {
-                TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
-                scene05Rechts.progress(1); //directly ends timeline for right scene
-                goodCounter++;
-            });
+                         function () {
+                             TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                             scene05Rechts.progress(1); //directly ends timeline for right scene
+                             goodCounter++;
+                         });
 
 
         const decision1 = new ScrollMagic.Scene({
-            triggerElement: ".decision1",
-            duration: 25000,
-            triggerHook: 0,
-            reverse: true
-        });
+                                                    triggerElement: ".decision1",
+                                                    duration: 25000,
+                                                    triggerHook: 0,
+                                                    reverse: true
+                                                });
 
         decision1.setTween(decision1Main);
         decision1.setPin(".decision1");
         decision1.addTo(controller);
-        
+
     });
 
 
-    //  START FadeInScene05 ================================
+    //  START FadeInScene05and6 ================================
     $('.decision1').each(function () {
         const decision1In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let decision1 = new ScrollMagic.Scene({
-            triggerElement: '.decision1',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
+                                                  triggerElement: '.decision1',
+                                                  duration: 500,
+                                                  triggerHook: .6,
+                                                  offset: 0
+                                              });
         decision1.setTween(decision1In);
         decision1.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
-    //  END FadeInScene05 ================================
+    //  END FadeInScene05and6 ================================
 
-    //  START FadeOutScene05 ================================
+    //  START FadeOutScene05and6 ================================
     $(".decision1").each(function () {
         const decision1Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let decision1 = new ScrollMagic.Scene({
-            triggerElement: '.scene07',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
+                                                  triggerElement: '.scene07',
+                                                  duration: 700,
+                                                  triggerHook: "onEnter",
+                                              });
         decision1.setTween(decision1Out);
         decision1.addTo(controller);
     });
-    //  END FadeOutScene05 ================================
-
-    //END SCENE05
-    //  START FadeInScene06 ================================
-    $(".scene06").each(function () {
-        const scene06In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene6Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene06',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
-        scene6Scene.setTween(scene06In);
-        scene6Scene.addTo(controller);
-        //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-    });
-    //  END FadeInScene05 ================================
-
-    //  START FadeOutScene06 ================================
-    $(".scene06").each(function () {
-        const scene06Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
-
-        let scene6Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene07',
-                                                    duration: 300,
-                                                    triggerHook: "onEnter",
-                                                });
-        scene6Scene.setTween(scene06Out);
-        scene6Scene.addTo(controller);
-    });
-    //  END FadeOutScene06 ================================
+    //  END FadeOutScene05and6 ================================
+    //END DECISION1
 
     //  START scene07 ================================
     //SCENE 7 =========================
@@ -983,477 +962,521 @@ $(document).ready(function () {
 
     //  START scene08 ================================
     //SCENE 8 =========================
-    let scene08Action = new TimelineLite();
-    //BLUR
-    scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-    //TEXT
-    scene08Action.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene08Action.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene08Action.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
-    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 1}, "-=10");
-    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 1, y: -74}, "-=10");
-    scene08Action.to('#scene08_textline3', 10, {autoAlpha: 1}, "-=5");
-    scene08Action.to('#scene08_textline2', 10, {autoAlpha: 0, y: -573}, "+=20");
-    scene08Action.to('#scene08_textline3', 10, {autoAlpha: 0, y: -500}, "-=10");
-    scene08Action.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 300}, "+=2");
-    scene08Action.to('#scene08_textblock2', 5, {autoAlpha: 1, y: -150}, "+=2");
-    scene08Action.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 300}, "-=5");
-    scene08Action.to('#scene08_textblock2', 5, {autoAlpha: 0, x: 600}, "+=20");
-    scene08Action.to('#scene08_textblock3', 5, {autoAlpha: 0, x: 600}, "-=5");
-    scene08Action.to('#scene08_textblock4', 10, {autoAlpha: 1, x: 300});
-    scene08Action.to('#scene08_textblock4', 5, {autoAlpha: 0, x: 600}, "+=20");
-    scene08Action.to('#scene08_textline4', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_textline4', 5, {autoAlpha: 0}, "+=20");
-    //BLUR ENDE
-    scene08Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-    scene08Action.to('#scene08_textblock5', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_textblock5', 5, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_regBubble1', 10, {autoAlpha: 1, x: -300}, "+=2");
-    scene08Action.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: 300}, "+=20");
-    scene08Action.to('#scene08_textline5', 10, {autoAlpha: 1, y: 260}, "+=2");
-    scene08Action.to('#scene08_textline5', 5, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_bubbleAdam2', 10, {autoAlpha: 1}, "-=5");
-    scene08Action.to('#scene08_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_bubbleAdam3', 10, {autoAlpha: 1}, "-=5");
-    scene08Action.to('#scene08_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
-    scene08Action.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=2");
-    scene08Action.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
-    //BACKGROUND CHANGE
-    scene08Action.to('#background1', 5, {autoAlpha: 0}, "+=4");
-    scene08Action.to('#background2', 5, {autoAlpha: 1}, "-=10");
-    scene08Action.to('#scene08_textline7', 10, {autoAlpha: 1}, "+=2");
-    // start animating 'funken'
-    scene08Action.to('#funken00', 3, {autoAlpha: 1});
-    scene08Action.to('#funken00', 3, {autoAlpha: 0});
-    scene08Action.to('#funken01', 3, {autoAlpha: 1});
-    scene08Action.to('#funken01', 3, {autoAlpha: 0});
-    scene08Action.to('#funken02', 3, {autoAlpha: 1});
-    scene08Action.to('#funken02', 3, {autoAlpha: 0});
-    scene08Action.to('#funken03', 3, {autoAlpha: 1});
-    scene08Action.to('#funken03', 3, {autoAlpha: 0});
-    scene08Action.to('#funken04', 3, {autoAlpha: 1});
-    scene08Action.to('#funken04', 3, {autoAlpha: 0});
-    scene08Action.to('#funken05', 3, {autoAlpha: 1});
-    scene08Action.to('#funken05', 3, {autoAlpha: 0});
-    scene08Action.to('#funken06', 3, {autoAlpha: 1});
-    scene08Action.to('#funken06', 3, {autoAlpha: 0});
-    scene08Action.to('#funken07', 3, {autoAlpha: 1});
-    scene08Action.to('#funken07', 3, {autoAlpha: 0});
-    scene08Action.to('#funken08', 3, {autoAlpha: 1});
-    scene08Action.to('#funken08', 3, {autoAlpha: 0});
-    scene08Action.to('#funken09', 3, {autoAlpha: 1});
-    scene08Action.to('#funken10', 3, {autoAlpha: 0});
-    scene08Action.to('#funken11', 3, {autoAlpha: 1});
-    scene08Action.to('#funken12', 3, {autoAlpha: 1});
-    scene08Action.to('#funken13', 3, {autoAlpha: 1});
-    scene08Action.to('#funken14', 3, {autoAlpha: 1});
-    scene08Action.to('#funken15', 3, {autoAlpha: 1});
-    scene08Action.to('#funken14', 3, {autoAlpha: 0});
-    scene08Action.to('#funken15', 3, {autoAlpha: 0});
-    scene08Action.to('#funken14', 3, {autoAlpha: 1});
-    scene08Action.to('#funken15', 3, {autoAlpha: 1});
-    scene08Action.to('#funken11', 3, {autoAlpha: 0});
-    scene08Action.to('#funken12', 3, {autoAlpha: 0});
-    scene08Action.to('#funken11', 3, {autoAlpha: 1});
-    scene08Action.to('#funken12', 3, {autoAlpha: 1});
-    scene08Action.to('#funken01', 3, {autoAlpha: 1});
-    scene08Action.to('#funken01', 3, {autoAlpha: 0});
-    scene08Action.to('#funken02', 3, {autoAlpha: 1});
-    scene08Action.to('#funken02', 3, {autoAlpha: 0});
-    scene08Action.to('#funken03', 3, {autoAlpha: 1});
-    scene08Action.to('#funken03', 3, {autoAlpha: 0});
-    scene08Action.to('#funken04', 3, {autoAlpha: 1});
-    scene08Action.to('#funken04', 3, {autoAlpha: 0});
-    scene08Action.to('#funken05', 3, {autoAlpha: 1});
-    scene08Action.to('#funken05', 3, {autoAlpha: 0});
-    scene08Action.to('#funken06', 3, {autoAlpha: 1});
-    scene08Action.to('#funken06', 3, {autoAlpha: 0});
-    scene08Action.to('#funken07', 3, {autoAlpha: 1});
-    scene08Action.to('#funken07', 3, {autoAlpha: 0});
-    scene08Action.to('#funken08', 3, {autoAlpha: 1});
-    scene08Action.to('#funken08', 3, {autoAlpha: 0});
-    scene08Action.to('#funken09', 3, {autoAlpha: 1});
-    // end animation
-    scene08Action.to('#scene08_textline7', 5, {autoAlpha: 0}, "-=3");
+    $('.decision2').each(function () {
 
-    const scene08 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene08",
-                                              duration: 30000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
+        // START SCENE 08 LEFT SIDE =======================================================================
+        let scene08left = new TimelineLite();
+        //BLUR
+        scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        //TEXT
+        scene08left.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene08left.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene08left.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
+        scene08left.to('#scene08_textline2', 10, {autoAlpha: 1}, "-=10");
+        scene08left.to('#scene08_textline2', 10, {autoAlpha: 1, y: -74}, "-=10");
+        scene08left.to('#scene08_textline3', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_textline2', 10, {autoAlpha: 0, y: -573}, "+=20");
+        scene08left.to('#scene08_textline3', 10, {autoAlpha: 0, y: -500}, "-=10");
+        scene08left.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 300}, "+=2");
+        scene08left.to('#scene08_textblock2', 5, {autoAlpha: 1, y: -150}, "+=2");
+        scene08left.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 300}, "-=5");
+        scene08left.to('#scene08_textblock2', 5, {autoAlpha: 0, x: 600}, "+=20");
+        scene08left.to('#scene08_textblock3', 5, {autoAlpha: 0, x: 600}, "-=5");
+        scene08left.to('#scene08_textblock4', 10, {autoAlpha: 1, x: 300});
+        scene08left.to('#scene08_textblock4', 5, {autoAlpha: 0, x: 600}, "+=20");
+        scene08left.to('#scene08_textline4', 10, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textline4', 5, {autoAlpha: 0}, "+=20");
+        //BLUR ENDE
+        scene08left.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene08left.to('#scene08_textblock5', 10, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textblock5', 5, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 1, x: -300}, "+=2");
+        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: 300}, "+=20");
+        scene08left.to('#scene08_textline5', 10, {autoAlpha: 1, y: 260}, "+=2");
+        scene08left.to('#scene08_textline5', 5, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_bubbleAdam2', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_bubbleAdam3', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
+        //BACKGROUND CHANGE
+        scene08left.to('#background1', 5, {autoAlpha: 0}, "+=4");
+        scene08left.to('#background2', 5, {autoAlpha: 1}, "-=10");
+        scene08left.to('#scene08_textline7', 10, {autoAlpha: 1}, "+=2");
+        // start animating 'funken'
+        scene08left.to('#funken00', 3, {autoAlpha: 1});
+        scene08left.to('#funken00', 3, {autoAlpha: 0});
+        scene08left.to('#funken01', 3, {autoAlpha: 1});
+        scene08left.to('#funken01', 3, {autoAlpha: 0});
+        scene08left.to('#funken02', 3, {autoAlpha: 1});
+        scene08left.to('#funken02', 3, {autoAlpha: 0});
+        scene08left.to('#funken03', 3, {autoAlpha: 1});
+        scene08left.to('#funken03', 3, {autoAlpha: 0});
+        scene08left.to('#funken04', 3, {autoAlpha: 1});
+        scene08left.to('#funken04', 3, {autoAlpha: 0});
+        scene08left.to('#funken05', 3, {autoAlpha: 1});
+        scene08left.to('#funken05', 3, {autoAlpha: 0});
+        scene08left.to('#funken06', 3, {autoAlpha: 1});
+        scene08left.to('#funken06', 3, {autoAlpha: 0});
+        scene08left.to('#funken07', 3, {autoAlpha: 1});
+        scene08left.to('#funken07', 3, {autoAlpha: 0});
+        scene08left.to('#funken08', 3, {autoAlpha: 1});
+        scene08left.to('#funken08', 3, {autoAlpha: 0});
+        scene08left.to('#funken09', 3, {autoAlpha: 1});
+        scene08left.to('#funken10', 3, {autoAlpha: 0});
+        scene08left.to('#funken11', 3, {autoAlpha: 1});
+        scene08left.to('#funken12', 3, {autoAlpha: 1});
+        scene08left.to('#funken13', 3, {autoAlpha: 1});
+        scene08left.to('#funken14', 3, {autoAlpha: 1});
+        scene08left.to('#funken15', 3, {autoAlpha: 1});
+        scene08left.to('#funken14', 3, {autoAlpha: 0});
+        scene08left.to('#funken15', 3, {autoAlpha: 0});
+        scene08left.to('#funken14', 3, {autoAlpha: 1});
+        scene08left.to('#funken15', 3, {autoAlpha: 1});
+        scene08left.to('#funken11', 3, {autoAlpha: 0});
+        scene08left.to('#funken12', 3, {autoAlpha: 0});
+        scene08left.to('#funken11', 3, {autoAlpha: 1});
+        scene08left.to('#funken12', 3, {autoAlpha: 1});
+        scene08left.to('#funken01', 3, {autoAlpha: 1});
+        scene08left.to('#funken01', 3, {autoAlpha: 0});
+        scene08left.to('#funken02', 3, {autoAlpha: 1});
+        scene08left.to('#funken02', 3, {autoAlpha: 0});
+        scene08left.to('#funken03', 3, {autoAlpha: 1});
+        scene08left.to('#funken03', 3, {autoAlpha: 0});
+        scene08left.to('#funken04', 3, {autoAlpha: 1});
+        scene08left.to('#funken04', 3, {autoAlpha: 0});
+        scene08left.to('#funken05', 3, {autoAlpha: 1});
+        scene08left.to('#funken05', 3, {autoAlpha: 0});
+        scene08left.to('#funken06', 3, {autoAlpha: 1});
+        scene08left.to('#funken06', 3, {autoAlpha: 0});
+        scene08left.to('#funken07', 3, {autoAlpha: 1});
+        scene08left.to('#funken07', 3, {autoAlpha: 0});
+        scene08left.to('#funken08', 3, {autoAlpha: 1});
+        scene08left.to('#funken08', 3, {autoAlpha: 0});
+        scene08left.to('#funken09', 3, {autoAlpha: 1});
+        // end animation
+        scene08left.to('#scene08_textline7', 5, {autoAlpha: 0}, "-=3");
+        // END SCENE 08 LEFT SIDE =======================================================================
 
-    scene08.setTween(scene08Action);
-    scene08.setPin(".scene08");
-    scene08.addTo(controller);
+        // START SCENE 09 RIGHT SIDE =======================================================================
+        let scene09right = new TimelineMax();
+        //BLUR
+        scene09right.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        // hier alle Animationen
+        // END SCENE 06 LEFT SIDE =======================================================================
 
-    //  START FadeInScene08 ================================
-    $(".scene08").each(function () {
-        const scene08In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+        let decision2Middle = new TimelineLite();
+        decision2Middle.add('text');
+        decision2Middle.add('options');
+        decision2Middle.add('buttons');
+        decision2Middle.call(disableScroll, ["2"], null, '+=1');
+        decision2Middle.call(function () {
+            chosen1 = true
+        }, null, '+=3');
+        decision2Middle.to('.choice1', 2, {autoAlpha: 1, y: 100}, 'text');
+        decision2Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options');
+        decision2Middle.to('.buttonL', 2, {autoAlpha: 1, x: 0}, 'buttons');
+        decision2Middle.to('.movieR', 1, {autoAlpha: 1, x: -100}, 'options');
+        decision2Middle.to('.buttonR', 2, {autoAlpha: 1, x: 0}, 'buttons');
 
-        let scene8Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene08',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
+        let decision2Main = new TimelineLite();
+        decision2Main.add(decision2Middle);
+        decision2Main.add("main");
+        decision2Main.add(scene08left, 'main');
+        decision2Main.add(scene09right, "main");
+        decision2Main.set('.scene10 .blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+
+        // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonR').on('click',
+                         function () {
+                             TweenMax.to("#wrapper2", 2,
+                                         {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                             scene08left.progress(1); //directly ends timeline for left scene
+                             badCounter++;
+                         });
+
+        // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonL').on('click',
+                         function () {
+                             TweenMax.to("#wrapper2", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                             scene09right.progress(1); //directly ends timeline for right scene
+                             goodCounter++;
+                         });
+
+        const decision2 = new ScrollMagic.Scene({
+                                                    triggerElement: ".decision2",
+                                                    duration: 25000,
+                                                    triggerHook: 0,
+                                                    reverse: true
                                                 });
-        scene8Scene.setTween(scene08In);
-        scene8Scene.addTo(controller);
-        //scene6Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+
+        decision2.setTween(decision2Main);
+        decision2.setPin(".decision2");
+        decision2.addTo(controller);
+
     });
-    //  END FadeInScene08 ================================
 
-    //  START FadeOutScene08 ================================
-    $(".scene08").each(function () {
-        const scene08Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+    //  START FadeInScene08and09 ================================
+    $('.decision2').each(function () {
+        const decision2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-        let scene8Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.nine',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
-        scene8Scene.setTween(scene08Out);
-        scene8Scene.addTo(controller);
-    });
-    //  END FadeOutScene08 ================================
-
-    //  START scene10 ================================
-    //SCENE 10 =========================
-    let scene10Action = new TimelineLite();
-    //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
-    scene08Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-    //TEXT
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
-    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
-    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
-    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
-    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
-    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
-    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
-    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
-    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
-    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
-    //BLUR ENDE
-    scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-    scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
-    scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
-    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
-    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
-    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
-
-    const scene10 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene10",
-                                              duration: 30000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
-
-    scene10.setTween(scene10Action);
-    scene10.setPin(".scene10");
-    scene10.addTo(controller);
-
-    //  START FadeInScene10 ================================
-    $(".scene10").each(function () {
-        const scene10In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene10Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene10',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
-        scene10Scene.setTween(scene10In);
-        scene10Scene.addTo(controller);
-        //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-    });
-    //  END FadeInScene10 ================================
-
-    //  START FadeOutScene10 ================================
-    $(".scene10").each(function () {
-        const scene10Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
-
-        let scene10Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene11',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
-        scene10Scene.setTween(scene10Out);
-        scene10Scene.addTo(controller);
-    });
-    //  END FadeOutScene10 ================================
-
-    //  START FadeInScene11 ================================
-    $('.scene11').each(function () {
-        const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene11Scene = new ScrollMagic.Scene({
-                                                     triggerElement: '.scene11',
-                                                     duration: 500,
-                                                     triggerHook: .6,
-                                                     offset: 0
-                                                 });
-        scene11Scene.setTween(scene11In);
-        scene11Scene.addTo(controller);
+        let decision2 = new ScrollMagic.Scene({
+                                                  triggerElement: '.decision2',
+                                                  duration: 500,
+                                                  triggerHook: .6,
+                                                  offset: 0
+                                              });
+        decision2.setTween(decision2In);
+        decision2.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
-    //  END FadeInScene11 ================================
+    //  END FadeInScene08and09 ================================
 
-    //  START FadeOutScene11 ================================
-    $(".scene11").each(function () {
-        const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+    //  START FadeOutScene08and09 ================================
+    $(".decision2").each(function () {
+        const decision2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
-        let scene11Scene = new ScrollMagic.Scene({
-                                                     triggerElement: '.scene12',
-                                                     duration: 700,
-                                                     triggerHook: "onEnter",
-                                                 });
-        scene11Scene.setTween(scene11Out);
-        scene11Scene.addTo(controller);
+        let decision2 = new ScrollMagic.Scene({
+                                                  triggerElement: '.scene10',
+                                                  duration: 700,
+                                                  triggerHook: "onEnter",
+                                              });
+        decision2.setTween(decision2Out);
+        decision2.addTo(controller);
     });
-    //  END FadeOutScene11 ================================
+    //  END FadeOutScene08and09 ================================
+    //END DECISION2
 
-    // START SCENE11 ======================================
-    // START ANIMATION ====================================
-    let scene11Action = new TimelineLite();
-    //BLUR
-    scene11Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
+        //  START scene10 ================================
+        //SCENE 10 =========================
+        let scene10Action = new TimelineLite();
+        //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
+        scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        //TEXT
+        scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
+        scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
+        scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
+        scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
+        scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
+        scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
+        scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
+        scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
+        scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
+        scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
+        scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
+        //BLUR ENDE
+        scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
+        scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
+        scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
+        scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
+        scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
+        scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
 
-    scene11Action.to('#scene11_textline4', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene11Action.to('#scene11_textline4', 5, {autoAlpha: 0}, "+=20");
+        const scene10 = new ScrollMagic.Scene({
+                                                  triggerElement: ".scene10",
+                                                  duration: 30000,
+                                                  triggerHook: 0,
+                                                  reverse: true
+                                              });
 
+        scene10.setTween(scene10Action);
+        scene10.setPin(".scene10");
+        scene10.addTo(controller);
 
-    // BLUR END
-    scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        //  START FadeInScene10 ================================
+        $(".scene10").each(function () {
+            const scene10In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-    // LIGHT GOES OFF
-    scene11Action.to('#scene11_bright', 4,
-                     {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
-    scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
-    scene11Action.add("Parallax", "+=1");
-    scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
-    scene11Action.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
-    scene11Action.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
-    scene11Action.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
-    scene11Action.add("Parallax2", "+=1");
-    scene11Action.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
-    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1}, "Parallax2");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"}, "+=1");
-    scene11Action.add("Parallax3", "+=1");
-    scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
-    scene11Action.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 2,
-                     {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
-    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-    scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
-
-    // PREPARING FOR ZOOM-OUT SCENE12 //
-    scene11Action.add("Parallax_concert1", "+=1");
-    scene11Action.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
-    scene11Action.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
-    scene11Action.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
-    scene11Action.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
-    scene11Action.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
-
-
-    const scene11 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene11",
-                                              duration: 30000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
-
-    scene11.setTween(scene11Action);
-    scene11.setPin(".scene11");
-    scene11.addTo(controller);
-
-
-
-
-    //  START FadeInScene12 ================================
-    $('.scene12').each(function () {
-        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene12Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene12',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
+            let scene10Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene10',
+                                                         duration: 500,
+                                                         triggerHook: .6,
+                                                         offset: 0
+                                                     });
+            scene10Scene.setTween(scene10In);
+            scene10Scene.addTo(controller);
+            //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
         });
-        scene12Scene.setTween(scene12In);
-        scene12Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-    });
-    //  END FadeInScene12 ================================
+        //  END FadeInScene10 ================================
 
-    //  START FadeOutScene12 ================================
-    $(".scene12").each(function () {
-        const scene12Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        //  START FadeOutScene10 ================================
+        $(".scene10").each(function () {
+            const scene10Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
-        let scene11Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene13',
-            duration: 700,
-            triggerHook: "onEnter",
+            let scene10Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene11',
+                                                         duration: 700,
+                                                         triggerHook: "onEnter",
+                                                     });
+            scene10Scene.setTween(scene10Out);
+            scene10Scene.addTo(controller);
         });
-        scene11Scene.setTween(scene12Out);
-        scene11Scene.addTo(controller);
-    });
-    //  END FadeOutScene12 ================================
+        //  END FadeOutScene10 ================================
 
-    // START SCENE11 ======================================
-    // START ANIMATION ====================================
-    let scene12Action = new TimelineLite();
-    // ANIMATION FOR SCENEBEGINING
-    scene12Action.add("Parallax_concert2", "+=1");
-    scene12Action.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
-    scene12Action.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
-    scene12Action.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
-    scene12Action.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
-    scene12Action.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
-    //////////////////////////////
+        //  START FadeInScene11 ================================
+        $('.scene11').each(function () {
+            const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-
-    // Ab hier Animationen einfügen
-    scene12Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
-    scene12Action.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
-
-    // BLUR END
-    scene12Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-
-
-
-    // START ANIMATION  -  ZOOM-IN  -
-    scene12Action.add("Parallax_concert", "+=1");
-    scene12Action.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
-    scene12Action.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
-    scene12Action.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
-    scene12Action.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
-    scene12Action.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
-
-
-
-
-    const scene12 = new ScrollMagic.Scene({
-        triggerElement: ".scene12",
-        duration: 3000,
-        triggerHook: 0,
-        reverse: true
-    });
-
-    scene12.setTween(scene12Action);
-    scene12.setPin(".scene12");
-    scene12.addTo(controller);
-
-
-
-
-
-
-
-
-
-
-
-
-    //  START FadeInScene14 ================================
-    $('.scene14').each(function () {
-        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene12Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene14',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
+            let scene11Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene11',
+                                                         duration: 500,
+                                                         triggerHook: .6,
+                                                         offset: 0
+                                                     });
+            scene11Scene.setTween(scene11In);
+            scene11Scene.addTo(controller);
+            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
         });
-        scene12Scene.setTween(scene12In);
-        scene12Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+        //  END FadeInScene11 ================================
+
+        //  START FadeOutScene11 ================================
+        $(".scene11").each(function () {
+            const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+            let scene11Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene12',
+                                                         duration: 700,
+                                                         triggerHook: "onEnter",
+                                                     });
+            scene11Scene.setTween(scene11Out);
+            scene11Scene.addTo(controller);
+        });
+        //  END FadeOutScene11 ================================
+
+        // START SCENE11 ======================================
+        // START ANIMATION ====================================
+        let scene11Action = new TimelineLite();
+        //BLUR
+        scene11Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
+
+        scene11Action.to('#scene11_textline4', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene11Action.to('#scene11_textline4', 5, {autoAlpha: 0}, "+=20");
+
+
+        // BLUR END
+        scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+        // LIGHT GOES OFF
+        scene11Action.to('#scene11_bright', 4,
+                         {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
+        scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
+        scene11Action.add("Parallax", "+=1");
+        scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
+        scene11Action.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
+        scene11Action.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
+        scene11Action.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
+        scene11Action.add("Parallax2", "+=1");
+        scene11Action.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
+        scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
+                         "Parallax2");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"},
+                         "+=1");
+        scene11Action.add("Parallax3", "+=1");
+        scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
+        scene11Action.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 2,
+                         {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
+        scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
+
+        // PREPARING FOR ZOOM-OUT SCENE12 //
+        scene11Action.add("Parallax_concert1", "+=1");
+        scene11Action.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
+        scene11Action.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
+        scene11Action.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
+        scene11Action.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
+        scene11Action.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
+
+
+        const scene11 = new ScrollMagic.Scene({
+                                                  triggerElement: ".scene11",
+                                                  duration: 30000,
+                                                  triggerHook: 0,
+                                                  reverse: true
+                                              });
+
+        scene11.setTween(scene11Action);
+        scene11.setPin(".scene11");
+        scene11.addTo(controller);
+
+
+        //  START FadeInScene12 ================================
+        $('.scene12').each(function () {
+            const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+            let scene12Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene12',
+                                                         duration: 500,
+                                                         triggerHook: .6,
+                                                         offset: 0
+                                                     });
+            scene12Scene.setTween(scene12In);
+            scene12Scene.addTo(controller);
+            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+        });
+        //  END FadeInScene12 ================================
+
+        //  START FadeOutScene12 ================================
+        $(".scene12").each(function () {
+            const scene12Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+            let scene11Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene13',
+                                                         duration: 700,
+                                                         triggerHook: "onEnter",
+                                                     });
+            scene11Scene.setTween(scene12Out);
+            scene11Scene.addTo(controller);
+        });
+        //  END FadeOutScene12 ================================
+
+        // START SCENE11 ======================================
+        // START ANIMATION ====================================
+        let scene12Action = new TimelineLite();
+        // ANIMATION FOR SCENEBEGINING
+        scene12Action.add("Parallax_concert2", "+=1");
+        scene12Action.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
+        scene12Action.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
+        scene12Action.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
+        scene12Action.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
+        scene12Action.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
+        //////////////////////////////
+
+
+        // Ab hier Animationen einfügen
+        scene12Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
+        scene12Action.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
+
+        // BLUR END
+        scene12Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
+
+        // START ANIMATION  -  ZOOM-IN  -
+        scene12Action.add("Parallax_concert", "+=1");
+        scene12Action.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
+        scene12Action.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
+        scene12Action.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
+        scene12Action.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
+        scene12Action.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
+
+
+        const scene12 = new ScrollMagic.Scene({
+                                                  triggerElement: ".scene12",
+                                                  duration: 3000,
+                                                  triggerHook: 0,
+                                                  reverse: true
+                                              });
+
+        scene12.setTween(scene12Action);
+        scene12.setPin(".scene12");
+        scene12.addTo(controller);
+
+
+        //  START FadeInScene14 ================================
+        $('.scene14').each(function () {
+            const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+            let scene12Scene = new ScrollMagic.Scene({
+                                                         triggerElement: '.scene14',
+                                                         duration: 500,
+                                                         triggerHook: .6,
+                                                         offset: 0
+                                                     });
+            scene12Scene.setTween(scene12In);
+            scene12Scene.addTo(controller);
+            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+        });
+        //  END FadeInScene14 ================================
+
+        // START ANIMATION
+        let scene14Action = new TimelineLite();
+
+        scene14Action.to('#scene14_title', 10, {autoAlpha: 1}, "-=20");
+        scene11Action.add("scene14_animation01", "-=20");
+        scene14Action.to('#scene14_title', 10, {autoAlpha: 0, scale: "6"}, "scene14_animation01");
+        scene14Action.to('#scene14_project', 20, {autoAlpha: 1}, "scene14_animation01");
+        scene14Action.to('#hsd_logo', 10, {autoAlpha: 1});
+        scene11Action.add("scene14_animation02", "+=1");
+        scene14Action.to('#hsd_logo', 20, {width: "15%", height: "15%", top: "5%", left: "43%"}, "scene14_animation02");
+        scene14Action.to('#scene14_project', 20, {scale: "6", autoAlpha: 0}, "scene14_animation02");
+        scene14Action.fromTo('#border', 10, {scaleX: 0, autoAlpha: 0}, {scaleX: 1, autoAlpha: .7});
+
+        scene11Action.add("scene14_animation03", "+=1");
+        scene14Action.fromTo('#scene14_name01', 10, {autoAlpha: 0, color: "red", y: "-20"},
+                             {autoAlpha: 1, color: "white", y: "200", x: "-800", fontsize: "4vh"},
+                             "scene14_animation03");
+        scene14Action.fromTo('#scene14_name02', 10, {autoAlpha: 0, color: "red", y: "-20"},
+                             {autoAlpha: 1, color: "white", y: "400", x: "-400", fontsize: "4vh"},
+                             "scene14_animation03");
+        scene14Action.fromTo('#scene14_name03', 10, {autoAlpha: 0, color: "red", y: "-20"},
+                             {autoAlpha: 1, color: "white", y: "200", x: "0", fontsize: "4vh"}, "scene14_animation03");
+        scene14Action.fromTo('#scene14_name04', 10, {autoAlpha: 0, color: "red", y: "-20"},
+                             {autoAlpha: 1, color: "white", y: "400", x: "300", fontsize: "4vh"},
+                             "scene14_animation03");
+        scene14Action.fromTo('#scene14_name05', 10, {autoAlpha: 0, color: "red", y: "-20"},
+                             {autoAlpha: 1, color: "white", y: "200", x: "700", fontsize: "4vh"},
+                             "scene14_animation03");
+
+        scene14Action.to('#border', 10, {scaleX: 0, autoAlpha: 0});
+
+        scene11Action.add("scene14_animation04", "+=1");
+        scene14Action.to('#scene14_name01', 10, {y: "-100"}, "scene14_animation04");
+        scene14Action.to('#scene14_name02', 10, {y: "0"}, "scene14_animation04");
+        scene14Action.to('#scene14_name03', 10, {y: "-100"}, "scene14_animation04");
+        scene14Action.to('#scene14_name04', 10, {y: "0"}, "scene14_animation04");
+        scene14Action.to('#scene14_name05', 10, {y: "-100"}, "scene14_animation04");
+        scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1});
+
+        scene11Action.add("scene14_animation05", "-=20");
+        scene14Action.to('#scene14_name01', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#scene14_name02', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#scene14_name03', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#scene14_name04', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#scene14_name05', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#scene14_name06', 5, {autoAlpha: 0}, "scene14_animation05");
+        scene14Action.to('#hsd_logo', 10, {autoAlpha: 0, scale: "4", y: "500"}, "scene14_animation05");
+
+
+        const scene14 = new ScrollMagic.Scene({
+                                                  triggerElement: ".scene14",
+                                                  duration: 15000,
+                                                  triggerHook: 0,
+                                                  reverse: true
+                                              });
+
+        scene14.setTween(scene14Action);
+        scene14.setPin(".scene14");
+        scene14.addTo(controller);
     });
-    //  END FadeInScene14 ================================
-
-    // START ANIMATION
-    let scene14Action = new TimelineLite();
-
-    scene14Action.to('#scene14_title', 10, {autoAlpha:1},"-=20");
-    scene11Action.add("scene14_animation01", "-=20");
-    scene14Action.to('#scene14_title', 10, {autoAlpha:0,scale:"6"},"scene14_animation01");
-    scene14Action.to('#scene14_project', 20, {autoAlpha:1},"scene14_animation01");
-    scene14Action.to('#hsd_logo', 10, {autoAlpha:1});
-    scene11Action.add("scene14_animation02", "+=1");
-    scene14Action.to('#hsd_logo', 20, {width:"15%",height:"15%",top:"5%",left:"43%"},"scene14_animation02");
-    scene14Action.to('#scene14_project', 20, {scale:"6",autoAlpha:0},"scene14_animation02");
-    scene14Action.fromTo('#border', 10, {scaleX:0,autoAlpha:0},{scaleX:1, autoAlpha:.7});
-
-    scene11Action.add("scene14_animation03", "+=1");
-    scene14Action.fromTo('#scene14_name01', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"-800",fontsize:"4vh"},"scene14_animation03");
-    scene14Action.fromTo('#scene14_name02', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"400",x:"-400",fontsize:"4vh"},"scene14_animation03");
-    scene14Action.fromTo('#scene14_name03', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"0",fontsize:"4vh"},"scene14_animation03");
-    scene14Action.fromTo('#scene14_name04', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"400",x:"300",fontsize:"4vh"},"scene14_animation03");
-    scene14Action.fromTo('#scene14_name05', 10, {autoAlpha:0,color:"red",y:"-20"},{autoAlpha:1, color: "white",y:"200",x:"700",fontsize:"4vh"},"scene14_animation03");
-
-    scene14Action.to('#border', 10, {scaleX:0, autoAlpha:0});
-
-    scene11Action.add("scene14_animation04", "+=1");
-    scene14Action.to('#scene14_name01', 10, {y:"-100"},"scene14_animation04");
-    scene14Action.to('#scene14_name02', 10, {y:"0"},"scene14_animation04");
-    scene14Action.to('#scene14_name03', 10, {y:"-100"},"scene14_animation04");
-    scene14Action.to('#scene14_name04', 10, {y:"0"},"scene14_animation04");
-    scene14Action.to('#scene14_name05', 10, {y:"-100"},"scene14_animation04");
-    scene14Action.fromTo('#scene14_name06', 10, {y:"300",autoAlpha:0},{autoAlpha:1});
-
-    scene11Action.add("scene14_animation05", "-=20");
-    scene14Action.to('#scene14_name01', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#scene14_name02', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#scene14_name03', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#scene14_name04', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#scene14_name05', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#scene14_name06', 5, {autoAlpha:0},"scene14_animation05");
-    scene14Action.to('#hsd_logo', 10, {autoAlpha:0,scale:"4",y:"500"},"scene14_animation05");
-
-
-
-
-
-
-    const scene14 = new ScrollMagic.Scene({
-        triggerElement: ".scene14",
-        duration: 15000,
-        triggerHook: 0,
-        reverse: true
-    });
-
-    scene14.setTween(scene14Action);
-    scene14.setPin(".scene14");
-    scene14.addTo(controller);
-});
 
 
