@@ -17,3 +17,13 @@
     top: 38%;
     opacity: 1;
 }
+.fadeIn{
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    transition: all 2s 1.5s;
+}
+.fadeOut{
+    opacity: 0 !important;
+    transition: opacity 2s !important;
+
+}
