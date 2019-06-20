@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    TweenLite.defaultOverwrite = false;
+
     let chosen1 = false;
     let chosen2 = false;
     let chosen3 = false;
@@ -947,11 +950,11 @@ $(document).ready(function () {
     //  END FadeInScene07 ================================
 
     //  START FadeOutScene07 ================================
-    $(".scene07").each(function () {
+    $(".decision2").each(function () {
         const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene7Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene08',
+                                                    triggerElement: '.decision2',
                                                     duration: 700,
                                                     triggerHook: "onEnter",
                                                 });
@@ -1070,18 +1073,18 @@ $(document).ready(function () {
         // END SCENE 06 LEFT SIDE =======================================================================
 
         let decision2Middle = new TimelineLite();
-        decision2Middle.add('text');
-        decision2Middle.add('options');
-        decision2Middle.add('buttons');
+        decision2Middle.add('text2');
+        decision2Middle.add('options2');
+        decision2Middle.add('buttons2');
         decision2Middle.call(disableScroll, ["2"], null, '+=1');
         decision2Middle.call(function () {
-            chosen1 = true
+            chosen2 = true
         }, null, '+=3');
-        decision2Middle.to('.choice1', 2, {autoAlpha: 1, y: 100}, 'text');
-        decision2Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options');
-        decision2Middle.to('.buttonL', 2, {autoAlpha: 1, x: 0}, 'buttons');
-        decision2Middle.to('.movieR', 1, {autoAlpha: 1, x: -100}, 'options');
-        decision2Middle.to('.buttonR', 2, {autoAlpha: 1, x: 0}, 'buttons');
+        decision2Middle.to('.choice2', 2, {autoAlpha: 1, y: 100}, 'text2');
+        decision2Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options2');
+        decision2Middle.to('.buttonL2', 2, {autoAlpha: 1, x: 0}, 'buttons2');
+        decision2Middle.to('.movieR', 1, {autoAlpha: 1, x: -100}, 'options2');
+        decision2Middle.to('.buttonR2', 2, {autoAlpha: 1, x: 0}, 'buttons2');
 
         let decision2Main = new TimelineLite();
         decision2Main.add(decision2Middle);
@@ -1091,7 +1094,7 @@ $(document).ready(function () {
         decision2Main.set('.scene10 .blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
-        $('.buttonR').on('click',
+        $('.buttonR2').on('click',
                          function () {
                              TweenMax.to("#wrapper2", 2,
                                          {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
@@ -1100,7 +1103,7 @@ $(document).ready(function () {
                          });
 
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
-        $('.buttonL').on('click',
+        $('.buttonL2').on('click',
                          function () {
                              TweenMax.to("#wrapper2", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
                              scene09right.progress(1); //directly ends timeline for right scene
@@ -1155,7 +1158,7 @@ $(document).ready(function () {
         //SCENE 10 =========================
         let scene10Action = new TimelineLite();
         //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
-        scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        //scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
         scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
         scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");

@@ -1193,6 +1193,7 @@ FOR EVERY SCENE USEABLE
     width: 100%;
     left: 100vw;
     top: 0;
+    border: 3px solid green;
 }
 .choice1, .choice2{
     position: absolute;
@@ -1263,10 +1264,10 @@ FOR EVERY SCENE USEABLE
     transform: translateY(-50%);
     border-bottom: 1px solid transparent;
 }
-.buttonL{
+.buttonL,.buttonL2{
     left: 10vw;
 }
-.buttonR{
+.buttonR,.buttonR2{
     left: 90vw;
 }
 
