@@ -1,0 +1,283 @@
+\ProvidesPackage{ReportDesign}[2017/09/04 report layout]
+
+% character stack which can be used inside the document
+\RequirePackage[utf8]{inputenc}
+
+% prevent LaTeX to warn about issues inside used packages
+\RequirePackage{scrhack}
+
+% creation of document-level commands
+\RequirePackage{xparse}
+
+% makes it possible to check if the document is a draft
+\RequirePackage{ifdraft}
+% configuration of the whole page design
+\RequirePackage[a4paper,portrait,includemp,top=3.26cm,right=2cm,bottom=2cm,left=3.5cm,marginparsep=0.5cm,marginparwidth=2cm,headheight=2cm,headsep=1.26cm,footskip=1.26cm,heightrounded,pdftex,verbose]{geometry}
+% Allow breaks on hyphens inside urls
+\RequirePackage[hyphens]{url}
+% referencing of different stuff inside the document
+\RequirePackage[pdftex,bookmarksopenlevel=6,colorlinks,plainpages=false,pdfstartview=FitV,linkcolor=black,citecolor=black,urlcolor=black,hyperfootnotes=false]{hyperref}
+% KOMA supported customm header and footer
+\RequirePackage[automark,markcase=upper,headsepline,plainheadsepline]{scrlayer-scrpage}
+	\pagestyle{scrheadings}
+% much more possibilities for line / page breaks
+\RequirePackage{nextpage}
+% Add improvements for footnotes
+\RequirePackage[bottom,multiple]{footmisc}
+    % Set numeric footnotes
+    \renewcommand{\thefootnote}{\arabic{footnote}}
+    % Make footnotes not breakable. (Display one footnote on two pages)
+    \interfootnotelinepenalty=9999
+
+% a lot dictionaries
+\RequirePackage[main=ngerman,english]{babel}
+% Import AMS Symbols
+\RequirePackage{amssymb}
+% font definition
+\RequirePackage{lmodern}
+	\renewcommand{\sfdefault}{lcmss}
+	\renewcommand*\familydefault{\sfdefault}
+	\renewcommand{\ttdefault}{pcr}
+% much more possibilities for math representations and underscored text
+\RequirePackage{ulem,nicefrac}
+% bett line breaks which improves compilation (reduce Overfull warnings)
+\RequirePackage[T1]{fontenc}
+% add possibility to define date format at one position
+\RequirePackage{isodate}
+% add possibility to add custom colors
+\RequirePackage[table,dvipsnames]{xcolor}
+
+% line spacing
+%% options:   singlespacing, onehalfspacing, doublespacing
+\RequirePackage[singlespacing]{setspace}
+
+% changes to the depths of some indices
+\RequirePackage{titletoc}
+	\setcounter{secnumdepth}{3}
+	\setcounter{tocdepth}{2}
+% changes for index naming
+\RequirePackage[titles]{tocloft}
+    \renewcommand{\cftfigpresnum}{\iflanguage{ngerman}{Abb.}{fig.} }
+	\setlength{\cftfignumwidth}{2cm}
+    \renewcommand{\cfttabpresnum}{\iflanguage{ngerman}{Tab.}{tab.} }
+	\setlength{\cfttabnumwidth}{2cm}
+% add possibility to check if index is needed
+\RequirePackage[figure,table]{totalcount}
+	\DeclareTotalCounter{listing}
+
+% possibility to create filler text or filler sections
+\RequirePackage{blindtext}
+% possibility to create filler text
+\RequirePackage{lipsum}
+
+% optimized justification
+\RequirePackage{ragged2e}
+% possibility to rotate whole pages and sections
+\RequirePackage{rotating}
+
+% advanced options inside lists
+\RequirePackage{paralist,enumitem}
+	\renewcommand*\labelitemi{\textbullet}
+	\let\labelitemiii\labelitemi
+	\renewcommand*\labelitemii{$\circ$}
+	\let\labelitemiv\labelitemii
+
+	\setlist{parsep=0pt}
+
+% advanced table options
+\RequirePackage{tabularx}
+% creation of multipage table
+\RequirePackage{longtable}
+% overlapping columns inside table
+\RequirePackage{multicol}
+% overlapping rows inside table
+\RequirePackage{multirow}
+
+% possibility to display sourcecode with syntax highlighting.
+\RequirePackage[chapter,outputdir=.texpadtmp]{minted}
+	\setminted{autogobble,breakafter=.-_,breakautoindent,breaklines,linenos,xleftmargin=40pt}
+	\setmintedinline{autogobble,breakafter=.-_,breakautoindent,breaklines,linenos,xleftmargin=40pt}
+	\usemintedstyle{colorful}
+	\renewcommand{\listingscaption}{\iflanguage{ngerman}{Pa.}{Lst.} }
+	\renewcommand{\listoflistingscaption}{\iflanguage{ngerman}{Programmausdruckverzeichnis}{List of Listings}}
+
+% possiblity to integrate vector graphics
+\RequirePackage{svg}
+% set the path where LaTeX will search for all graphics and attachments
+\RequirePackage{graphicx}
+	\graphicspath{{figures/}{appendix/}}
+% make subfigures possible
+\RequirePackage[lofdepth,lotdepth]{subfig}
+
+% possibility to create different graphics and diagrams
+\RequirePackage{tikz}
+% need by pdfgantt to let it always use the compilation date as today
+\RequirePackage{datetime}
+% possibility to create gantt-charts directly inside LaTeX
+\RequirePackage{pgfgantt}
+
+% much more importation options for pictures
+\RequirePackage{config/picins}
+% much more positioning options
+\RequirePackage{float}
+
+% change naming of captions
+\RequirePackage{caption}
+    \captionsetup[figure]{name=\iflanguage{ngerman}{Abb.}{fig.}}
+    \captionsetup[table]{name=\iflanguage{ngerman}{Tab.}{tab.}}
+
+% possibility to integrate PDF documents
+\RequirePackage[final]{pdfpages}
+% possiblity to make chapters independent
+\RequirePackage{subfiles}
+
+% integration of glossaries
+\RequirePackage[acronym,nonumberlist,sort=standard,style=altlist,toc]{glossaries}
+	\setlength{\glspagelistwidth}{0.5\textwidth}
+	\setlength{\glsdescwidth}{0.5\textwidth}
+
+	\newcommand*{\newdualentry}[5][]{%
+		\newglossaryentry{main-#2}{%
+			name={#4},%
+			text={#3\glsadd{#2}},%
+			description={#5},%
+			#1
+		}%
+		\newacronym{#2}{#3\glsadd{main-#2}}{#4}%
+	}
+
+	\loadglsentries{library/glossary}
+	\makeglossaries
+% integration of references
+\RequirePackage[numbers,square,round]{natbib}
+	\bibliographystyle{FontysIEEEtranSAde}
+
+% integration of an appendix
+\RequirePackage[toc,page]{appendix}
+	\renewcommand{\appendixtocname}{\iflanguage{ngerman}{Anh\"ange}{Appendices}}
+	\renewcommand{\appendixname}{\iflanguage{ngerman}{Anhang}{Appendix}}
+	\renewcommand{\appendixpagename}{\iflanguage{ngerman}{Anh\"ange}{Appendices}}
+
+
+%%%% settings for the KOMA-Script
+\KOMAoptions{%
+	titlepage=firstiscover,%
+	abstract,%
+	numbers=noenddot,%
+	listof=totoc,%
+	index=totoc,%
+	headings=small%
+}
+% font size definitions
+\setkomafont{part}{\fontsize{18}{22}\selectfont}
+\setkomafont{chapter}{\fontsize{16}{20}\selectfont}
+\setkomafont{section}{\fontsize{14}{17}\selectfont}
+\setkomafont{subsection}{\fontsize{12}{15}\selectfont}
+\setkomafont{subsubsection}{\fontsize{11}{14}\selectfont}
+\setkomafont{paragraph}{\fontsize{11}{14}\selectfont}
+\setkomafont{subparagraph}{\fontsize{11}{14}\selectfont}
+\setkomafont{minisec}{\fontsize{12}{15}\selectfont}
+
+
+%%%% custom colors
+% color of the Fontys International Campus Venlo
+\definecolor{fontys}{RGB}{51,0,51}
+% color of the Valtech GmbH
+\definecolor{valtech}{RGB}{0,189,250}
+% gray shades
+\definecolor{lightGrey}{RGB}{211,211,211}
+\definecolor{dimGrey}{RGB}{105,105,105}
+% blue shades
+\definecolor{lightBlue}{RGB}{173,216,230}
+\definecolor{steelBlue}{RGB}{70,130,180}
+\definecolor{mediumBlue}{RGB}{0,0,205}
+\definecolor{darkBlue}{RGB}{0,0,139}
+\definecolor{midnightBlue}{RGB}{25,25,112}
+% red shades
+\definecolor{orangeRed}{RGB}{255,69,0}
+\definecolor{darkRed}{RGB}{139,0,0}
+% green shades
+\definecolor{lightGreen}{RGB}{144,238,144}
+\definecolor{forestGreen}{RGB}{34,139,34}
+\definecolor{darkGreen}{RGB}{0,100,0}
+
+
+%%%% page set up
+% appearance of header
+\lehead[{\fontsize{9}{11}\selectfont\thepage}]{{\fontsize{9}{11}\selectfont\thepage}}
+\lohead[]{{\fontsize{9}{11}\selectfont\headmark}}
+\cehead[]{}
+\cohead[]{}
+\rehead[]{{\fontsize{9}{11}\selectfont\headmark}}
+\rohead[{\fontsize{9}{11}\selectfont\thepage}]{{\fontsize{9}{11}\selectfont\thepage}}
+% appearance of footer
+\lefoot[]{}
+\lofoot[]{}
+\cefoot[]{}
+\cofoot[]{}
+\refoot[]{}
+\rofoot[]{}
+
+%%%% settings of the watermark
+% possibility to set absolute positions
+\RequirePackage{eso-pic}
+
+% the text displayed in the watermark
+\newcommand{\waterMarkText}{}
+
+% insertion of a watermark
+\makeatletter
+	\AddToShipoutPicture{
+		\setlength{\@tempdimb}{.5\paperwidth}
+		\setlength{\@tempdimc}{.5\paperheight}
+		\setlength{\unitlength}{1pt}
+		\put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){
+			\makebox(0,0){
+				\rotatebox{45}{
+					\textcolor[gray]{0.95}{
+						\fontsize{1.5cm}{1.5cm}
+						\selectfont{\waterMarkText}
+					}
+				}
+			}
+		}
+	}
+\makeatother
+
+% when the document is created as a draft, a watermark is displayed
+\ifdraft{\renewcommand{\waterMarkText}{\iflanguage{ngerman}{ENTWURF}{DRAFT}}}
+
+
+
+
+% with the chapter the part is always reset
+\makeatletter
+	\@addtoreset{chapter}{part}
+\makeatother
+
+
+
+
+%% appearance of paragraphes
+% paragraph indentation
+\setlength{\parindent}{0pt}
+
+% paragraph spacing
+\setlength{\parskip}{10pt}
+
+
+
+
+%% own longtable environment
+% alternating table rows
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\newenvironment{longtableC}{\rowcolors{2}{lightGrey}{}\oldlongtable} {
+\endoldlongtable}
+
+% row spacing inside table
+\setlength{\tabcolsep}{2mm}
+
+% line spacing inside table
+\renewcommand{\arraystretch}{1.2}
+

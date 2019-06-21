@@ -1,0 +1,33 @@
+\pagestyle{plain.scrheadings}
+% Table of Content
+\tableofcontents
+\cleardoublepage
+
+% List of Tables
+\iftotaltables
+	\listoftables
+	\cleardoublepage
+\fi
+
+% List of Figures
+\iftotalfigures
+	\listoffigures
+	\cleardoublepage
+\fi
+
+% List of Listings
+\iftotallistings
+	\renewcommand{\cftfigpresnum}{Pa. }
+	\listoflistings
+	\cleardoublepage
+\fi
+
+% List of Abbreviations
+\printglossary[toctitle=Akronyme,type=\acronymtype,style=super,nopostdot]
+\cleardoublepage
+
+% Glossary
+\printglossary[toctitle=Glossar,type=main,nopostdot]
+\clearpage
+
+\pagestyle{scrheadings}

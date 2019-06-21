@@ -1,0 +1,47 @@
+\documentclass[ngerman,bibliography=totoc,11pt]{scrreprt}
+%\documentclass[twoside,ngerman,bibliography=totoc,11pt]{scrreprt}
+
+% import of the centralized provided design
+\usepackage{config/ReportDesign}
+
+% debug purpose: displays frames and crops around page borders
+\ifdraft{\geometry{showcrop,showframe}}
+
+% debug purpose: displays internal cross references
+\ifdraft{\usepackage{showkeys}}
+
+% properties of the actual document
+\pdfinfo{
+	/Title (\@title)
+	/Author (\@author)
+	/Keywords ()
+}
+
+
+\begin{document}
+	\pagenumbering{arabic}
+
+
+	\include{subfiles/frontpage}
+	\cleardoublepage
+
+
+	% all indices
+	\include{subfiles/lists}
+	\cleardoublepage
+
+
+	% main content
+	\glsresetall
+	\include{chapters/master}
+
+
+	\include{subfiles/bibliography}
+	\cleardoublepage
+
+
+	\include{appendix/appendix}
+
+
+	\include{subfiles/backside}
+\end{document}
