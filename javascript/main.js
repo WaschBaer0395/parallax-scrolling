@@ -9,61 +9,29 @@ $(document).ready(function () {
 
     let badCounter = 0;
     let goodCounter = 0;
-
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-    function preventDefault(e) {
-        e = e || window.event;
-        if (e.preventDefault) {
-            e.preventDefault();
-        }
-        e.returnValue = false;
-    }
-
-    function preventDefaultForScrollKeys(e) {
-        if (keys[e.keyCode]) {
-            preventDefault(e);
-            return false;
-        }
-    }
+    
 
     function disableScroll(choice) {
-        if (choice == "1" && chosen1 == true) {
+        if (choice == '1' && chosen1 == true) {
             enableScroll();
             return false;
-        } else if (choice == "2" && chosen2 == true) {
+        } else if (choice == '2' && chosen2 == true) {
             enableScroll();
             return false;
-        } else if (choice == "3" && chosen3 == true) {
+        } else if (choice == '3' && chosen3 == true) {
             enableScroll();
             return false;
-        } else if (choice == "4" && chosen4 == true) {
+        } else if (choice == '4' && chosen4 == true) {
             enableScroll();
             return false;
         } else {
-            if (window.addEventListener) // older FF
-            {
-                window.addEventListener('DOMMouseScroll', preventDefault, false);
-            }
-            document.addEventListener('wheel', preventDefault, {passive: false}); // Disable scrolling in Chrome
-            window.onwheel = preventDefault; // modern standard
-            window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-            window.ontouchmove = preventDefault; // mobile
-            document.onkeydown = preventDefaultForScrollKeys;
+            document.body.style.overflow = 'hidden';
         }
     }
 
     function enableScroll() {
-        if (window.removeEventListener) {
-            window.removeEventListener('DOMMouseScroll', preventDefault, false);
-        }
-        document.removeEventListener('wheel', preventDefault, {passive: false}); // Enable scrolling in Chrome
-        window.onmousewheel = document.onmousewheel = null;
-        window.onwheel = null;
-        window.ontouchmove = null;
-        document.onkeydown = null;
+        document.body.style.overflowY = 'scroll';
+
     }
 
     // Single scrollmagic controller for the entire experience
@@ -103,9 +71,10 @@ $(document).ready(function () {
 
     const cover = new ScrollMagic.Scene({
                                             triggerElement: ".cover",
-                                            duration: 1000,
+                                            duration: '100%',
                                             triggerHook: 0, //  top of viewport
-                                            reverse: true
+                                            reverse: true,
+                                            pushFollowers: true
                                         });
     cover.setTween(coverAction);
     cover.setPin(".cover");
@@ -806,7 +775,7 @@ $(document).ready(function () {
         decision1Middle.add('text');
         decision1Middle.add('options');
         decision1Middle.add('buttons');
-        decision1Middle.call(disableScroll, ["1"], null, '+=1');
+        decision1Middle.call(disableScroll, ['1'], null, '+=1');
         decision1Middle.call(function () {
             chosen1 = true
         }, null, '+=3');

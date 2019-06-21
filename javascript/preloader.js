@@ -1,74 +1,178 @@
-let progressbar = document.getElementById('progressbar');
-let cont =  document.getElementById('progressbar_cont');
-var preload = new createjs.LoadQueue();
+let progress = document.getElementById('progress');
+let percentage = document.getElementById('percentage');
+let progresscontainer = document.getElementById('progresscontainer');
+let scrollindicator = document.getElementById("scrollIndicator");
+var queue = new createjs.LoadQueue(false);
 
-//the progress for when the entire queue has changed.
-preload.on("progress", handleProgress);
-//fired when a queue completes loading all files
-preload.on("complete", handleComplete);
-//for when a single file has completed loading.
-preload.on("fileload", handleFileLoad);
 
-let manifest =[
-    {id: 'szene01_1', src: "./Media/pictures/szene01/background.png"},
-    {id: 'szene01_2', src: "./Media/pictures/szene01/background2.png"},
-    {id: 'szene02_back', src: "Media/pictures/szene02/background.png"},
-    {id: 'szene02_fore', src: "Media/pictures/szene02/foreground.png"},
-    {id: 'szene03_01', src: "Media/pictures/szene03/krankenhaus_scene01.png"},
-    {id: 'szene03_ back',src: "Media/pictures/hospital/krankenhaus_backgroundpng.png"},
-    {id: 'szene03_layer1', src: "Media/pictures/hospital/krankenhaus_layer01.png"},
-    {id: 'szene03_layer2', src: "Media/pictures/hospital/krankenhaus_layer02.png"},
-    {id: 'szene03_layer3', src: "Media/pictures/hospital/krankenhaus_layer03.png"},
-    {id: 'szene04_1', src: "Media/pictures/scene04/layer01.jpg"},
-    {id: 'szene04_2,', src: "Media/pictures/scene04/layer011.png"},
-    {id: 'szene04_3', src: "Media/pictures/scene04/layer_21.png"},
-    {id: 'szene05_back', src: "Media/pictures/szene05/background1.jpg"},
-    {id: 'szene06_01', src: "Media/pictures/szene06/scene06_layer01.png"},
-    {id: 'szene06_00', src: "Media/pictures/szene06/scene06_layer00.jpg"},
-    {id: 'szene07_1', src: "Media/pictures/szene07/gala_layer01.png"},
-    {id: 'szene07_2', src: "Media/pictures/szene07/gala_layer02.png"},
-    {id: 'szene07_3', src: "Media/pictures/szene07/gala_layer03.png"},
-    {id: 'szene07_4', src: "Media/pictures/szene07/gala_layer04.png"},
-    {id: 'szene08_1', src: "Media/pictures/szene08/sitting1.png"},
-    {id: 'szene08_2', src: "Media/pictures/szene08/sitting2.png"},
-    {id: 'szene09_1', src: "Media/pictures/szene09/scene09_layer0.jpg"},
-    {id: 'szene09_2', src: "Media/pictures/szene09/scene09_layer01.png"},
-    {id: 'szene09_3', src: "Media/pictures/szene09/scene09_layer02.png"},
-    {id: 'szene10_0', src: "Media/pictures/szene10/cafe_layer00.jpg"},
-    {id: 'szene10_1', src: "Media/pictures/szene10/cafe_layer01.png"},
-    {id: 'szene10_2', src: "Media/pictures/szene10/cafe_layer02.png"},
-    {id: 'szene11_airport_bright', src: "Media/pictures/szene11/airport_scene_bright.jpg"},
-    {id: 'szene11_1', src: "Media/pictures/szene11/dark_scene/dark_background01_layer01.jpg"},
-    {id: 'szene11_2', src: "Media/pictures/szene11/dark_scene/dark_background01_layer02.png"},
-    {id: 'szene11_without_nightvision', src: "Media/pictures/szene11/dark_scene/dark_background02_without_nightvision.jpg"},
-    {id: 'szene11_with_nightvision', src: "Media/pictures/szene11/dark_scene/dark_background02_with_nightvision.jpg"},
-    {id: 'szene12_1', src: "Media/pictures/szene12/concert_layer00.jpg"},
-    {id: 'szene12_2', src: "Media/pictures/szene12/concert_layer01.png"},
-    {id: 'szene12_3', src: "Media/pictures/szene12/concert_layer02.png"},
-    {id: 'szene12_4', src: "Media/pictures/szene12/concert_layer04.png"}
-];
+queue.on("progress", event =>{
+    scrollindicator.style.opacity ='0';
+    document.body.style.overflowY = 'hidden';
+    let progress = Math.floor(event.progress*100);
+    this.progress.style.width = progress+'%';
+    this.percentage.innerText = progress+'%';
+    //console.log(progress+'%');
+/*    if(progress == 100){
+        console.log('all done\n');
+    }*/
+});
 
-preload.loadManifest(manifest);
+function sleep(miliseconds) {
+    var currentTime = new Date().getTime();
 
-function stop() {
-    if (preload != null) {
-        preload.close();
+    while (currentTime + miliseconds >= new Date().getTime()) {
     }
 }
-function handleProgress(event){
-    var progress = Math.round(event.progress * 100);
-    this.progressbar.style.width = progress + '%';
-    console.log('General progress');
+function enableScroll(){
+    //console.log("now sleeping");
+    sleep(300);
+    //console.log("noe enable scroll");
+    document.body.style.overflowY = 'scroll';
 }
 
-function handleComplete(event){
-    console.log('Complete', event);
-    progressbar.addClass('.fadeOut');
-    cont.addClass('.fadeOut');
-}
-function handleFileLoad() {
-    //test
-    console.log('a file has loaded');
-    
-}
 
+queue.on("complete", event =>{
+    //console.log('progressbar hidden\n');
+    scrollindicator.classList.add('fadeIn');
+    progresscontainer.classList.add('fadeOut');
+    $('.fadeOut').on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", enableScroll());
+});
+
+queue.on("fileload", handleFileComplete);
+// SCENE01 =============================================================================
+queue.loadFile("Media/pictures/szene01/background.png");
+queue.loadFile("Media/pictures/szene01/background2.png");
+queue.loadFile("Media/pictures/szene01/ground.png");
+queue.loadFile("Media/pictures/szene01/laterne.png");
+// SCENE02 =============================================================================
+queue.loadFile("Media/pictures/szene02/background.png");
+queue.loadFile("Media/pictures/szene02/foreground.png");
+queue.loadFile("Media/pictures/szene02/quinn_scene02_final.png");
+// SCENE03 =============================================================================
+queue.loadFile("Media/pictures/szene03/Adam_01.png");
+queue.loadFile("Media/pictures/szene03/Adam_02.png");
+queue.loadFile("Media/pictures/szene03/Adam_03.png");
+queue.loadFile("Media/pictures/szene03/Adam_04.png");
+queue.loadFile("Media/pictures/szene03/Adam_05.png");
+//queue.loadFile("Media/pictures/szene03/AdobeStock_140128343.jpg");
+queue.loadFile("Media/pictures/szene03/krankenhaus_backgroundpng.png");
+queue.loadFile("Media/pictures/szene03/krankenhaus_layer01.png");
+queue.loadFile("Media/pictures/szene03/krankenhaus_layer02.png");
+queue.loadFile("Media/pictures/szene03/krankenhaus_layer03.png");
+queue.loadFile("Media/pictures/szene03/krankenhaus_scene01.png");
+//queue.loadFile("Media/pictures/szene03/draws/socket.svg");
+//queue.loadFile("Media/pictures/szene03/draws/wire.svg");
+// SCENE04 =============================================================================
+queue.loadFile("Media/pictures/scene04/adam.png");
+queue.loadFile("Media/pictures/scene04/adam1.png");
+queue.loadFile("Media/pictures/scene04/background.jpg");
+queue.loadFile("Media/pictures/scene04/background1.jpg");
+queue.loadFile("Media/pictures/scene04/layer0.jpg");
+queue.loadFile("Media/pictures/scene04/layer01.jpg");
+queue.loadFile("Media/pictures/scene04/layer01.png");
+queue.loadFile("Media/pictures/scene04/layer011.png");
+queue.loadFile("Media/pictures/scene04/layer_2.png");
+queue.loadFile("Media/pictures/scene04/layer_21.png");
+// SCENE05 =============================================================================
+queue.loadFile("Media/pictures/szene05/adam.png");
+queue.loadFile("Media/pictures/szene05/adam1.png");
+queue.loadFile("Media/pictures/szene05/background.jpg");
+queue.loadFile("Media/pictures/szene05/background1.jpg");
+queue.loadFile("Media/pictures/szene05/girl.png");
+queue.loadFile("Media/pictures/szene05/girl1.png");
+queue.loadFile("Media/pictures/szene05/hurt.svg");
+queue.loadFile("Media/pictures/szene05/vorgabe.jpg");
+// SCENE06 =============================================================================
+queue.loadFile("Media/pictures/szene06/draws/layer01.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer02.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer03.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer04.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer05.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer06.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer07.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer08.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer09.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer10.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer11.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer12.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer13.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer14.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer15.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer16.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer17.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer18.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer19.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer20.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer21.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer22.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer23.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer24.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer25.svg");
+queue.loadFile("Media/pictures/szene06/draws/layer26.svg");
+queue.loadFile("Media/pictures/szene06/scene06_layer00.jpg");
+queue.loadFile("Media/pictures/szene06/scene06_layer01.png");
+// SCENE07 =============================================================================
+queue.loadFile("Media/pictures/szene07/background.jpg");
+queue.loadFile("Media/pictures/szene07/gala_layer01.png");
+queue.loadFile("Media/pictures/szene07/gala_layer02.png");
+queue.loadFile("Media/pictures/szene07/gala_layer03.png");
+queue.loadFile("Media/pictures/szene07/gala_layer04.png");
+// SCENE08 =============================================================================
+queue.loadFile("Media/pictures/szene08/funken/layer0.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer01.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer02.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer03.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer04.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer05.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer06.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer07.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer08.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer09.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer10.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer11.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer12.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer13.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer14.svg");
+queue.loadFile("Media/pictures/szene08/funken/layer15.svg");
+queue.loadFile("Media/pictures/szene08/sitting1.png");
+queue.loadFile("Media/pictures/szene08/sitting2.png");
+// SCENE09 =============================================================================
+queue.loadFile("Media/pictures/szene09/scene09_layer0.jpg");
+queue.loadFile("Media/pictures/szene09/scene09_layer01.png");
+queue.loadFile("Media/pictures/szene09/scene09_layer02.png");
+// SCENE10 =============================================================================
+queue.loadFile("Media/pictures/szene10/cafe_girl.png");
+queue.loadFile("Media/pictures/szene10/cafe_layer00.jpg");
+queue.loadFile("Media/pictures/szene10/cafe_layer01.png");
+queue.loadFile("Media/pictures/szene10/cafe_layer02.png");
+queue.loadFile("Media/pictures/szene10/cafe_man.png");
+// SCENE11 =============================================================================
+queue.loadFile("Media/pictures/szene11/dark_scene/dark_background01_layer01.jpg");
+queue.loadFile("Media/pictures/szene11/dark_scene/dark_background01_layer02.png");
+queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_with_nightvision.jpg");
+queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_without_nightvision.jpg");
+queue.loadFile("Media/pictures/szene11/airport_scene_bright.jpg");
+// SCENE12 =============================================================================
+queue.loadFile("Media/pictures/szene12/adam_concert.png");
+queue.loadFile("Media/pictures/szene12/concert_layer00.jpg");
+queue.loadFile("Media/pictures/szene12/concert_layer01.png");
+queue.loadFile("Media/pictures/szene12/concert_layer02.png");
+queue.loadFile("Media/pictures/szene12/concert_layer03_adam.png");
+queue.loadFile("Media/pictures/szene12/concert_layer04.png");
+
+
+
+
+
+
+
+
+function handleFileComplete(event){
+    var item = event.item;
+    var type = item.type;
+    let body = document.getElementsByTagName('body');
+    if(type == createjs.Types.IMAGE || type == createjs.Types.SVG){
+        document.body.appendChild(event.result);
+        //console.log("appending items"+event.result+"\n");
+    }
+}

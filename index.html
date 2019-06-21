@@ -12,30 +12,38 @@
     <link href="stylesheets/prolog.css" media="screen" rel="stylesheet" type="text/css">
     <link href="stylesheets/scenes.css" media="screen" rel="stylesheet" type="text/css">
     <link href="stylesheets/cover.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="stylesheets/preloader.css" media="screen" rel="stylesheet" type="text/css">
+    <!--<link href="stylesheets/preloader.css" media="screen" rel="stylesheet" type="text/css">-->
 </head>
 <body>
 <div class="section cover" id="cover">
     <div id="cover_parallax" data-relative-input="true">
+        <div id="progresscontainer" data-depth="0.6">
+            <div id="percentage"></div>
+            <div id="progress"></div>
+        </div>
         <div class="scenes_layer0">
             <img src="Media/pictures/title/background.jpg" alt="background_cover">
         </div>
         <div class="scenes_layer03" data-depth="0.4">
             <img src="Media/pictures/title/title.png" alt="background_title">
         </div>
-        <div class="scenes_layer02" data-depth="0.2">
+        <div class="scenes_layer02" data-depth="0.3">
             <img src="Media/pictures/title/lu_bright.png" alt="lu_bright" style="opacity: .9">
         </div>
         <div class="scenes_layer01" data-depth="0.1">
             <img src="Media/pictures/title/lu_dark.png" alt="lu_dark" style="opacity: .8">
         </div>
     </div>
+<<<<<<< HEAD
     <div class="scroll scenes_layer03"></div>
 
     <div id="progressbar_cont">
         <div id="progressbar"></div>
     </div>
 
+=======
+    <div id="scrollIndicator" class="scroll scenes_layer03"></div>
+>>>>>>> Implemented Preloader
 </div>
 <div class="section intro">
     <div class="content story" id="introscene">
@@ -869,7 +877,6 @@
         Adam war perfekt.
     </div>
 </div>
-
 <div class="section decision2" id="decicion">
     <div id="wrapper2">
         <div class="scene08L" id="left scene08L">
@@ -1165,7 +1172,6 @@
         </div>
     </div>
 </div>
-
 <div class="section scene10">
     <div class="scene10Parallax scenes_layer0 blur" id="scene10_layer00">
         <img src="Media/pictures/szene10/cafe_layer00.jpg">
@@ -1338,7 +1344,6 @@
         <h2>Finale</h2>
     </div>
 </div>
-
 <div class="section scene14">
     <div class="section_inner content" id="Scene14">
 
@@ -1375,6 +1380,9 @@
 </div>
 
 </body>
+<script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="javascript/preloader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
