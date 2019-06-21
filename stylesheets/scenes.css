@@ -767,7 +767,6 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene06_textblock4 {
-    left: -12%;
     top: 60%;
     width: 80vw;
     left: -6vw;
@@ -898,7 +897,6 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_textblock6 {
-    fleft: 9%;
     right: auto;
     top: 50%;
 }
@@ -1117,6 +1115,172 @@ FOR EVERY SCENE USEABLE
     font-size: 200%;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
+}
+
+#scene09_textline1 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+}
+
+#scene09_textline2 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+    top: -41vw;
+}
+
+#scene09_textline3 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+    top: -45vw;
+}
+
+#scene09_textline4 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+    top: -32vw;
+}
+
+#scene09_textline5 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+    top: -19vw;
+}
+
+#scene09_textblock1 {
+    top: 20%;
+    width: 45em;
+    height: auto;
+    left: 200vw;
+}
+
+#scene09_textblock2 {
+    top: 50%;
+    width: 45em;
+    height: auto;
+    left: 200vw;
+}
+
+#scene09_textblock3 {
+    top: 20%;
+    width: 45em;
+    height: auto;
+    left: 225vw;
+}
+
+#scene09_textblock4 {
+    top: 60%;
+    width: 45em;
+    height: auto;
+    left: 208vw;
+}
+
+#scene09_textblock5 {
+    top: 20%;
+    width: 45em;
+    height: auto;
+    left: 208vw;
+}
+
+#scene09_boyBubble1 {
+     width: auto;
+     height: 25%;
+     top: 65%;
+     left: 225vw;
+ }
+
+.scene09_boytext1 {
+    width: 45%;
+    height: auto;
+    transform: translate(-55%);
+    left: 11%;
+    top: 25%;
+}
+
+.scene09_boytext1 p {
+    font-size: 2.5vh;
+}
+
+#scene09_boyBubble2 {
+    width: auto;
+    height: 25%;
+    top: 65%;
+    left: 225vw;
+}
+
+.scene09_boytext2 {
+    width: 45%;
+    height: auto;
+    transform: translate(-55%);
+    left: 5%;
+    top: 30%;
+}
+
+#scene09_boyBubble3 {
+    width: auto;
+    height: 35%;
+    top: 57%;
+    left: 225vw;
+}
+
+.scene09_boytext3 {
+    width: 25%;
+    height: auto;
+    transform: translate(-55%);
+    left: -19%;
+    top: 30%;
+}
+
+#scene09_adamBubble1 {
+    width: 50%;
+    height: 25%;
+    top: 60%;
+    left: 203vw;
+}
+
+.scene09_adamtext1 {
+    width: 30%;
+    height: auto;
+    transform: translate(-55%);
+    left: -28.5%;
+}
+
+.scene09_adamtext1 p {
+    font-size: 2.5vh;
+}
+
+#scene09_adamBubble2 {
+    width: 60%;
+    height: 30%;
+    top: 55%;
+    left: 201vw;
+}
+
+.scene09_adamtext2 {
+    width: 7%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41.5%;
+    top: 14%;
+}
+
+#scene09_adamBubble3 {
+    width: 55%;
+    height: 27.5%;
+    top: 60%;
+    left: 202vw;
+}
+
+.scene09_adamtext3 {
+    width: 7%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41.5%;
+    top: 25%;
 }
 
 /*--- SCENE 10 ---*/
