@@ -976,6 +976,7 @@ $(document).ready(function () {
         scene08left.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
         //BACKGROUND CHANGE
+        scene08left.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene08left.to('#background1', 5, {autoAlpha: 0}, "+=4");
         scene08left.to('#background2', 5, {autoAlpha: 1}, "-=10");
         scene08left.to('#scene08_textline7', 10, {autoAlpha: 1}, "+=2");
