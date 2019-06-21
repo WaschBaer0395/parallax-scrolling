@@ -1106,6 +1106,18 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 9 ---*/
+.scene09Parallax{
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
+
+.scene09R .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
 
 /*--- SCENE 10 ---*/
 .scene10 .textline {
