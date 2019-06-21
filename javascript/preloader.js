@@ -1,6 +1,6 @@
 let progressbar = document.getElementById('progressbar');
 let cont =  document.getElementById('progressbar_cont');
-var preload = new createjs.LoadQueue(false);
+var preload = new createjs.LoadQueue();
 
 preload.on("progress", handleProgress);
 preload.on("complete", handleComplete);
@@ -45,24 +45,25 @@ let manifest =[
     {id: 'szene12_4', src: "Media/pictures/szene12/concert_layer04.png"}
 ];
 
-preload.loadManifest(manifest);
+//preload.loadManifest(manifest);
 
 function stop() {
     if (preload != null) {
         preload.close();
     }
 }
-
+function handleFileLoad(){
+    preload.loadManifest(manifest);
+}
 function handleProgress(event){
     var progress = Math.round(event.loaded * 100);
     this.progressbar.style.width = progress + '%';
     console.log('General progress');
-
 }
 
 function handleComplete(event){
     console.log('Complete', event);
-    progressbar.classList.add('.fadeOut');
-    cont.classList.add('.fadeOut');
+    progressbar.addClass('.fadeOut');
+    cont.addClass('.fadeOut');
 }
 
