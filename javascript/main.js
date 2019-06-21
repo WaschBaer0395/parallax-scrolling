@@ -1067,10 +1067,47 @@ $(document).ready(function () {
 
         // START SCENE 09 RIGHT SIDE =======================================================================
         let scene09right = new TimelineMax();
-        //BLUR
-        scene09right.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+
         // hier alle Animationen
-        // END SCENE 06 LEFT SIDE =======================================================================
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textblock1', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textblock2', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        scene09right.to('#scene09_textblock3', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textblock3', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline1', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textline1', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textblock4', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textblock4', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('#scene09_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_adamBubble2', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('#scene09_boyBubble3', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_boyBubble3', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('#scene09_textblock5', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textblock5', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_adamBubble3', 10, {autoAlpha: 0}, "+=4");
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        scene09right.to('#scene09_textline2', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textline2', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline3', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textline3', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline4', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textline4', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline5', 10, {autoAlpha: 1}, "+=2");
+        scene09right.to('#scene09_textline5', 5, {autoAlpha: 0}, "+=20");
+        // END SCENE 09 RIGHT SIDE =======================================================================
 
         let decision2Middle = new TimelineLite();
         decision2Middle.add('text2');
