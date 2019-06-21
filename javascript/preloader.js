@@ -3,59 +3,165 @@ let progressbar = document.getElementById('progressbar');
 var queue = new createjs.LoadQueue(false);
 
 
-queue.on("progress", event =>{
+queue.on("progress", event => {
     console.log('all done');
-    let progress = Math.floor(event.progress*100);
-    this.progressbar.style.width = progress+'%';
-    if(progress == 100){
+    let progress = Math.floor(event.progress * 100);
+    this.progressbar.style.width = progress + '%';
+    if (progress == 100) {
         console.log('all done');
 
     }
 });
-queue.on("complete", event =>{
+queue.on("complete", event => {
     progress.classList.add('.fadeOut');
     progressbar.classList.add('.fadeOut');
 });
 
 queue.on("fileload", handleFileComplete);
 
-queue.loadFile("./Media/pictures/szene01/background.png");
-queue.loadFile("./Media/pictures/szene01/background2.png");
-queue.loadFile("Media/pictures/szene02/background.png");
-queue.loadFile("Media/pictures/szene02/foreground.png");
-queue.loadFile("Media/pictures/szene03/krankenhaus_scene01.png");
-queue.loadFile("Media/pictures/hospital/krankenhaus_backgroundpng.png");
-queue.loadFile("Media/pictures/hospital/krankenhaus_layer01.png");
-queue.loadFile("Media/pictures/hospital/krankenhaus_layer02.png");
-queue.loadFile("Media/pictures/hospital/krankenhaus_layer03.png");
-queue.loadFile("Media/pictures/scene04/layer_21.png");
-queue.loadFile("Media/pictures/scene04/layer011.png");
-queue.loadFile("Media/pictures/scene04/layer01.jpg");
-queue.loadFile("Media/pictures/szene05/background1.jpg");
-queue.loadFile("Media/pictures/szene06/forBackup/Szene06_Berge.jpg");
-queue.loadFile("Media/pictures/szene06/scene06_layer03.png");
-queue.loadFile("Media/pictures/szene06/scene06_layer02.png");
-queue.loadFile("Media/pictures/szene06/scene06_layer01.png");
-queue.loadFile("Media/pictures/szene07/background.jpg");
-queue.loadFile("Media/pictures/szene07/gala_layer01.png");
-queue.loadFile("Media/pictures/szene07/gala_layer02.png");
-queue.loadFile("Media/pictures/szene07/gala_layer03.png");
-queue.loadFile("Media/pictures/szene07/gala_layer04.png");
-queue.loadFile("Media/pictures/szene08/sitting1.png");
-queue.loadFile("Media/pictures/szene08/sitting2.png");
-queue.loadFile("Media/pictures/szene11/airport_scene_bright.jpg");
-queue.loadFile("Media/pictures/szene11/dark_scene/dark_background01_layer01.jpg");
-queue.loadFile("Media/pictures/szene11/dark_scene/dark_background01_layer02.png");
-queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_without_nightvision.jpg");
-queue.loadFile("Media/pictures/szene11/dark_scene/dark_background02_with_nightvision.jpg");
+queue.loadManifest([
+    {
+        id: 'szene01_1',
+        src: "./Media/pictures/szene01/background.png"
+    },
+    {
+        id: 'szene01_2',
+        src: "./Media/pictures/szene01/background2.png"
+    },
+    {
+        id: 'szene02_back',
+        src: "Media/pictures/szene02/background.png"
+    },
+    {
+        id: 'szene02_fore',
+        src: "Media/pictures/szene02/foreground.png"
+    },
+    {
+        id: 'szene03_01',
+        src: "Media/pictures/szene03/krankenhaus_scene01.png"
+    },
+    {
+        id: 'szene03_ back',
+        src: "Media/pictures/hospital/krankenhaus_backgroundpng.png"
+    },
+    {
+        id: 'szene03_layer1',
+        src: "Media/pictures/hospital/krankenhaus_layer01.png"
+    },
+    {
+        id: 'szene03_layer2',
+        src: "Media/pictures/hospital/krankenhaus_layer02.png"
+    },
+    {
+        id: 'szene03_layer3',
+        src: "Media/pictures/hospital/krankenhaus_layer03.png"
+    },
+    {
+        id: 'szene04_1',
+        src: "Media/pictures/scene04/layer01.jpg"
+    },
+    {
+        id: 'szene04_2,',
+        src: "Media/pictures/scene04/layer011.png"
+    },
+    {
+        id: 'szene04_3',
+        src: "Media/pictures/scene04/layer_21.png"
+    },
+    {
+        id: 'szene05_back',
+        src: "Media/pictures/szene05/background1.jpg"
+    },
+    {
+        id: 'szene06_01',
+        src: "Media/pictures/szene06/scene06_layer01.png"
+    },
+    {
+        id: 'szene06_00',
+        src: "Media/pictures/szene06/scene06_layer00.jpg"
+    },
+    {
+        id: 'szene07_1',
+        src: "Media/pictures/szene07/gala_layer01.png"
+    },
+    {
+        id: 'szene07_2',
+        src: "Media/pictures/szene07/gala_layer02.png"
+    },
+    {
+        id: 'szene07_3',
+        src: "Media/pictures/szene07/gala_layer03.png"
+    },
+    {
+        id: 'szene07_4',
+        src: "Media/pictures/szene07/gala_layer04.png"
+    },
+    {
+        id: 'szene08_1',
+        src: "Media/pictures/szene08/sitting1.png"
+    },
+    {
+        id: 'szene08_2',
+        src: "Media/pictures/szene08/sitting2.png"
+    },
+    {
+        id: 'szene10_0',
+        src: "Media/pictures/szene10/cafe_layer00.jpg"
+    },
+    {
+        id: 'szene10_1',
+        src: "Media/pictures/szene10/cafe_layer01.png"
+    },
+    {
+        id: 'szene10_2',
+        src: "Media/pictures/szene10/cafe_layer02.png"
+    },
+    {
+        id: 'szene11_airport_bright',
+        src: "Media/pictures/szene11/airport_scene_bright.jpg"
+    },
+    {
+        id: 'szene11_1',
+        src: "Media/pictures/szene11/dark_scene/dark_background01_layer01.jpg"
+    },
+    {
+        id: 'szene11_2',
+        src: "Media/pictures/szene11/dark_scene/dark_background01_layer02.png"
+    },
+    {
+        id: 'szene11_without_nightvision',
+        src: "Media/pictures/szene11/dark_scene/dark_background02_without_nightvision.jpg"
+    },
+    {
+        id: 'szene11_with_nightvision',
+        src: "Media/pictures/szene11/dark_scene/dark_background02_with_nightvision.jpg"
+    },
+    {
+        id: 'szene12_1',
+        src: "Media/pictures/szene12/concert_layer00.jpg"
+    },
+    {
+        id: 'szene12_2',
+        src: "Media/pictures/szene12/concert_layer01.png"
+    },
+    {
+        id: 'szene12_3',
+        src: "Media/pictures/szene12/concert_layer02.png"
+    },
+    {
+        id: 'szene12_4',
+        src: "Media/pictures/szene12/concert_layer04.png"
+    }
+]);
 
-function handleFileComplete(event){
+
+function handleFileComplete(event) {
     var item = event.item;
     var type = item.type;
 
     let body = document.getElementsByTagName('body');
-    
-    if(type== createjs.Types.IMAGE){
+
+    if (type == createjs.Types.IMAGE) {
         body.appendChild(event.result);
     }
 }
