@@ -727,7 +727,7 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 6 ---*/
 .scene06Parallax{
-    left: 0;
+    left: -0.2%;
     height: 100vh;
     width: 100vw;
 }
@@ -1429,7 +1429,7 @@ FOR EVERY SCENE USEABLE
     top: 0;
     height: 100vh;
     display: inline-block;
-    left: -101vw;
+    left: -100vw;
 }
 #middle, #middle2{
     position: absolute;
@@ -1437,7 +1437,6 @@ FOR EVERY SCENE USEABLE
     width: 100%;
     left: 100vw;
     top: 0;
-    border: 3px solid green;
 }
 .choice1, .choice2{
     position: absolute;
