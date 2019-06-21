@@ -172,7 +172,6 @@ function handleFileComplete(event){
     var type = item.type;
     let body = document.getElementsByTagName('body');
     if(type == createjs.Types.IMAGE || type == createjs.Types.SVG){
-        document.body.appendChild(event.result);
         //console.log("appending items"+event.result+"\n");
     }
 }

@@ -96,6 +96,7 @@ img {
     font-size: 25px;
 }
 .fadeIn{
+    visibility: visible;
     opacity: 1 !important;
     transition: opacity 1s;
 }
