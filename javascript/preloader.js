@@ -105,6 +105,18 @@ queue.loadManifest([
         src: "Media/pictures/szene08/sitting2.png"
     },
     {
+        id: 'szene09_1',
+        src: "Media/pictures/szene09/scene09_layer0.jpg"
+    },
+    {
+        id: 'szene09_2',
+        src: "Media/pictures/szene09/scene09_layer01.png"
+    },
+    {
+        id: 'szene09_3',
+        src: "Media/pictures/szene09/scene09_layer02.png"
+    },
+    {
         id: 'szene10_0',
         src: "Media/pictures/szene10/cafe_layer00.jpg"
     },
