@@ -6,6 +6,7 @@
     position: relative;
     top: -40%;
     opacity: 0.6;
+    z-index: 3;
 }
 
 #progressbar {
@@ -13,9 +14,9 @@
     height: 2px;
     margin: 10px;
     position: relative;
-    z-index: 1;
     top: 38%;
     opacity: 1;
+    z-index: 3;
 }
 .fadeIn{
     transform: scale(1) !important;
