@@ -156,12 +156,5 @@ queue.loadManifest([
 
 
 function handleFileComplete(event) {
-    var item = event.item;
-    var type = item.type;
-
-    let body = document.getElementsByTagName('body');
-
-    if (type == createjs.Types.IMAGE) {
-        body.appendChild(event.result);
-    }
+   
 }
