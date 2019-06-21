@@ -1,25 +1,12 @@
 let progressbar = document.getElementById('progressbar');
+let cont =  document.getElementById('progressbar_cont');
+var preload = new createjs.LoadQueue(false);
 
-var queue = new createjs.LoadQueue(false);
+preload.on("progress", handleProgress);
+preload.on("complete", handleComplete);
+preload.on("fileload", handleFileLoad);
 
-
-queue.on("progress", event => {
-    console.log('all done');
-    let progress = Math.floor(event.progress * 100);
-    this.progressbar.style.width = progress + '%';
-    if (progress == 100) {
-        console.log('all done');
-
-    }
-});
-queue.on("complete", event => {
-    progress.classList.add('.fadeOut');
-    progressbar.classList.add('.fadeOut');
-});
-
-queue.on("fileload", handleFileComplete);
-
-let manifest = [
+let manifest =[
     {id: 'szene01_1', src: "./Media/pictures/szene01/background.png"},
     {id: 'szene01_2', src: "./Media/pictures/szene01/background2.png"},
     {id: 'szene02_back', src: "Media/pictures/szene02/background.png"},
@@ -58,7 +45,24 @@ let manifest = [
     {id: 'szene12_4', src: "Media/pictures/szene12/concert_layer04.png"}
 ];
 
+preload.loadManifest(manifest);
 
-function handleFileComplete(event) {
-   
+function stop() {
+    if (preload != null) {
+        preload.close();
+    }
 }
+
+function handleProgress(event){
+    var progress = Math.round(event.loaded * 100);
+    this.progressbar.style.width = progress + '%';
+    console.log('General progress');
+
+}
+
+function handleComplete(event){
+    console.log('Complete', event);
+    progressbar.classList.add('.fadeOut');
+    cont.classList.add('.fadeOut');
+}
+

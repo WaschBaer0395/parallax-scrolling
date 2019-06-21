@@ -1,4 +1,4 @@
-#progress {
+#progressbar_cont {
     background-color: rgb(29, 29, 29);
     height: 25px;
     width: 50%;
@@ -24,6 +24,6 @@
 }
 .fadeOut{
     opacity: 0 !important;
-    transition: opacity 2s !important;
+
 
 }
