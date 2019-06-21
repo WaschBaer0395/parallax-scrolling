@@ -48,7 +48,7 @@ let manifest =[
     {id: 'szene12_4', src: "Media/pictures/szene12/concert_layer04.png"}
 ];
 
-//preload.loadManifest(manifest);
+preload.loadManifest(manifest);
 
 function stop() {
     if (preload != null) {
