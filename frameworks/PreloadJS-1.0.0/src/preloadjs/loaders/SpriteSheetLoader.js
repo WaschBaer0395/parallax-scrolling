@@ -65,7 +65,7 @@ this.createjs = this.createjs || {};
 
 		// protected properties
 		/**
-		 * An internal queue which loads the SpriteSheet's images.
+		 * An internal perload which loads the SpriteSheet's images.
 		 * @method _manifestQueue
 		 * @type {LoadQueue}
 		 * @private

@@ -59,12 +59,12 @@ this.createjs = this.createjs || {};
 	 * <h4>Example</h4>
 	 *
 	 * 		var loadItem = {id:"json", type:"jsonp", src:"http://server.com/text.json", callback:"callbackName"}
-	 * 		var queue = new createjs.LoadQueue();
-	 * 		queue.on("complete", handleComplete);
-	 * 		queue.loadItem(loadItem);
+	 * 		var perload = new createjs.LoadQueue();
+	 * 		perload.on("complete", handleComplete);
+	 * 		perload.loadItem(loadItem);
 	 *
 	 * 		function handleComplete(event) }
-	 * 			var json = queue.getResult("json");
+	 * 			var json = perload.getResult("json");
 	 * 			console.log(json.obj.bool); // true
 	 * 		}
 	 *

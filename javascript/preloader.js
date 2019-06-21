@@ -2,8 +2,11 @@ let progressbar = document.getElementById('progressbar');
 let cont =  document.getElementById('progressbar_cont');
 var preload = new createjs.LoadQueue();
 
+//the progress for when the entire queue has changed.
 preload.on("progress", handleProgress);
+//fired when a queue completes loading all files
 preload.on("complete", handleComplete);
+//for when a single file has completed loading.
 preload.on("fileload", handleFileLoad);
 
 let manifest =[
@@ -52,11 +55,8 @@ function stop() {
         preload.close();
     }
 }
-function handleFileLoad(){
-    preload.loadManifest(manifest);
-}
 function handleProgress(event){
-    var progress = Math.round(event.loaded * 100);
+    var progress = Math.round(event.progress * 100);
     this.progressbar.style.width = progress + '%';
     console.log('General progress');
 }
@@ -65,5 +65,10 @@ function handleComplete(event){
     console.log('Complete', event);
     progressbar.addClass('.fadeOut');
     cont.addClass('.fadeOut');
+}
+function handleFileLoad() {
+    //test
+    console.log('a file has loaded');
+    
 }
 

@@ -2882,10 +2882,10 @@ this.createjs = this.createjs || {};
 		 *
 		 * <h4>Example</h4>
 		 *
-		 *     var queue = new createjs.LoadQueue();
-		 *     queue.loadFile("largeImage.png");
-		 *     queue.on("progress", function() {
-		 *         console.log("Progress:", queue.progress, event.progress);
+		 *     var perload = new createjs.LoadQueue();
+		 *     perload.loadFile("largeImage.png");
+		 *     perload.on("progress", function() {
+		 *         console.log("Progress:", perload.progress, event.progress);
 		 *     });
 		 *
 		 * @property progress
@@ -3038,7 +3038,7 @@ this.createjs = this.createjs || {};
 	 */
 
 	/**
-	 * The {{#crossLink "Event"}}{{/crossLink}} that is fired when the entire queue has been loaded.
+	 * The {{#crossLink "Event"}}{{/crossLink}} that is fired when the entire perload has been loaded.
 	 * @event complete
 	 * @param {Object} target The object that dispatched the event.
 	 * @param {String} type The event type.
@@ -3141,10 +3141,10 @@ this.createjs = this.createjs || {};
 	 *
 	 * <h4>Example</h4>
 	 *
-	 *      var queue = new createjs.LoadQueue();
-	 *      queue.on("complete", handleComplete);
-	 *      queue.loadManifest(fileArray, false); // Note the 2nd argument that tells the queue not to start loading yet
-	 *      queue.load();
+	 *      var perload = new createjs.LoadQueue();
+	 *      perload.on("complete", handleComplete);
+	 *      perload.loadManifest(fileArray, false); // Note the 2nd argument that tells the perload not to start loading yet
+	 *      perload.load();
 	 *
 	 * @method load
 	 */
@@ -3305,7 +3305,7 @@ this.createjs = this.createjs || {};
 
 	/**
 	 * Determine if the load has been canceled. This is important to ensure that method calls or asynchronous events
-	 * do not cause issues after the queue has been cleaned up.
+	 * do not cause issues after the perload has been cleaned up.
 	 * @method _isCanceled
 	 * @return {Boolean} If the loader has been canceled.
 	 * @protected
@@ -4381,51 +4381,51 @@ this.createjs = this.createjs || {};
 // constructor
 	/**
 	 * The LoadQueue class is the main API for preloading content. LoadQueue is a load manager, which can preload either
-	 * a single file, or queue of files.
+	 * a single file, or perload of files.
 	 *
 	 * <b>Creating a Queue</b><br />
 	 * To use LoadQueue, create a LoadQueue instance. If you want to force tag loading where possible, set the preferXHR
 	 * argument to false.
 	 *
-	 *      var queue = new createjs.LoadQueue(true);
+	 *      var perload = new createjs.LoadQueue(true);
 	 *
 	 * <b>Listening for Events</b><br />
-	 * Add any listeners you want to the queue. Since PreloadJS 0.3.0, the {{#crossLink "EventDispatcher"}}{{/crossLink}}
+	 * Add any listeners you want to the perload. Since PreloadJS 0.3.0, the {{#crossLink "EventDispatcher"}}{{/crossLink}}
 	 * lets you add as many listeners as you want for events. You can subscribe to the following events:<ul>
-	 *     <li>{{#crossLink "AbstractLoader/complete:event"}}{{/crossLink}}: fired when a queue completes loading all
+	 *     <li>{{#crossLink "AbstractLoader/complete:event"}}{{/crossLink}}: fired when a perload completes loading all
 	 *     files</li>
-	 *     <li>{{#crossLink "AbstractLoader/error:event"}}{{/crossLink}}: fired when the queue encounters an error with
+	 *     <li>{{#crossLink "AbstractLoader/error:event"}}{{/crossLink}}: fired when the perload encounters an error with
 	 *     any file.</li>
-	 *     <li>{{#crossLink "AbstractLoader/progress:event"}}{{/crossLink}}: Progress for the entire queue has
+	 *     <li>{{#crossLink "AbstractLoader/progress:event"}}{{/crossLink}}: Progress for the entire perload has
 	 *     changed.</li>
 	 *     <li>{{#crossLink "LoadQueue/fileload:event"}}{{/crossLink}}: A single file has completed loading.</li>
 	 *     <li>{{#crossLink "LoadQueue/fileprogress:event"}}{{/crossLink}}: Progress for a single file has changes. Note
 	 *     that only files loaded with XHR (or possibly by plugins) will fire progress events other than 0 or 100%.</li>
 	 * </ul>
 	 *
-	 *      queue.on("fileload", handleFileLoad, this);
-	 *      queue.on("complete", handleComplete, this);
+	 *      perload.on("fileload", handleFileLoad, this);
+	 *      perload.on("complete", handleComplete, this);
 	 *
 	 * <b>Adding files and manifests</b><br />
 	 * Add files you want to load using {{#crossLink "LoadQueue/loadFile"}}{{/crossLink}} or add multiple files at a
 	 * time using a list or a manifest definition using {{#crossLink "LoadQueue/loadManifest"}}{{/crossLink}}. Files are
-	 * appended to the end of the active queue, so you can use these methods as many times as you like, whenever you
+	 * appended to the end of the active perload, so you can use these methods as many times as you like, whenever you
 	 * like.
 	 *
-	 *      queue.loadFile("filePath/file.jpg");
-	 *      queue.loadFile({id:"image", src:"filePath/file.jpg"});
-	 *      queue.loadManifest(["filePath/file.jpg", {id:"image", src:"filePath/file.jpg"}]);
+	 *      perload.loadFile("filePath/file.jpg");
+	 *      perload.loadFile({id:"image", src:"filePath/file.jpg"});
+	 *      perload.loadManifest(["filePath/file.jpg", {id:"image", src:"filePath/file.jpg"}]);
 	 *
 	 *      // Use an external manifest
-	 *      queue.loadManifest("path/to/manifest.json");
-	 *      queue.loadManifest({src:"manifest.json", type:"manifest"});
+	 *      perload.loadManifest("path/to/manifest.json");
+	 *      perload.loadManifest({src:"manifest.json", type:"manifest"});
 	 *
-	 * If you pass `false` as the `loadNow` parameter, the queue will not kick of the load of the files, but it will not
+	 * If you pass `false` as the `loadNow` parameter, the perload will not kick of the load of the files, but it will not
 	 * stop if it has already been started. Call the {{#crossLink "AbstractLoader/load"}}{{/crossLink}} method to begin
-	 * a paused queue. Note that a paused queue will automatically resume when new files are added to it with a
+	 * a paused perload. Note that a paused perload will automatically resume when new files are added to it with a
 	 * `loadNow` argument of `true`.
 	 *
-	 *      queue.load();
+	 *      perload.load();
 	 *
 	 * <b>File Types</b><br />
 	 * The file type of a manifest item is auto-determined by the file extension. The pattern matching in PreloadJS
@@ -4433,10 +4433,10 @@ this.createjs = this.createjs || {};
 	 * either a non-standard file extension, or are serving the file using a proxy script, then you can pass in a
 	 * <code>type</code> property with any manifest item.
 	 *
-	 *      queue.loadFile({src:"path/to/myFile.mp3x", type:createjs.Types.SOUND});
+	 *      perload.loadFile({src:"path/to/myFile.mp3x", type:createjs.Types.SOUND});
 	 *
 	 *      // Note that PreloadJS will not read a file extension from the query string
-	 *      queue.loadFile({src:"http://server.com/proxy?file=image.jpg", type:createjs.Types.IMAGE});
+	 *      perload.loadFile({src:"http://server.com/proxy?file=image.jpg", type:createjs.Types.IMAGE});
 	 *
 	 * Supported types are defined on the {{#crossLink "AbstractLoader"}}{{/crossLink}} class, and include:
 	 * <ul>
@@ -4488,12 +4488,12 @@ this.createjs = this.createjs || {};
 	 *          }
 	 *      }
 	 *
-	 * At any time after the file has been loaded (usually after the queue has completed), any result can be looked up
+	 * At any time after the file has been loaded (usually after the perload has completed), any result can be looked up
 	 * via its "id" using {{#crossLink "LoadQueue/getResult"}}{{/crossLink}}. If no id was provided, then the
 	 * "src" or file path can be used instead, including the `path` defined by a manifest, but <strong>not including</strong>
 	 * a base path defined on the LoadQueue. It is recommended to always pass an id if you want to look up content.
 	 *
-	 *      var image = queue.getResult("image");
+	 *      var image = perload.getResult("image");
 	 *      document.body.appendChild(image);
 	 *
 	 * Raw loaded content can be accessed using the <code>rawResult</code> property of the {{#crossLink "LoadQueue/fileload:event"}}{{/crossLink}}
@@ -4501,14 +4501,14 @@ this.createjs = this.createjs || {};
 	 * argument. This is only applicable for content that has been parsed for the browser, specifically: JavaScript,
 	 * CSS, XML, SVG, and JSON objects, or anything loaded with XHR.
 	 *
-	 *      var image = queue.getResult("image", true); // load the binary image data loaded with XHR.
+	 *      var image = perload.getResult("image", true); // load the binary image data loaded with XHR.
 	 *
 	 * <b>Plugins</b><br />
 	 * LoadQueue has a simple plugin architecture to help process and preload content. For example, to preload audio,
 	 * make sure to install the <a href="http://soundjs.com">SoundJS</a> Sound class, which will help load HTML audio,
 	 * Flash audio, and WebAudio files. This should be installed <strong>before</strong> loading any audio files.
 	 *
-	 *      queue.installPlugin(createjs.Sound);
+	 *      perload.installPlugin(createjs.Sound);
 	 *
 	 * <h4>Known Browser Issues</h4>
 	 * <ul>
@@ -4526,9 +4526,9 @@ this.createjs = this.createjs || {};
 	 *
 	 * @class LoadQueue
 	 * @param {Boolean} [preferXHR=true] Determines whether the preload instance will favor loading with XHR (XML HTTP
-	 * Requests), or HTML tags. When this is `false`, the queue will use tag loading when possible, and fall back on XHR
+	 * Requests), or HTML tags. When this is `false`, the perload will use tag loading when possible, and fall back on XHR
 	 * when necessary.
-	 * @param {String} [basePath=""] A path that will be prepended on to the source parameter of all items in the queue
+	 * @param {String} [basePath=""] A path that will be prepended on to the source parameter of all items in the perload
 	 * before they are loaded.  Sources beginning with a protocol such as `http://` or a relative path such as `../`
 	 * will not receive a base path.
 	 * @param {String|Boolean} [crossOrigin=""] An optional flag to support images loaded from a CORS-enabled server. To
@@ -4572,8 +4572,8 @@ this.createjs = this.createjs || {};
 		this._extensionCallbacks = {};
 
 		/**
-		 * The next preload queue to process when this one is complete. If an error is thrown in the current queue, and
-		 * {{#crossLink "LoadQueue/stopOnError:property"}}{{/crossLink}} is `true`, the next queue will not be processed.
+		 * The next preload perload to process when this one is complete. If an error is thrown in the current perload, and
+		 * {{#crossLink "LoadQueue/stopOnError:property"}}{{/crossLink}} is `true`, the next perload will not be processed.
 		 * @property next
 		 * @type {LoadQueue}
 		 * @default null
@@ -4590,14 +4590,14 @@ this.createjs = this.createjs || {};
 		 * property on the load item, or by ensuring that only one connection can be open at a time using
 		 * {{#crossLink "LoadQueue/setMaxConnections"}}{{/crossLink}}. Note that when the `maintainScriptOrder` property
 		 * is set to `true`, scripts items are automatically set to `maintainOrder=true`, and changing the
-		 * `maintainScriptOrder` to `false` during a load will not change items already in a queue.
+		 * `maintainScriptOrder` to `false` during a load will not change items already in a perload.
 		 *
 		 * <h4>Example</h4>
 		 *
-		 *      var queue = new createjs.LoadQueue();
-		 *      queue.setMaxConnections(3); // Set a higher number to load multiple items at once
-		 *      queue.maintainScriptOrder = true; // Ensure scripts are loaded in order
-		 *      queue.loadManifest([
+		 *      var perload = new createjs.LoadQueue();
+		 *      perload.setMaxConnections(3); // Set a higher number to load multiple items at once
+		 *      perload.maintainScriptOrder = true; // Ensure scripts are loaded in order
+		 *      perload.loadManifest([
 		 *          "script1.js",
 		 *          "script2.js",
 		 *          "image.png", // Load any time
@@ -4613,7 +4613,7 @@ this.createjs = this.createjs || {};
 		this.maintainScriptOrder = true;
 
 		/**
-		 * Determines if the LoadQueue will stop processing the current queue when an error is encountered.
+		 * Determines if the LoadQueue will stop processing the current perload when an error is encountered.
 		 * @property stopOnError
 		 * @type {Boolean}
 		 * @default false
@@ -4730,7 +4730,7 @@ this.createjs = this.createjs || {};
 
 		// protected properties
 		/**
-		 * Whether the queue is currently paused or not.
+		 * Whether the perload is currently paused or not.
 		 * @property _paused
 		 * @type {boolean}
 		 * @private
@@ -4978,8 +4978,8 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Stops all queued and loading items, and clears the queue. This also removes all internal references to loaded
-	 * content, and allows the queue to be used again.
+	 * Stops all queued and loading items, and clears the perload. This also removes all internal references to loaded
+	 * content, and allows the perload to be used again.
 	 * @method removeAll
 	 * @since 0.3.0
 	 */
@@ -4988,22 +4988,22 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Stops an item from being loaded, and removes it from the queue. If nothing is passed, all items are removed.
+	 * Stops an item from being loaded, and removes it from the perload. If nothing is passed, all items are removed.
 	 * This also removes internal references to loaded item(s).
 	 *
 	 * <h4>Example</h4>
 	 *
-	 *      queue.loadManifest([
+	 *      perload.loadManifest([
 	 *          {src:"test.png", id:"png"},
 	 *          {src:"test.jpg", id:"jpg"},
 	 *          {src:"test.mp3", id:"mp3"}
 	 *      ]);
-	 *      queue.remove("png"); // Single item by ID
-	 *      queue.remove("png", "test.jpg"); // Items as arguments. Mixed id and src.
-	 *      queue.remove(["test.png", "jpg"]); // Items in an Array. Mixed id and src.
+	 *      perload.remove("png"); // Single item by ID
+	 *      perload.remove("png", "test.jpg"); // Items as arguments. Mixed id and src.
+	 *      perload.remove(["test.png", "jpg"]); // Items in an Array. Mixed id and src.
 	 *
 	 * @method remove
-	 * @param {String | Array} idsOrUrls* The id or ids to remove from this queue. You can pass an item, an array of
+	 * @param {String | Array} idsOrUrls* The id or ids to remove from this perload. You can pass an item, an array of
 	 * items, or multiple items as arguments.
 	 * @since 0.3.0
 	 */
@@ -5043,7 +5043,7 @@ this.createjs = this.createjs || {};
 					}
 				}
 
-				//Remove from the backup queue
+				//Remove from the backup perload
 				for (i = this._loadQueueBackup.length - 1; i >= 0; i--) {
 					loadItem = this._loadQueueBackup[i].getItem();
 					if (loadItem.id == item || loadItem.src == item) {
@@ -5074,9 +5074,9 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Stops all open loads, destroys any loaded items, and resets the queue, so all items can
+	 * Stops all open loads, destroys any loaded items, and resets the perload, so all items can
 	 * be reloaded again by calling {{#crossLink "AbstractLoader/load"}}{{/crossLink}}. Items are not removed from the
-	 * queue. To remove items use the {{#crossLink "LoadQueue/remove"}}{{/crossLink}} or
+	 * perload. To remove items use the {{#crossLink "LoadQueue/remove"}}{{/crossLink}} or
 	 * {{#crossLink "LoadQueue/removeAll"}}{{/crossLink}} method.
 	 * @method reset
 	 * @since 0.3.0
@@ -5087,7 +5087,7 @@ this.createjs = this.createjs || {};
 			this._disposeItem(this._loadItemsById[n]);
 		}
 
-		//Reset the queue to its start state
+		//Reset the perload to its start state
 		var a = [];
 		for (var i = 0, l = this._loadQueueBackup.length; i < l; i++) {
 			a.push(this._loadQueueBackup[i].getItem());
@@ -5146,8 +5146,8 @@ this.createjs = this.createjs || {};
 	 *
 	 * <h4>Example</h4>
 	 *
-	 *      var queue = new createjs.LoadQueue();
-	 *      queue.setMaxConnections(10); // Allow 10 concurrent loads
+	 *      var perload = new createjs.LoadQueue();
+	 *      perload.setMaxConnections(10); // Allow 10 concurrent loads
 	 *
 	 * @method setMaxConnections
 	 * @param {Number} value The number of concurrent loads to allow. By default, only a single connection per LoadQueue
@@ -5164,8 +5164,8 @@ this.createjs = this.createjs || {};
 	 * Load a single file. To add multiple files at once, use the {{#crossLink "LoadQueue/loadManifest"}}{{/crossLink}}
 	 * method.
 	 *
-	 * Files are always appended to the current queue, so this method can be used multiple times to add files.
-	 * To clear the queue first, use the {{#crossLink "AbstractLoader/close"}}{{/crossLink}} method.
+	 * Files are always appended to the current perload, so this method can be used multiple times to add files.
+	 * To clear the perload first, use the {{#crossLink "AbstractLoader/close"}}{{/crossLink}} method.
 	 * @method loadFile
 	 * @param {LoadItem|Object|String} file The file object or path to load. A file can be either
 	 * <ul>
@@ -5175,8 +5175,8 @@ this.createjs = this.createjs || {};
 	 *     in the background.</li>
 	 * </ul>
 	 * @param {Boolean} [loadNow=true] Kick off an immediate load (true) or wait for a load call (false). The default
-	 * value is true. If the queue is paused using {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}}, and the value is
-	 * `true`, the queue will resume automatically.
+	 * value is true. If the perload is paused using {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}}, and the value is
+	 * `true`, the perload will resume automatically.
 	 * @param {String} [basePath] A base path that will be prepended to each file. The basePath argument overrides the
 	 * path specified in the constructor. Note that if you load a manifest using a file of type {{#crossLink "Types/MANIFEST:property"}}{{/crossLink}},
 	 * its files will <strong>NOT</strong> use the basePath parameter. <strong>The basePath parameter is deprecated.</strong>
@@ -5205,8 +5205,8 @@ this.createjs = this.createjs || {};
 	 * in the right order as long as {{#crossLink "LoadQueue/maintainScriptOrder"}}{{/crossLink}} is true (which is
 	 * default).
 	 *
-	 * Files are always appended to the current queue, so this method can be used multiple times to add files.
-	 * To clear the queue first, use the {{#crossLink "AbstractLoader/close"}}{{/crossLink}} method.
+	 * Files are always appended to the current perload, so this method can be used multiple times to add files.
+	 * To clear the perload first, use the {{#crossLink "AbstractLoader/close"}}{{/crossLink}} method.
 	 * @method loadManifest
 	 * @param {Array|String|Object} manifest An list of files to load. The loadManifest call supports four types of
 	 * manifests:
@@ -5231,8 +5231,8 @@ this.createjs = this.createjs || {};
 	 * </ul>
 	 *
 	 * @param {Boolean} [loadNow=true] Kick off an immediate load (true) or wait for a load call (false). The default
-	 * value is true. If the queue is paused using {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}} and this value is
-	 * `true`, the queue will resume automatically.
+	 * value is true. If the perload is paused using {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}} and this value is
+	 * `true`, the perload will resume automatically.
 	 * @param {String} [basePath] A base path that will be prepended to each file. The basePath argument overrides the
 	 * path specified in the constructor. Note that if you load a manifest using a file of type {{#crossLink "LoadQueue/MANIFEST:property"}}{{/crossLink}},
 	 * its files will <strong>NOT</strong> use the basePath parameter. <strong>The basePath parameter is deprecated.</strong>
@@ -5359,7 +5359,7 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Generate an list of items loaded by this queue.
+	 * Generate an list of items loaded by this perload.
 	 * @method getItems
 	 * @param {Boolean} loaded Determines if only items that have been loaded should be returned. If false, in-progress
 	 * and failed load items will also be included.
@@ -5385,14 +5385,14 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Pause or resume the current load. Active loads will not be cancelled, but the next items in the queue will not
+	 * Pause or resume the current load. Active loads will not be cancelled, but the next items in the perload will not
 	 * be processed when active loads complete. LoadQueues are not paused by default.
 	 *
-	 * Note that if new items are added to the queue using {{#crossLink "LoadQueue/loadFile"}}{{/crossLink}} or
-	 * {{#crossLink "LoadQueue/loadManifest"}}{{/crossLink}}, a paused queue will be resumed, unless the `loadNow`
+	 * Note that if new items are added to the perload using {{#crossLink "LoadQueue/loadFile"}}{{/crossLink}} or
+	 * {{#crossLink "LoadQueue/loadManifest"}}{{/crossLink}}, a paused perload will be resumed, unless the `loadNow`
 	 * argument is `false`.
 	 * @method setPaused
-	 * @param {Boolean} value Whether the queue should be paused or not.
+	 * @param {Boolean} value Whether the perload should be paused or not.
 	 */
 	p.setPaused = function (value) {
 		this._paused = value;
@@ -5402,10 +5402,10 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Close the active queue. Closing a queue completely empties the queue, and prevents any remaining items from
+	 * Close the active perload. Closing a perload completely empties the perload, and prevents any remaining items from
 	 * starting to download. Note that currently any active loads will remain open, and events may be processed.
 	 *
-	 * To stop and restart a queue, use the {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}} method instead.
+	 * To stop and restart a perload, use the {{#crossLink "LoadQueue/setPaused"}}{{/crossLink}} method instead.
 	 * @method close
 	 */
 	p.close = function () {
@@ -5421,12 +5421,12 @@ this.createjs = this.createjs || {};
 
 // protected methods
 	/**
-	 * Add an item to the queue. Items are formatted into a usable object containing all the properties necessary to
-	 * load the content. The load queue is populated with the loader instance that handles preloading, and not the load
+	 * Add an item to the perload. Items are formatted into a usable object containing all the properties necessary to
+	 * load the content. The load perload is populated with the loader instance that handles preloading, and not the load
 	 * item that was passed in by the user. To look up the load item by id or src, use the {{#crossLink "LoadQueue.getItem"}}{{/crossLink}}
 	 * method.
 	 * @method _addItem
-	 * @param {String|Object} value The item to add to the queue.
+	 * @param {String|Object} value The item to add to the perload.
 	 * @param {String} [path] An optional path prepended to the `src`. The path will only be prepended if the src is
 	 * relative, and does not start with a protocol such as `http://`, or a path like `../`. If the LoadQueue was
 	 * provided a {{#crossLink "_basePath"}}{{/crossLink}}, then it will optionally be prepended after.
@@ -5602,8 +5602,8 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * Load the next item in the queue. If the queue is empty (all items have been loaded), then the complete event
-	 * is processed. The queue will "fill up" any empty slots, up to the max connection specified using
+	 * Load the next item in the perload. If the perload is empty (all items have been loaded), then the complete event
+	 * is processed. The perload will "fill up" any empty slots, up to the max connection specified using
 	 * {{#crossLink "LoadQueue.setMaxConnections"}}{{/crossLink}} method. The only exception is scripts that are loaded
 	 * using tags, which have to be loaded one at a time to maintain load order.
 	 * @method _loadNext
@@ -5620,12 +5620,12 @@ this.createjs = this.createjs || {};
 			this._loadStartWasDispatched = true;
 		}
 
-		// The queue has completed.
+		// The perload has completed.
 		if (this._numItems == this._numItemsLoaded) {
 			this.loaded = true;
 			this._sendComplete();
 
-			// Load the next queue, if it has been defined.
+			// Load the next perload, if it has been defined.
 			if (this.next && this.next.load) {
 				this.next.load();
 			}
@@ -5670,7 +5670,7 @@ this.createjs = this.createjs || {};
 
 	/**
 	 * The callback that is fired when a loader loads a file. This enables loaders like {{#crossLink "ManifestLoader"}}{{/crossLink}}
-	 * to maintain internal queues, but for this queue to dispatch the {{#crossLink "fileload:event"}}{{/crossLink}}
+	 * to maintain internal queues, but for this perload to dispatch the {{#crossLink "fileload:event"}}{{/crossLink}}
 	 * events.
 	 * @param {Event} event The {{#crossLink "AbstractLoader/fileload:event"}}{{/crossLink}} event from the loader.
 	 * @private
@@ -5693,7 +5693,7 @@ this.createjs = this.createjs || {};
 	};
 
 	/**
-	 * The callback that is fired when a loader encounters an error. The queue will continue loading unless {{#crossLink "LoadQueue/stopOnError:property"}}{{/crossLink}}
+	 * The callback that is fired when a loader encounters an error. The perload will continue loading unless {{#crossLink "LoadQueue/stopOnError:property"}}{{/crossLink}}
 	 * is set to `true`.
 	 * @method _handleError
 	 * @param {ErrorEvent} event The error event, containing relevant error information.
@@ -5765,7 +5765,7 @@ this.createjs = this.createjs || {};
 	 */
 	p._saveLoadedItems = function (loader) {
 		// TODO: Not sure how to handle this. Would be nice to expose the items.
-		// Loaders may load sub-items. This adds them to this queue
+		// Loaders may load sub-items. This adds them to this perload
 		var list = loader.getLoadedItems();
 		if (list === null) {
 			return;
@@ -5957,7 +5957,7 @@ this.createjs = this.createjs || {};
 	 *
 	 * For example, if 5/10 items have loaded, and item 6 is 20% loaded, the total progress would be:
 	 * <ul>
-	 *      <li>5/10 of the items in the queue (50%)</li>
+	 *      <li>5/10 of the items in the perload (50%)</li>
 	 *      <li>plus 20% of item 6's slot (2%)</li>
 	 *      <li>equals 52%</li>
 	 * </ul>
@@ -7118,12 +7118,12 @@ this.createjs = this.createjs || {};
 	 * <h4>Example</h4>
 	 *
 	 * 		var loadItem = {id:"json", type:"jsonp", src:"http://server.com/text.json", callback:"callbackName"}
-	 * 		var queue = new createjs.LoadQueue();
-	 * 		queue.on("complete", handleComplete);
-	 * 		queue.loadItem(loadItem);
+	 * 		var perload = new createjs.LoadQueue();
+	 * 		perload.on("complete", handleComplete);
+	 * 		perload.loadItem(loadItem);
 	 *
 	 * 		function handleComplete(event) }
-	 * 			var json = queue.getResult("json");
+	 * 			var json = perload.getResult("json");
 	 * 			console.log(json.obj.bool); // true
 	 * 		}
 	 *
@@ -7611,7 +7611,7 @@ this.createjs = this.createjs || {};
 
 		// protected properties
 		/**
-		 * An internal queue which loads the SpriteSheet's images.
+		 * An internal perload which loads the SpriteSheet's images.
 		 * @method _manifestQueue
 		 * @type {LoadQueue}
 		 * @private

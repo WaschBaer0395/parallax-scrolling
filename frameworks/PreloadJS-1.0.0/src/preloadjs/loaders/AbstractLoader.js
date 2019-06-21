@@ -79,10 +79,10 @@ this.createjs = this.createjs || {};
 		 *
 		 * <h4>Example</h4>
 		 *
-		 *     var queue = new createjs.LoadQueue();
-		 *     queue.loadFile("largeImage.png");
-		 *     queue.on("progress", function() {
-		 *         console.log("Progress:", queue.progress, event.progress);
+		 *     var perload = new createjs.LoadQueue();
+		 *     perload.loadFile("largeImage.png");
+		 *     perload.on("progress", function() {
+		 *         console.log("Progress:", perload.progress, event.progress);
 		 *     });
 		 *
 		 * @property progress
@@ -235,7 +235,7 @@ this.createjs = this.createjs || {};
 	 */
 
 	/**
-	 * The {{#crossLink "Event"}}{{/crossLink}} that is fired when the entire queue has been loaded.
+	 * The {{#crossLink "Event"}}{{/crossLink}} that is fired when the entire perload has been loaded.
 	 * @event complete
 	 * @param {Object} target The object that dispatched the event.
 	 * @param {String} type The event type.
@@ -338,10 +338,10 @@ this.createjs = this.createjs || {};
 	 *
 	 * <h4>Example</h4>
 	 *
-	 *      var queue = new createjs.LoadQueue();
-	 *      queue.on("complete", handleComplete);
-	 *      queue.loadManifest(fileArray, false); // Note the 2nd argument that tells the queue not to start loading yet
-	 *      queue.load();
+	 *      var perload = new createjs.LoadQueue();
+	 *      perload.on("complete", handleComplete);
+	 *      perload.loadManifest(fileArray, false); // Note the 2nd argument that tells the perload not to start loading yet
+	 *      perload.load();
 	 *
 	 * @method load
 	 */
@@ -502,7 +502,7 @@ this.createjs = this.createjs || {};
 
 	/**
 	 * Determine if the load has been canceled. This is important to ensure that method calls or asynchronous events
-	 * do not cause issues after the queue has been cleaned up.
+	 * do not cause issues after the perload has been cleaned up.
 	 * @method _isCanceled
 	 * @return {Boolean} If the loader has been canceled.
 	 * @protected

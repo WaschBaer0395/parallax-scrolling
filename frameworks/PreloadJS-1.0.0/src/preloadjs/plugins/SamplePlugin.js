@@ -34,9 +34,9 @@
 	 * To register a plugin with PreloadJS, simply install it into a LoadQueue before files begin to load using the
 	 * {{#crossLink "LoadQueue/installPlugin"}}{{/crossLink}} method:
 	 *
-	 *      var queue = new createjs.LoadQueue();
-	 *      queue.installPlugin(createjs.SamplePlugin);
-	 *      queue.loadFile("test.jpg");
+	 *      var perload = new createjs.LoadQueue();
+	 *      perload.installPlugin(createjs.SamplePlugin);
+	 *      perload.loadFile("test.jpg");
 	 *
 	 * The {{#crossLink "SamplePlugin/getPreloadHandlers"}}{{/crossLink}} method can also return a `callback`
 	 * property, which is a function that will be invoked before each file is loaded. Check out the {{#crossLink "SamplePlugin/preloadHandler"}}{{/crossLink}}
@@ -111,13 +111,13 @@
 	 * <h4>Example</h4>
 	 *
 	 *      // Cancel a load
-	 *      SamplePlugin.preloadHandler = function(loadItem, queue) {
+	 *      SamplePlugin.preloadHandler = function(loadItem, perload) {
      *          if (loadItem.id.indexOf("thumb") { return false; } // Don't load items like "image-thumb.png"
      *          return true;
      *      }
 	 *
 	 *      // Specify a completeHandler
-	 *      SamplePlugin.preloadHandler = function(loadItem, queue) {
+	 *      SamplePlugin.preloadHandler = function(loadItem, perload) {
 	 *          item.completeHandler = SamplePlugin.fileLoadHandler;
 	 *      }
 	 *
