@@ -829,7 +829,6 @@ FOR EVERY SCENE USEABLE
     height: auto;
     right: 0;
     transform: translate(-52%,-50%)
-
 }
 
 #scene06_bubble1small {
@@ -948,69 +947,109 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 8 ---*/
+.scene08Parallax{
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
 #background2 {
     visibility: hidden;
 }
 
-.scene08 .textline {
+.scene08L .textline {
     font-size: 200%;
     background-color: hsla(0, 0%, 0%, 0.58);
     padding: 20px;
 }
 
 #scene08_textblock1 {
-    left: 9%;
-    right: auto;
+    left: 4.5%;
+    width: 70vw;
+    height: auto;
+}
+
+#scene08_textline1{
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textline2 {
     top: 71.5%;
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textline3 {
-    top: 62.5%;
+    top: 38vw;
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textblock2 {
-    left: -12%;
+    width: 70vw;
+    height: auto;
 }
 
 #scene08_textblock3 {
-    left: -12%;
-    top: 60%;
+    top: 55%;
+    width: 70vw;
+    height: auto;
 }
 
 #scene08_textblock4 {
-    left: -12%;
+    width: 70vw;
+    height: auto;
+}
+
+#scene08_textline4 {
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textblock5 {
-    left: 9%;
-    right: auto;
+    width: 70vw;
+    height: auto;
+    left: 4.5%;
 }
 
 #scene08_textline5 {
-    top: -80%;
-    font-size: 3.5vh;
+    top: 24vw;
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textline6 {
-    top: 16%;
+    top: 20vw;
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_textline7 {
-    top: 6%;
+    top: 16vw;
+    right: 100.5vw;
+    height: auto;
+    width: 97vw;
 }
 
 #scene08_regBubble1 {
     width: 20%;
     height: 40%;
     top: 10%;
-    left: 100%;
 }
 
 .scene08_regtext1 {
-    top: 30%;
+    top: 45%;
+    width: 40%;
+    height: auto;
+    right: 12%;
+    transform: translate(-52%,-50%)
 }
 
 .scene08_regtext1 p {
@@ -1021,33 +1060,49 @@ FOR EVERY SCENE USEABLE
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 53%;
+    left: 45vw;
 }
 
 #scene08_adamText1 {
-    top: 25%;
+    top: 47%;
+    width: 25%;
+    height: auto;
+    right: 18.5%;
+    transform: translate(-52%,-50%)
 }
 
 #scene08_bubbleAdam2 {
     width: 20%;
     height: 40%;
-    top: 20%;
-    left: 70%;
+    top: 10%;
+    left: 70vw;
 }
 
 #scene08_adamText2 {
-    top: 28%;
+    top: 47%;
+    width: 25%;
+    height: auto;
+    right: 18.5%;
+    transform: translate(-52%,-50%)
 }
 
 #scene08_bubbleAdam3 {
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 53%;
+    left: 45vw;
 }
 
 #scene08_adamText3 {
-    top: 25%;
+    top: 47%;
+    width: 25%;
+    height: auto;
+    right: 18.5%;
+    transform: translate(-52%,-50%)
+}
+
+.scene08L .person {
+    left: 0;
 }
 
 /*--- SCENE 9 ---*/

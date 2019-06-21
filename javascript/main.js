@@ -972,21 +972,21 @@ $(document).ready(function () {
         //BLUR
         scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
-        scene08left.to('#scene08_textline1', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene08left.to('#scene08_textline1', 10, {autoAlpha: 1, y: 300}, "+=2");
         scene08left.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
         scene08left.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
         scene08left.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
         scene08left.to('#scene08_textline2', 10, {autoAlpha: 1}, "-=10");
         scene08left.to('#scene08_textline2', 10, {autoAlpha: 1, y: -74}, "-=10");
         scene08left.to('#scene08_textline3', 10, {autoAlpha: 1}, "-=5");
-        scene08left.to('#scene08_textline2', 10, {autoAlpha: 0, y: -573}, "+=20");
-        scene08left.to('#scene08_textline3', 10, {autoAlpha: 0, y: -500}, "-=10");
-        scene08left.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 300}, "+=2");
+        scene08left.to('#scene08_textline2', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textline3', 10, {autoAlpha: 0}, "-=10");
+        scene08left.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 270}, "+=2");
         scene08left.to('#scene08_textblock2', 5, {autoAlpha: 1, y: -150}, "+=2");
-        scene08left.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 300}, "-=5");
+        scene08left.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 270}, "-=5");
         scene08left.to('#scene08_textblock2', 5, {autoAlpha: 0, x: 600}, "+=20");
         scene08left.to('#scene08_textblock3', 5, {autoAlpha: 0, x: 600}, "-=5");
-        scene08left.to('#scene08_textblock4', 10, {autoAlpha: 1, x: 300});
+        scene08left.to('#scene08_textblock4', 10, {autoAlpha: 1, x: 260});
         scene08left.to('#scene08_textblock4', 5, {autoAlpha: 0, x: 600}, "+=20");
         scene08left.to('#scene08_textline4', 10, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_textline4', 5, {autoAlpha: 0}, "+=20");
@@ -994,9 +994,9 @@ $(document).ready(function () {
         scene08left.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene08left.to('#scene08_textblock5', 10, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_textblock5', 5, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 1, x: -300}, "+=2");
-        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: 300}, "+=20");
-        scene08left.to('#scene08_textline5', 10, {autoAlpha: 1, y: 260}, "+=2");
+        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
+        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: -200}, "+=20");
+        scene08left.to('#scene08_textline5', 10, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_textline5', 5, {autoAlpha: 0}, "+=20");
         scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
