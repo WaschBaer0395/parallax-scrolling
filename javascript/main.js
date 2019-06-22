@@ -1264,27 +1264,28 @@ $(document).ready(function () {
 
         scene10Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
 
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0}, "+=20");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, x: 270}, "+=2");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0, x: 500}, "+=20");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0}, "-=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -300}, "+=10");
+        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 1, y: -200}, "+=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -600}, "-=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0, y: -1000}, "+=20");
+        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0, y: -1000}, "-=10");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0}, "-=10");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1, x: 270}, "+=2");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1, x: -880}, "+=2");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0, y: -1000}, "+=20");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0, y: -1000}, "-=10");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 0}, "+=20");
         // LIGHT GOES OFF
@@ -1299,8 +1300,8 @@ $(document).ready(function () {
         scene11LinksAction.add("Parallax2", "+=1");
         scene11LinksAction.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
 
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1}, "+=2");
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0}, "+=20");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: 100}, "+=2");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: -100}, "+=20");
 
         scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
             "Parallax2");
@@ -1320,7 +1321,7 @@ $(document).ready(function () {
         scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
         scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1}, "+=2");
+        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1, y: -300}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 0}, "-=10");
