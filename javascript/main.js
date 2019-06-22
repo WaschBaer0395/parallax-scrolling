@@ -1355,11 +1355,15 @@ $(document).ready(function () {
         scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 1});
         scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0});
 
+        scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'},  "+=2");
+        scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+
         scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 1});
         scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 1});
         scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 0});
         scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 0});
-
 
         // START ANIMATION  -  ZOOM-IN  -
         scene12RechtsAction.add("Parallax_concert", "+=1");
