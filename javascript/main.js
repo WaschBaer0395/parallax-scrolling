@@ -1326,32 +1326,39 @@ $(document).ready(function () {
         scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 0}, "-=10");
 
         // PREPARING FOR ZOOM-OUT SCENE12 //
+        /**
         scene11LinksAction.add("Parallax_concert1", "+=1");
         scene11LinksAction.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
         scene11LinksAction.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
         scene11LinksAction.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
         scene11LinksAction.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
         scene11LinksAction.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
-
+        **/
 
         //START SCENE 12 RIGHT
         // START ANIMATION ====================================
         let scene12RechtsAction = new TimelineLite();
-        // ANIMATION FOR SCENEBEGINING
-        scene12RechtsAction.add("Parallax_concert2", "+=1");
-        scene12RechtsAction.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
-        scene12RechtsAction.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
-        scene12RechtsAction.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
-        scene12RechtsAction.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
-        scene12RechtsAction.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
-        //////////////////////////////
 
         // Ab hier Animationen einfügen
         scene12RechtsAction.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
-        scene12RechtsAction.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
-
+        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 0}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 0}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 0});
         // BLUR END
-        scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'},
+            "+=2");
+        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0});
+
+        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 0});
 
 
         // START ANIMATION  -  ZOOM-IN  -
