@@ -1504,7 +1504,7 @@ $(document).ready(function () {
 
     scene14Action.to('#border', 10, {scaleX: 0, autoAlpha: 0});
 
-    scene11Action.add("scene14_animation04", "+=1");
+    scene14Action.add("scene14_animation04", "+=1");
     scene14Action.to('#scene14_name01', 10, {y: "-100"}, "scene14_animation04");
     scene14Action.to('#scene14_name02', 10, {y: "0"}, "scene14_animation04");
     scene14Action.to('#scene14_name03', 10, {y: "-100"}, "scene14_animation04");
@@ -1512,7 +1512,7 @@ $(document).ready(function () {
     scene14Action.to('#scene14_name05', 10, {y: "-100"}, "scene14_animation04");
     scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1});
 
-    scene11Action.add("scene14_animation05", "-=20");
+    scene14Action.add("scene14_animation05", "-=20");
     scene14Action.to('#scene14_name01', 5, {autoAlpha: 0}, "scene14_animation05");
     scene14Action.to('#scene14_name02', 5, {autoAlpha: 0}, "scene14_animation05");
     scene14Action.to('#scene14_name03', 5, {autoAlpha: 0}, "scene14_animation05");
