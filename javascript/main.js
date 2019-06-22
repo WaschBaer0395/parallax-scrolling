@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     let badCounter = 0;
     let goodCounter = 0;
-    
+
 
     function disableScroll(choice) {
         if (choice == '1' && chosen1 == true) {
@@ -41,24 +41,24 @@ $(document).ready(function () {
         // letter animation
         const tween = new TimelineLite(); // timeline for the typing and cursor animation
         tween.add( // adds the animation to our timeline
-                   TweenMax.fromTo(".anim-typewriter", 1.75,
-                                   {width: "0",},
-                                   {width: "2.5em", ease: SteppedEase.config(11)}, 0));
+            TweenMax.fromTo(".anim-typewriter", 1.75,
+                {width: "0",},
+                {width: "2.5em", ease: SteppedEase.config(11)}, 0));
         // text cursor animation
         tween.add( // adds the animation to our timeline
-                   TweenMax.fromTo(".anim-typewriter", 0.5,
-                                   {"border-right-color": "rgba(255,255,255,0.75)"},
-                                   {
-                                       "border-right-color": "rgba(255,255,255,0)",
-                                       repeat: -1,
-                                       ease: SteppedEase.config(11)
-                                   }, 0));
+            TweenMax.fromTo(".anim-typewriter", 0.5,
+                {"border-right-color": "rgba(255,255,255,0.75)"},
+                {
+                    "border-right-color": "rgba(255,255,255,0)",
+                    repeat: -1,
+                    ease: SteppedEase.config(11)
+                }, 0));
 
         let tweenScene = new ScrollMagic.Scene({
-                                                   triggerElement: '.typewriter', // trigger for the start of the animation
-                                                   triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
-                                                   offset: 600 // start y !  for use add this to animating div data-offset=" "
-                                               });
+            triggerElement: '.typewriter', // trigger for the start of the animation
+            triggerHook: 0.5, // start y !  for use add this to animating div data-hook=" "
+            offset: 600 // start y !  for use add this to animating div data-offset=" "
+        });
         tweenScene.setTween(tween);
         tweenScene.addTo(controller)
         //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
@@ -70,12 +70,12 @@ $(document).ready(function () {
     let coverAction = new TimelineLite();
 
     const cover = new ScrollMagic.Scene({
-                                            triggerElement: ".cover",
-                                            duration: '100%',
-                                            triggerHook: 0, //  top of viewport
-                                            reverse: true,
-                                            pushFollowers: true
-                                        });
+        triggerElement: ".cover",
+        duration: '100%',
+        triggerHook: 0, //  top of viewport
+        reverse: true,
+        pushFollowers: true
+    });
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
@@ -94,11 +94,11 @@ $(document).ready(function () {
     introAction.to('.intro #introscene', 20, {autoAlpha: 0}, "+=4");
 
     const intro = new ScrollMagic.Scene({
-                                            triggerElement: ".intro",
-                                            duration: 5000,
-                                            triggerHook: 0, //  top of viewport
-                                            reverse: true
-                                        });
+        triggerElement: ".intro",
+        duration: 5000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    });
     intro.setTween(introAction);
     intro.setPin(".intro");
     intro.addTo(controller);
@@ -108,11 +108,11 @@ $(document).ready(function () {
     //let timeline = new TimelineLite();
     // NO ANIMATION HERE SINCE ITS UP TOP INSIDE THE .each LOOP
     const typewriter = new ScrollMagic.Scene({
-                                                 triggerElement: ".typewriter",
-                                                 duration: 2500,
-                                                 triggerHook: 0, //  top of viewport
-                                                 reverse: true
-                                             });
+        triggerElement: ".typewriter",
+        duration: 2500,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    });
     //typewriter.setTween(timeline);
     typewriter.setPin(".typewriter");
     typewriter.addTo(controller);
@@ -134,11 +134,11 @@ $(document).ready(function () {
     prologAction.to('.prolog #prolog4', 10, {autoAlpha: 0}, "+=4"); // fade from top
 
     const prolog = new ScrollMagic.Scene({
-                                             triggerElement: ".prolog",
-                                             duration: 15000,
-                                             triggerHook: 0, //  top of viewport
-                                             reverse: true
-                                         });
+        triggerElement: ".prolog",
+        duration: 15000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    });
     prolog.setTween(prologAction);
     prolog.setPin(".prolog");
     prolog.addTo(controller);
@@ -180,11 +180,11 @@ $(document).ready(function () {
     scene01Action.to('#scene01_bubble_quinn', 40, {y: -80}, "Parallax"); // starting at point Parallax
 
     const scene01 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene01",
-                                              duration: 8000,
-                                              triggerHook: 0, //  top of viewport
-                                              reverse: true
-                                          });
+        triggerElement: ".scene01",
+        duration: 8000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    });
     scene01.setTween(scene01Action);
     scene01.setPin(".scene01");
     scene01.addTo(controller);
@@ -197,11 +197,11 @@ $(document).ready(function () {
         const quinn3 = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let quinn3Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene01',
-                                                    duration: 600,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
+            triggerElement: '.scene01',
+            duration: 600,
+            triggerHook: .6,
+            offset: 0
+        });
         quinn3Scene.setTween(quinn3);
         quinn3Scene.addTo(controller);
         //quinn3Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -213,10 +213,10 @@ $(document).ready(function () {
         const quinn2 = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let quinn2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02',
-                                                    duration: 500,
-                                                    triggerHook: "onEnter",
-                                                });
+            triggerElement: '.scene02',
+            duration: 500,
+            triggerHook: "onEnter",
+        });
         quinn2Scene.setTween(quinn2);
         quinn2Scene.addTo(controller);
         //quinn2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -259,11 +259,11 @@ $(document).ready(function () {
 
     //// TEXT ENDE ////
     const scene02 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene02",
-                                              duration: 10000,
-                                              triggerHook: 0, //  top of viewport
-                                              reverse: true
-                                          });
+        triggerElement: ".scene02",
+        duration: 10000,
+        triggerHook: 0, //  top of viewport
+        reverse: true
+    });
     scene02.setTween(scene02Action);
     scene02.setPin(".scene02");
     scene02.addTo(controller);
@@ -275,11 +275,11 @@ $(document).ready(function () {
         const scene02In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene02',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
+            triggerElement: '.scene02',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         scene2Scene.setTween(scene02In);
         scene2Scene.addTo(controller);
     });
@@ -290,10 +290,10 @@ $(document).ready(function () {
         const scene02Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene2Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene03',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
+            triggerElement: '.scene03',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
@@ -363,11 +363,11 @@ $(document).ready(function () {
 
 
     const scene03 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene03",
-                                              duration: 15000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
+        triggerElement: ".scene03",
+        duration: 15000,
+        triggerHook: 0,
+        reverse: true
+    });
 
     scene03.setTween(scene03Action);
     scene03.setPin(".scene03");
@@ -378,11 +378,11 @@ $(document).ready(function () {
         const scene03In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene03',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
+            triggerElement: '.scene03',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         scene3Scene.setTween(scene03In);
         scene3Scene.addTo(controller);
         //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -394,10 +394,10 @@ $(document).ready(function () {
         const scene03Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene04',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
+            triggerElement: '.scene04',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         scene3Scene.setTween(scene03Out);
         scene3Scene.addTo(controller);
     });
@@ -445,11 +445,11 @@ $(document).ready(function () {
     t.progress(0.5).play();
 
     const scene03_2 = new ScrollMagic.Scene({
-                                                triggerElement: ".scene03_part2",
-                                                duration: 20000,
-                                                triggerHook: 0,
-                                                reverse: true
-                                            });
+        triggerElement: ".scene03_part2",
+        duration: 20000,
+        triggerHook: 0,
+        reverse: true
+    });
 
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
@@ -461,11 +461,11 @@ $(document).ready(function () {
         const scene03_2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-                                                      triggerElement: '.scene03_part2',
-                                                      duration: 500,
-                                                      triggerHook: .6,
-                                                      offset: 0
-                                                  });
+            triggerElement: '.scene03_part2',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         scene3_2Scene.setTween(scene03_2In);
         scene3_2Scene.addTo(controller);
         //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -477,10 +477,10 @@ $(document).ready(function () {
         const scene03_2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene3_2Scene = new ScrollMagic.Scene({
-                                                      triggerElement: '.scene04',
-                                                      duration: 700,
-                                                      triggerHook: "onEnter",
-                                                  });
+            triggerElement: '.scene04',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         scene3_2Scene.setTween(scene03_2Out);
         scene3_2Scene.addTo(controller);
     });
@@ -496,30 +496,30 @@ $(document).ready(function () {
         const scene04_in = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene04 = new ScrollMagic.Scene({
-                                                triggerElement: '.scene04',
-                                                duration: 500,
-                                                triggerHook: .6,
-                                                offset: 0
-                                            });
+            triggerElement: '.scene04',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         scene04.setTween(scene04_in);
         scene04.addTo(controller);
     });
     //  END FadeInScene04 ================================
     const scene04 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene04",
-                                              duration: 20000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
+        triggerElement: ".scene04",
+        duration: 20000,
+        triggerHook: 0,
+        reverse: true
+    });
     //  FadeOutScene04 ================================
     $(".scene04").each(function () {
         const scene04Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let s04out = new ScrollMagic.Scene({
-                                               triggerElement: '.decision1',
-                                               duration: 700,
-                                               triggerHook: "onEnter",
-                                           });
+            triggerElement: '.decision1',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         s04out.setTween(scene04Out);
         s04out.addTo(controller);
     });
@@ -576,7 +576,7 @@ $(document).ready(function () {
 
 
     //  START scene05 ================================
-    //SCENE 5 =========================
+    //SCENE 5and6 =========================
     $('.decision1').each(function () {
 
         // START SCENE 05 RIGHT SIDE =======================================================================
@@ -795,28 +795,28 @@ $(document).ready(function () {
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR').on('click',
-                         function () {
-                             TweenMax.to("#wrapper1", 2,
-                                         {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
-                             scene06Links.progress(1); //directly ends timeline for left scene
-                             badCounter++;
-                         });
+            function () {
+                TweenMax.to("#wrapper1", 2,
+                    {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                scene06Links.progress(1); //directly ends timeline for left scene
+                badCounter++;
+            });
 
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonL').on('click',
-                         function () {
-                             TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
-                             scene05Rechts.progress(1); //directly ends timeline for right scene
-                             goodCounter++;
-                         });
+            function () {
+                TweenMax.to("#wrapper1", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                scene05Rechts.progress(1); //directly ends timeline for right scene
+                goodCounter++;
+            });
 
 
         const decision1 = new ScrollMagic.Scene({
-                                                    triggerElement: ".decision1",
-                                                    duration: 25000,
-                                                    triggerHook: 0,
-                                                    reverse: true
-                                                });
+            triggerElement: ".decision1",
+            duration: 25000,
+            triggerHook: 0,
+            reverse: true
+        });
 
         decision1.setTween(decision1Main);
         decision1.setPin(".decision1");
@@ -830,11 +830,11 @@ $(document).ready(function () {
         const decision1In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let decision1 = new ScrollMagic.Scene({
-                                                  triggerElement: '.decision1',
-                                                  duration: 500,
-                                                  triggerHook: .6,
-                                                  offset: 0
-                                              });
+            triggerElement: '.decision1',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         decision1.setTween(decision1In);
         decision1.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -846,10 +846,10 @@ $(document).ready(function () {
         const decision1Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let decision1 = new ScrollMagic.Scene({
-                                                  triggerElement: '.scene07',
-                                                  duration: 700,
-                                                  triggerHook: "onEnter",
-                                              });
+            triggerElement: '.scene07',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         decision1.setTween(decision1Out);
         decision1.addTo(controller);
     });
@@ -892,11 +892,11 @@ $(document).ready(function () {
     scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: 260}, "+=20");
 
     const scene07 = new ScrollMagic.Scene({
-                                              triggerElement: ".scene07",
-                                              duration: 15000,
-                                              triggerHook: 0,
-                                              reverse: true
-                                          });
+        triggerElement: ".scene07",
+        duration: 15000,
+        triggerHook: 0,
+        reverse: true
+    });
 
     scene07.setTween(scene07Action);
     scene07.setPin(".scene07");
@@ -907,11 +907,11 @@ $(document).ready(function () {
         const scene07In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene7Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.scene07',
-                                                    duration: 500,
-                                                    triggerHook: .6,
-                                                    offset: 0
-                                                });
+            triggerElement: '.scene07',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         scene7Scene.setTween(scene07In);
         scene7Scene.addTo(controller);
         //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -923,10 +923,10 @@ $(document).ready(function () {
         const scene07Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let scene7Scene = new ScrollMagic.Scene({
-                                                    triggerElement: '.decision2',
-                                                    duration: 700,
-                                                    triggerHook: "onEnter",
-                                                });
+            triggerElement: '.decision2',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         scene7Scene.setTween(scene07Out);
         scene7Scene.addTo(controller);
     });
@@ -1042,7 +1042,7 @@ $(document).ready(function () {
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 0}, "+=20");
-        scene09right.to('.blur', 5,{webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1, x: 150}, "+=4");
         scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1, x: 150}, "+=4");
         scene09right.to('#scene09_textblock1', 10, {autoAlpha: 0, x: -300}, "+=20");
@@ -1102,27 +1102,27 @@ $(document).ready(function () {
 
         // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonR2').on('click',
-                         function () {
-                             TweenMax.to("#wrapper2", 2,
-                                         {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
-                             scene08left.progress(1); //directly ends timeline for left scene
-                             badCounter++;
-                         });
+            function () {
+                TweenMax.to("#wrapper2", 2,
+                    {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                scene08left.progress(1); //directly ends timeline for left scene
+                badCounter++;
+            });
 
         // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
         $('.buttonL2').on('click',
-                         function () {
-                             TweenMax.to("#wrapper2", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
-                             scene09right.progress(1); //directly ends timeline for right scene
-                             goodCounter++;
-                         });
+            function () {
+                TweenMax.to("#wrapper2", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                scene09right.progress(1); //directly ends timeline for right scene
+                goodCounter++;
+            });
 
         const decision2 = new ScrollMagic.Scene({
-                                                    triggerElement: ".decision2",
-                                                    duration: 25000,
-                                                    triggerHook: 0,
-                                                    reverse: true
-                                                });
+            triggerElement: ".decision2",
+            duration: 25000,
+            triggerHook: 0,
+            reverse: true
+        });
 
         decision2.setTween(decision2Main);
         decision2.setPin(".decision2");
@@ -1135,11 +1135,11 @@ $(document).ready(function () {
         const decision2In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let decision2 = new ScrollMagic.Scene({
-                                                  triggerElement: '.decision2',
-                                                  duration: 500,
-                                                  triggerHook: .6,
-                                                  offset: 0
-                                              });
+            triggerElement: '.decision2',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
         decision2.setTween(decision2In);
         decision2.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
@@ -1151,350 +1151,350 @@ $(document).ready(function () {
         const decision2Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
         let decision2 = new ScrollMagic.Scene({
-                                                  triggerElement: '.scene10',
-                                                  duration: 700,
-                                                  triggerHook: "onEnter",
-                                              });
+            triggerElement: '.scene10',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
         decision2.setTween(decision2Out);
         decision2.addTo(controller);
     });
     //  END FadeOutScene08and09 ================================
     //END DECISION2
 
-        //  START scene10 ================================
-        //SCENE 10 =========================
-        let scene10Action = new TimelineLite();
-        //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
-        //scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        //TEXT
-        scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-        scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
-        scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
-        scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
-        scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
-        scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
-        scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
-        scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
-        scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
-        scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
-        scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
-        scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
-        //BLUR ENDE
-        scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-        scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
-        scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
-        scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
-        scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
-        scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
-        scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
-        scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
+    //  START scene10 ================================
+    //SCENE 10 =========================
+    let scene10Action = new TimelineLite();
+    //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
+    //scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
+    //TEXT
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
+    //BLUR ENDE
+    scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+    scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
+    scene10Action.to('#scene10_girl', 10, {autoAlpha: 1, x: -150}, "-=10");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_textline3', 10, {autoAlpha: 0}, "+=20");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene10Action.to('#scene10_girlBubble4', 10, {autoAlpha: 0}, "+=20");
 
     scene10Action.add("scene10_parallax", "+=20");
-    scene10Action.to('#scene10_adam', 15, {x:-10}, "scene10_parallax");
-    scene10Action.to('#scene10_girl', 15, {x:-400}, "scene10_parallax");
-    scene10Action.to('#scene10_layer02', 15, {x:-70}, "scene10_parallax");
-    scene10Action.to('#scene10_layer01', 15, {x:-30}, "scene10_parallax");
-    scene10Action.to('#scene10_layer00', 15, {x:40}, "scene10_parallax");
+    scene10Action.to('#scene10_adam', 15, {x: -10}, "scene10_parallax");
+    scene10Action.to('#scene10_girl', 15, {x: -400}, "scene10_parallax");
+    scene10Action.to('#scene10_layer02', 15, {x: -70}, "scene10_parallax");
+    scene10Action.to('#scene10_layer01', 15, {x: -30}, "scene10_parallax");
+    scene10Action.to('#scene10_layer00', 15, {x: 40}, "scene10_parallax");
     scene10Action.to('.blur', 15, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "scene10_parallax");
 
-        const scene10 = new ScrollMagic.Scene({
-                                                  triggerElement: ".scene10",
-                                                  duration: 30000,
-                                                  triggerHook: 0,
-                                                  reverse: true
-                                              });
+    const scene10 = new ScrollMagic.Scene({
+        triggerElement: ".scene10",
+        duration: 30000,
+        triggerHook: 0,
+        reverse: true
+    });
 
-        scene10.setTween(scene10Action);
-        scene10.setPin(".scene10");
-        scene10.addTo(controller);
+    scene10.setTween(scene10Action);
+    scene10.setPin(".scene10");
+    scene10.addTo(controller);
 
-        //  START FadeInScene10 ================================
-        $(".scene10").each(function () {
-            const scene10In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+    //  START FadeInScene10 ================================
+    $(".scene10").each(function () {
+        const scene10In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-            let scene10Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene10',
-                                                         duration: 500,
-                                                         triggerHook: .6,
-                                                         offset: 0
-                                                     });
-            scene10Scene.setTween(scene10In);
-            scene10Scene.addTo(controller);
-            //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+        let scene10Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene10',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
         });
-        //  END FadeInScene10 ================================
+        scene10Scene.setTween(scene10In);
+        scene10Scene.addTo(controller);
+        //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene10 ================================
 
-        //  START FadeOutScene10 ================================
-        $(".scene10").each(function () {
-            const scene10Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+    //  START FadeOutScene10 ================================
+    $(".scene10").each(function () {
+        const scene10Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
-            let scene10Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene11',
-                                                         duration: 700,
-                                                         triggerHook: "onEnter",
-                                                     });
-            scene10Scene.setTween(scene10Out);
-            scene10Scene.addTo(controller);
+        let scene10Scene = new ScrollMagic.Scene({
+            triggerElement: '.decision3',
+            duration: 700,
+            triggerHook: "onEnter",
         });
-        //  END FadeOutScene10 ================================
+        scene10Scene.setTween(scene10Out);
+        scene10Scene.addTo(controller);
+    });
+    //  END FadeOutScene10 ================================
 
-        //  START FadeInScene11 ================================
-        $('.scene11').each(function () {
-            const scene11In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-            let scene11Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene11',
-                                                         duration: 500,
-                                                         triggerHook: .6,
-                                                         offset: 0
-                                                     });
-            scene11Scene.setTween(scene11In);
-            scene11Scene.addTo(controller);
-            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-        });
-        //  END FadeInScene11 ================================
+    // START Scene11adn12
+    $('.decision3').each(function () {
 
-        //  START FadeOutScene11 ================================
-        $(".scene11").each(function () {
-            const scene11Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+        // START SCENE11 Action
+        let scene11LinksAction = new TimelineLite();
 
-            let scene11Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene12',
-                                                         duration: 700,
-                                                         triggerHook: "onEnter",
-                                                     });
-            scene11Scene.setTween(scene11Out);
-            scene11Scene.addTo(controller);
-        });
-        //  END FadeOutScene11 ================================
+        scene10Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
 
-        // START SCENE11 ======================================
-        // START ANIMATION ====================================
-        let scene11Action = new TimelineLite();
-        //BLUR
-        scene11Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
-
-        scene11Action.to('#scene11_textline4', 10, {autoAlpha: 1, y: 210}, "+=2");
-        scene11Action.to('#scene11_textline4', 5, {autoAlpha: 0}, "+=20");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
+        scene11LinksAction.to('#scene11_textblock2', 5, {autoAlpha: 0}, "+=20");
 
 
         // BLUR END
-        scene11Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
         // LIGHT GOES OFF
-        scene11Action.to('#scene11_bright', 4,
-                         {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
-        scene11Action.to('#scene11_bright', 2, {autoAlpha: 0});
-        scene11Action.add("Parallax", "+=1");
-        scene11Action.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
-        scene11Action.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
-        scene11Action.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
-        scene11Action.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
-        scene11Action.add("Parallax2", "+=1");
-        scene11Action.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
-        scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
-                         "Parallax2");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"},
-                         "+=1");
-        scene11Action.add("Parallax3", "+=1");
-        scene11Action.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
-        scene11Action.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 2,
-                         {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
-        scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11Action.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
+        scene11LinksAction.to('#scene11_bright', 4,
+            {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
+        scene11LinksAction.to('#scene11_bright', 2, {autoAlpha: 0});
+        scene11LinksAction.add("Parallax", "+=1");
+        scene11LinksAction.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
+        scene11LinksAction.add("Parallax2", "+=1");
+        scene11LinksAction.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
+            "Parallax2");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"},
+            "+=1");
+        scene11LinksAction.add("Parallax3", "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2,
+            {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
 
         // PREPARING FOR ZOOM-OUT SCENE12 //
-        scene11Action.add("Parallax_concert1", "+=1");
-        scene11Action.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
-        scene11Action.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
-        scene11Action.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
-        scene11Action.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
-        scene11Action.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
+        scene11LinksAction.add("Parallax_concert1", "+=1");
+        scene11LinksAction.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
+        scene11LinksAction.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
+        scene11LinksAction.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
+        scene11LinksAction.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
+        scene11LinksAction.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
 
 
-        const scene11 = new ScrollMagic.Scene({
-                                                  triggerElement: ".scene11",
-                                                  duration: 30000,
-                                                  triggerHook: 0,
-                                                  reverse: true
-                                              });
-
-        scene11.setTween(scene11Action);
-        scene11.setPin(".scene11");
-        scene11.addTo(controller);
-
-
-        //  START FadeInScene12 ================================
-        $('.scene12').each(function () {
-            const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-            let scene12Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene12',
-                                                         duration: 500,
-                                                         triggerHook: .6,
-                                                         offset: 0
-                                                     });
-            scene12Scene.setTween(scene12In);
-            scene12Scene.addTo(controller);
-            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-        });
-        //  END FadeInScene12 ================================
-
-        //  START FadeOutScene12 ================================
-        $(".scene12").each(function () {
-            const scene12Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
-
-            let scene11Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene13',
-                                                         duration: 700,
-                                                         triggerHook: "onEnter",
-                                                     });
-            scene11Scene.setTween(scene12Out);
-            scene11Scene.addTo(controller);
-        });
-        //  END FadeOutScene12 ================================
-
-        // START SCENE11 ======================================
+        //START SCENE 12 RIGHT
         // START ANIMATION ====================================
-        let scene12Action = new TimelineLite();
+        let scene12RechtsAction = new TimelineLite();
         // ANIMATION FOR SCENEBEGINING
-        scene12Action.add("Parallax_concert2", "+=1");
-        scene12Action.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
-        scene12Action.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
-        scene12Action.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
-        scene12Action.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
-        scene12Action.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
+        scene12RechtsAction.add("Parallax_concert2", "+=1");
+        scene12RechtsAction.to('#scene12_layer00', 10, {scale: "1"}, "Parallax_concert2");
+        scene12RechtsAction.to('#scene12_layer01', 10, {scale: "1"}, "Parallax_concert2");
+        scene12RechtsAction.to('#scene12_layer02', 10, {scale: "1"}, "Parallax_concert2");
+        scene12RechtsAction.to('#scene12_layer03', 10, {scale: "1"}, "Parallax_concert2");
+        scene12RechtsAction.to('#scene12_layer04', 10, {scale: "1"}, "Parallax_concert2");
         //////////////////////////////
 
-
         // Ab hier Animationen einfügen
-        scene12Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
-        scene12Action.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
+        scene12RechtsAction.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
+        scene12RechtsAction.to('#scene12_textline1', 5, {autoAlpha: 1}, "+=20");
 
         // BLUR END
-        scene12Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
 
         // START ANIMATION  -  ZOOM-IN  -
-        scene12Action.add("Parallax_concert", "+=1");
-        scene12Action.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
-        scene12Action.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
-        scene12Action.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
-        scene12Action.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
-        scene12Action.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
+        scene12RechtsAction.add("Parallax_concert", "+=1");
+        scene12RechtsAction.to('#scene12_layer00', 10, {scale: "1.5"}, "Parallax_concert");
+        scene12RechtsAction.to('#scene12_layer01', 10, {scale: "2"}, "Parallax_concert");
+        scene12RechtsAction.to('#scene12_layer02', 10, {scale: "2.5"}, "Parallax_concert");
+        scene12RechtsAction.to('#scene12_layer03', 10, {scale: "3"}, "Parallax_concert");
+        scene12RechtsAction.to('#scene12_layer04', 10, {scale: "3.5"}, "Parallax_concert");
+        //END SCENE 12 RIGHT
 
 
-        const scene12 = new ScrollMagic.Scene({
-                                                  triggerElement: ".scene12",
-                                                  duration: 3000,
-                                                  triggerHook: 0,
-                                                  reverse: true
-                                              });
+        let decision3Middle = new TimelineLite();
+        decision3Middle.add('text3');
+        decision3Middle.add('options3');
+        decision3Middle.add('buttons3');
+        decision3Middle.call(disableScroll, ['3'], null, '+=1');
+        decision3Middle.call(function () {
+            chosen3 = true
+        }, null, '+=3');
+        decision3Middle.to('.choice3', 2, {autoAlpha: 1, y: 100}, 'text3');
+        decision3Middle.to('.movieL', 1, {autoAlpha: 1, x: 100}, 'options3');
+        decision3Middle.to('.buttonL3', 2, {autoAlpha: 1, x: 0}, 'buttons3');
+        decision3Middle.to('.movieR', 1, {autoAlpha: 1, x: -100}, 'options3');
+        decision3Middle.to('.buttonR3', 2, {autoAlpha: 1, x: 0}, 'buttons3');
 
-        scene12.setTween(scene12Action);
-        scene12.setPin(".scene12");
-        scene12.addTo(controller);
 
+        let decision3Main = new TimelineLite();
+        decision3Main.add(decision3Middle);
+        decision3Main.add("main");
+        decision3Main.add(scene11LinksAction, 'main');
+        decision3Main.add(scene12RechtsAction, "main");
+        decision3Main.set('.scene13 .blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
 
-        //  START FadeInScene14 ================================
-        $('.scene14').each(function () {
-            const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+        // RIGHT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonR3').on('click',
+            function () {
+                TweenMax.to("#wrapper3", 2,
+                    {ease: Power2.easeOut, left: "-200vw", oncomplete: enableScroll()});
+                scene11LinksAction.progress(1); //directly ends timeline for left scene
+                badCounter++;
+            });
 
-            let scene12Scene = new ScrollMagic.Scene({
-                                                         triggerElement: '.scene14',
-                                                         duration: 500,
-                                                         triggerHook: .6,
-                                                         offset: 0
-                                                     });
-            scene12Scene.setTween(scene12In);
-            scene12Scene.addTo(controller);
-            //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+        // LEFT SCENE ANIMATIONS AND SCROLL LOCK ========================================
+        $('.buttonL3').on('click',
+            function () {
+                TweenMax.to("#wrapper3", 2, {ease: Power2.easeOut, left: "0", oncomplete: enableScroll()});
+                scene12RechtsAction.progress(1); //directly ends timeline for right scene
+                goodCounter++;
+            });
+
+        const decision3 = new ScrollMagic.Scene({
+            triggerElement: ".decision3",
+            duration: 30000,
+            triggerHook: 0,
+            reverse: true
         });
-        //  END FadeInScene14 ================================
 
-        // START ANIMATION
-        let scene14Action = new TimelineLite();
-
-        scene14Action.to('#scene14_title', 10, {autoAlpha: 1}, "-=20");
-        scene11Action.add("scene14_animation01", "-=20");
-        scene14Action.to('#scene14_title', 10, {autoAlpha: 0, scale: "6"}, "scene14_animation01");
-        scene14Action.to('#scene14_project', 20, {autoAlpha: 1}, "scene14_animation01");
-        scene14Action.to('#hsd_logo', 10, {autoAlpha: 1});
-        scene11Action.add("scene14_animation02", "+=1");
-        scene14Action.to('#hsd_logo', 20, {width: "15%", height: "15%", top: "5%", left: "43%"}, "scene14_animation02");
-        scene14Action.to('#scene14_project', 20, {scale: "6", autoAlpha: 0}, "scene14_animation02");
-        scene14Action.fromTo('#border', 10, {scaleX: 0, autoAlpha: 0}, {scaleX: 1, autoAlpha: .7});
-
-        scene11Action.add("scene14_animation03", "+=1");
-        scene14Action.fromTo('#scene14_name01', 10, {autoAlpha: 0, color: "red", y: "-20"},
-                             {autoAlpha: 1, color: "white", y: "200", x: "-800", fontsize: "4vh"},
-                             "scene14_animation03");
-        scene14Action.fromTo('#scene14_name02', 10, {autoAlpha: 0, color: "red", y: "-20"},
-                             {autoAlpha: 1, color: "white", y: "400", x: "-400", fontsize: "4vh"},
-                             "scene14_animation03");
-        scene14Action.fromTo('#scene14_name03', 10, {autoAlpha: 0, color: "red", y: "-20"},
-                             {autoAlpha: 1, color: "white", y: "200", x: "0", fontsize: "4vh"}, "scene14_animation03");
-        scene14Action.fromTo('#scene14_name04', 10, {autoAlpha: 0, color: "red", y: "-20"},
-                             {autoAlpha: 1, color: "white", y: "400", x: "300", fontsize: "4vh"},
-                             "scene14_animation03");
-        scene14Action.fromTo('#scene14_name05', 10, {autoAlpha: 0, color: "red", y: "-20"},
-                             {autoAlpha: 1, color: "white", y: "200", x: "700", fontsize: "4vh"},
-                             "scene14_animation03");
-
-        scene14Action.to('#border', 10, {scaleX: 0, autoAlpha: 0});
-
-        scene11Action.add("scene14_animation04", "+=1");
-        scene14Action.to('#scene14_name01', 10, {y: "-100"}, "scene14_animation04");
-        scene14Action.to('#scene14_name02', 10, {y: "0"}, "scene14_animation04");
-        scene14Action.to('#scene14_name03', 10, {y: "-100"}, "scene14_animation04");
-        scene14Action.to('#scene14_name04', 10, {y: "0"}, "scene14_animation04");
-        scene14Action.to('#scene14_name05', 10, {y: "-100"}, "scene14_animation04");
-        scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1});
-
-        scene11Action.add("scene14_animation05", "-=20");
-        scene14Action.to('#scene14_name01', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#scene14_name02', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#scene14_name03', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#scene14_name04', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#scene14_name05', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#scene14_name06', 5, {autoAlpha: 0}, "scene14_animation05");
-        scene14Action.to('#hsd_logo', 10, {autoAlpha: 0, scale: "4", y: "500"}, "scene14_animation05");
-
-
-        const scene14 = new ScrollMagic.Scene({
-                                                  triggerElement: ".scene14",
-                                                  duration: 15000,
-                                                  triggerHook: 0,
-                                                  reverse: true
-                                              });
-
-        scene14.setTween(scene14Action);
-        scene14.setPin(".scene14");
-        scene14.addTo(controller);
+        decision3.setTween(decision3Main);
+        decision3.setPin(".decision3");
+        decision3.addTo(controller);
     });
+
+    // START FadeInScene11and12
+    $(".decision3").each(function () {
+        const decision3In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let decision3 = new ScrollMagic.Scene({
+            triggerElement: '.decision3',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        decision3.setTween(decision3In);
+        decision3.addTo(controller);
+    });
+    //  END FadeInScene11and12 ================================
+
+    //  START FadeOutScene11and12 ================================
+    $(".decision3").each(function () {
+        const decision3Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let decision3 = new ScrollMagic.Scene({
+            triggerElement: '.scene13',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        decision3.setTween(decision3Out);
+        decision3.addTo(controller);
+    });
+    //  END FadeOutScene11and12 ================================
+
+
+    //  START FadeInScene14 ================================
+    $('.scene14').each(function () {
+        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene12Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene14',
+            duration: 500,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene12Scene.setTween(scene12In);
+        scene12Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene14 ================================
+
+    // START ANIMATION
+    let scene14Action = new TimelineLite();
+
+    scene14Action.to('#scene14_title', 10, {autoAlpha: 1}, "-=20");
+    scene14Action.add("scene14_animation01", "-=20");
+    scene14Action.to('#scene14_title', 10, {autoAlpha: 0, scale: "6"}, "scene14_animation01");
+    scene14Action.to('#scene14_project', 20, {autoAlpha: 1}, "scene14_animation01");
+    scene14Action.to('#hsd_logo', 10, {autoAlpha: 1});
+    scene14Action.add("scene14_animation02", "+=1");
+    scene14Action.to('#hsd_logo', 20, {width: "15%", height: "15%", top: "5%", left: "43%"}, "scene14_animation02");
+    scene14Action.to('#scene14_project', 20, {scale: "6", autoAlpha: 0}, "scene14_animation02");
+    scene14Action.fromTo('#border', 10, {scaleX: 0, autoAlpha: 0}, {scaleX: 1, autoAlpha: .7});
+
+    scene14Action.add("scene14_animation03", "+=1");
+    scene14Action.fromTo('#scene14_name01', 10, {autoAlpha: 0, color: "red", y: "-20"},
+        {autoAlpha: 1, color: "white", y: "200", x: "-800", fontsize: "4vh"},
+        "scene14_animation03");
+    scene14Action.fromTo('#scene14_name02', 10, {autoAlpha: 0, color: "red", y: "-20"},
+        {autoAlpha: 1, color: "white", y: "400", x: "-400", fontsize: "4vh"},
+        "scene14_animation03");
+    scene14Action.fromTo('#scene14_name03', 10, {autoAlpha: 0, color: "red", y: "-20"},
+        {autoAlpha: 1, color: "white", y: "200", x: "0", fontsize: "4vh"}, "scene14_animation03");
+    scene14Action.fromTo('#scene14_name04', 10, {autoAlpha: 0, color: "red", y: "-20"},
+        {autoAlpha: 1, color: "white", y: "400", x: "300", fontsize: "4vh"},
+        "scene14_animation03");
+    scene14Action.fromTo('#scene14_name05', 10, {autoAlpha: 0, color: "red", y: "-20"},
+        {autoAlpha: 1, color: "white", y: "200", x: "700", fontsize: "4vh"},
+        "scene14_animation03");
+
+    scene14Action.to('#border', 10, {scaleX: 0, autoAlpha: 0});
+
+    scene11Action.add("scene14_animation04", "+=1");
+    scene14Action.to('#scene14_name01', 10, {y: "-100"}, "scene14_animation04");
+    scene14Action.to('#scene14_name02', 10, {y: "0"}, "scene14_animation04");
+    scene14Action.to('#scene14_name03', 10, {y: "-100"}, "scene14_animation04");
+    scene14Action.to('#scene14_name04', 10, {y: "0"}, "scene14_animation04");
+    scene14Action.to('#scene14_name05', 10, {y: "-100"}, "scene14_animation04");
+    scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1});
+
+    scene11Action.add("scene14_animation05", "-=20");
+    scene14Action.to('#scene14_name01', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#scene14_name02', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#scene14_name03', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#scene14_name04', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#scene14_name05', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#scene14_name06', 5, {autoAlpha: 0}, "scene14_animation05");
+    scene14Action.to('#hsd_logo', 10, {autoAlpha: 0, scale: "4", y: "500"}, "scene14_animation05");
+
+
+    const scene14 = new ScrollMagic.Scene({
+        triggerElement: ".scene14",
+        duration: 15000,
+        triggerHook: 0,
+        reverse: true
+    });
+
+    scene14.setTween(scene14Action);
+    scene14.setPin(".scene14");
+    scene14.addTo(controller);
+});
 
 

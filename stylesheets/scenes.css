@@ -1415,15 +1415,24 @@ FOR EVERY SCENE USEABLE
     top: 25%;
 }
 /*--- SCENE 11 ---*/
-
+.scene11Parallax{
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
 /*--- SCENE 12 ---*/
-
+.scene12Parallax{
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
 
 #descicion{
 }
 
 
-#wrapper1, #wrapper2{
+#wrapper1, #wrapper2, #wrapper3{
     position: absolute;
     width: 300vw;
     top: 0;
@@ -1431,14 +1440,14 @@ FOR EVERY SCENE USEABLE
     display: inline-block;
     left: -100vw;
 }
-#middle, #middle2{
+#middle, #middle2, #middle3{
     position: absolute;
     height: 100vh;
     width: 100%;
     left: 100vw;
     top: 0;
 }
-.choice1, .choice2{
+.choice1, .choice2, .choice3{
     position: absolute;
     top: 1%;
     left: 50vw;
@@ -1507,10 +1516,10 @@ FOR EVERY SCENE USEABLE
     transform: translateY(-50%);
     border-bottom: 1px solid transparent;
 }
-.buttonL,.buttonL2{
+.buttonL,.buttonL2, .buttonL3{
     left: 10vw;
 }
-.buttonR,.buttonR2{
+.buttonR,.buttonR2, .buttonR3{
     left: 90vw;
 }
 
