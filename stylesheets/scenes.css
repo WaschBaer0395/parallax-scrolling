@@ -1420,6 +1420,8 @@ FOR EVERY SCENE USEABLE
     height: 100vh;
     width: 100vw;
 }
+
+
 /*--- SCENE 12 ---*/
 .scene12Parallax{
     right: 0;
@@ -1428,10 +1430,7 @@ FOR EVERY SCENE USEABLE
     top: 0;
 }
 
-#descicion{
-}
-
-
+/*--- DECISION ---*/
 #wrapper1, #wrapper2, #wrapper3{
     position: absolute;
     width: 300vw;
