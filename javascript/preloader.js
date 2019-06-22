@@ -2,15 +2,17 @@ let progress = document.getElementById('progress');
 let percentage = document.getElementById('percentage');
 let progresscontainer = document.getElementById('progresscontainer');
 let scrollindicator = document.getElementById("scrollIndicator");
+let cover_title = document.getElementById("cover_title");
 var queue = new createjs.LoadQueue(false);
 
 
 queue.on("progress", event =>{
+    cover_title.style.opacity = '0';
     scrollindicator.style.opacity ='0';
     document.body.style.overflowY = 'hidden';
     let progress = Math.floor(event.progress*100);
     this.progress.style.width = progress+'%';
-    this.percentage.innerText = progress+'%';
+    this.percentage.innerText = "[ " + progress+'%' + " ]";
     //console.log(progress+'%');
 /*    if(progress == 100){
         console.log('all done\n');
@@ -34,6 +36,7 @@ function enableScroll(){
 queue.on("complete", event =>{
     //console.log('progressbar hidden\n');
     scrollindicator.classList.add('fadeIn');
+    cover_title.classList.add('fadeIn');
     progresscontainer.classList.add('fadeOut');
     $('.fadeOut').on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", enableScroll());
 });

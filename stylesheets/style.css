@@ -13,6 +13,18 @@
     src: url("../Media/fonts/mesmerize/mesmerize-ul.ttf") format("truetype");
 }
 
+@media (max-device-width: 1920px) and (max-device-height: 1080px) and (orientation: portrait) {
+
+    .section {
+        display: none !important;
+    }
+
+    #hidden {
+        display: flex !important;
+    }
+}
+
+
 html {
     height: 100vh;
     width: 100%;
@@ -26,7 +38,7 @@ h2 {
 }
 
 body {
-    margin:0;
+    margin: 0;
     height: 100vh;
     width: 100%;
     background: black;
@@ -42,6 +54,7 @@ img {
 
 .section {
     height: 100vh;
+    display: block;
 }
 
 ::-webkit-scrollbar {
@@ -58,53 +71,79 @@ img {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-#progresscontainer{
-    height: 2.2vh;
+#progresscontainer {
+    height: .1vh;
     position: absolute;
     top: 60vh !important;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.3);
+    fbackground: rgba(0, 0, 0, 0.3);
     width: 60vw;
     z-index: 200;
-    border: solid 1px rgba(0,0,0,0.9);
-    border-radius:8px;
+    fborder: solid 1px rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-#progress{
+#progress {
     z-index: 0;
-    height: 2.19vh;
-    background: rgba(9,120,120,0.5);
-    border-left: solid 1px white;
-    border-right: solid 1px white;
-    border-radius:8px;
+    height: .2vh;
+    background: black;
+    border-radius: 8px;
     opacity: 1;
-    margin:0 auto;
 }
 
-#percentage{
+#percentage {
     position: absolute;
-    color: lightgrey;
-    top: 50%;
+    color: black;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
-    font-size: 25px;
+    transform: translate(-50%, -120%);
+    font-size: 30px;
+    font-weight: 900 !important;
 }
-.fadeIn{
+
+.fadeIn {
     visibility: visible;
     opacity: 1 !important;
-    transition: opacity 1s;
+    transition: opacity 4s;
 }
-.fadeOut{
+
+.fadeOut {
     opacity: 0 !important;
     transition: opacity 3s !important;
 }
 
-#scrollIndicator{
+#scrollIndicator {
     opacity: 0;
+}
+
+#cover_title {
+    opacity: 0;
+}
+
+#hidden {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+#hidden p {
+    position: absolute;
+    font-size: 4vh;
+    hyphens: auto;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+    padding: 20px 20px 20px 0;
+}
+#rotate{
+    width:25%;
+    position: absolute;
+    left:35%;
+    top:45%;
 }
