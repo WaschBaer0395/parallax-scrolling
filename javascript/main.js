@@ -1328,16 +1328,16 @@ $(document).ready(function () {
 
         // PREPARING FOR ZOOM-OUT SCENE12 //
         /**
-        scene11LinksAction.add("Parallax_concert1", "+=1");
-        scene11LinksAction.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
-        scene11LinksAction.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
-        scene11LinksAction.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
-        scene11LinksAction.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
-        scene11LinksAction.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
-        **/
+         scene11LinksAction.add("Parallax_concert1", "+=1");
+         scene11LinksAction.to('#scene12_layer00', 1, {scale: "1.5"}, "Parallax_concert1");
+         scene11LinksAction.to('#scene12_layer01', 1, {scale: "2"}, "Parallax_concert1");
+         scene11LinksAction.to('#scene12_layer02', 1, {scale: "2.5"}, "Parallax_concert1");
+         scene11LinksAction.to('#scene12_layer03', 1, {scale: "3"}, "Parallax_concert1");
+         scene11LinksAction.to('#scene12_layer04', 1, {scale: "3.5"}, "Parallax_concert1");
+         **/
 
-        //START SCENE 12 RIGHT
-        // START ANIMATION ====================================
+            //START SCENE 12 RIGHT
+            // START ANIMATION ====================================
         let scene12RechtsAction = new TimelineLite();
 
         // Ab hier Animationen einfügen
@@ -1357,7 +1357,7 @@ $(document).ready(function () {
         scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0});
 
         scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'},  "+=2");
+        scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 0});
         scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
@@ -1476,8 +1476,8 @@ $(document).ready(function () {
     // START ANIMATION
     let scene14Action = new TimelineLite();
 
-    scene14Action.to('#scene14_title', 10, {autoAlpha: 1}, "-=20");
-    scene14Action.add("scene14_animation01", "-=20");
+    scene14Action.to('#scene14_title', 10, {autoAlpha: 1});
+    scene14Action.add("scene14_animation01");
     scene14Action.to('#scene14_title', 10, {autoAlpha: 0, scale: "6"}, "scene14_animation01");
     scene14Action.to('#scene14_project', 20, {autoAlpha: 1}, "scene14_animation01");
     scene14Action.to('#hsd_logo', 10, {autoAlpha: 1});
@@ -1510,9 +1510,9 @@ $(document).ready(function () {
     scene14Action.to('#scene14_name03', 10, {y: "-100"}, "scene14_animation04");
     scene14Action.to('#scene14_name04', 10, {y: "0"}, "scene14_animation04");
     scene14Action.to('#scene14_name05', 10, {y: "-100"}, "scene14_animation04");
-    scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1});
+    scene14Action.fromTo('#scene14_name06', 10, {y: "300", autoAlpha: 0}, {autoAlpha: 1}, "scene14_animation04");
 
-    scene14Action.add("scene14_animation05", "-=20");
+    scene14Action.add("scene14_animation05", "+=20");
     scene14Action.to('#scene14_name01', 5, {autoAlpha: 0}, "scene14_animation05");
     scene14Action.to('#scene14_name02', 5, {autoAlpha: 0}, "scene14_animation05");
     scene14Action.to('#scene14_name03', 5, {autoAlpha: 0}, "scene14_animation05");
