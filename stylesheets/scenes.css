@@ -1568,6 +1568,114 @@ FOR EVERY SCENE USEABLE
     top: 0;
 }
 
+.scene12R .textline {
+    font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+}
+
+#scene12_textline1 {
+    left: 100vw;
+    height: auto;
+    width: 97vw;
+    top: -80vw;
+}
+
+#scene12_textblock1 {
+    top: 30%;
+    width: 45em;
+    height: auto;
+    left: 240vw;
+}
+
+#scene12_textblock2 {
+    top: 30%;
+    width: 45em;
+    height: auto;
+    left: 180vw;
+}
+
+#scene12_textblock3 {
+    top: 30%;
+    width: 45em;
+    height: auto;
+    left: 208vw;
+}
+
+#scene12_textblock4 {
+    top: 0;
+    width: 45em;
+    height: auto;
+    left: 208vw;
+}
+
+#scene12_textblock5 {
+    top: 90%;
+    width: 45em;
+    height: auto;
+    left: 210vw;
+}
+
+#scene12_adamBubble1 {
+    width: 80%;
+    height: 40%;
+    top: 30%;
+    left: 210vw;
+}
+
+.scene12_adamtext1 {
+    width: 8%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41%;
+}
+
+#scene12_audienceBubble1 {
+    width: 50%;
+    height: 25%;
+    top: 40%;
+    left: 210vw;
+}
+
+.scene12_audiencetext1 {
+    width: 8%;
+    top: 35%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41%;
+}
+
+#scene12_audienceBubble2 {
+    width: 50%;
+    height: 25%;
+    top: 45%;
+    left: 280vw;
+}
+
+.scene12_audiencetext2 {
+    width: 8%;
+    top: 35%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41%;
+}
+
+#scene12_audienceBubble3 {
+    width: 50%;
+    height: 25%;
+    top: 35%;
+    left: 250vw;
+}
+
+.scene12_audiencetext3 {
+    width: 8%;
+    top: 35%;
+    height: auto;
+    transform: translate(-55%);
+    left: -41%;
+}
+
+
 /*--- DECISION ---*/
 #wrapper1, #wrapper2, #wrapper3{
     position: absolute;

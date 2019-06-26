@@ -1342,29 +1342,32 @@ $(document).ready(function () {
 
         // Ab hier Animationen einfügen
         scene12RechtsAction.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
-        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 1}, "+=10");
-        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 0}, "+=10");
-        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 1}, "+=10");
-        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 0}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 1, x: -600}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 0, x: -900}, "+=20");
+        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 1, x: 550}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 0, x: 800}, "+=20");
         scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 1});
         scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 0});
         // BLUR END
-        scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'},
-            "+=2");
-        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 0});
-        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 1, y: 300}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0}, "+=20");
 
-        scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 1});
+        scene12RechtsAction.to('#scene12_audienceBubble1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_audienceBubble2', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_audienceBubble3', 10, {autoAlpha: 1}, "+=10");
         scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene12RechtsAction.to('#scene12_adamBubble2', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('#scene12_audienceBubble1', 10, {autoAlpha: 0}, "+=20");
+        scene12RechtsAction.to('#scene12_audienceBubble2', 10, {autoAlpha: 0}, "-=10");
+        scene12RechtsAction.to('#scene12_audienceBubble3', 10, {autoAlpha: 0}, "-=10");
         scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
-        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 0});
-        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 1, y: -500}, "+=10");
+        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 0}, "+=20");
+        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 0}, "-=10");
 
         // START ANIMATION  -  ZOOM-IN  -
         scene12RechtsAction.add("Parallax_concert", "+=1");
