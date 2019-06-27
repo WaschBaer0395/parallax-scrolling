@@ -594,6 +594,11 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 5 ---*/
 
+.hurt{
+    border: solid 5px green;
+    right: 0.1%!important;
+}
+
 .scene05Parallax{
     right: 0;
     height: 100vh;
@@ -945,6 +950,9 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 8 ---*/
+.funken {
+    left: 3.5em!important;
+}
 .scene08Parallax{
     left: 0;
     height: 100vh;
