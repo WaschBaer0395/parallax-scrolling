@@ -1459,19 +1459,54 @@ $(document).ready(function () {
     });
     //  END FadeOutScene11and12 ================================
 
+    //  START FadeInScene13 ================================
+    $('.scene13').each(function () {
+        const scene13In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+
+        let scene13Scene = new ScrollMagic.Scene({
+            triggerElement: '.scene13',
+            duration: 1000,
+            triggerHook: .6,
+            offset: 0
+        });
+        scene13Scene.setTween(scene13In);
+        scene13Scene.addTo(controller);
+        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+    });
+    //  END FadeInScene13 ================================
+
+    //  START FadeOutScene13 ================================
+    $(".scene13").each(function () {
+        const scene13Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
+
+        let scene13 = new ScrollMagic.Scene({
+            triggerElement: '.scene14',
+            duration: 700,
+            triggerHook: "onEnter",
+        });
+        scene13.setTween(scene13Out);
+        scene13.addTo(controller);
+    });
+    //  END FadeOutScene13 ================================
+
+    //START ANIMATION scene13
+    let scene13Action = new TimelineLite();
+    scene13Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
+
+    //END ANIMATION SCENE13
 
     //  START FadeInScene14 ================================
     $('.scene14').each(function () {
-        const scene12In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
+        const scene14In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-        let scene12Scene = new ScrollMagic.Scene({
+        let scene14Scene = new ScrollMagic.Scene({
             triggerElement: '.scene14',
             duration: 500,
             triggerHook: .6,
             offset: 0
         });
-        scene12Scene.setTween(scene12In);
-        scene12Scene.addTo(controller);
+        scene14Scene.setTween(scene14In);
+        scene14Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene14 ================================
