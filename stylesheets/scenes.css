@@ -1681,7 +1681,9 @@ FOR EVERY SCENE USEABLE
     transform: translate(-55%);
     left: -41%;
 }
-
+#scene13_layer02{
+    opacity: 0;
+}
 
 /*--- DECISION ---*/
 #wrapper1, #wrapper2, #wrapper3{
