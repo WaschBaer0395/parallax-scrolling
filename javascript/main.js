@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 
         let decision3 = new ScrollMagic.Scene({
             triggerElement: '.scene13',
-            duration: 700,
+            duration: 1000,
             triggerHook: "onEnter",
         });
         decision3.setTween(decision3Out);
@@ -1463,14 +1463,14 @@ $(document).ready(function () {
     $('.scene13').each(function () {
         const scene13In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-        let scene13Scene = new ScrollMagic.Scene({
+        let scene13 = new ScrollMagic.Scene({
             triggerElement: '.scene13',
             duration: 1000,
             triggerHook: .6,
             offset: 0
         });
-        scene13Scene.setTween(scene13In);
-        scene13Scene.addTo(controller);
+        scene13.setTween(scene13In);
+        scene13.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene13 ================================
