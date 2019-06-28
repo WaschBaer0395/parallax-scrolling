@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 
         let decision3 = new ScrollMagic.Scene({
             triggerElement: '.scene13',
-            duration: 1000,
+            duration: 10000,
             triggerHook: "onEnter",
         });
         decision3.setTween(decision3Out);
@@ -1493,6 +1493,12 @@ $(document).ready(function () {
     let scene13Action = new TimelineLite();
     scene13Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
 
+    const scene13 = new ScrollMagic.Scene({
+        triggerElement: ".scene13",
+        duration: 30000,
+        triggerHook: 0,
+        reverse: true
+    });
     //END ANIMATION SCENE13
 
     //  START FadeInScene14 ================================
@@ -1509,6 +1515,9 @@ $(document).ready(function () {
         scene14Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
+    scene13.setTween(scene13Action);
+    scene13.setPin(".scene13");
+    scene13.addTo(controller);
     //  END FadeInScene14 ================================
 
     // START ANIMATION
