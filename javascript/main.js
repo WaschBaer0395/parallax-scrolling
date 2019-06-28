@@ -1499,6 +1499,9 @@ $(document).ready(function () {
         triggerHook: 0,
         reverse: true
     });
+    scene13.setTween(scene13Action);
+    scene13.setPin(".scene13");
+    scene13.addTo(controller);
     //END ANIMATION SCENE13
 
     //  START FadeInScene14 ================================
@@ -1515,9 +1518,6 @@ $(document).ready(function () {
         scene14Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
-    scene13.setTween(scene13Action);
-    scene13.setPin(".scene13");
-    scene13.addTo(controller);
     //  END FadeInScene14 ================================
 
     // START ANIMATION
