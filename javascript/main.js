@@ -1490,45 +1490,45 @@ $(document).ready(function () {
     //  END FadeOutScene13 ================================
 
     //START ANIMATION scene13
-    let scene13Action = new TimelineLite();
-    scene13Action.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
-    scene13Action.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 400, x: "10%"}, "+=10");
-    scene13Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
-    scene13Action.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
-    scene13Action.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
+    let scene13GoodAction = new TimelineLite();
+    scene13GoodAction.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
+    scene13GoodAction.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
+    scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
+    scene13GoodAction.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
+    scene13GoodAction.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
 
-    scene13Action.to('#scene13_adambubble1', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "-=10");
+    scene13GoodAction.to('#scene13_adambubble1', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble2', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble2', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble3', 10, {autoAlpha: 1}, "+=1");
-    scene13Action.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble3', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble4', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble4', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble5', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble5', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble6', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble6', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble7', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble7', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble8', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble8', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble9', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble9', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble10', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble10', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=4");
 
-    scene13Action.to('#scene13_adambubble11', 10, {autoAlpha: 1}, "+=4");
-    scene13Action.to('#scene13_adamBubble11', 10, {autoAlpha: 0}, "+=10");
+    scene13GoodAction.to('#scene13_adambubble11', 10, {autoAlpha: 1}, "-=4");
+    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 0}, "+=4");
 
 
     const scene13 = new ScrollMagic.Scene({
@@ -1537,7 +1537,7 @@ $(document).ready(function () {
         triggerHook: 0,
         reverse: true
     });
-    scene13.setTween(scene13Action);
+    scene13.setTween(scene13GoodAction);
     scene13.setPin(".scene13");
     scene13.addTo(controller);
     //END ANIMATION SCENE13
