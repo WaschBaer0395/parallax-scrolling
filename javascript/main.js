@@ -1475,18 +1475,7 @@ $(document).ready(function () {
     });
     //  END FadeInScene13 ================================
 
-    //  START FadeOutScene13 ================================
-    $(".scene13").each(function () {
-        const scene13Out = TweenMax.to($(this), 2, {opacity: 0, ease: Power1.easeIn,});
 
-        let scene13 = new ScrollMagic.Scene({
-            triggerElement: '.scene14',
-            duration: 700,
-            triggerHook: "onEnter",
-        });
-        scene13.setTween(scene13Out);
-        scene13.addTo(controller);
-    });
     //  END FadeOutScene13 ================================
 
     //START ANIMATION scene13
@@ -1527,8 +1516,14 @@ $(document).ready(function () {
     scene13GoodAction.to('#scene13_adambubble10', 10, {autoAlpha: 1}, "-=4");
     scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=4");
 
-    scene13GoodAction.to('#scene13_adambubble11', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adambubble11', 10, {autoAlpha: 1});
+
+    // Fade Out for Scene13
+    scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0.3});
+    scene13GoodAction.add("fade_out_scene13", "+=1");
+    scene13GoodAction.to('#scene13_layer02', 10, { autoAlpha:0},"fade_out_scene13");
+    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 0}, "fade_out_scene13");
+    scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0},"fade_out_scene13");
 
 
     const scene13 = new ScrollMagic.Scene({
