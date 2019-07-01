@@ -1703,7 +1703,7 @@ FOR EVERY SCENE USEABLE
 }
 #scene13_adamText2{
     right: 23%;
-    top: 19%;
+    top: 13%;
 }
 
 #scene13_adamBubble3{
@@ -1724,27 +1724,22 @@ FOR EVERY SCENE USEABLE
 }
 #scene13_adamText4{
     right: 23%;
-    top: 20%;
+    top: 13%;
 }
-#scene13_adamBubble5{
+#scene13_adamBubble5, #scene13_adamBubble6, #scene13_adamBubble8{
     width: 35%;
-    height: 35%;
+    height: 36%;
     left: 23%;
     top: 5%;
 }
 #scene13_adamText5{
     left: -24%;
-    top: 20%;
+    top: 13%;
 }
-#scene13_adamBubble6{
-    width: 35%;
-    height: 35%;
-    left: 23%;
-    top: 5%;
-}
+
 #scene13_adamText6{
     left: -23%;
-    top: 18%;
+    top: 12%;
 }
 #scene13_adamBubble7{
     width: 40%;
@@ -1756,12 +1751,7 @@ FOR EVERY SCENE USEABLE
     right: 23%;
     top: 22%;
 }
-#scene13_adamBubble8{
-    width: 35%;
-    height: 35%;
-    left: 23%;
-    top: 5%;
-}
+
 #scene13_adamText8{
     left: -23%;
     top: 20%;
@@ -1774,7 +1764,7 @@ FOR EVERY SCENE USEABLE
 }
 #scene13_adamText9{
     left: -23%;
-    top: 18%;
+    top: 12%;
 }
 #scene13_adamBubble10{
     width: 20%;
@@ -1784,7 +1774,7 @@ FOR EVERY SCENE USEABLE
 }
 #scene13_adamText10{
     left: -23%;
-    top: 35%;
+    top: 30%;
 }
 #scene13_adamBubble11{
     width: 20%;
@@ -1794,7 +1784,7 @@ FOR EVERY SCENE USEABLE
 }
 #scene13_adamText11{
     right: 23%;
-    top: 40%;
+    top: 35%;
 }
 
 /*--- DECISION ---*/
