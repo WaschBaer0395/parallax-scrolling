@@ -1483,36 +1483,36 @@ $(document).ready(function () {
     scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
     scene13GoodAction.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
     scene13GoodAction.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
-    scene13GoodAction.to('#scene13_adambubble1', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=4");
-    scene13GoodAction.to('#scene13_adambubble2', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble3', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble4', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble5', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble6', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble7', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble8', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble9', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble10', 10, {autoAlpha: 1}, "-=4");
-    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=4");
+    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adambubble11', 10, {autoAlpha: 1});
+    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 1});
 
     // Fade Out for Scene13
     scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0.3});
