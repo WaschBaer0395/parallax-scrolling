@@ -1463,32 +1463,28 @@ $(document).ready(function () {
     $('.scene13').each(function () {
         const scene13In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
-        let scene13 = new ScrollMagic.Scene({
+        let scene13Scene = new ScrollMagic.Scene({
             triggerElement: '.scene13',
             duration: 500,
             triggerHook: .6,
             offset: 0
         });
-        scene13.setTween(scene13In);
-        scene13.addTo(controller);
+        scene13Scene.setTween(scene13In);
+        scene13Scene.addTo(controller);
         //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene13 ================================
 
-
-    //  END FadeOutScene13 ================================
-
     //START ANIMATION scene13
     let scene13GoodAction = new TimelineLite();
+
     scene13GoodAction.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
     scene13GoodAction.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
     scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
     scene13GoodAction.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
     scene13GoodAction.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
-
     scene13GoodAction.to('#scene13_adambubble1', 10, {autoAlpha: 1}, "-=4");
     scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=4");
-
     scene13GoodAction.to('#scene13_adambubble2', 10, {autoAlpha: 1}, "-=4");
     scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=4");
 
@@ -1535,6 +1531,7 @@ $(document).ready(function () {
     scene13.setTween(scene13GoodAction);
     scene13.setPin(".scene13");
     scene13.addTo(controller);
+    
     //END ANIMATION SCENE13
 
     //  START FadeInScene14 ================================
