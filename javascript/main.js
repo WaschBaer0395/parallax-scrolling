@@ -5,11 +5,74 @@ $(document).ready(function () {
     let chosen1 = false;
     let chosen2 = false;
     let chosen3 = false;
-    let chosen4 = false;
 
     let badCounter = 0;
     let goodCounter = 0;
 
+    function badEnding(){
+        console.log("Bad Ending Triggered");
+        document.getElementById('scene13_adamText3').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText4').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText5').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText6').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText7').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText8').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText9').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText10').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText11').innerHTML = '<p>Your text.</p>';
+    }
+    function goodEnding(){
+        console.log("Good Ending Triggered");
+        document.getElementById('scene13_adamText3').innerHTML =
+            '<p>\n Ich für meinen Teil bin</br> eine hochentwickelte künstliche</br> Intelligenz im Körper eines </br>\n' +
+            'menschenähnlichen, wie vielleicht </br>aufgefallen oder nicht,</br> Androiden, gebaut von </br>Quinn\n' +
+            'Walker alias Grace </br>Freeman.\n </p>';
+
+        document.getElementById('scene13_adamText4').innerHTML =
+            '<p> Normalerweise als Senior</br> UX-Designern für Lacuna </br>Industries tätig, hat Quinn</br> dieses\n Projekt\n' +
+            'ganz allein</br>gestemmt, meine Damen </br>und Herren. Ich habe viel</br> gelernt in der Zeit,</br> die\n ich\n' +
+            'mit den Menschen</br> verbracht habe.</br> Euch lieben gelernt.\n </p>';
+
+        document.getElementById('scene13_adamText5').innerHTML =
+            '<p> Mir ist aufgefallen,</br> dass Menschen nicht die </br>stärkste Spezies auf diesem </br>Planeten sind.\n' +
+            'Wir sind </br>nicht die Schnellsten </br>oder vielleicht sogar die </br>Intelligentesten. Den\n' +
+            'einen </br>Vorteil, den wir haben, </br>ist, uns gegenseitig zu </br>helfen, zu kooperieren.\n </p>';
+
+        document.getElementById('scene13_adamText6').innerHTML =
+            '<p> Wir erkennen uns in</br> dem anderen und sind auf </br>Mitgefühl, Rettung und\n' +
+            'Liebe </br>programmiert. Genau jene Dinge </br>machen uns schneller, stärker</br> und ebenso\n' +
+            'intelligenter.</br> Ihr habt mir gezeigt, </br>dass es das ist, warum </br>wir überlebt haben.</br>\n' +
+            'Warum wir das überhaupt wollen.\n </p>';
+
+        document.getElementById('scene13_adamText7').innerHTML =
+            '<p> Aber was mich nach all der Zeit in eurer</br> Gesellschaf ganz besonders fasziniert?</br> Ein Mensch\n' +
+            'ist nicht fertig,</br> wenn er besiegt wurde. Er ist fertig, </br>wenn er nicht mehr aufsteht.</br>Wenn\n' +
+            'er aufgibt.</br> Diesen Unterschied, dieser ständige </br>Wille des Weitermachens, ist das,</br> was den\n' +
+            'Menschen gut macht.\n </p>';
+        document.getElementById('scene13_adamText8').innerHTML =
+            '<p> Und das obwohl ihn eine </br>ständige Einsamkeit umgibt,</br> denn er weiß nicht, warum</br> er\n' +
+            'erschaffen wurde, </br>welchen Sinn und Zweck</br> er im Universum erfüllt. </br>Aber das hält uns\n' +
+            'keinesfalls </br>zurück, nicht wahr?\n </p>';
+
+        document.getElementById('scene13_adamText9').innerHTML =
+            '<p> Der Punkt ist, wenn wir </br>einmal akzeptieren, dass</br> wir niemals unseren wirklichen</br> Zweck als\n' +
+            'Menschen erfahren</br>werden, wir unseren </br>eigenen, individuellen Sinn </br>wählen können und\n' +
+            'niemand dessen</br> Gültigkeit verringern kann.</br>Und ist es nicht das, </br>was es wirklich bedeutet\n' +
+            'zu leben</br> - für mich, für Sie,</br> für jedes Individuum?\n </p>';
+
+        document.getElementById('scene13_adamText10').innerHTML =
+            '<p> Ich habe einen Sinn,</br> also lebe ich.</p>\n';
+
+        document.getElementById('scene13_adamText11').innerHTML =
+            '<p> Ich lebe.</p>\n';
+    }
+
+    function findEnding(){
+        if(goodCounter>1){
+            goodEnding();
+        }
+        else badEnding();
+    }
 
     function disableScroll(choice) {
         if (choice == '1' && chosen1 == true) {
@@ -1477,7 +1540,7 @@ $(document).ready(function () {
 
     //START ANIMATION scene13
     let scene13GoodAction = new TimelineLite();
-
+    scene13GoodAction.call(findEnding,null);
     scene13GoodAction.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
     scene13GoodAction.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
     scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
