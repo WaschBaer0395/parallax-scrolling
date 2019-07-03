@@ -1117,6 +1117,13 @@ FOR EVERY SCENE USEABLE
     width: 100vw;
     top: 0;
 }
+.scene09Parallax_draw{
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+    right:0;
+    top:0;
+}
 
 .scene09R .textline {
     font-size: 200%;

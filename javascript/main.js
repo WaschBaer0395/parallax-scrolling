@@ -1140,6 +1140,58 @@ $(document).ready(function () {
         scene09right.to('#scene09_textline3', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('#scene09_textline4', 10, {autoAlpha: 0}, "-=10");
         scene09right.to('#scene09_textline5', 10, {autoAlpha: 0}, "-=10");
+
+        // Start animation for draws
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: .7}, "+=10");
+        scene09right.add("wlanAnimation", "+=10");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: 0}, "wlanAnimation");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: .7}, "+=10");
+        scene09right.add("wlanAnimation2", "+=10");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: 0}, "wlanAnimation2");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation2");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation2");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation2");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_frame', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_search', 2, {autoAlpha: .7}, "+=10");
+        scene09right.add("wlanAnimation3", "+=10");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: 0}, "wlanAnimation3");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation3");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation3");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation3");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: .7}, "+=10");
+        scene09right.add("wlanAnimation4", "+=10");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: 0}, "wlanAnimation4");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation4");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation4");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation4");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: .7}, "+=10");
+        scene09right.add("wlanAnimation5", "+=10");
+        scene09right.to('#scene09_wlan1', 2, {autoAlpha: 0}, "wlanAnimation5");
+        scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation5");
+        scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation5");
+        scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation5");
+
+
+
         // END SCENE 09 RIGHT SIDE =======================================================================
 
         let decision2Middle = new TimelineLite();
