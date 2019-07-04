@@ -1142,6 +1142,7 @@ $(document).ready(function () {
         scene09right.to('#scene09_textline5', 10, {autoAlpha: 0}, "-=10");
 
         // Start animation for draws
+        scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "-=2");
         scene09right.to('#scene09_wlan1', 2, {autoAlpha: .7}, "+=10");
         scene09right.to('#scene09_wlan2', 2, {autoAlpha: .7}, "+=10");
         scene09right.to('#scene09_wlan3', 2, {autoAlpha: .7}, "+=10");
