@@ -642,11 +642,11 @@ $(document).ready(function () {
     scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: "50%"}, "+=20");
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=2");
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=4");
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=20");
@@ -654,13 +654,13 @@ $(document).ready(function () {
     scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: "50%"}, "+=20");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80});
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80}, "+=4");
     scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: -80}, "+=20");
-    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: 80});
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: 80}, "+=4");
     scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: -80}, "+=20");
-    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
     scene04.setTween(scene04Action);
