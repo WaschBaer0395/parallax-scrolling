@@ -11,6 +11,8 @@ $(document).ready(function () {
 
     function badEnding(){
         console.log("Bad Ending Triggered");
+        document.getElementById('scene13_layer02').innerHTML =
+            '<img src="Media/pictures/final/adam_boese.png">';
         document.getElementById('scene13_adamText3').innerHTML =
             '<p>\n Ich für meinen Teil bin</br> eine hochentwickelte künstliche</br> Intelligenz im Körper eines </br>\n' +
             'menschenähnlichen, wie vielleicht </br>aufgefallen oder nicht,</br> Androiden, gebaut von </br>Quinn\n' +
@@ -49,6 +51,8 @@ $(document).ready(function () {
     }
     function goodEnding(){
         console.log("Good Ending Triggered");
+        document.getElementById('scene13_layer02').innerHTML =
+            '<img src="Media/pictures/final/adam02.png">';
         document.getElementById('scene13_adamText3').innerHTML =
             '<p>\n Ich für meinen Teil bin</br> eine hochentwickelte künstliche</br> Intelligenz im Körper eines </br>\n' +
             'menschenähnlichen, wie vielleicht </br>aufgefallen oder nicht,</br> Androiden, gebaut von </br>Quinn\n' +
@@ -1618,50 +1622,50 @@ $(document).ready(function () {
     //  END FadeInScene13 Good ================================
 
     //START ANIMATION scene13_good
-    let scene13GoodAction = new TimelineLite();
-    scene13GoodAction.call(findEnding,null);
-    scene13GoodAction.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
-    scene13GoodAction.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
-    scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
-    scene13GoodAction.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
-    scene13GoodAction.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
-    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+    let scene13Action = new TimelineLite();
+    scene13Action.call(findEnding,null);
+    scene13Action.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
+    scene13Action.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
+    scene13Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
+    scene13Action.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
+    scene13Action.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
+    scene13Action.to('#scene13_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble5', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble6', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble7', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble8', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble9', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=20");
+    scene13Action.to('#scene13_adamBubble10', 10, {autoAlpha: 1}, "+=2");
+    scene13Action.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 1});
+    scene13Action.to('#scene13_adamBubble11', 10, {autoAlpha: 1});
 
     // Fade Out for Scene13
-    scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0.3});
-    scene13GoodAction.add("fade_out_scene13", "+=1");
-    scene13GoodAction.to('#scene13_layer02', 10, { autoAlpha:0},"fade_out_scene13");
-    scene13GoodAction.to('#scene13_good_adamBubble11', 10, {autoAlpha: 0}, "fade_out_scene13");
-    scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0},"fade_out_scene13");
+    scene13Action.to('#scene13_layer00', 10, { autoAlpha:0.3});
+    scene13Action.add("fade_out_scene13", "+=1");
+    scene13Action.to('#scene13_layer02', 10, { autoAlpha:0},"fade_out_scene13");
+    scene13Action.to('#scene13_good_adamBubble11', 10, {autoAlpha: 0}, "fade_out_scene13");
+    scene13Action.to('#scene13_layer00', 10, { autoAlpha:0},"fade_out_scene13");
 
 
     const scene13 = new ScrollMagic.Scene({
@@ -1670,7 +1674,7 @@ $(document).ready(function () {
         triggerHook: 0,
         reverse: true
     });
-    scene13.setTween(scene13GoodAction);
+    scene13.setTween(scene13Action);
     scene13.setPin(".scene13");
     scene13.addTo(controller);
     
