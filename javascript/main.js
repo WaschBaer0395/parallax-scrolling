@@ -677,10 +677,10 @@ $(document).ready(function () {
         //BLUR
         scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
-        scene05Rechts.to(' #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-        scene05Rechts.to(' #scene05_textblock1', 5, {autoAlpha: 0, y: -100}, "+=4");
+        scene05Rechts.to(' #scene05_textline1', 20, {autoAlpha: 1, y: "50%"}, "+=20");
+        scene05Rechts.to(' #scene05_textline1', 20, {autoAlpha: 0, y: "-50%"}, "+=20");
+        scene05Rechts.to(' #scene05_textblock1', 20, {autoAlpha: 1, y: "50%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock1', 20, {autoAlpha: 0, y: "-50%"}, "+=20");
         //BLUR ENDE
         scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         //ADAM IN
@@ -690,29 +690,31 @@ $(document).ready(function () {
         //GIRL IN
         scene05Rechts.to(' #scene05_girl', 10, {autoAlpha: 1}, "+=4");
         //BUBBLES
-        scene05Rechts.to(' #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleGirl1', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleGirl1', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam1', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleAdam1', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam2', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleAdam2', 20, {autoAlpha: 0}, "+=20");
         //TEXT
-        scene05Rechts.to(' #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textline3', 10, {autoAlpha: 0}, "-=10");
-        scene05Rechts.to(' #scene05_textblock2', 10, {autoAlpha: 1, x: -600}, "+=2");
-        scene05Rechts.to(' #scene05_textblock2', 10, {autoAlpha: 0, x: 300}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam3', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textblock3', 10, {autoAlpha: 1, y: -400}, "+=2");
-        scene05Rechts.to(' #scene05_textblock3', 10, {autoAlpha: 0, y: 150}, "+=10");
-        scene05Rechts.to(' #scene05_textline4', 10, {autoAlpha: 1}, "-=2");
-        scene05Rechts.to(' #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
-        scene05Rechts.to(' #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
-        scene05Rechts.to(' #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textline2', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_textline3', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_textline2', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textline3', 20, {autoAlpha: 0}, "-=10");
+        scene05Rechts.to(' #scene05_textblock2', 20, {autoAlpha: 1, x: "-50%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock2', 20, {autoAlpha: 0, x: "50%"}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam3', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_bubbleAdam3', 20, {autoAlpha: 0}, "+=4");
+        scene05Rechts.to(' #scene05_textblock3', 20, {autoAlpha: 1, y: "-70%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock3', 20, {autoAlpha: 0, y: "70%"}, "+=20");
+        scene05Rechts.to(' #scene05_textline4', 20, {autoAlpha: 1}, "-=2");
+        scene05Rechts.to(' #scene05_textline4', 20, {autoAlpha: 0}, "+=8");
+        scene05Rechts.to(' #scene05_textblock4', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_textblock5', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_textblock4', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textblock5', 20, {autoAlpha: 0}, "-=10");
+        scene05Rechts.to(' #scene05_bubbleAdam4', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_bubbleAdam4', 20, {autoAlpha: 0}, "+=20");
         // END SCENE 05 RIGHT SIDE =======================================================================
 
         // START SCENE 06 LEFT SIDE =======================================================================

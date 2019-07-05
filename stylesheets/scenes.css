@@ -567,23 +567,23 @@ FOR EVERY SCENE USEABLE
 
 #scene05_textline1 {
     left: 100vw;
-    top: 30%;
+    bottom: 40vh;
     height: auto;
     width: 97vw;
 }
 #scene05_textline2 {
     left: 100vw;
     width: 97vw;
-    height: auto;
+    top: 6vh;
 }
 #scene05_textline3 {
     left: 100vw;
     width: 97vw;
-    height: auto;
+    top: 6vh;
 }
 
 #scene05_textline4 {
-    top: 57%;
+    bottom: 1.25vh;
     width: 97vw;
     left: 100vw;
 }
@@ -606,25 +606,31 @@ FOR EVERY SCENE USEABLE
 #scene05_textblock3 {
     width: 80vw;
     left: 209vw;
-    top: 80%;
+    top: 50%;
 }
 
 #scene05_textblock4 {
     width: 80vw;
     left: 209vw;
-    top: 10%;
+    top: 15%;
+}
+
+#scene05_textblock5 {
+    width: 80vw;
+    left: 209vw;
+    top: 60%;
 }
 
 #scene05_bubbleGirl1 {
-    width: 7em;
-    height: 7em;
-    top: 60%;
+    width: 5%;
+    height: 10%;
+    top: 50%;
     left: 238vw;
 }
 
 #scene05_girlText1 {
     top: 13%;
-    height: auto;
+    transform: translate(-45%);
 }
 
 #scene05_girlText1 p {
@@ -632,29 +638,28 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene05_bubbleAdam1 {
-    width: auto;
+    width: 15%;
     height: 30%;
     top: 10%;
     left: 225vw;
 }
 
 #scene05_adamText1 {
-    width: 40%;
-    height: auto;
-    transform: translate(-55%);
+    width: 20%;
+    transform: translate(-160%);
 }
 
 #scene05_bubbleAdam2 {
-    width: auto;
-    height: 35%;
+    width: 18%;
+    height: 36%;
     top: 10%;
     left: 225vw;
 }
 
 #scene05_adamText2 {
-    width: 40%;
-    height: auto;
-    transform: translate(-55%);
+    top: 25%;
+    width: 30%;
+    transform: translate(-105%);
 }
 
 #scene05_bubbleAdam3 {
