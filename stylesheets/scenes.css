@@ -283,7 +283,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_textline2 {
-    top: 72%;
+    top: 73%;
 }
 
 #battery_animation_1 {
@@ -353,13 +353,13 @@ FOR EVERY SCENE USEABLE
 
 #scene03_frauBubble1 {
     width: 12%;
-    height: 25%;
+    height: 24%;
     top: 33%;
     left: 55%;
 }
 
 #scene03_frautext1 {
-    top: 18%;
+    top: 27%;
 }
 
 #scene03_adamBubble1 {
@@ -370,18 +370,18 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext1 {
-    top: 20%;
+    top: 23%;
 }
 
 #scene03_frauBubble2 {
     width: 12%;
-    height: 25%;
+    height: 24%;
     top: 33%;
     left: 55%;
 }
 
 #scene03_frautext2 {
-    top: 22%;
+    top: 27%;
 }
 
 #scene03_adamBubble2 {
@@ -392,7 +392,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext2 {
-    top: 25%;
+    top: 31%;
 }
 
 #scene03_regBubble3 {
@@ -403,7 +403,7 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene03_regtext3 {
-    top: 28%;
+    top: 32%;
 }
 
 /*--- SCENE 4 ---*/
@@ -415,7 +415,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_reportertext1 {
-    top: 20%;
+    top: 23%;
 }
 
 #scene04_reporter02 {
@@ -426,7 +426,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_reportertext2 {
-    top: 25%;
+    top: 29%;
 }
 
 #scene04_reporter03 {
@@ -437,7 +437,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_reportertext3 {
-    top: 23%;
+    top: 28%;
 }
 
 #scene04_reportertext3 > p {
@@ -452,7 +452,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext1 {
-    top: 22%;
+    top: 25%;
 }
 
 #scene04_adamtext1 > p {
@@ -467,7 +467,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext2 {
-    top: 22%;
+    top: 27%;
 }
 
 #scene04_adamBubble3 {
@@ -478,7 +478,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext3 {
-    top: 23%;
+    top: 25%;
 }
 
 #scene04_adamBubble4 {
@@ -489,7 +489,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext4 {
-    top: 15%;
+    top: 20%;
 }
 
 #scene04_adamBubble5 {
@@ -500,7 +500,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext5 {
-    top: 24%;
+    top: 27%;
 }
 
 #scene04_adamtext5 > p {
@@ -509,11 +509,12 @@ FOR EVERY SCENE USEABLE
 
 #scene04_textblock1 {
     left: 9%;
+    top: 20%;
 }
 
 #scene04_textblock2 {
     left: 9%;
-    top: 10%;
+    top: 50%;
 }
 
 #scene04_textblock3 {
@@ -531,20 +532,24 @@ FOR EVERY SCENE USEABLE
     top: 70%;
 }
 
+#scene04_textline1 {
+    top: 92.5%
+}
+
 #scene04_textline2 {
-    top: 82%;
+    top: 85%
 }
 
 #scene04_textline3 {
-    top: 75%;
+    top: 77%;
 }
 
 #scene04_textline4 {
-    top: 64%;
+    top: 65%;
 }
 
 #scene04_textline5 {
-    top: 55%;
+    top: 57%;
 }
 
 /*--- SCENE 5 ---*/

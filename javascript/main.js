@@ -457,7 +457,7 @@ $(document).ready(function () {
 
     const scene03 = new ScrollMagic.Scene({
         triggerElement: ".scene03",
-        duration: 15000,
+        duration: 35000,
         triggerHook: 0,
         reverse: true
     });
@@ -600,7 +600,7 @@ $(document).ready(function () {
     //  END FadeInScene04 ================================
     const scene04 = new ScrollMagic.Scene({
         triggerElement: ".scene04",
-        duration: 25000,
+        duration: 30000,
         triggerHook: 0,
         reverse: true
     });
@@ -623,8 +623,8 @@ $(document).ready(function () {
     //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: "50%"}, "+=4");
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: "-50%"}, "+=20");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: "90%"}, "+=4");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: "-90%"}, "+=20");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "+=10");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=4");
