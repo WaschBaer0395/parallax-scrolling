@@ -140,12 +140,12 @@ FOR EVERY SCENE USEABLE
 }
 
 .textline {
-    z-index: 99;
     font-size: 200%;
+    background-color: hsla(0, 0%, 0%, 0.58);
+    padding: 20px;
+    z-index: 99;
     visibility: hidden;
-    font-size: 5vh;
     text-align: center;
-    vw: 100%;
     margin: 0 auto;
     position: relative;
     overflow-wrap: break-word;
@@ -295,12 +295,6 @@ FOR EVERY SCENE USEABLE
     visibility: visible;
 }
 
-.scene03 .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-}
-
 #scene03_textline2 {
     top: 50%;
 }
@@ -322,14 +316,10 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_textblock3 {
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
     top: -9.5%;
 }
 
-#scene04_textline1 {
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
+#scene03_textline1 {
     bottom: 0;
 }
 
@@ -436,8 +426,6 @@ FOR EVERY SCENE USEABLE
 
 #scene03_2_textblock1 {
     font-size: 150%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 /*--- SCENE 4 ---*/
@@ -570,12 +558,6 @@ FOR EVERY SCENE USEABLE
     top: 70%;
 }
 
-.scene04 .textline {
-    font-size: 180%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-}
-
 #scene04_textline2 {
     top: 82%;
 }
@@ -605,12 +587,6 @@ FOR EVERY SCENE USEABLE
     top: 0;
 }
 
-.scene05 .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-}
-
 #scene05_textline1 {
     left: 100vw;
     top: 30%;
@@ -627,7 +603,6 @@ FOR EVERY SCENE USEABLE
     width: 97vw;
     height: auto;
 }
-
 
 #scene05_textline4 {
     top: 57%;
@@ -734,13 +709,6 @@ FOR EVERY SCENE USEABLE
     left: -0.2%;
     height: 100vh;
     width: 100vw;
-}
-
-
-.scene06L .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 #scene06_textlineTitle{
@@ -905,12 +873,6 @@ FOR EVERY SCENE USEABLE
     top: 50%;
 }
 
-.scene07 .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-}
-
 #scene07_textline1 {
     top: 91%;
 }
@@ -960,12 +922,6 @@ FOR EVERY SCENE USEABLE
 
 #background2 {
     visibility: hidden;
-}
-
-.scene08L .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 #scene08_textblock1 {
@@ -1123,12 +1079,6 @@ FOR EVERY SCENE USEABLE
     visibility: hidden;
     right:0;
     top:0;
-}
-
-.scene09R .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 #scene09_textline1 {
@@ -1298,11 +1248,6 @@ FOR EVERY SCENE USEABLE
 }
 
 /*--- SCENE 10 ---*/
-.scene10 .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-}
 #scene10_layer01{
     height:105%;
     width:105%;
@@ -1433,12 +1378,6 @@ FOR EVERY SCENE USEABLE
     left: 0;
     height: 100vh;
     width: 100vw;
-}
-
-.scene11L .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 #scene11_textblock1 {
@@ -1580,12 +1519,6 @@ FOR EVERY SCENE USEABLE
     height: 100vh;
     width: 100vw;
     top: 0;
-}
-
-.scene12R .textline {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
 }
 
 #scene12_textline1 {
