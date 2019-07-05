@@ -241,18 +241,17 @@ FOR EVERY SCENE USEABLE
     width: 30%;
     height: 60%;
     top: 10%;
-    right: 30%;
+    right: 25%;
 }
 
 #scene02_textblock1 {
-    top: 21%;
-    position: relative;
+    top: 0;
+    right: 9.5%;
 }
 
 #scene02_textblock2 {
-    text-align: center;
-    left: 8%;
-    right: auto;
+    right: 9.5%;
+    top: 70%;
 }
 
 #scene02_textblock3 {
@@ -262,17 +261,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene02_textblock4 {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-    text-align: center;
     top: 15%;
 }
 
 #scene02_textblock5 {
-    left: 8%;
-    right: auto;
-    top: 30%;
+    right: 9%;
+    top: 70%;
+}
+
+#scene02_textline1, #scene02_textline2, #scene02_textline3 {
+    width: 120%;
 }
 
 /*--- SCENE 3 ---*/
@@ -280,8 +278,12 @@ FOR EVERY SCENE USEABLE
     visibility: visible;
 }
 
+#scene03_textline1 {
+    top: 30%;
+}
+
 #scene03_textline2 {
-    top: 50%;
+    top: 72%;
 }
 
 #battery_animation_1 {
@@ -296,43 +298,38 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_textblock2 {
-    left: 8%;
-    right: auto;
+    right: 9%;
 }
 
 #scene03_textblock3 {
     top: -9.5%;
 }
 
-#scene03_textline1 {
-    bottom: 0;
-}
-
 #scene03_textblock4 {
-    left: 9%;
+    left: -32%;
     top: 50%;
 }
 
 #scene03_thoughtBubble {
-    width: 25%;
-    height: 40%;
+    width: 22%;
+    height: 44%;
     top: 10%;
     left: 20%;
 }
 
 .scene03_thoughttext1 {
-    top: 25%;
+    top: 22%;
 }
 
 #scene03_regBubble {
-    width: 20%;
-    height: 50%;
+    width: 22%;
+    height: 44%;
     top: 10%;
     left: 80%;
 }
 
 .scene03_regtext1 {
-    top: 22%;
+    top: 27%;
 }
 
 .scene03_regtext1 p {
@@ -340,14 +337,14 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_regBubble2 {
-    width: 20%;
-    height: 50%;
+    width: 22%;
+    height: 44%;
     top: 10%;
     left: 80%;
 }
 
 .scene03_regtext2 {
-    top: 17%;
+    top: 25%;
 }
 
 .scene03_regtext2 p {
@@ -402,15 +399,11 @@ FOR EVERY SCENE USEABLE
     width: 25%;
     height: 50%;
     top: 10%;
-    left: 75%;
+    left: 78%;
 }
 
 .scene03_regtext3 {
-    top: 30%;
-}
-
-#scene03_2_textblock1 {
-    font-size: 150%;
+    top: 28%;
 }
 
 /*--- SCENE 4 ---*/
