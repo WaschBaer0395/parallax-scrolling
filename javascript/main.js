@@ -600,7 +600,7 @@ $(document).ready(function () {
     //  END FadeInScene04 ================================
     const scene04 = new ScrollMagic.Scene({
         triggerElement: ".scene04",
-        duration: 20000,
+        duration: 25000,
         triggerHook: 0,
         reverse: true
     });
@@ -623,23 +623,23 @@ $(document).ready(function () {
     //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=20");
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=8");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: "50%"}, "+=4");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: "-50%"}, "+=20");
+    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "+=10");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline1', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textblock3', 20, {autoAlpha: 1, y: -250}, "+=2");
+    scene04Action.to('#scene04_textblock3', 20, {autoAlpha: 1, y: "-60%"}, "+=4");
     scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline2', 10, {autoAlpha: 0}, "+=20");
     //BLUR ENDE
     scene04Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // TEXT
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1, x: -80});
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0, x: 80}, "+=20");
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1, y: -250}, "-=5");
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: 250}, "+=20");
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1, x: "-20%"});
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0, x: "20%"}, "+=20");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1, y: "-50%"}, "-=5");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: "50%"}, "+=20");
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=2");
@@ -648,11 +648,11 @@ $(document).ready(function () {
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1, y: -250}, "-=5");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: 250}, "+=20");
-    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1, y: "-50%"}, "+=4");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: "50%"}, "+=20");
+    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=20");
     scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80});
     scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: -80}, "+=20");

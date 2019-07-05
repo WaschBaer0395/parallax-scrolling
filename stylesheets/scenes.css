@@ -408,36 +408,36 @@ FOR EVERY SCENE USEABLE
 
 /*--- SCENE 4 ---*/
 #scene04_reporter01 {
-    width: 25%;
-    height: 45%;
+    width: 22%;
+    height: 44%;
     top: 10%;
     left: 80%;
 }
 
 #scene04_reportertext1 {
-    top: 26%;
+    top: 20%;
 }
 
 #scene04_reporter02 {
-    width: 27%;
+    width: 25%;
     height: 50%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext2 {
-    top: 30%;
+    top: 25%;
 }
 
 #scene04_reporter03 {
-    width: 25%;
-    height: 40%;
+    width: 22%;
+    height: 44%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext3 {
-    top: 35%;
+    top: 23%;
 }
 
 #scene04_reportertext3 > p {
@@ -445,14 +445,14 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamBubble1 {
-    width: 15%;
-    height: 40%;
+    width: 16%;
+    height: 34%;
     top: 15%;
     left: 30%;
 }
 
 #scene04_adamtext1 {
-    top: 20%;
+    top: 22%;
 }
 
 #scene04_adamtext1 > p {
@@ -509,30 +509,25 @@ FOR EVERY SCENE USEABLE
 
 #scene04_textblock1 {
     left: 9%;
-    right: auto;
 }
 
 #scene04_textblock2 {
     left: 9%;
-    right: auto;
     top: 10%;
 }
 
 #scene04_textblock3 {
     left: 9%;
-    right: auto;
     top: 60%;
 }
 
 #scene04_textblock4 {
     left: 9%;
-    right: auto;
     top: 70%;
 }
 
 #scene04_textblock5 {
     left: 9%;
-    right: auto;
     top: 70%;
 }
 
@@ -541,15 +536,15 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_textline3 {
-    top: 73%;
+    top: 75%;
 }
 
 #scene04_textline4 {
-    top: 60%;
+    top: 64%;
 }
 
 #scene04_textline5 {
-    top: 50%;
+    top: 55%;
 }
 
 /*--- SCENE 5 ---*/
