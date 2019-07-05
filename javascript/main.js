@@ -11,59 +11,59 @@ $(document).ready(function () {
 
     function badEnding(){
         console.log("Bad Ending Triggered");
-        document.getElementById('scene13_bad_adamText3').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText4').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText5').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText6').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText7').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText8').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText9').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText10').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_bad_adamText11').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText3').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText4').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText5').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText6').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText7').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText8').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText9').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText10').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText11').innerHTML = '<p>Your text.</p>';
     }
     function goodEnding(){
         console.log("Good Ending Triggered");
-        document.getElementById('scene13_good_adamText3').innerHTML =
+        document.getElementById('scene13_adamText3').innerHTML =
             '<p>\n Ich für meinen Teil bin</br> eine hochentwickelte künstliche</br> Intelligenz im Körper eines </br>\n' +
             'menschenähnlichen, wie vielleicht </br>aufgefallen oder nicht,</br> Androiden, gebaut von </br>Quinn\n' +
             'Walker alias Grace </br>Freeman.\n </p>';
 
-        document.getElementById('scene13_good_adamText4').innerHTML =
+        document.getElementById('scene13_adamText4').innerHTML =
             '<p> Normalerweise als Senior</br> UX-Designern für Lacuna </br>Industries tätig, hat Quinn</br> dieses\n Projekt\n' +
             'ganz allein</br>gestemmt, meine Damen </br>und Herren. Ich habe viel</br> gelernt in der Zeit,</br> die\n ich\n' +
             'mit den Menschen</br> verbracht habe.</br> Euch lieben gelernt.\n </p>';
 
-        document.getElementById('scene13_good_adamText5').innerHTML =
+        document.getElementById('scene13_adamText5').innerHTML =
             '<p> Mir ist aufgefallen,</br> dass Menschen nicht die </br>stärkste Spezies auf diesem </br>Planeten sind.\n' +
             'Wir sind </br>nicht die Schnellsten </br>oder vielleicht sogar die </br>Intelligentesten. Den\n' +
             'einen </br>Vorteil, den wir haben, </br>ist, uns gegenseitig zu </br>helfen, zu kooperieren.\n </p>';
 
-        document.getElementById('scene13_good_adamText6').innerHTML =
+        document.getElementById('scene13_adamText6').innerHTML =
             '<p> Wir erkennen uns in</br> dem anderen und sind auf </br>Mitgefühl, Rettung und\n' +
             'Liebe </br>programmiert. Genau jene Dinge </br>machen uns schneller, stärker</br> und ebenso\n' +
             'intelligenter.</br> Ihr habt mir gezeigt, </br>dass es das ist, warum </br>wir überlebt haben.</br>\n' +
             'Warum wir das überhaupt wollen.\n </p>';
 
-        document.getElementById('scene13_good_adamText7').innerHTML =
+        document.getElementById('scene13_adamText7').innerHTML =
             '<p> Aber was mich nach all der Zeit in eurer</br> Gesellschaf ganz besonders fasziniert?</br> Ein Mensch\n' +
             'ist nicht fertig,</br> wenn er besiegt wurde. Er ist fertig, </br>wenn er nicht mehr aufsteht.</br>Wenn\n' +
             'er aufgibt.</br> Diesen Unterschied, dieser ständige </br>Wille des Weitermachens, ist das,</br> was den\n' +
             'Menschen gut macht.\n </p>';
-        document.getElementById('scene13_good_adamText8').innerHTML =
+        document.getElementById('scene13_adamText8').innerHTML =
             '<p> Und das obwohl ihn eine </br>ständige Einsamkeit umgibt,</br> denn er weiß nicht, warum</br> er\n' +
             'erschaffen wurde, </br>welchen Sinn und Zweck</br> er im Universum erfüllt. </br>Aber das hält uns\n' +
             'keinesfalls </br>zurück, nicht wahr?\n </p>';
 
-        document.getElementById('scene13_good_adamText9').innerHTML =
+        document.getElementById('scene13_adamText9').innerHTML =
             '<p> Der Punkt ist, wenn wir </br>einmal akzeptieren, dass</br> wir niemals unseren wirklichen</br> Zweck als\n' +
             'Menschen erfahren</br>werden, wir unseren </br>eigenen, individuellen Sinn </br>wählen können und\n' +
             'niemand dessen</br> Gültigkeit verringern kann.</br>Und ist es nicht das, </br>was es wirklich bedeutet\n' +
             'zu leben</br> - für mich, für Sie,</br> für jedes Individuum?\n </p>';
 
-        document.getElementById('scene13_good_adamText10').innerHTML =
+        document.getElementById('scene13_adamText10').innerHTML =
             '<p> Ich habe einen Sinn,</br> also lebe ich.</p>\n';
 
-        document.getElementById('scene13_good_adamText11').innerHTML =
+        document.getElementById('scene13_adamText11').innerHTML =
             '<p> Ich lebe.</p>\n';
     }
 
@@ -1576,11 +1576,11 @@ $(document).ready(function () {
     //  END FadeOutScene11and12 ================================
 
     //  START FadeInScene13 Good ================================
-    $('.scene13_good').each(function () {
+    $('.scene13').each(function () {
         const scene13In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
 
         let scene13Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene13_good',
+            triggerElement: '.scene13',
             duration: 500,
             triggerHook: .6,
             offset: 0
@@ -1594,41 +1594,41 @@ $(document).ready(function () {
     //START ANIMATION scene13_good
     let scene13GoodAction = new TimelineLite();
     scene13GoodAction.call(findEnding,null);
-    scene13GoodAction.to('#scene13_good_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
-    scene13GoodAction.to('#scene13_good_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
+    scene13GoodAction.to('#scene13_textblock1', 10, {autoAlpha: 1, y: 300, x: "10%"}, "+=4");
+    scene13GoodAction.to('#scene13_textblock1', 15, {autoAlpha: 0, y: 600, x: "10%"}, "+=10");
     scene13GoodAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter:'blur(0px)'}, "+=2");
     scene13GoodAction.to('#scene13_layer01', 10, {autoAlpha: 0}, "+=1");
     scene13GoodAction.to('#scene13_layer02', 5, {autoAlpha: 1}, "-=7");
-    scene13GoodAction.to('#scene13_good_adamBubble1', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene13GoodAction.to('#scene13_good_adamBubble2', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble2', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble1', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble2', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble3', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble3', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble3', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble4', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble4', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble4', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble5', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble5', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble6', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble6', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble6', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble7', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble7', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble7', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble8', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble8', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble8', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble9', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble9', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble9', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble10', 10, {autoAlpha: 1}, "+=2");
-    scene13GoodAction.to('#scene13_good_adamBubble10', 10, {autoAlpha: 0}, "+=20");
+    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 1}, "+=2");
+    scene13GoodAction.to('#scene13_adamBubble10', 10, {autoAlpha: 0}, "+=20");
 
-    scene13GoodAction.to('#scene13_good_adamBubble11', 10, {autoAlpha: 1});
+    scene13GoodAction.to('#scene13_adamBubble11', 10, {autoAlpha: 1});
 
     // Fade Out for Scene13
     scene13GoodAction.to('#scene13_layer00', 10, { autoAlpha:0.3});
@@ -1639,31 +1639,16 @@ $(document).ready(function () {
 
 
     const scene13 = new ScrollMagic.Scene({
-        triggerElement: ".scene13_good",
+        triggerElement: ".scene13",
         duration: 40000,
         triggerHook: 0,
         reverse: true
     });
     scene13.setTween(scene13GoodAction);
-    scene13.setPin(".scene13_good");
+    scene13.setPin(".scene13");
     scene13.addTo(controller);
     
-    //END ANIMATION SCENE13_GOOD
-
-    //START FADE IN SCENE13_BAD
-    $('.scene13_bad').each(function () {
-        const scene13In = TweenMax.fromTo($(this), 2, {opacity: 0}, {opacity: 1, ease: Power1.easeIn});
-
-        let scene13Scene = new ScrollMagic.Scene({
-            triggerElement: '.scene13_bad',
-            duration: 500,
-            triggerHook: .6,
-            offset: 0
-        });
-        scene13Scene.setTween(scene13In);
-        scene13Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
-    });
+    //END ANIMATION SCENE13
 
     //  START FadeInScene14 ================================
     $('.scene14').each(function () {
