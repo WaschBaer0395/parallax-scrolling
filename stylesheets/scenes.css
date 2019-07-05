@@ -153,21 +153,6 @@ FOR EVERY SCENE USEABLE
     hyphens: auto;
 }
 
-.dark_textline {
-    visibility: hidden;
-    text-align: center;
-    position: relative;
-    background-color: hsla(360, 100%, 100%, 0.8);
-    padding: 20px;
-    color: #262626;
-    font-size: 3vh;
-}
-
-.shadow_textline {
-    font-size: 200%;
-    text-shadow: 2px 2px #262626;
-}
-
 .person {
     position: absolute;
     visibility: hidden;
@@ -201,8 +186,8 @@ FOR EVERY SCENE USEABLE
     position: relative;
 }
 
-.scene1bubble {
-    top: 16%;
+#scene01_bubble1_text {
+    top: 17%;
 }
 
 #scene01_bubble_quinn {
@@ -212,7 +197,7 @@ FOR EVERY SCENE USEABLE
     left: 24%;
 }
 
-#bubble_quinn_text {
+#scene01_bubble_quinn_text {
     top: 25%;
 }
 
