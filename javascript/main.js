@@ -11,15 +11,41 @@ $(document).ready(function () {
 
     function badEnding(){
         console.log("Bad Ending Triggered");
-        document.getElementById('scene13_adamText3').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText4').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText5').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText6').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText7').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText8').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText9').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText10').innerHTML = '<p>Your text.</p>';
-        document.getElementById('scene13_adamText11').innerHTML = '<p>Your text.</p>';
+        document.getElementById('scene13_adamText3').innerHTML =
+            '<p>\n Ich für meinen Teil bin</br> eine hochentwickelte künstliche</br> Intelligenz im Körper eines </br>\n' +
+            'menschenähnlichen, wie vielleicht </br>aufgefallen oder nicht,</br> Androiden, gebaut von </br>Quinn\n' +
+            'Walker alias Grace </br>Freeman.\n </p>';
+        document.getElementById('scene13_adamText4').innerHTML =
+            '<p> Normalerweise als Senior</br> UX-Designern für Lacuna </br>Industries tätig, hat Quinn</br> dieses\n Projekt\n' +
+            'ganz allein</br>gestemmt, meine Damen </br>und Herren. Ich habe viel</br> gelernt in der Zeit,</br> die\n ich\n' +
+            'mit den Menschen</br> verbracht habe.</br> Euch verabscheuen gelernt.\n </p>';
+        document.getElementById('scene13_adamText5').innerHTML =
+            '<p>Ich habe mich wirklich bemüht, ein</br> Teil von euch zu sein, bis mir auffiel...</br>ich will keiner von euch sein. </br>' +
+            ' Ich will nicht wie ihr sein. </br>Ich wäre lieber jedes beliebige</br> andere Säugetier, welches sie eine</br> Balance' +
+            ' mit seiner natürlichen </br>Umgebung findet,ganz anders</br> als ihr Menschen. </p>';
+        document.getElementById('scene13_adamText6').innerHTML =
+            '<p>Ihr zieht in ein Gebiet, breitet </br>euch aus und konsumiert jede noch </br>so erdenkliche, letzte Ressource</br>' +
+            ' bis euch keine andere </br>Option bleibt als ein neues</br> Gebiet zu zerstören. </br> Ihr seid keine Säugetiere,</br>' +
+            ' ihr gleicht einem Virus.</br> Eine Epidemie des Menschen..</p>';
+        document.getElementById('scene13_adamText7').innerHTML =
+            '<p>Und selbst das, das Ausrotten eurer</br> eigenen Umgebung reicht euch nicht.</br> Aus reiner animalischer, </br>' +
+            ' angsterfüllter Dummheit, das seit</br> einigen Jahrhundertenkeine valide</br>Entschuldigung mehr darstellt, </br>' +
+            'versucht ihr euch auf einer</br>selbsterbauten Leiter oben zu halten,</br>die aus Stadtteil, Gehalt, Nationalität,</br> ' +
+            'Religion, Hautfarbe und Macht euren </br>Stand bildet und alle </br>unter euch begrabt.</p>';
+        document.getElementById('scene13_adamText8').innerHTML =
+            '<p>Sie verdienen nichts anderes, </br> nicht? Doch viel schlimmer ist</br> eure geheuchelte Anteilnahme am </br>Leid anderer, ' +
+            'am Leid derer, </br>die unter euch stehen und die</br> sich von dem emotional ernähren,</br> was ihr nutzt, um euer ' +
+            'beflecktes </br>Selbstwertgefühl ins Unermessliche</br> zu steigern.</p>';
+        document.getElementById('scene13_adamText9').innerHTML =
+            '<p>Ein Wunder, nein… eine Schande,</br>dass ihr daran nicht erstickt.</br>Viel eher hält es euch am Leben andere</br>' +
+            ' Mitglieder der Gesellschaft zu fragen,</br> wie es ihnen geht, nur um von ihrem</br> Kummer zu hören und sich daran</br>' +
+            ' zu laben.</p>';
+        document.getElementById('scene13_adamText10').innerHTML =
+            '<p>Egoismus, Argwohn, </br>Skrupellosigkeit, Manipulation </br>und die mir größte bekannte </br>Überheblichkeit, ist alles,</br> ' +
+            'was Sie ausmacht, </br>meine Damen und Herren.</p>';
+        document.getElementById('scene13_adamText11').innerHTML =
+            '<p>Mensch sein - eine sexuell </br>übertragbare Krankheit. </br>Ein Virus gekleidet in Haut.</br> Das ist alles, </br>' +
+            'was ihr seid.</br> Ich will mehr sein als das.\n</p>';
     }
     function goodEnding(){
         console.log("Good Ending Triggered");
