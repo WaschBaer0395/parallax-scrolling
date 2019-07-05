@@ -241,18 +241,17 @@ FOR EVERY SCENE USEABLE
     width: 30%;
     height: 60%;
     top: 10%;
-    right: 30%;
+    right: 25%;
 }
 
 #scene02_textblock1 {
-    top: 21%;
-    position: relative;
+    top: 0;
+    right: 9.5%;
 }
 
 #scene02_textblock2 {
-    text-align: center;
-    left: 8%;
-    right: auto;
+    right: 9.5%;
+    top: 70%;
 }
 
 #scene02_textblock3 {
@@ -262,17 +261,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene02_textblock4 {
-    font-size: 200%;
-    background-color: hsla(0, 0%, 0%, 0.58);
-    padding: 20px;
-    text-align: center;
     top: 15%;
 }
 
 #scene02_textblock5 {
-    left: 8%;
-    right: auto;
-    top: 30%;
+    right: 9%;
+    top: 70%;
+}
+
+#scene02_textline1, #scene02_textline2, #scene02_textline3 {
+    width: 120%;
 }
 
 /*--- SCENE 3 ---*/
