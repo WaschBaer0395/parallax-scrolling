@@ -654,12 +654,12 @@ $(document).ready(function () {
     scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: "50%"}, "+=20");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80}, "+=4");
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: -80}, "+=20");
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: 80}, "+=4");
-    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: -80}, "+=20");
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
     scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
