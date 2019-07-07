@@ -1699,6 +1699,9 @@ FOR EVERY SCENE USEABLE
     top: 0;
 }
 .choice1, .choice2, .choice3{
+    visibility: hidden;
+    padding-bottom: 0.75em;
+    font-size: 2.5em;
     position: absolute;
     top: 1%;
     left: 50vw;
@@ -1707,7 +1710,40 @@ FOR EVERY SCENE USEABLE
     width: auto;
     border-bottom: 2px solid greenyellow;
 }
+
+.headingForChoicesR1 {
+    margin-left: 1.25%;
+    visibility: hidden;
+}
+
+.headingForChoicesL1 {
+    margin-left: 1%;
+    visibility: hidden;
+}
+
+.headingForChoicesR2 {
+    margin-left: 1%;
+    visibility: hidden;
+}
+
+.headingForChoicesL2 {
+    margin-left: 1.75%;
+    visibility: hidden;
+}
+
+.headingForChoicesR3 {
+    margin-left: 1.4%;
+    visibility: hidden;
+}
+
+.headingForChoicesL3 {
+    margin-left: 0.8%;
+    visibility: hidden;
+}
+
+
 .movieL,.movieR{
+    font-size: 2em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1716,29 +1752,25 @@ FOR EVERY SCENE USEABLE
 }
 .movieR{
     margin-top:-5vw;
-    left: 65vw;
+    left: 60vw;
     transform: translate(-50%,-50%);
     height: auto;
     width: auto;
 }
 .movieL{
     margin-top:-5vw;
-    left: 18vw;
+    left: 17vw;
     transform: translate(-50%,-50%);
     height: auto;
     width: auto;
 }
 .textblockForChoices{
+    font-size: 1.4em;
     width:8%;
-    margin-left:-40px;
-    margin-top:5vw;
+    margin-top:8vw;
     visibility: hidden;
     text-align: center;
-    background-color: hsla(0, 0%, 0%, 0.58);
     padding: 10px 0 40px 0;
-    border-top: 2px solid #262626;
-    border-bottom:2px solid #262626;
-    border-radius: 10px;
     position: absolute;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -1771,7 +1803,7 @@ FOR EVERY SCENE USEABLE
     left: 10vw;
 }
 .buttonR,.buttonR2, .buttonR3{
-    left: 90vw;
+    left: 85vw;
 }
 
 .arrow{
