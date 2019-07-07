@@ -154,7 +154,6 @@ $(document).ready(function () {
         });
         tweenScene.setTween(tween);
         tweenScene.addTo(controller)
-        //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
     });
 
 
@@ -171,7 +170,6 @@ $(document).ready(function () {
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
-    //cover.addIndicators({name: "COVER", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     var cover_parallax = document.getElementById('cover_parallax');
     var parallaxInstance = new Parallax(cover_parallax, {
         relativeInput: true
@@ -194,7 +192,6 @@ $(document).ready(function () {
     intro.setTween(introAction);
     intro.setPin(".intro");
     intro.addTo(controller);
-    //intro.addIndicators({name: "INTRO"});
 
     //  typewriter ================================
     //let timeline = new TimelineLite();
@@ -208,7 +205,6 @@ $(document).ready(function () {
     //typewriter.setTween(timeline);
     typewriter.setPin(".typewriter");
     typewriter.addTo(controller);
-    //typewriter.addIndicators({name: "TYPEWRITER"});
 
 //  Prolog ================================
 // bsp: bewege nach oder mache in richtung .to( klasse , länge, {styles},
@@ -234,7 +230,6 @@ $(document).ready(function () {
     prolog.setTween(prologAction);
     prolog.setPin(".prolog");
     prolog.addTo(controller);
-    //prolog.addIndicators({name:"PROLOG"});
 
     //  scene01 ================================
 
@@ -280,7 +275,6 @@ $(document).ready(function () {
     scene01.setTween(scene01Action);
     scene01.setPin(".scene01");
     scene01.addTo(controller);
-    //scene01.addIndicators();
 
 
 // fade in ist einfach nur die scenen klasse!
@@ -296,7 +290,6 @@ $(document).ready(function () {
         });
         quinn3Scene.setTween(quinn3);
         quinn3Scene.addTo(controller);
-        //quinn3Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
 
 // fadeout hingegen ist scenen klasse aber mit trigger auf der nächsten scene bei einem onEnter Hook !!
@@ -311,7 +304,6 @@ $(document).ready(function () {
         });
         quinn2Scene.setTween(quinn2);
         quinn2Scene.addTo(controller);
-        //quinn2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
 
     //  END scene01 ================================
@@ -359,7 +351,6 @@ $(document).ready(function () {
     scene02.setTween(scene02Action);
     scene02.setPin(".scene02");
     scene02.addTo(controller);
-    scene02.addIndicators({name: "Scene02"});
 
 
     //  START FadeInScene02================================
@@ -388,7 +379,6 @@ $(document).ready(function () {
         });
         scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
-        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
     //  END FadeOutScene02 ================================
     //  END scene02 ================================
@@ -477,7 +467,6 @@ $(document).ready(function () {
         });
         scene3Scene.setTween(scene03In);
         scene3Scene.addTo(controller);
-        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene03 text ================================
 
@@ -546,7 +535,6 @@ $(document).ready(function () {
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
     scene03_2.addTo(controller);
-    //scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
 
     //  START FadeInScene03  text================================
     $(".scene03_part2").each(function () {
@@ -560,7 +548,6 @@ $(document).ready(function () {
         });
         scene3_2Scene.setTween(scene03_2In);
         scene3_2Scene.addTo(controller);
-        //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene03_2 ================================
 
@@ -931,7 +918,6 @@ $(document).ready(function () {
         });
         decision1.setTween(decision1In);
         decision1.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene05and6 ================================
 
@@ -1008,7 +994,6 @@ $(document).ready(function () {
         });
         scene7Scene.setTween(scene07In);
         scene7Scene.addTo(controller);
-        //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene07 ================================
 
@@ -1285,7 +1270,6 @@ $(document).ready(function () {
         });
         decision2.setTween(decision2In);
         decision2.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene08and09 ================================
 
@@ -1380,7 +1364,6 @@ $(document).ready(function () {
         });
         scene10Scene.setTween(scene10In);
         scene10Scene.addTo(controller);
-        //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene10 ================================
 
@@ -1618,7 +1601,6 @@ $(document).ready(function () {
         });
         scene13Scene.setTween(scene13In);
         scene13Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene13 Good ================================
 
@@ -1693,7 +1675,7 @@ $(document).ready(function () {
         });
         scene14Scene.setTween(scene14In);
         scene14Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+
     });
     //  END FadeInScene14 ================================
 
