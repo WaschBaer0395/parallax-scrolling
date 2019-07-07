@@ -818,7 +818,7 @@ FOR EVERY SCENE USEABLE
 /*--- SCENE 7 ---*/
 #scene07_textblock1 {
     left: 9%;
-    right: auto;
+    top: 20%;
 }
 
 #scene07_textblock2 {
@@ -828,28 +828,26 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_textblock3 {
-    left: 9%;
-    right: auto;
+    top: 89%;
 }
 
 #scene07_textblock4 {
     left: 9%;
-    right: auto;
+    top: 10%;
 }
 
 #scene07_textblock5 {
     left: 9%;
-    right: auto;
-    top: 70%;
+    top: 75%;
 }
 
 #scene07_textblock6 {
-    right: auto;
+    left: -8%;
     top: 50%;
 }
 
 #scene07_textline1 {
-    top: 91%;
+    top: 81%;
 }
 
 #scene07_bubbleAdam1 {
@@ -860,7 +858,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText1 {
-    top: 14%;
+    top: 19%;
 }
 
 #scene07_bubbleAdam2 {
@@ -871,7 +869,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText2 {
-    top: 15%;
+    top: 20%;
 }
 
 #scene07_bubbleAdam3 {
@@ -882,7 +880,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText3 {
-    top: 16%;
+    top: 21%;
 }
 
 /*--- SCENE 8 ---*/

@@ -957,12 +957,11 @@ $(document).ready(function () {
     //BLUR
     //scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 5, {autoAlpha: 1}, "-=5");
-    scene07Action.to('#scene07_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene07Action.to('#scene07_textblock1', 5, {autoAlpha: 0, y: -100}, "+=20");
-    scene07Action.to('#scene07_textblock2', 10, {autoAlpha: 1, y: -250}, "-=6");
-    scene07Action.to('#scene07_textblock2', 5, {autoAlpha: 0, y: 250}, "+=20");
-    scene07Action.to('#scene07_textblock3', 10, {autoAlpha: 1, y: 250}, "-=6");
-    scene07Action.to('#scene07_textblock3', 5, {autoAlpha: 0, y: -250}, "+=20");
+    scene07Action.to('#scene07_textblock1', 10, {autoAlpha: 1, y: "80%"}, "+=4");
+    scene07Action.to('#scene07_textblock1', 5, {autoAlpha: 0, y: "-80%"}, "+=20");
+    scene07Action.to('#scene07_textblock2', 10, {autoAlpha: 1, y: "-80%"}, "+=4");
+    scene07Action.to('#scene07_textblock2', 5, {autoAlpha: 0, y: "80%"}, "+=20");
+    scene07Action.to('#scene07_textblock3', 10, {autoAlpha: 1}, "+=4");
     //BLUR ENDE
     scene07Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 10, {autoAlpha: 0});
@@ -971,10 +970,11 @@ $(document).ready(function () {
     scene07Action.to('#scene07_adam3', 10, {autoAlpha: 1}, "-=5");
     scene07Action.to('#scene07_adam3', 10, {autoAlpha: 0});
     scene07Action.to('#scene07_adam4', 10, {autoAlpha: 1}, "-=5");
-    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 1, y: -150}, "+=4");
-    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 0, x: 300}, "+=20");
-    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 0, x: 300}, "-=10");
+    scene07Action.to('#scene07_textblock3', 5, {autoAlpha: 0}, "-=10");
+    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 1, y: "50%"}, "+=2");
+    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 1, y: "-50%"}, "+=4");
+    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 0, x: "100%"}, "+=20");
+    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 0, x: "100%"}, "-=10");
     scene07Action.to('#scene07_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
     scene07Action.to('#scene07_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
     scene07Action.to('#scene07_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
@@ -983,8 +983,8 @@ $(document).ready(function () {
     scene07Action.to('#scene07_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
     scene07Action.to('#scene07_textline1', 10, {autoAlpha: 1}, "+=2");
     scene07Action.to('#scene07_textline1', 5, {autoAlpha: 0}, "+=20");
-    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 1, x: 130}, "+=2");
-    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: 260}, "+=20");
+    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: "80%"}, "+=20");
 
     const scene07 = new ScrollMagic.Scene({
         triggerElement: ".scene07",
