@@ -1135,23 +1135,25 @@ $(document).ready(function () {
 
         // hier alle Animationen
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene09right.to('#scene09_textlineTitle', 10, {autoAlpha: 1, y: "60%"}, "+=4");
+        scene09right.to('#scene09_textlineTitle', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1, x: 150}, "+=4");
-        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1, x: 150}, "+=4");
-        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 0, x: -300}, "+=20");
-        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 0, x: -300}, "-=10");
+        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
+        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 0, x: "-20%"}, "-=10");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene09right.to('#scene09_textblock3', 10, {autoAlpha: 1, x: -320}, "+=4");
-        scene09right.to('#scene09_textline1', 10, {autoAlpha: 1, y: -100}, "+=4");
-        scene09right.to('#scene09_textblock3', 5, {autoAlpha: 0, x: 320}, "+=20");
-        scene09right.to('#scene09_textline1', 5, {autoAlpha: 0, x: 320}, "-=5");
-        scene09right.to('#scene09_textblock4', 10, {autoAlpha: 1, y: -200}, "+=4");
-        scene09right.to('#scene09_textblock4', 5, {autoAlpha: 0, y: -500}, "+=20");
+        scene09right.to('#scene09_textblock3', 10, {autoAlpha: 1, x: "-20%"}, "+=4");
+        scene09right.to('#scene09_textline1', 10, {autoAlpha: 1, y: "-10%"}, "+=4");
+        scene09right.to('#scene09_textblock3', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline1', 5, {autoAlpha: 0}, "-=5");
+        scene09right.to('#scene09_textblock4', 10, {autoAlpha: 1, y: "-40%"}, "+=4");
+        scene09right.to('#scene09_textblock4', 5, {autoAlpha: 0, y: "-90%"}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 0}, "+=20");
@@ -1167,11 +1169,6 @@ $(document).ready(function () {
         scene09right.to('#scene09_textline2', 10, {autoAlpha: 0}, "-=10");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene09right.to('#scene09_textline3', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline4', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline5', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline3', 10, {autoAlpha: 0}, "+=20");
-        scene09right.to('#scene09_textline4', 10, {autoAlpha: 0}, "-=10");
-        scene09right.to('#scene09_textline5', 10, {autoAlpha: 0}, "-=10");
 
         // Start animation for draws
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "-=2");
@@ -1222,8 +1219,7 @@ $(document).ready(function () {
         scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation5");
         scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation5");
         scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation5");
-
-
+        scene09right.to('#scene09_textline3', 10, {autoAlpha: 0}, "-=2");
 
         // END SCENE 09 RIGHT SIDE =======================================================================
 

@@ -1054,65 +1054,51 @@ FOR EVERY SCENE USEABLE
     top:0;
 }
 
+#scene09_textlineTitle {
+    left: 100vw;
+    width: 98vw;
+    top: -40vh;
+}
+
 #scene09_textline1 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
+    width: 98vw;
+    top: 15vh;
 }
 
 #scene09_textline2 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -41vw;
+    width: 98vw;
+    top: -87vh;
 }
 
 #scene09_textline3 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -45vw;
-}
-
-#scene09_textline4 {
-    left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -32vw;
-}
-
-#scene09_textline5 {
-    left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -19vw;
+    width: 98vw;
+    top: -95vh;
 }
 
 #scene09_textblock1 {
     top: 20%;
-    width: 45em;
-    height: auto;
-    left: 200vw;
+    width: 80vw;
+    left: 192vw;
 }
 
 #scene09_textblock2 {
     top: 50%;
-    width: 45em;
-    height: auto;
-    left: 200vw;
+    width: 80vw;
+    left: 192vw;
 }
 
 #scene09_textblock3 {
     top: 20%;
-    width: 45em;
-    height: auto;
+    width: 80vw;
     left: 225vw;
 }
 
 #scene09_textblock4 {
     top: 60%;
     width: 45em;
-    height: auto;
     left: 208vw;
 }
 
@@ -1143,18 +1129,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene09_boyBubble2 {
-    width: auto;
-    height: 25%;
-    top: 65%;
+    width: 15%;
+    height: 30%;
+    top: 60%;
     left: 225vw;
 }
 
 .scene09_boytext2 {
-    width: 45%;
-    height: auto;
-    transform: translate(-55%);
-    left: 5%;
-    top: 30%;
+    width: 30%;
+    left: -31%;
+    top: 35%;
 }
 
 #scene09_boyBubble3 {
@@ -1191,18 +1175,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene09_adamBubble2 {
-    width: 60%;
-    height: 30%;
-    top: 55%;
-    left: 201vw;
+    width: 18%;
+    height: 34%;
+    top: 50%;
+    left: 200vw;
 }
 
 .scene09_adamtext2 {
-    width: 7%;
-    height: auto;
-    transform: translate(-55%);
-    left: -41.5%;
-    top: 14%;
+    width: 27%;
+    left: -32.5%;
+    top: 24%;
 }
 
 #scene09_adamBubble3 {
