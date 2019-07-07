@@ -1246,11 +1246,11 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene10_textline2 {
-    top: 75%;
+    top: 84.5%;
 }
 
 #scene10_textline3 {
-    top: 57%;
+    top: 73%;
 }
 
 #scene10_girlBubble1 {
@@ -1261,16 +1261,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene10_girlBubble2 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
+    width: 15%;
+    height: 30%;
+    top: 25%;
     left: 53%;
 }
 
 #scene10_girlBubble3 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
+    width: 15%;
+    height: 30%;
+    top: 25%;
     left: 53%;
 }
 
@@ -1281,44 +1281,56 @@ FOR EVERY SCENE USEABLE
     left: 53%;
 }
 
+.scene10_girltext1 {
+    top: 33%;
+}
+
 .scene10_girltext2 {
-    top: 32%;
+    top: 35%;
 }
 
 .scene10_girltext3 {
-    top: 31%;
+    top: 33%;
 }
 
 .scene10_girltext4 {
-    top: 23%;
+    top: 25%;
 }
 
 #scene10_adamBubble1 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
-    left: 7%;
+    width: 15%;
+    height: 30%;
+    top: 20%;
+    left: 10%;
 }
 
 #scene10_adamBubble2 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
-    left: 7%;
+    width: 15%;
+    height: 30%;
+    top: 20%;
+    left: 10%;
 }
 
 #scene10_adamBubble3 {
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 7%;
+    left: 5%;
 }
 
 #scene10_adamBubble4 {
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 7%;
+    left: 5%;
+}
+
+.scene10_adamtext1 {
+    top: 32%;
+}
+
+.scene10_adamtext2 {
+    top: 32%;
 }
 
 .scene10_adamtext3 {
@@ -1326,7 +1338,7 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene10_adamtext4 {
-    top: 25%;
+    top: 28%;
 }
 /*--- SCENE 11 ---*/
 .scene11Parallax{
