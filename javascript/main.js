@@ -98,7 +98,7 @@ $(document).ready(function () {
     }
 
     function findEnding(){
-        if(goodCounter>1){
+        if(goodCounter>=2){
             goodEnding();
         }
         else badEnding();
@@ -154,7 +154,6 @@ $(document).ready(function () {
         });
         tweenScene.setTween(tween);
         tweenScene.addTo(controller)
-        //tweenScene.addIndicators({name: "typewriter", colorTrigger: "orange", colorStart: "yellow", colorEnd: "teal"});
     });
 
 
@@ -166,13 +165,11 @@ $(document).ready(function () {
         triggerElement: ".cover",
         duration: '100%',
         triggerHook: 0, //  top of viewport
-        reverse: true,
-        pushFollowers: true
+        reverse: true
     });
     cover.setTween(coverAction);
     cover.setPin(".cover");
     cover.addTo(controller);
-    //cover.addIndicators({name: "COVER", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     var cover_parallax = document.getElementById('cover_parallax');
     var parallaxInstance = new Parallax(cover_parallax, {
         relativeInput: true
@@ -195,7 +192,6 @@ $(document).ready(function () {
     intro.setTween(introAction);
     intro.setPin(".intro");
     intro.addTo(controller);
-    //intro.addIndicators({name: "INTRO"});
 
     //  typewriter ================================
     //let timeline = new TimelineLite();
@@ -209,7 +205,6 @@ $(document).ready(function () {
     //typewriter.setTween(timeline);
     typewriter.setPin(".typewriter");
     typewriter.addTo(controller);
-    //typewriter.addIndicators({name: "TYPEWRITER"});
 
 //  Prolog ================================
 // bsp: bewege nach oder mache in richtung .to( klasse , länge, {styles},
@@ -235,7 +230,6 @@ $(document).ready(function () {
     prolog.setTween(prologAction);
     prolog.setPin(".prolog");
     prolog.addTo(controller);
-    //prolog.addIndicators({name:"PROLOG"});
 
     //  scene01 ================================
 
@@ -281,7 +275,6 @@ $(document).ready(function () {
     scene01.setTween(scene01Action);
     scene01.setPin(".scene01");
     scene01.addTo(controller);
-    //scene01.addIndicators();
 
 
 // fade in ist einfach nur die scenen klasse!
@@ -297,7 +290,6 @@ $(document).ready(function () {
         });
         quinn3Scene.setTween(quinn3);
         quinn3Scene.addTo(controller);
-        //quinn3Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
 
 // fadeout hingegen ist scenen klasse aber mit trigger auf der nächsten scene bei einem onEnter Hook !!
@@ -312,7 +304,6 @@ $(document).ready(function () {
         });
         quinn2Scene.setTween(quinn2);
         quinn2Scene.addTo(controller);
-        //quinn2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
 
     //  END scene01 ================================
@@ -360,7 +351,6 @@ $(document).ready(function () {
     scene02.setTween(scene02Action);
     scene02.setPin(".scene02");
     scene02.addTo(controller);
-    scene02.addIndicators({name: "Scene02"});
 
 
     //  START FadeInScene02================================
@@ -389,7 +379,6 @@ $(document).ready(function () {
         });
         scene2Scene.setTween(scene02Out);
         scene2Scene.addTo(controller);
-        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange",colorTrigger:"white"});
     });
     //  END FadeOutScene02 ================================
     //  END scene02 ================================
@@ -457,7 +446,7 @@ $(document).ready(function () {
 
     const scene03 = new ScrollMagic.Scene({
         triggerElement: ".scene03",
-        duration: 15000,
+        duration: 35000,
         triggerHook: 0,
         reverse: true
     });
@@ -478,7 +467,6 @@ $(document).ready(function () {
         });
         scene3Scene.setTween(scene03In);
         scene3Scene.addTo(controller);
-        //scene2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene03 text ================================
 
@@ -547,7 +535,6 @@ $(document).ready(function () {
     scene03_2.setTween(scene03_part2Action);
     scene03_2.setPin(".scene03_part2");
     scene03_2.addTo(controller);
-    //scene03_2.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
 
     //  START FadeInScene03  text================================
     $(".scene03_part2").each(function () {
@@ -561,7 +548,6 @@ $(document).ready(function () {
         });
         scene3_2Scene.setTween(scene03_2In);
         scene3_2Scene.addTo(controller);
-        //scene3_2Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene03_2 ================================
 
@@ -600,7 +586,7 @@ $(document).ready(function () {
     //  END FadeInScene04 ================================
     const scene04 = new ScrollMagic.Scene({
         triggerElement: ".scene04",
-        duration: 20000,
+        duration: 30000,
         triggerHook: 0,
         reverse: true
     });
@@ -623,44 +609,44 @@ $(document).ready(function () {
     //BLUR
     scene03_part2Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: -250}, "+=20");
-    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "-=8");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 1, y: "90%"}, "+=4");
+    scene04Action.to('#scene04_textblock1', 10, {autoAlpha: 0, y: "-90%"}, "+=20");
+    scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 1}, "+=10");
     scene04Action.to('#scene04_textblock2', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline1', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline1', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textblock3', 20, {autoAlpha: 1, y: -250}, "+=2");
+    scene04Action.to('#scene04_textblock3', 20, {autoAlpha: 1, y: "-60%"}, "+=4");
     scene04Action.to('#scene04_textblock3', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline2', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline2', 10, {autoAlpha: 0}, "+=20");
     //BLUR ENDE
     scene04Action.to('.blur', 20, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     // TEXT
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1, x: -80});
-    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0, x: 80}, "+=20");
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1, y: -250}, "-=5");
-    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: 250}, "+=20");
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 1, x: "-20%"});
+    scene04Action.to('#scene04_reporter01', 10, {autoAlpha: 0, x: "20%"}, "+=20");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 1, y: "-50%"}, "-=5");
+    scene04Action.to('#scene04_textblock4', 10, {autoAlpha: 0, y: "50%"}, "+=20");
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 1});
     scene04Action.to('#scene04_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=2");
-    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=4");
-    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 1}, "+=4");
+    scene04Action.to('#scene04_textline3', 10, {autoAlpha: 0}, "+=20");
+    scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble2', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble3', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textline4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline4', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1, y: -250}, "-=5");
-    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: 250}, "+=20");
-    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=2");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 1, y: "-50%"}, "+=4");
+    scene04Action.to('#scene04_textblock5', 10, {autoAlpha: 0, y: "50%"}, "+=20");
+    scene04Action.to('#scene04_textline5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_textline5', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: 80});
-    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: -80}, "+=20");
-    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+    scene04Action.to('#scene04_reporter02', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
+    scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble4', 10, {autoAlpha: 0}, "+=20");
-    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: 80});
-    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: -80}, "+=20");
-    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1});
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+    scene04Action.to('#scene04_reporter03', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
+    scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 1}, "+=4");
     scene04Action.to('#scene04_adamBubble5', 10, {autoAlpha: 0}, "+=20");
 
     scene04.setTween(scene04Action);
@@ -677,10 +663,10 @@ $(document).ready(function () {
         //BLUR
         scene04Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
-        scene05Rechts.to(' #scene05_textline1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-        scene05Rechts.to(' #scene05_textblock1', 5, {autoAlpha: 0, y: -100}, "+=4");
+        scene05Rechts.to(' #scene05_textline1', 20, {autoAlpha: 1, y: "50%"}, "+=20");
+        scene05Rechts.to(' #scene05_textline1', 20, {autoAlpha: 0, y: "-50%"}, "+=20");
+        scene05Rechts.to(' #scene05_textblock1', 20, {autoAlpha: 1, y: "50%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock1', 20, {autoAlpha: 0, y: "-50%"}, "+=20");
         //BLUR ENDE
         scene05Rechts.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         //ADAM IN
@@ -690,69 +676,71 @@ $(document).ready(function () {
         //GIRL IN
         scene05Rechts.to(' #scene05_girl', 10, {autoAlpha: 1}, "+=4");
         //BUBBLES
-        scene05Rechts.to(' #scene05_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleGirl1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam1', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam2', 10, {autoAlpha: 0}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleGirl1', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleGirl1', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam1', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleAdam1', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam2', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_bubbleAdam2', 20, {autoAlpha: 0}, "+=20");
         //TEXT
-        scene05Rechts.to(' #scene05_textline2', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline3', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textline2', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textline3', 10, {autoAlpha: 0}, "-=10");
-        scene05Rechts.to(' #scene05_textblock2', 10, {autoAlpha: 1, x: -600}, "+=2");
-        scene05Rechts.to(' #scene05_textblock2', 10, {autoAlpha: 0, x: 300}, "+=4");
-        scene05Rechts.to(' #scene05_bubbleAdam3', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam3', 10, {autoAlpha: 0}, "+=4");
-        scene05Rechts.to(' #scene05_textblock3', 10, {autoAlpha: 1, y: -400}, "+=2");
-        scene05Rechts.to(' #scene05_textblock3', 10, {autoAlpha: 0, y: 150}, "+=10");
-        scene05Rechts.to(' #scene05_textline4', 10, {autoAlpha: 1}, "-=2");
-        scene05Rechts.to(' #scene05_textline4', 10, {autoAlpha: 0}, "+=8");
-        scene05Rechts.to(' #scene05_textblock4', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_textblock4', 10, {autoAlpha: 0}, "+=20");
-        scene05Rechts.to(' #scene05_bubbleAdam4', 10, {autoAlpha: 1}, "+=2");
-        scene05Rechts.to(' #scene05_bubbleAdam4', 10, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textline2', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_textline3', 20, {autoAlpha: 1}, "+=4");
+        scene05Rechts.to(' #scene05_textline2', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textline3', 20, {autoAlpha: 0}, "-=10");
+        scene05Rechts.to(' #scene05_textblock2', 20, {autoAlpha: 1, x: "-50%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock2', 20, {autoAlpha: 0, x: "50%"}, "+=20");
+        scene05Rechts.to(' #scene05_bubbleAdam3', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_bubbleAdam3', 20, {autoAlpha: 0}, "+=4");
+        scene05Rechts.to(' #scene05_textblock3', 20, {autoAlpha: 1, y: "-70%"}, "+=4");
+        scene05Rechts.to(' #scene05_textblock3', 20, {autoAlpha: 0, y: "70%"}, "+=20");
+        scene05Rechts.to(' #scene05_textline4', 20, {autoAlpha: 1}, "-=2");
+        scene05Rechts.to(' #scene05_textline4', 20, {autoAlpha: 0}, "+=8");
+        scene05Rechts.to(' #scene05_textblock4', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_textblock5', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_textblock4', 20, {autoAlpha: 0}, "+=20");
+        scene05Rechts.to(' #scene05_textblock5', 20, {autoAlpha: 0}, "-=10");
+        scene05Rechts.to(' #scene05_bubbleAdam4', 20, {autoAlpha: 1}, "+=2");
+        scene05Rechts.to(' #scene05_bubbleAdam4', 20, {autoAlpha: 0}, "+=20");
         // END SCENE 05 RIGHT SIDE =======================================================================
 
         // START SCENE 06 LEFT SIDE =======================================================================
         let scene06Links = new TimelineMax();
         //BLUR
         scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: 300}, "+=2");
+        scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: "100%"}, "+=4");
         scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 0}, "+=20");
-        scene06Links.to('#scene06_textblock1', 10, {autoAlpha: 1, y: -300}, "+=10");
-        scene06Links.to('#scene06_textblock1', 5, {autoAlpha: 0, y: -600}, "+=20");
-        scene06Links.to('#scene06_textline1', 10, {autoAlpha: 1, x: -1424}, "+=2");
-        scene06Links.to('#scene06_textline2', 10, {autoAlpha: 1, x: -1424}, "+=20");
-        scene06Links.to('#scene06_textline3', 10, {autoAlpha: 1, x: -1424}, "+=20");
-        scene06Links.to('#scene06_textline1', 10, {autoAlpha: 0, x: 10}, "+=20");
-        scene06Links.to('#scene06_textline2', 10, {autoAlpha: 0, x: 10}, "-=10");
-        scene06Links.to('#scene06_textline3', 10, {autoAlpha: 0, x: 10}, "-=10");
-        scene06Links.to('#scene06_textblock2', 10, {autoAlpha: 1, y: -300}, "+=2");
-        scene06Links.to('#scene06_textblock2', 5, {autoAlpha: 0, y: -400}, "+=20");
+        scene06Links.to('#scene06_textblock1', 10, {autoAlpha: 1, y: "-70%"}, "+=10");
+        scene06Links.to('#scene06_textblock1', 5, {autoAlpha: 0, y: "-100%"}, "+=20");
+        scene06Links.to('#scene06_textline1', 10, {autoAlpha: 1, x: "-74%"}, "+=2");
+        scene06Links.to('#scene06_textline2', 10, {autoAlpha: 1, x: "-74%"}, "+=20");
+        scene06Links.to('#scene06_textline3', 10, {autoAlpha: 1, x: "-74%"}, "+=20");
+        scene06Links.to('#scene06_textline1', 10, {autoAlpha: 0, x: "10%"}, "+=20");
+        scene06Links.to('#scene06_textline2', 10, {autoAlpha: 0, x: "10%"}, "-=10");
+        scene06Links.to('#scene06_textline3', 10, {autoAlpha: 0, x: "10%"}, "-=10");
+        scene06Links.to('#scene06_textblock2', 10, {autoAlpha: 1, y: "-40%"}, "+=2");
+        scene06Links.to('#scene06_textblock2', 5, {autoAlpha: 0, y: "-80%"}, "+=20");
         //BLUR ENDE
         scene06Links.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-        scene06Links.to('#scene06_textline4', 10, {autoAlpha: 1}, "+=2");
-        scene06Links.to('#scene06_bubbleAdam1', 10, {autoAlpha: 0.9, x: 400}, "-=10");
+        scene06Links.to('#scene06_textline4', 10, {autoAlpha: 1}, "+=4");
+        scene06Links.to('#scene06_bubbleAdam1', 10, {autoAlpha: 0.9, x: "10%"}, "-=10");
         scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0.3}, "+=20");
         scene06Links.to('#scene06_bubble1small', 10, {autoAlpha: 0.7}, "-=15");
         scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0}, "+=10");
         scene06Links.to('#scene06_bubble1small', 20, {autoAlpha: 0}, "+=10");
         scene06Links.to('#scene06_textline4', 5, {autoAlpha: 0}, "-=10");
-        scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 1, x: 300}, "+=2");
-        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 1, y: -150}, "+=2");
-        scene06Links.to('#scene06_textblock4', 10, {autoAlpha: 1, x: 300}, "-=5");
-        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 0, x: 1000}, "+=20");
-        scene06Links.to('#scene06_textblock4', 5, {autoAlpha: 0, x: 1000}, "-=5");
-        scene06Links.to('#scene06_textblock5', 10, {autoAlpha: 1, x: 300}, "+=2");
+        scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 1, y: "-40%"}, "+=2");
+        scene06Links.to('#scene06_textblock4', 10, {autoAlpha: 1, x: "20%"}, "-=5");
+        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 0, x: "80%"}, "+=20");
+        scene06Links.to('#scene06_textblock4', 5, {autoAlpha: 0, x: "80"}, "-=5");
+        scene06Links.to('#scene06_textblock5', 10, {autoAlpha: 1, x: "20%"}, "+=4");
         scene06Links.to('#scene06_textblock5', 5, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
         scene06Links.to('#scene06_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
-        scene06Links.to('#scene06_textblock6', 10, {autoAlpha: 1, y: -500}, "+=2");
+        scene06Links.to('#scene06_textblock6', 10, {autoAlpha: 1, y: "-90%"}, "+=2");
         scene06Links.to('#scene06_textblock6', 5, {autoAlpha: 0}, "+=20");
-        scene06Links.to('#scene06_textline5', 10, {autoAlpha: 1, y: 60}, "+=2");
-        scene06Links.to('#scene06_textline6', 10, {autoAlpha: 1, y: -350}, "-=10");
+        scene06Links.to('#scene06_textline5', 10, {autoAlpha: 1, y: "50%"}, "+=2");
+        scene06Links.to('#scene06_textline6', 10, {autoAlpha: 1, y: "-330%"}, "-=10");
         scene06Links.to('#scene06_textline5', 5, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_textline6', 5, {autoAlpha: 0}, "-=5");
         // start animation of binär
@@ -930,7 +918,6 @@ $(document).ready(function () {
         });
         decision1.setTween(decision1In);
         decision1.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene05and6 ================================
 
@@ -955,12 +942,11 @@ $(document).ready(function () {
     //BLUR
     //scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 5, {autoAlpha: 1}, "-=5");
-    scene07Action.to('#scene07_textblock1', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene07Action.to('#scene07_textblock1', 5, {autoAlpha: 0, y: -100}, "+=20");
-    scene07Action.to('#scene07_textblock2', 10, {autoAlpha: 1, y: -250}, "-=6");
-    scene07Action.to('#scene07_textblock2', 5, {autoAlpha: 0, y: 250}, "+=20");
-    scene07Action.to('#scene07_textblock3', 10, {autoAlpha: 1, y: 250}, "-=6");
-    scene07Action.to('#scene07_textblock3', 5, {autoAlpha: 0, y: -250}, "+=20");
+    scene07Action.to('#scene07_textblock1', 10, {autoAlpha: 1, y: "80%"}, "+=4");
+    scene07Action.to('#scene07_textblock1', 5, {autoAlpha: 0, y: "-80%"}, "+=20");
+    scene07Action.to('#scene07_textblock2', 10, {autoAlpha: 1, y: "-80%"}, "+=4");
+    scene07Action.to('#scene07_textblock2', 5, {autoAlpha: 0, y: "80%"}, "+=20");
+    scene07Action.to('#scene07_textblock3', 10, {autoAlpha: 1}, "+=4");
     //BLUR ENDE
     scene07Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     scene07Action.to('#scene07_adam1', 10, {autoAlpha: 0});
@@ -969,10 +955,11 @@ $(document).ready(function () {
     scene07Action.to('#scene07_adam3', 10, {autoAlpha: 1}, "-=5");
     scene07Action.to('#scene07_adam3', 10, {autoAlpha: 0});
     scene07Action.to('#scene07_adam4', 10, {autoAlpha: 1}, "-=5");
-    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 1, y: 100}, "+=2");
-    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 1, y: -150}, "+=4");
-    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 0, x: 300}, "+=20");
-    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 0, x: 300}, "-=10");
+    scene07Action.to('#scene07_textblock3', 5, {autoAlpha: 0}, "-=10");
+    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 1, y: "50%"}, "+=2");
+    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 1, y: "-50%"}, "+=4");
+    scene07Action.to('#scene07_textblock4', 10, {autoAlpha: 0, x: "100%"}, "+=20");
+    scene07Action.to('#scene07_textblock5', 10, {autoAlpha: 0, x: "100%"}, "-=10");
     scene07Action.to('#scene07_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
     scene07Action.to('#scene07_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
     scene07Action.to('#scene07_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
@@ -981,8 +968,8 @@ $(document).ready(function () {
     scene07Action.to('#scene07_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
     scene07Action.to('#scene07_textline1', 10, {autoAlpha: 1}, "+=2");
     scene07Action.to('#scene07_textline1', 5, {autoAlpha: 0}, "+=20");
-    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 1, x: 130}, "+=2");
-    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: 260}, "+=20");
+    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+    scene07Action.to('#scene07_textblock6', 10, {autoAlpha: 0, x: "80%"}, "+=20");
 
     const scene07 = new ScrollMagic.Scene({
         triggerElement: ".scene07",
@@ -1007,7 +994,6 @@ $(document).ready(function () {
         });
         scene7Scene.setTween(scene07In);
         scene7Scene.addTo(controller);
-        //scene7Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene07 ================================
 
@@ -1034,40 +1020,40 @@ $(document).ready(function () {
         //BLUR
         scene07Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         //TEXT
-        scene08left.to('#scene08_textline1', 10, {autoAlpha: 1, y: 300}, "+=2");
-        scene08left.to('#scene08_textline1', 5, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-        scene08left.to('#scene08_textblock1', 10, {autoAlpha: 0, y: -300}, "+=20");
-        scene08left.to('#scene08_textline2', 10, {autoAlpha: 1}, "-=10");
-        scene08left.to('#scene08_textline2', 10, {autoAlpha: 1, y: -74}, "-=10");
-        scene08left.to('#scene08_textline3', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_textline1', 20, {autoAlpha: 1, y: "60%"}, "+=4");
+        scene08left.to('#scene08_textline1', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textblock1', 20, {autoAlpha: 1, y: "50%"}, "+=2");
+        scene08left.to('#scene08_textblock1', 10, {autoAlpha: 0, y: "-50%"}, "+=20");
+        scene08left.to('#scene08_textline2', 20, {autoAlpha: 1}, "+=4");
+        scene08left.to('#scene08_textline2', 20, {autoAlpha: 1, y: "-66%"}, "-=20");
+        scene08left.to('#scene08_textline3', 20, {autoAlpha: 1}, "-=10");
         scene08left.to('#scene08_textline2', 10, {autoAlpha: 0}, "+=20");
         scene08left.to('#scene08_textline3', 10, {autoAlpha: 0}, "-=10");
-        scene08left.to('#scene08_textblock2', 10, {autoAlpha: 1, x: 270}, "+=2");
-        scene08left.to('#scene08_textblock2', 5, {autoAlpha: 1, y: -150}, "+=2");
-        scene08left.to('#scene08_textblock3', 10, {autoAlpha: 1, x: 270}, "-=5");
-        scene08left.to('#scene08_textblock2', 5, {autoAlpha: 0, x: 600}, "+=20");
-        scene08left.to('#scene08_textblock3', 5, {autoAlpha: 0, x: 600}, "-=5");
-        scene08left.to('#scene08_textblock4', 10, {autoAlpha: 1, x: 260});
-        scene08left.to('#scene08_textblock4', 5, {autoAlpha: 0, x: 600}, "+=20");
-        scene08left.to('#scene08_textline4', 10, {autoAlpha: 1}, "+=2");
-        scene08left.to('#scene08_textline4', 5, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textblock2', 20, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene08left.to('#scene08_textblock2', 20, {autoAlpha: 1, y: "-30%"}, "+=2");
+        scene08left.to('#scene08_textblock3', 20, {autoAlpha: 1, x: "20%"}, "-=10");
+        scene08left.to('#scene08_textblock2', 10, {autoAlpha: 0, x: "100%"}, "+=20");
+        scene08left.to('#scene08_textblock3', 10, {autoAlpha: 0, x: "100%"}, "-=10");
+        scene08left.to('#scene08_textblock4', 20, {autoAlpha: 1, x: "20%"}, "+=4");
+        scene08left.to('#scene08_textblock4', 10, {autoAlpha: 0, x: "50%"}, "+=20");
+        scene08left.to('#scene08_textline4', 20, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textline4', 10, {autoAlpha: 0}, "+=20");
         //BLUR ENDE
         scene08left.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-        scene08left.to('#scene08_textblock5', 10, {autoAlpha: 1}, "+=2");
-        scene08left.to('#scene08_textblock5', 5, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 1, x: 100}, "+=2");
-        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: -200}, "+=20");
-        scene08left.to('#scene08_textline5', 10, {autoAlpha: 1}, "+=2");
-        scene08left.to('#scene08_textline5', 5, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textblock5', 20, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textblock5', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_regBubble1', 20, {autoAlpha: 1, x: "7%"}, "+=2");
+        scene08left.to('#scene08_regBubble1', 10, {autoAlpha: 0, x: "-7%"}, "+=20");
+        scene08left.to('#scene08_textline5', 20, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textline5', 10, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_bubbleAdam1', 20, {autoAlpha: 1}, "+=2");
         scene08left.to('#scene08_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_bubbleAdam2', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_bubbleAdam2', 20, {autoAlpha: 1}, "-=5");
         scene08left.to('#scene08_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_bubbleAdam3', 10, {autoAlpha: 1}, "-=5");
+        scene08left.to('#scene08_bubbleAdam3', 20, {autoAlpha: 1}, "-=5");
         scene08left.to('#scene08_bubbleAdam3', 10, {autoAlpha: 0}, "+=20");
-        scene08left.to('#scene08_textline6', 10, {autoAlpha: 1}, "+=2");
-        scene08left.to('#scene08_textline6', 5, {autoAlpha: 0}, "+=20");
+        scene08left.to('#scene08_textline6', 20, {autoAlpha: 1}, "+=2");
+        scene08left.to('#scene08_textline6', 10, {autoAlpha: 0}, "+=20");
         //BACKGROUND CHANGE
         scene08left.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene08left.to('#background1', 5, {autoAlpha: 0}, "+=4");
@@ -1133,23 +1119,25 @@ $(document).ready(function () {
 
         // hier alle Animationen
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
+        scene09right.to('#scene09_textlineTitle', 10, {autoAlpha: 1, y: "60%"}, "+=4");
+        scene09right.to('#scene09_textlineTitle', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_boyBubble1', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1, x: 150}, "+=4");
-        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1, x: 150}, "+=4");
-        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 0, x: -300}, "+=20");
-        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 0, x: -300}, "-=10");
+        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 1, x: "20%"}, "+=4");
+        scene09right.to('#scene09_textblock1', 10, {autoAlpha: 0, x: "-20%"}, "+=20");
+        scene09right.to('#scene09_textblock2', 10, {autoAlpha: 0, x: "-20%"}, "-=10");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_adamBubble1', 10, {autoAlpha: 0}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene09right.to('#scene09_textblock3', 10, {autoAlpha: 1, x: -320}, "+=4");
-        scene09right.to('#scene09_textline1', 10, {autoAlpha: 1, y: -100}, "+=4");
-        scene09right.to('#scene09_textblock3', 5, {autoAlpha: 0, x: 320}, "+=20");
-        scene09right.to('#scene09_textline1', 5, {autoAlpha: 0, x: 320}, "-=5");
-        scene09right.to('#scene09_textblock4', 10, {autoAlpha: 1, y: -200}, "+=4");
-        scene09right.to('#scene09_textblock4', 5, {autoAlpha: 0, y: -500}, "+=20");
+        scene09right.to('#scene09_textblock3', 10, {autoAlpha: 1, x: "-20%"}, "+=4");
+        scene09right.to('#scene09_textline1', 10, {autoAlpha: 1, y: "-10%"}, "+=4");
+        scene09right.to('#scene09_textblock3', 5, {autoAlpha: 0}, "+=20");
+        scene09right.to('#scene09_textline1', 5, {autoAlpha: 0}, "-=5");
+        scene09right.to('#scene09_textblock4', 10, {autoAlpha: 1, y: "-40%"}, "+=4");
+        scene09right.to('#scene09_textblock4', 5, {autoAlpha: 0, y: "-90%"}, "+=20");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 1}, "+=4");
         scene09right.to('#scene09_boyBubble2', 10, {autoAlpha: 0}, "+=20");
@@ -1165,11 +1153,6 @@ $(document).ready(function () {
         scene09right.to('#scene09_textline2', 10, {autoAlpha: 0}, "-=10");
         scene09right.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene09right.to('#scene09_textline3', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline4', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline5', 10, {autoAlpha: 1}, "+=4");
-        scene09right.to('#scene09_textline3', 10, {autoAlpha: 0}, "+=20");
-        scene09right.to('#scene09_textline4', 10, {autoAlpha: 0}, "-=10");
-        scene09right.to('#scene09_textline5', 10, {autoAlpha: 0}, "-=10");
 
         // Start animation for draws
         scene09right.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "-=2");
@@ -1220,8 +1203,7 @@ $(document).ready(function () {
         scene09right.to('#scene09_wlan2', 2, {autoAlpha: 0}, "wlanAnimation5");
         scene09right.to('#scene09_wlan3', 2, {autoAlpha: 0}, "wlanAnimation5");
         scene09right.to('#scene09_wlan4', 2, {autoAlpha: 0}, "wlanAnimation5");
-
-
+        scene09right.to('#scene09_textline3', 10, {autoAlpha: 0}, "-=2");
 
         // END SCENE 09 RIGHT SIDE =======================================================================
 
@@ -1288,7 +1270,6 @@ $(document).ready(function () {
         });
         decision2.setTween(decision2In);
         decision2.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene08and09 ================================
 
@@ -1313,20 +1294,20 @@ $(document).ready(function () {
     //BLUR -> muss sobald Szene 9 existiert, in scene09Action.set umgeändert werden!
     //scene08left.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
     //TEXT
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: -80}, "+=20");
-    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: 500}, "+=20");
-    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: 500}, "-=10");
-    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: -100}, "+=2");
-    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: -100}, "+=2");
-    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: -500}, "+=20");
-    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 0, y: -500}, "-=10");
-    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: -300}, "+=2");
-    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: 600}, "+=20");
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 1, y: "30%"}, "+=2");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 1, y: "-82%"}, "+=20");
+    scene10Action.to('#scene10_textblock1', 10, {autoAlpha: 0, y: "100%"}, "+=20");
+    scene10Action.to('#scene10_textline1', 10, {autoAlpha: 0, y: "100%"}, "-=10");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 1, y: "-50%"}, "+=2");
+    scene10Action.to('#scene10_textblock3', 10, {autoAlpha: 1, y: "-50%"}, "+=2");
+    scene10Action.to('#scene10_textblock2', 10, {autoAlpha: 0, y: "-100%"}, "+=20");
+    scene10Action.to('#scene10_textblock3', 15, {autoAlpha: 0, y: "-100%"}, "-=10");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 1, x: "-25%"}, "+=2");
+    scene10Action.to('#scene10_textblock4', 10, {autoAlpha: 0, x: "75%"}, "+=20");
     scene10Action.to('#scene10_textline2', 10, {autoAlpha: 1}, "+=2");
     scene10Action.to('#scene10_textline2', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: -300}, "+=2");
-    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: 600}, "+=20");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 1, x: "-25%"}, "+=2");
+    scene10Action.to('#scene10_textblock5', 10, {autoAlpha: 0, x: "75%"}, "+=20");
     //BLUR ENDE
     scene10Action.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
     scene10Action.to('#scene10_adam', 10, {autoAlpha: 1, x: 150}, "+=4");
@@ -1343,8 +1324,8 @@ $(document).ready(function () {
     scene10Action.to('#scene10_girlBubble3', 10, {autoAlpha: 0}, "+=20");
     scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 1}, "+=2");
     scene10Action.to('#scene10_adamBubble3', 10, {autoAlpha: 0}, "+=20");
-    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: 210}, "+=2");
-    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: -300}, "+=20");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 1, y: "30%"}, "+=2");
+    scene10Action.to('#scene10_textblock6', 10, {autoAlpha: 0, y: "-70%"}, "+=20");
     scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 1}, "+=2");
     scene10Action.to('#scene10_adamBubble4', 10, {autoAlpha: 0}, "+=20");
     scene10Action.to('#scene10_textline3', 10, {autoAlpha: 1}, "+=2");
@@ -1383,7 +1364,6 @@ $(document).ready(function () {
         });
         scene10Scene.setTween(scene10In);
         scene10Scene.addTo(controller);
-        //scene10Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene10 ================================
 
@@ -1410,64 +1390,66 @@ $(document).ready(function () {
 
         scene10Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
 
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, x: 270}, "+=2");
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0, x: 500}, "+=20");
+        scene11LinksAction.to('#scene11_textlineTitle', 10, {autoAlpha: 1, y: "300%"}, "+=2");
+        scene11LinksAction.to('#scene11_textlineTitle', 10, {autoAlpha: 0}, "+=20");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0, x: "70%"}, "+=20");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -300}, "+=10");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 1, y: -200}, "+=10");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -600}, "-=10");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0, y: -1000}, "+=20");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0, y: -1000}, "-=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: "-40%"}, "+=10");
+        scene11LinksAction.to('#scene11_textblock3', 5, {autoAlpha: 1, y: "-40%"}, "+=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0, y: "-300%"}, "-=5");
+        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0, y: "-300%"}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1, x: 270}, "+=2");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1, x: -880}, "+=2");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0, y: -1000}, "+=20");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0, y: -1000}, "-=10");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1, x: "-63%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0, y: "-100%"}, "+=20");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0, y: "-100%"}, "-=10");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 0}, "+=20");
         // LIGHT GOES OFF
-        scene11LinksAction.to('#scene11_bright', 4,
+        scene11LinksAction.to('#scene11_bright', 10,
             {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
-        scene11LinksAction.to('#scene11_bright', 2, {autoAlpha: 0});
+        scene11LinksAction.to('#scene11_bright', 10, {autoAlpha: 0});
         scene11LinksAction.add("Parallax", "+=1");
-        scene11LinksAction.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
-        scene11LinksAction.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
-        scene11LinksAction.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
-        scene11LinksAction.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
+        scene11LinksAction.to('#scene11_layer01', 10, {scale: "1.2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer01', 10, {scale: "1.01"}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "1"}, "Parallax");
         scene11LinksAction.add("Parallax2", "+=1");
-        scene11LinksAction.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "3", autoAlpha: 0}, "Parallax2");
 
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: 100}, "+=2");
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: -100}, "+=20");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: "5%"}, "+=2");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: "-5%"}, "+=20");
 
-        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 10, {scale: "1.2", autoAlpha: 1},
             "Parallax2");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"},
-            "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 10, {scaleY: 0, transformOrigin: "50%"
+                                                                                                              + " 50%"},
+            "+=4");
         scene11LinksAction.add("Parallax3", "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
-        scene11LinksAction.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2,
-            {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 5, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_layer01', 5, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5,
+            {scale: "1.01", autoAlpha: 1, transformOrigin: "50% 50%"}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: .3});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: .4});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {scaleY: 0, autoAlpha: .2}, "+=0");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {scaleY: 1, autoAlpha: .3}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 1}, "+=1");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1, y: -300}, "+=2");
+        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1, y: "-50%"}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 0}, "-=10");
@@ -1488,30 +1470,32 @@ $(document).ready(function () {
 
         // Ab hier Animationen einfügen
         scene12RechtsAction.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=4");
-        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 1, x: -600}, "+=10");
-        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 0, x: -900}, "+=20");
-        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 1, x: 550}, "+=10");
-        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 0, x: 800}, "+=20");
-        scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 1});
-        scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 0});
+        scene12RechtsAction.to('#scene12_textlineTitle', 20, {autoAlpha: 1, y: "100%"}, "+=10");
+        scene12RechtsAction.to('#scene12_textlineTitle', 10, {autoAlpha: 0}, "+=20");
+        scene12RechtsAction.to('#scene12_textblock1', 20, {autoAlpha: 1, x: "-38%"}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock1', 10, {autoAlpha: 0, x: "-60%"}, "+=20");
+        scene12RechtsAction.to('#scene12_textblock2', 20, {autoAlpha: 1, x: "33%"}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock2', 10, {autoAlpha: 0, x: "67%"}, "+=20");
+        scene12RechtsAction.to('#scene12_textblock3', 20, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock3', 10, {autoAlpha: 0}, "+=20");
         // BLUR END
         scene12RechtsAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
-        scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_adamBubble1', 20, {autoAlpha: 1}, "+=10");
         scene12RechtsAction.to('#scene12_adamBubble1', 10, {autoAlpha: 0}, "+=20");
-        scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 1, y: 300}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock4', 20, {autoAlpha: 1, y: "90%"}, "+=10");
         scene12RechtsAction.to('#scene12_textblock4', 10, {autoAlpha: 0}, "+=20");
 
-        scene12RechtsAction.to('#scene12_audienceBubble1', 10, {autoAlpha: 1}, "+=10");
-        scene12RechtsAction.to('#scene12_audienceBubble2', 10, {autoAlpha: 1}, "+=10");
-        scene12RechtsAction.to('#scene12_audienceBubble3', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_audienceBubble1', 20, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_audienceBubble2', 20, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_audienceBubble3', 20, {autoAlpha: 1}, "+=10");
         scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
         scene12RechtsAction.to('#scene12_audienceBubble1', 10, {autoAlpha: 0}, "+=20");
         scene12RechtsAction.to('#scene12_audienceBubble2', 10, {autoAlpha: 0}, "-=10");
         scene12RechtsAction.to('#scene12_audienceBubble3', 10, {autoAlpha: 0}, "-=10");
         scene12RechtsAction.to('.blur_speechbubble', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
 
-        scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 1, y: -500}, "+=10");
-        scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 1}, "+=10");
+        scene12RechtsAction.to('#scene12_textblock5', 20, {autoAlpha: 1, y: "-150%"}, "+=10");
+        scene12RechtsAction.to('#scene12_textline1', 20, {autoAlpha: 1}, "+=10");
         scene12RechtsAction.to('#scene12_textblock5', 10, {autoAlpha: 0}, "+=20");
         scene12RechtsAction.to('#scene12_textline1', 10, {autoAlpha: 0}, "-=10");
 
@@ -1617,7 +1601,6 @@ $(document).ready(function () {
         });
         scene13Scene.setTween(scene13In);
         scene13Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
     });
     //  END FadeInScene13 Good ================================
 
@@ -1692,7 +1675,7 @@ $(document).ready(function () {
         });
         scene14Scene.setTween(scene14In);
         scene14Scene.addTo(controller);
-        //scene5Scene.addIndicators({name: "TEST", colorStart: "orange", colorEnd: "orange"});
+
     });
     //  END FadeInScene14 ================================
 

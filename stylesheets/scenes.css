@@ -283,7 +283,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_textline2 {
-    top: 72%;
+    top: 73%;
 }
 
 #battery_animation_1 {
@@ -329,7 +329,7 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene03_regtext1 {
-    top: 27%;
+    top: 32%;
 }
 
 .scene03_regtext1 p {
@@ -344,7 +344,7 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene03_regtext2 {
-    top: 25%;
+    top: 27%;
 }
 
 .scene03_regtext2 p {
@@ -353,13 +353,13 @@ FOR EVERY SCENE USEABLE
 
 #scene03_frauBubble1 {
     width: 12%;
-    height: 25%;
+    height: 24%;
     top: 33%;
     left: 55%;
 }
 
 #scene03_frautext1 {
-    top: 18%;
+    top: 27%;
 }
 
 #scene03_adamBubble1 {
@@ -370,18 +370,18 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext1 {
-    top: 20%;
+    top: 23%;
 }
 
 #scene03_frauBubble2 {
     width: 12%;
-    height: 25%;
+    height: 24%;
     top: 33%;
     left: 55%;
 }
 
 #scene03_frautext2 {
-    top: 22%;
+    top: 27%;
 }
 
 #scene03_adamBubble2 {
@@ -392,7 +392,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene03_adamtext2 {
-    top: 25%;
+    top: 31%;
 }
 
 #scene03_regBubble3 {
@@ -403,41 +403,41 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene03_regtext3 {
-    top: 28%;
+    top: 32%;
 }
 
 /*--- SCENE 4 ---*/
 #scene04_reporter01 {
-    width: 25%;
-    height: 45%;
+    width: 22%;
+    height: 44%;
     top: 10%;
     left: 80%;
 }
 
 #scene04_reportertext1 {
-    top: 26%;
+    top: 23%;
 }
 
 #scene04_reporter02 {
-    width: 27%;
+    width: 25%;
     height: 50%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext2 {
-    top: 30%;
+    top: 29%;
 }
 
 #scene04_reporter03 {
-    width: 25%;
-    height: 40%;
+    width: 22%;
+    height: 44%;
     top: 5%;
     left: 1%;
 }
 
 #scene04_reportertext3 {
-    top: 35%;
+    top: 28%;
 }
 
 #scene04_reportertext3 > p {
@@ -445,14 +445,14 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamBubble1 {
-    width: 15%;
-    height: 40%;
+    width: 16%;
+    height: 34%;
     top: 15%;
     left: 30%;
 }
 
 #scene04_adamtext1 {
-    top: 20%;
+    top: 25%;
 }
 
 #scene04_adamtext1 > p {
@@ -467,7 +467,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext2 {
-    top: 22%;
+    top: 27%;
 }
 
 #scene04_adamBubble3 {
@@ -478,7 +478,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext3 {
-    top: 23%;
+    top: 25%;
 }
 
 #scene04_adamBubble4 {
@@ -489,7 +489,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext4 {
-    top: 15%;
+    top: 20%;
 }
 
 #scene04_adamBubble5 {
@@ -500,7 +500,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene04_adamtext5 {
-    top: 24%;
+    top: 27%;
 }
 
 #scene04_adamtext5 > p {
@@ -509,47 +509,47 @@ FOR EVERY SCENE USEABLE
 
 #scene04_textblock1 {
     left: 9%;
-    right: auto;
+    top: 20%;
 }
 
 #scene04_textblock2 {
     left: 9%;
-    right: auto;
-    top: 10%;
+    top: 50%;
 }
 
 #scene04_textblock3 {
     left: 9%;
-    right: auto;
     top: 60%;
 }
 
 #scene04_textblock4 {
     left: 9%;
-    right: auto;
     top: 70%;
 }
 
 #scene04_textblock5 {
     left: 9%;
-    right: auto;
     top: 70%;
 }
 
+#scene04_textline1 {
+    top: 92.5%
+}
+
 #scene04_textline2 {
-    top: 82%;
+    top: 85%
 }
 
 #scene04_textline3 {
-    top: 73%;
+    top: 77%;
 }
 
 #scene04_textline4 {
-    top: 60%;
+    top: 65%;
 }
 
 #scene04_textline5 {
-    top: 50%;
+    top: 57%;
 }
 
 /*--- SCENE 5 ---*/
@@ -567,23 +567,23 @@ FOR EVERY SCENE USEABLE
 
 #scene05_textline1 {
     left: 100vw;
-    top: 30%;
+    bottom: 40vh;
     height: auto;
     width: 97vw;
 }
 #scene05_textline2 {
     left: 100vw;
     width: 97vw;
-    height: auto;
+    top: 6vh;
 }
 #scene05_textline3 {
     left: 100vw;
     width: 97vw;
-    height: auto;
+    top: 6vh;
 }
 
 #scene05_textline4 {
-    top: 57%;
+    bottom: 1.25vh;
     width: 97vw;
     left: 100vw;
 }
@@ -606,25 +606,31 @@ FOR EVERY SCENE USEABLE
 #scene05_textblock3 {
     width: 80vw;
     left: 209vw;
-    top: 80%;
+    top: 50%;
 }
 
 #scene05_textblock4 {
     width: 80vw;
     left: 209vw;
-    top: 10%;
+    top: 15%;
+}
+
+#scene05_textblock5 {
+    width: 80vw;
+    left: 209vw;
+    top: 60%;
 }
 
 #scene05_bubbleGirl1 {
-    width: 7em;
-    height: 7em;
-    top: 60%;
+    width: 5%;
+    height: 10%;
+    top: 50%;
     left: 238vw;
 }
 
 #scene05_girlText1 {
     top: 13%;
-    height: auto;
+    transform: translate(-45%);
 }
 
 #scene05_girlText1 p {
@@ -632,29 +638,28 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene05_bubbleAdam1 {
-    width: auto;
+    width: 15%;
     height: 30%;
     top: 10%;
     left: 225vw;
 }
 
 #scene05_adamText1 {
-    width: 40%;
-    height: auto;
-    transform: translate(-55%);
+    width: 20%;
+    transform: translate(-160%);
 }
 
 #scene05_bubbleAdam2 {
-    width: auto;
-    height: 35%;
+    width: 18%;
+    height: 36%;
     top: 10%;
     left: 225vw;
 }
 
 #scene05_adamText2 {
-    width: 40%;
-    height: auto;
-    transform: translate(-55%);
+    top: 25%;
+    width: 30%;
+    transform: translate(-105%);
 }
 
 #scene05_bubbleAdam3 {
@@ -691,78 +696,70 @@ FOR EVERY SCENE USEABLE
 
 #scene06_textlineTitle{
     right: 100.5vw;
-    top: 30%;
-    height: auto;
-    width: 97vw;
+    top: 15vh;
+    width: 98vw;
 }
 
 #scene06_textblock1 {
-    left: 9%;
+    left: 4.5%;
     width: 70vw;
-    height: auto;
-    top: 90%;
+    top: 70%;
 }
 
 #scene06_textblock2 {
-    left: 9%;
+    left: 4.5%;
     width: 70vw;
-    height: auto;
-    top: 50%;
+    top: 60%;
 }
 
 #scene06_textblock3 {
     width: 80vw;
-    left: -6vw;
-    height: auto;
+    left: -7vw;
 }
 
 #scene06_textblock4 {
-    top: 60%;
+    top: 55vh;
     width: 80vw;
-    left: -6vw;
-    height: auto;
+    left: -7vw;
 }
 
 #scene06_textblock5 {
-    top: 5%;
+    top: 10%;
     width: 80vw;
-    left: -15vw;
-    height: auto;
+    left: -7vw;
 }
 
 #scene06_textblock6 {
-    left: 9%;
+    left: 4.5%;
     width: 70vw;
-    height: auto;
-    top: 100%;
+    top: 80%;
 }
 
 #scene06_textline1, #scene06_textline2, #scene06_textline3 {
-    top: 25%;
+    top: 20vh;
     left: -26.5vw;
-    width: 97vw;
+    width: 98vw;
     height: auto;
 }
 
 #scene06_textline4 {
-    top: 26vw;
-    width: 97vw;
+    top: 61vh;
+    width: 98vw;
     right: 100.5vw;
     height: auto;
 }
 
 #scene06_textline5 {
-    top: -60.5%;
-    width: 97vw;
+    top: 43vh;
+    width: 98vw;
     right: 100.5vw;
     height: auto;
 }
 
 #scene06_textline6 {
-    top: 46%;
-    width: 97vw;
+    top: 0;
+    width: 98vw;
     right: 100.5vw;
-    height: auto;
 }
 
 #scene06_bubbleAdam1 {
@@ -821,7 +818,7 @@ FOR EVERY SCENE USEABLE
 /*--- SCENE 7 ---*/
 #scene07_textblock1 {
     left: 9%;
-    right: auto;
+    top: 20%;
 }
 
 #scene07_textblock2 {
@@ -831,28 +828,26 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_textblock3 {
-    left: 9%;
-    right: auto;
+    top: 89%;
 }
 
 #scene07_textblock4 {
     left: 9%;
-    right: auto;
+    top: 10%;
 }
 
 #scene07_textblock5 {
     left: 9%;
-    right: auto;
-    top: 70%;
+    top: 75%;
 }
 
 #scene07_textblock6 {
-    right: auto;
+    left: -8%;
     top: 50%;
 }
 
 #scene07_textline1 {
-    top: 91%;
+    top: 81%;
 }
 
 #scene07_bubbleAdam1 {
@@ -863,7 +858,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText1 {
-    top: 14%;
+    top: 19%;
 }
 
 #scene07_bubbleAdam2 {
@@ -874,7 +869,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText2 {
-    top: 15%;
+    top: 20%;
 }
 
 #scene07_bubbleAdam3 {
@@ -885,7 +880,7 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene07_adamText3 {
-    top: 16%;
+    top: 21%;
 }
 
 /*--- SCENE 8 ---*/
@@ -910,8 +905,8 @@ FOR EVERY SCENE USEABLE
 
 #scene08_textline1{
     right: 100.5vw;
-    height: auto;
     width: 97vw;
+    top: 30vh;
 }
 
 #scene08_textline2 {
@@ -946,13 +941,11 @@ FOR EVERY SCENE USEABLE
 
 #scene08_textline4 {
     right: 100.5vw;
-    height: auto;
     width: 97vw;
 }
 
 #scene08_textblock5 {
     width: 70vw;
-    height: auto;
     left: 4.5%;
 }
 
@@ -966,14 +959,12 @@ FOR EVERY SCENE USEABLE
 #scene08_textline6 {
     top: 20vw;
     right: 100.5vw;
-    height: auto;
     width: 97vw;
 }
 
 #scene08_textline7 {
     top: 16vw;
     right: 100.5vw;
-    height: auto;
     width: 97vw;
 }
 
@@ -986,7 +977,6 @@ FOR EVERY SCENE USEABLE
 .scene08_regtext1 {
     top: 45%;
     width: 40%;
-    height: auto;
     right: 12%;
     transform: translate(-52%,-50%)
 }
@@ -1059,65 +1049,51 @@ FOR EVERY SCENE USEABLE
     top:0;
 }
 
+#scene09_textlineTitle {
+    left: 100vw;
+    width: 98vw;
+    top: -40vh;
+}
+
 #scene09_textline1 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
+    width: 98vw;
+    top: 15vh;
 }
 
 #scene09_textline2 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -41vw;
+    width: 98vw;
+    top: -87vh;
 }
 
 #scene09_textline3 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -45vw;
-}
-
-#scene09_textline4 {
-    left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -32vw;
-}
-
-#scene09_textline5 {
-    left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -19vw;
+    width: 98vw;
+    top: -95vh;
 }
 
 #scene09_textblock1 {
     top: 20%;
-    width: 45em;
-    height: auto;
-    left: 200vw;
+    width: 80vw;
+    left: 192vw;
 }
 
 #scene09_textblock2 {
     top: 50%;
-    width: 45em;
-    height: auto;
-    left: 200vw;
+    width: 80vw;
+    left: 192vw;
 }
 
 #scene09_textblock3 {
     top: 20%;
-    width: 45em;
-    height: auto;
+    width: 80vw;
     left: 225vw;
 }
 
 #scene09_textblock4 {
     top: 60%;
     width: 45em;
-    height: auto;
     left: 208vw;
 }
 
@@ -1148,18 +1124,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene09_boyBubble2 {
-    width: auto;
-    height: 25%;
-    top: 65%;
+    width: 15%;
+    height: 30%;
+    top: 60%;
     left: 225vw;
 }
 
 .scene09_boytext2 {
-    width: 45%;
-    height: auto;
-    transform: translate(-55%);
-    left: 5%;
-    top: 30%;
+    width: 30%;
+    left: -31%;
+    top: 35%;
 }
 
 #scene09_boyBubble3 {
@@ -1196,18 +1170,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene09_adamBubble2 {
-    width: 60%;
-    height: 30%;
-    top: 55%;
-    left: 201vw;
+    width: 18%;
+    height: 34%;
+    top: 50%;
+    left: 200vw;
 }
 
 .scene09_adamtext2 {
-    width: 7%;
-    height: auto;
-    transform: translate(-55%);
-    left: -41.5%;
-    top: 14%;
+    width: 27%;
+    left: -32.5%;
+    top: 24%;
 }
 
 #scene09_adamBubble3 {
@@ -1269,11 +1241,11 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene10_textline2 {
-    top: 75%;
+    top: 84.5%;
 }
 
 #scene10_textline3 {
-    top: 57%;
+    top: 73%;
 }
 
 #scene10_girlBubble1 {
@@ -1284,16 +1256,16 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene10_girlBubble2 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
+    width: 15%;
+    height: 30%;
+    top: 25%;
     left: 53%;
 }
 
 #scene10_girlBubble3 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
+    width: 15%;
+    height: 30%;
+    top: 25%;
     left: 53%;
 }
 
@@ -1304,44 +1276,56 @@ FOR EVERY SCENE USEABLE
     left: 53%;
 }
 
+.scene10_girltext1 {
+    top: 33%;
+}
+
 .scene10_girltext2 {
-    top: 32%;
+    top: 35%;
 }
 
 .scene10_girltext3 {
-    top: 31%;
+    top: 33%;
 }
 
 .scene10_girltext4 {
-    top: 23%;
+    top: 25%;
 }
 
 #scene10_adamBubble1 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
-    left: 7%;
+    width: 15%;
+    height: 30%;
+    top: 20%;
+    left: 10%;
 }
 
 #scene10_adamBubble2 {
-    width: 20%;
-    height: 40%;
-    top: 15%;
-    left: 7%;
+    width: 15%;
+    height: 30%;
+    top: 20%;
+    left: 10%;
 }
 
 #scene10_adamBubble3 {
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 7%;
+    left: 5%;
 }
 
 #scene10_adamBubble4 {
     width: 20%;
     height: 40%;
     top: 15%;
-    left: 7%;
+    left: 5%;
+}
+
+.scene10_adamtext1 {
+    top: 32%;
+}
+
+.scene10_adamtext2 {
+    top: 32%;
 }
 
 .scene10_adamtext3 {
@@ -1349,7 +1333,7 @@ FOR EVERY SCENE USEABLE
 }
 
 .scene10_adamtext4 {
-    top: 25%;
+    top: 28%;
 }
 /*--- SCENE 11 ---*/
 .scene11Parallax{
@@ -1398,18 +1382,21 @@ FOR EVERY SCENE USEABLE
     left: 4.5%;
 }
 
+#scene11_textlineTitle{
+    right: 100.25vw;
+    width: 98vw;
+}
+
 #scene11_textline1{
     right: 100.25vw;
-    height: auto;
     width: 98vw;
-    top: 92%;
+    top: 84.5%;
 }
 
 #scene11_textline2{
     right: 100.25vw;
-    height: auto;
     width: 98vw;
-    top: 84.5%;
+    top: 77%;
 }
 
 #scene11_bubbleAdam1 {
@@ -1420,11 +1407,9 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene11_adamText1 {
-    top: 44%;
+    top: 35%;
     width: 25%;
-    height: auto;
-    right: 18.5%;
-    transform: translate(-52%,-50%)
+    right: 32%;
 }
 
 #scene11_bubbleAdam2 {
@@ -1450,11 +1435,9 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene11_girlText1 {
-    top: 44%;
+    top: 32%;
     width: 25%;
-    height: auto;
-    right: 18.5%;
-    transform: translate(-52%,-50%)
+    left: -31%;
 }
 
 #scene11_bubbleGirl2 {
@@ -1499,11 +1482,16 @@ FOR EVERY SCENE USEABLE
     top: 0;
 }
 
+#scene12_textlineTitle {
+    left: 100vw;
+    width: 98vw;
+    top: -70vh;
+}
+
 #scene12_textline1 {
     left: 100vw;
-    height: auto;
-    width: 97vw;
-    top: -80vw;
+    width: 98vw;
+    top: -108vh;
 }
 
 #scene12_textblock1 {
@@ -1544,7 +1532,7 @@ FOR EVERY SCENE USEABLE
 #scene12_adamBubble1 {
     width: 80%;
     height: 40%;
-    top: 30%;
+    top: 33%;
     left: 210vw;
 }
 
@@ -1604,104 +1592,93 @@ FOR EVERY SCENE USEABLE
     opacity: 0;
 }
 #scene13_adamBubble1{
-    width: 43%;
-    height: 43%;
+    width: 25%;
+    height: 50%;
     left: 20%;
     top: 5%;
 }
 #scene13_adamText1{
-    left: -22%;
-    top: 15%;
+    top: 13%;
 }
 #scene13_adamBubble2{
-    width: 30%;
-    height: 30%;
-    right: 5%;
+    width: 20%;
+    height: 40%;
+    right: 23%;
     top: 5%;
 }
 #scene13_adamText2{
-    right: 23%;
-    top: 13%;
+    top: 14%;
 }
 
 #scene13_adamBubble3{
-    width: 35%;
-    height: 35%;
+    width: 20%;
+    height: 40%;
     left: 22%;
-    top: 7%;
+    top: 5%;
 }
 #scene13_adamText3{
-    left: -23%;
-    top: 20%;
+    top: 13%;
 }
 #scene13_adamBubble4{
-    width: 35%;
-    height: 35%;
-    right: 5%;
+    width: 25%;
+    height: 50%;
+    right: 15%;
     top: 5%;
 }
 #scene13_adamText4{
-    right: 23%;
-    top: 10%;
+    top: 14%;
 }
 #scene13_adamBubble5, #scene13_adamBubble6, #scene13_adamBubble8{
-    width: 35%;
-    height: 36%;
-    left: 23%;
+    width: 25%;
+    height: 50%;
+    left: 17%;
     top: 5%;
 }
 #scene13_adamText5{
-    left: -22%;
-    top: 15%;
-}
-
-#scene13_adamText6{
-    left: -22%;
-    top: 12%;
-}
-#scene13_adamBubble7{
-    width: 40%;
-    height: 45%;
-    right: 1%;
-    top: 5%;
-}
-#scene13_adamText7{
-    right: 20%;
     top: 17%;
 }
 
+#scene13_adamText6{
+    top: 17%;
+}
+#scene13_adamBubble7{
+    width: 25%;
+    height: 50%;
+    right: 15%;
+    top: 5%;
+}
+#scene13_adamText7{
+    top: 14%;
+}
+
 #scene13_adamText8{
-    left: -22%;
-    top: 15%;
+    top: 17%;
 }
 #scene13_adamBubble9{
-    width: 40%;
-    height: 40%;
-    left: 23%;
+    width: 25%;
+    height: 50%;
+    left: 18%;
     top:5%;
 }
 #scene13_adamText9{
-    left: -23%;
-    top: 13%;
+    top: 15%;
 }
 #scene13_adamBubble10{
-    width: 30%;
-    height: 30%;
-    left: 30%;
+    width: 20%;
+    height: 40%;
+    left: 23%;
     top: 10%;
 }
 #scene13_adamText10{
-    left: -23%;
     top: 20%;
 }
 #scene13_adamBubble11{
-    width: 30%;
-    height: 30%;
-    right: 10%;
+    width: 20%;
+    height: 40%;
+    right: 20%;
     top: 15%;
 }
 #scene13_adamText11{
-    right: 23%;
     top: 21%;
 }
 

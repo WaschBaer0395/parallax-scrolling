@@ -1,5 +1,4 @@
 let progress = document.getElementById('progress');
-let percentage = document.getElementById('percentage');
 let progresscontainer = document.getElementById('progresscontainer');
 let scrollindicator = document.getElementById("scrollIndicator");
 let cover_title = document.getElementById("cover_title");
@@ -10,13 +9,10 @@ queue.on("progress", event =>{
     cover_title.style.opacity = '0';
     scrollindicator.style.opacity ='0';
     document.body.style.overflowY = 'hidden';
-    let progress = Math.floor(event.progress*100);
-    this.progress.style.width = progress+'%';
-    this.percentage.innerText = "[ " + progress+'%' + " ]";
+    let progression = Math.floor(event.progress*100);
+    this.progress.style.width = progression+'%';
+    this.percentage.innerText = "[ " + progression+'%' + " ]";
     //console.log(progress+'%');
-/*    if(progress == 100){
-        console.log('all done\n');
-    }*/
 });
 
 function sleep(miliseconds) {
@@ -143,6 +139,13 @@ queue.loadFile("Media/pictures/szene08/sitting2.png");
 queue.loadFile("Media/pictures/szene09/scene09_layer0.jpg");
 queue.loadFile("Media/pictures/szene09/scene09_layer01.png");
 queue.loadFile("Media/pictures/szene09/scene09_layer02.png");
+queue.loadFile("Media/pictures/szene09/draws/wlan/wlan1.svg");
+queue.loadFile("Media/pictures/szene09/draws/wlan/wlan2.svg");
+queue.loadFile("Media/pictures/szene09/draws/wlan/wlan3.svg");
+queue.loadFile("Media/pictures/szene09/draws/wlan/wlan4.svg");
+queue.loadFile("Media/pictures/szene09/draws/frame.svg");
+queue.loadFile("Media/pictures/szene09/draws/search.svg");
+
 // SCENE10 =============================================================================
 queue.loadFile("Media/pictures/szene10/cafe_girl.png");
 queue.loadFile("Media/pictures/szene10/cafe_layer00.jpg");
@@ -162,6 +165,12 @@ queue.loadFile("Media/pictures/szene12/concert_layer01.png");
 queue.loadFile("Media/pictures/szene12/concert_layer02.png");
 queue.loadFile("Media/pictures/szene12/concert_layer03_adam.png");
 queue.loadFile("Media/pictures/szene12/concert_layer04.png");
+// SCENE13 =============================================================================
+queue.loadFile("Media/pictures/final/background.jpg");
+queue.loadFile("Media/pictures/final/adam01.png");
+// SCENE14 =============================================================================
+queue.loadFile("Media/20150501_HSD_Logo_rot_transparent.png");
+
 
 
 
