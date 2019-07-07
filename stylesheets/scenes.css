@@ -1387,18 +1387,21 @@ FOR EVERY SCENE USEABLE
     left: 4.5%;
 }
 
+#scene11_textlineTitle{
+    right: 100.25vw;
+    width: 98vw;
+}
+
 #scene11_textline1{
     right: 100.25vw;
-    height: auto;
     width: 98vw;
-    top: 92%;
+    top: 84.5%;
 }
 
 #scene11_textline2{
     right: 100.25vw;
-    height: auto;
     width: 98vw;
-    top: 84.5%;
+    top: 77%;
 }
 
 #scene11_bubbleAdam1 {
@@ -1409,11 +1412,9 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene11_adamText1 {
-    top: 44%;
+    top: 35%;
     width: 25%;
-    height: auto;
-    right: 18.5%;
-    transform: translate(-52%,-50%)
+    right: 32%;
 }
 
 #scene11_bubbleAdam2 {
@@ -1439,11 +1440,9 @@ FOR EVERY SCENE USEABLE
 }
 
 #scene11_girlText1 {
-    top: 44%;
+    top: 32%;
     width: 25%;
-    height: auto;
-    right: 18.5%;
-    transform: translate(-52%,-50%)
+    left: -31%;
 }
 
 #scene11_bubbleGirl2 {

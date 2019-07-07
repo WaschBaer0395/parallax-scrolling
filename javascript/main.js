@@ -1407,28 +1407,29 @@ $(document).ready(function () {
 
         scene10Action.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=0");
 
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, x: 270}, "+=2");
-        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0, x: 500}, "+=20");
+        scene11LinksAction.to('#scene11_textlineTitle', 10, {autoAlpha: 1, y: "300%"}, "+=2");
+        scene11LinksAction.to('#scene11_textlineTitle', 10, {autoAlpha: 0}, "+=20");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock1', 10, {autoAlpha: 0, x: "70%"}, "+=20");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam1', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl1', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -300}, "+=10");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 1, y: -200}, "+=10");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: -600}, "-=10");
-        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0, y: -1000}, "+=20");
-        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0, y: -1000}, "-=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 1, y: "-40%"}, "+=10");
+        scene11LinksAction.to('#scene11_textblock3', 5, {autoAlpha: 1, y: "-40%"}, "+=10");
+        scene11LinksAction.to('#scene11_textblock2', 10, {autoAlpha: 0, y: "-300%"}, "-=5");
+        scene11LinksAction.to('#scene11_textblock3', 10, {autoAlpha: 0, y: "-300%"}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_bubbleGirl3', 10, {autoAlpha: 0}, "+=20");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1, x: 270}, "+=2");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1, x: -880}, "+=2");
-        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0, y: -1000}, "+=20");
-        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0, y: -1000}, "-=10");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 1, x: "20%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 1, x: "-63%"}, "+=2");
+        scene11LinksAction.to('#scene11_textblock4', 10, {autoAlpha: 0, y: "-100%"}, "+=20");
+        scene11LinksAction.to('#scene11_textblock5', 10, {autoAlpha: 0, y: "-100%"}, "-=10");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 0}, "+=20");
         // LIGHT GOES OFF
@@ -1443,28 +1444,29 @@ $(document).ready(function () {
         scene11LinksAction.add("Parallax2", "+=1");
         scene11LinksAction.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
 
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: 100}, "+=2");
-        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: -100}, "+=20");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: "5%"}, "+=2");
+        scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: "-5%"}, "+=20");
 
-        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {scale: "1.2", autoAlpha: 1},
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 10, {scale: "1.2", autoAlpha: 1},
             "Parallax2");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2, {scaleY: 0, transformOrigin: "50% 50%"},
-            "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 10, {scaleY: 0, transformOrigin: "50%"
+                                                                                                              + " 50%"},
+            "+=4");
         scene11LinksAction.add("Parallax3", "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 2, {autoAlpha: 0}, "Parallax3");
-        scene11LinksAction.to('#scene11_layer01', 2, {autoAlpha: 0}, "Parallax3");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 2,
-            {scale: "1.01", autoAlpha: .1, transformOrigin: "50% 50%"}, "Parallax3");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .3});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: .4});
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 0, autoAlpha: .2}, "+=0");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', .4, {scaleY: 1, autoAlpha: .3}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 0, {autoAlpha: 0}, "+=1");
-        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 1, {autoAlpha: 1}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_without_nightvision', 5, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_layer01', 5, {autoAlpha: 0}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5,
+            {scale: "1.01", autoAlpha: 1, transformOrigin: "50% 50%"}, "Parallax3");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: .3});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: .4});
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {scaleY: 0, autoAlpha: .2}, "+=0");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {scaleY: 1, autoAlpha: .3}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 0}, "+=1");
+        scene11LinksAction.to('#scene11_dark_background02_with_nightvision', 5, {autoAlpha: 1}, "+=1");
         scene11LinksAction.to('.blur', 5, {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1, y: -300}, "+=2");
+        scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 1, y: "-50%"}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline2', 10, {autoAlpha: 0}, "+=20");
         scene11LinksAction.to('#scene11_textblock6', 10, {autoAlpha: 0}, "-=10");
