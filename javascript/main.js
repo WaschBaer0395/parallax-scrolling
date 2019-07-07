@@ -98,7 +98,7 @@ $(document).ready(function () {
     }
 
     function findEnding(){
-        if(goodCounter>1){
+        if(goodCounter>=2){
             goodEnding();
         }
         else badEnding();
@@ -166,8 +166,7 @@ $(document).ready(function () {
         triggerElement: ".cover",
         duration: '100%',
         triggerHook: 0, //  top of viewport
-        reverse: true,
-        pushFollowers: true
+        reverse: true
     });
     cover.setTween(coverAction);
     cover.setPin(".cover");
