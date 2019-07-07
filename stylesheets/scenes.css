@@ -1592,104 +1592,93 @@ FOR EVERY SCENE USEABLE
     opacity: 0;
 }
 #scene13_adamBubble1{
-    width: 43%;
-    height: 43%;
+    width: 25%;
+    height: 50%;
     left: 20%;
     top: 5%;
 }
 #scene13_adamText1{
-    left: -22%;
-    top: 15%;
+    top: 13%;
 }
 #scene13_adamBubble2{
-    width: 30%;
-    height: 30%;
-    right: 5%;
+    width: 20%;
+    height: 40%;
+    right: 23%;
     top: 5%;
 }
 #scene13_adamText2{
-    right: 23%;
-    top: 13%;
+    top: 14%;
 }
 
 #scene13_adamBubble3{
-    width: 35%;
-    height: 35%;
+    width: 20%;
+    height: 40%;
     left: 22%;
-    top: 7%;
+    top: 5%;
 }
 #scene13_adamText3{
-    left: -23%;
-    top: 20%;
+    top: 13%;
 }
 #scene13_adamBubble4{
-    width: 35%;
-    height: 35%;
-    right: 5%;
+    width: 25%;
+    height: 50%;
+    right: 15%;
     top: 5%;
 }
 #scene13_adamText4{
-    right: 23%;
-    top: 10%;
+    top: 14%;
 }
 #scene13_adamBubble5, #scene13_adamBubble6, #scene13_adamBubble8{
-    width: 35%;
-    height: 36%;
-    left: 23%;
+    width: 25%;
+    height: 50%;
+    left: 17%;
     top: 5%;
 }
 #scene13_adamText5{
-    left: -22%;
-    top: 15%;
-}
-
-#scene13_adamText6{
-    left: -22%;
-    top: 12%;
-}
-#scene13_adamBubble7{
-    width: 40%;
-    height: 45%;
-    right: 1%;
-    top: 5%;
-}
-#scene13_adamText7{
-    right: 20%;
     top: 17%;
 }
 
+#scene13_adamText6{
+    top: 17%;
+}
+#scene13_adamBubble7{
+    width: 25%;
+    height: 50%;
+    right: 15%;
+    top: 5%;
+}
+#scene13_adamText7{
+    top: 14%;
+}
+
 #scene13_adamText8{
-    left: -22%;
-    top: 15%;
+    top: 17%;
 }
 #scene13_adamBubble9{
-    width: 40%;
-    height: 40%;
-    left: 23%;
+    width: 25%;
+    height: 50%;
+    left: 18%;
     top:5%;
 }
 #scene13_adamText9{
-    left: -23%;
-    top: 13%;
+    top: 15%;
 }
 #scene13_adamBubble10{
-    width: 30%;
-    height: 30%;
-    left: 30%;
+    width: 20%;
+    height: 40%;
+    left: 23%;
     top: 10%;
 }
 #scene13_adamText10{
-    left: -23%;
     top: 20%;
 }
 #scene13_adamBubble11{
-    width: 30%;
-    height: 30%;
-    right: 10%;
+    width: 20%;
+    height: 40%;
+    right: 20%;
     top: 15%;
 }
 #scene13_adamText11{
-    right: 23%;
     top: 21%;
 }
 
