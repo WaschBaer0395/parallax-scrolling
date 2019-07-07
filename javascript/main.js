@@ -1416,16 +1416,16 @@ $(document).ready(function () {
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 1}, "+=2");
         scene11LinksAction.to('#scene11_textline1', 10, {autoAlpha: 0}, "+=20");
         // LIGHT GOES OFF
-        scene11LinksAction.to('#scene11_bright', 4,
+        scene11LinksAction.to('#scene11_bright', 10,
             {scale: "10", x: "-3000vw", y: "3000vw"}, "+=2");
-        scene11LinksAction.to('#scene11_bright', 2, {autoAlpha: 0});
+        scene11LinksAction.to('#scene11_bright', 10, {autoAlpha: 0});
         scene11LinksAction.add("Parallax", "+=1");
-        scene11LinksAction.to('#scene11_layer01', 0, {scale: "1.2", autoAlpha: 1}, "Parallax");
-        scene11LinksAction.to('#scene11_layer02', 0, {scale: "2", autoAlpha: 1}, "Parallax");
-        scene11LinksAction.to('#scene11_layer01', 2, {scale: "1.01"}, "Parallax");
-        scene11LinksAction.to('#scene11_layer02', 2, {scale: "1"}, "Parallax");
+        scene11LinksAction.to('#scene11_layer01', 10, {scale: "1.2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "2", autoAlpha: 1}, "Parallax");
+        scene11LinksAction.to('#scene11_layer01', 10, {scale: "1.01"}, "Parallax");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "1"}, "Parallax");
         scene11LinksAction.add("Parallax2", "+=1");
-        scene11LinksAction.to('#scene11_layer02', 2, {scale: "3", autoAlpha: 0}, "Parallax2");
+        scene11LinksAction.to('#scene11_layer02', 10, {scale: "3", autoAlpha: 0}, "Parallax2");
 
         scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 1, x: "5%"}, "+=2");
         scene11LinksAction.to('#scene11_bubbleReg1', 10, {autoAlpha: 0, x: "-5%"}, "+=20");
