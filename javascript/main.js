@@ -707,18 +707,18 @@ $(document).ready(function () {
         let scene06Links = new TimelineMax();
         //BLUR
         scene06Links.set('.blur', {webkitFilter: 'blur(6px)', filter: 'blur(6px)'}, "+=2");
-        scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 1, y: "100%"}, "+=4");
+        scene06Links.to('#scene06_textlineTitle', 20, {autoAlpha: 1, y: "100%"}, "+=4");
         scene06Links.to('#scene06_textlineTitle', 10, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_textblock1', 10, {autoAlpha: 1, y: "-70%"}, "+=10");
         scene06Links.to('#scene06_textblock1', 5, {autoAlpha: 0, y: "-100%"}, "+=20");
-        scene06Links.to('#scene06_textline1', 10, {autoAlpha: 1, x: "-74%"}, "+=2");
-        scene06Links.to('#scene06_textline2', 10, {autoAlpha: 1, x: "-74%"}, "+=20");
-        scene06Links.to('#scene06_textline3', 10, {autoAlpha: 1, x: "-74%"}, "+=20");
+        scene06Links.to('#scene06_textline1', 20, {autoAlpha: 1, x: "-74%"}, "+=2");
+        scene06Links.to('#scene06_textline2', 20, {autoAlpha: 1, x: "-74%"}, "+=20");
+        scene06Links.to('#scene06_textline3', 20, {autoAlpha: 1, x: "-74%"}, "+=20");
         scene06Links.to('#scene06_textline1', 10, {autoAlpha: 0, x: "10%"}, "+=20");
         scene06Links.to('#scene06_textline2', 10, {autoAlpha: 0, x: "10%"}, "-=10");
         scene06Links.to('#scene06_textline3', 10, {autoAlpha: 0, x: "10%"}, "-=10");
         scene06Links.to('#scene06_textblock2', 10, {autoAlpha: 1, y: "-40%"}, "+=2");
-        scene06Links.to('#scene06_textblock2', 5, {autoAlpha: 0, y: "-80%"}, "+=20");
+        scene06Links.to('#scene06_textblock2', 10, {autoAlpha: 0, y: "-80%"}, "+=20");
         //BLUR ENDE
         scene06Links.to('.blur', 5, {webkitFilter: 'blur(0px)', filter: 'blur(0px)'}, "+=2");
         scene06Links.to('#scene06_textline4', 10, {autoAlpha: 1}, "+=4");
@@ -727,22 +727,22 @@ $(document).ready(function () {
         scene06Links.to('#scene06_bubble1small', 10, {autoAlpha: 0.7}, "-=15");
         scene06Links.to('#scene06_bubbleAdam1', 20, {autoAlpha: 0}, "+=10");
         scene06Links.to('#scene06_bubble1small', 20, {autoAlpha: 0}, "+=10");
-        scene06Links.to('#scene06_textline4', 5, {autoAlpha: 0}, "-=10");
+        scene06Links.to('#scene06_textline4', 10, {autoAlpha: 0}, "-=10");
         scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 1, x: "20%"}, "+=2");
-        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 1, y: "-40%"}, "+=2");
+        scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 1, y: "-40%"}, "+=2");
         scene06Links.to('#scene06_textblock4', 10, {autoAlpha: 1, x: "20%"}, "-=5");
-        scene06Links.to('#scene06_textblock3', 5, {autoAlpha: 0, x: "80%"}, "+=20");
-        scene06Links.to('#scene06_textblock4', 5, {autoAlpha: 0, x: "80"}, "-=5");
+        scene06Links.to('#scene06_textblock3', 10, {autoAlpha: 0, x: "80%"}, "+=20");
+        scene06Links.to('#scene06_textblock4', 10, {autoAlpha: 0, x: "80"}, "-=5");
         scene06Links.to('#scene06_textblock5', 10, {autoAlpha: 1, x: "20%"}, "+=4");
-        scene06Links.to('#scene06_textblock5', 5, {autoAlpha: 0}, "+=20");
+        scene06Links.to('#scene06_textblock5', 10, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_bubbleAdam2', 10, {autoAlpha: 1}, "+=2");
         scene06Links.to('#scene06_bubbleAdam2', 10, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_textblock6', 10, {autoAlpha: 1, y: "-90%"}, "+=2");
-        scene06Links.to('#scene06_textblock6', 5, {autoAlpha: 0}, "+=20");
+        scene06Links.to('#scene06_textblock6', 10, {autoAlpha: 0}, "+=20");
         scene06Links.to('#scene06_textline5', 10, {autoAlpha: 1, y: "50%"}, "+=2");
         scene06Links.to('#scene06_textline6', 10, {autoAlpha: 1, y: "-330%"}, "-=10");
-        scene06Links.to('#scene06_textline5', 5, {autoAlpha: 0}, "+=20");
-        scene06Links.to('#scene06_textline6', 5, {autoAlpha: 0}, "-=5");
+        scene06Links.to('#scene06_textline5', 10, {autoAlpha: 0}, "+=20");
+        scene06Links.to('#scene06_textline6', 10, {autoAlpha: 0}, "-=5");
         // start animation of binär
         scene06Links.to('#binaer01', 1, {autoAlpha: 1, y: -10}, "-=5");
         scene06Links.to('#binaer02', 1, {autoAlpha: 1, y: -10});
