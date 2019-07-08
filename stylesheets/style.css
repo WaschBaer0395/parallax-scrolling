@@ -13,18 +13,6 @@
     src: url("../Media/fonts/mesmerize/mesmerize-ul.ttf") format("truetype");
 }
 
-@media (max-device-width: 1920px) and (max-device-height: 1080px) and (orientation: portrait) {
-
-    .section {
-        display: none !important;
-    }
-
-    #hidden {
-        display: flex !important;
-    }
-}
-
-
 html {
     height: 100vh;
     width: 100%;
