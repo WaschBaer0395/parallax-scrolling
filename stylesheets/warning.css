@@ -29,14 +29,6 @@
     transform:translate(-50%);
 }
 
-.screenMain{
-    margin: 5em;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 15em;
-}
-
 .phone{
     margin: 5em;
     position: relative;
@@ -52,6 +44,7 @@
     width: 100%;
     max-width: 10em;
 }
+
 .window2{
     margin: 5em;
     position: relative;
@@ -68,50 +61,6 @@
     height: auto;
     width: 100%;
     top: 0;
-}
-
-.arrowContainer{
-    position: absolute;
-    top: 15%;
-    left: 7%;
-    height: 56%;
-    width: 86%;
-}
-
-.arrow1{
-    position: absolute;
-    height: auto;
-    width: 30%;
-    right: 0;
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-.arrow2{
-    position: absolute;
-    height: auto;
-    width: 30%;
-    left: 0;
-    bottom: 0;
-    transform: rotate(135deg);
-}
-
-.arrow3{
-    position: absolute;
-    height: auto;
-    width: 30%;
-    left: 0;
-    top: 0;
-    transform: rotate(-135deg);
-}
-
-.arrow4{
-    position: absolute;
-    height: auto;
-    width: 30%;
-    right: 0;
-    bottom: 0;
-    transform: rotate(45deg);
 }
 
 .res{
@@ -148,8 +97,3 @@
     transform: translate(-50%,-50%);
 }
 
-.screen{
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
